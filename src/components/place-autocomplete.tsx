@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -37,6 +38,7 @@ export function PlaceAutocomplete({
   placeholder = "City, country, or airport",
   className,
 }: PlaceAutocompleteProps) {
+  const t = useTranslations("PlaceAutocomplete");
   const listId = useId();
   const wrapRef = useRef<HTMLDivElement>(null);
   const [text, setText] = useState(value?.label ?? "");
@@ -68,7 +70,7 @@ export function PlaceAutocomplete({
         setItems([]);
         setFetchError(
           (typeof data.error === "string" && data.error) ||
-            "Could not search places.",
+            t("couldNotSearch"),
         );
         return;
       }
@@ -76,11 +78,11 @@ export function PlaceAutocomplete({
       setFetchError(null);
     } catch {
       setItems([]);
-      setFetchError("Could not search places.");
+      setFetchError(t("couldNotSearch"));
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -168,7 +170,7 @@ export function PlaceAutocomplete({
           >
             {loading && !items.length && !fetchError ? (
               <li className="px-3 py-2.5 text-sm text-muted-foreground">
-                Searching…
+                {t("searching")}
               </li>
             ) : null}
             {fetchError ? (
@@ -178,7 +180,7 @@ export function PlaceAutocomplete({
             ) : null}
             {!loading && !fetchError && text.trim().length >= 2 && !items.length ? (
               <li className="px-3 py-2.5 text-sm text-muted-foreground">
-                No places found. Try another spelling or city.
+                {t("empty")}
               </li>
             ) : null}
             {items.map((p, idx) => (
@@ -201,7 +203,7 @@ export function PlaceAutocomplete({
                     </span>
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    {p.type === "city" ? "City" : "Airport"}
+                    {p.type === "city" ? t("city") : t("airport")}
                     {p.subtitle ? ` · ${p.subtitle}` : null}
                   </span>
                 </button>

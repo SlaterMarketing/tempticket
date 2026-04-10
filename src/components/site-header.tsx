@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import { LocaleSwitcher } from "@/components/locale-switcher";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
 import { logoutAction } from "@/app/actions/auth";
@@ -15,6 +16,7 @@ export function SiteHeader({
   email?: string | null;
   showAdmin?: boolean;
 }) {
+  const t = useTranslations("SiteHeader");
   const pathname = usePathname();
   /** Full-bleed booking flow: no top nav (step chrome lives in the page). */
   if (pathname === "/book" || pathname.startsWith("/book/")) {
@@ -42,7 +44,7 @@ export function SiteHeader({
         >
           <Image
             src="/tempticket.png"
-            alt="TempTicket"
+            alt={t("brandAlt")}
             width={64}
             height={64}
             className="h-16 w-16 shrink-0 object-contain"
@@ -50,26 +52,32 @@ export function SiteHeader({
           />
           <Logo className="text-3xl leading-none" />
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-4 text-xl">
+        <nav className="flex max-w-full flex-1 flex-wrap items-center justify-end gap-2 sm:gap-4 text-xl">
+          <LocaleSwitcher
+            className={cn(
+              "shrink-0",
+              isFloatingNav && "text-[color:var(--brand-blue)]",
+            )}
+          />
           {email ? (
             <>
               <Link
                 href="/account/bookings"
                 className="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2"
               >
-                My bookings
+                {t("myBookings")}
               </Link>
               {showAdmin ? (
                 <Link
                   href="/admin"
                   className="rounded-md px-3 py-2 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2"
                 >
-                  Admin
+                  {t("admin")}
                 </Link>
               ) : null}
               <form action={logoutAction}>
                 <Button type="submit" variant="ghost" size="lg" className="text-xl">
-                  Sign out
+                  {t("signOut")}
                 </Button>
               </form>
             </>
@@ -84,7 +92,7 @@ export function SiteHeader({
                     : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
                 )}
               >
-                Sign in
+                {t("signIn")}
               </Link>
               <Link
                 href="/book"
@@ -95,7 +103,7 @@ export function SiteHeader({
                     : "text-muted-foreground hover:bg-muted/80 hover:text-foreground",
                 )}
               >
-                Book
+                {t("book")}
               </Link>
             </>
           )}

@@ -64,7 +64,8 @@ function SelectContent({
   sideOffset = 4,
   align = "center",
   alignOffset = 0,
-  alignItemWithTrigger = true,
+  /** When true, Base UI uses a separate placement path that breaks inside scroll/overflow parents (menu jumps to top). */
+  alignItemWithTrigger = false,
   /** `fixed` keeps the menu aligned to the trigger inside overflow-hidden / scroll parents (see Floating UI). */
   positionMethod = "fixed",
   ...props

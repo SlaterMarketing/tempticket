@@ -1,10 +1,12 @@
+import { hasLocale } from "next-intl";
 import { getSession } from "@/lib/auth/session";
+import { routing } from "@/i18n/routing";
 import { logBookingEvent } from "@/lib/booking/log";
 import { BOOKING_STATUS } from "@/lib/booking/status";
 import { db } from "@/lib/db";
 import { bookings, users } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
-import { serviceFeeForCurrency } from "@/lib/pricing";
+import { checkoutCurrencySchema, serviceFeeForCurrency } from "@/lib/pricing";
 import { getStripe } from "@/lib/stripe";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
@@ -28,8 +30,10 @@ function duffelTitleFromGender(gender: "m" | "f") {
 const bodySchema = z.object({
   offer_id: z.string(),
   passengers: z.array(passengerSchema).min(1).max(9),
-  currency: z.enum(["usd", "eur", "gbp", "thb"]).default("usd"),
+  currency: checkoutCurrencySchema.default("usd"),
   receipt_email: z.string().email(),
+  /** BCP 47 tag; used to build locale-prefixed Stripe return URLs. */
+  locale: z.string().optional(),
 });
 
 /** Postgres `uuid` type; avoids invalid/empty `sub` and FK violations after DB reset / stale JWT. */
@@ -94,7 +98,14 @@ export async function POST(req: Request) {
     const duffelOrderMode = requiresInstant ? "instant" : "pay_later";
 
     const feeCents = serviceFeeForCurrency(parsed.data.currency);
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+    const appUrl = (
+      process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
+    ).replace(/\/$/, "");
+    const locale =
+      parsed.data.locale && hasLocale(routing.locales, parsed.data.locale)
+        ? parsed.data.locale
+        : routing.defaultLocale;
+    const localePath = `/${locale}`;
 
     const passengersWithTitle = parsed.data.passengers.map((p) => ({
       ...p,
@@ -146,8 +157,8 @@ export async function POST(req: Request) {
           quantity: 1,
         },
       ],
-      success_url: `${appUrl}/book/confirmation?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${appUrl}/book?cancelled=1`,
+      success_url: `${appUrl}${localePath}/book/confirmation?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${appUrl}${localePath}/book?cancelled=1`,
       metadata: {
         booking_id: bookingId,
       },

@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { ChevronUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 const HERO_ID = "hero";
 
 export function BackToTopButton() {
+  const t = useTranslations("BackToTop");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export function BackToTopButton() {
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0",
       )}
-      aria-label="Back to top"
+      aria-label={t("ariaLabel")}
     >
       <ChevronUp className="size-6" aria-hidden />
     </button>
