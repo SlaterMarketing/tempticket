@@ -1,65 +1,859 @@
 import Image from "next/image";
+import Link from "next/link";
+import {
+  Briefcase,
+  CalendarClock,
+  Clock,
+  Globe,
+  Headset,
+  Plane,
+  ShieldCheck,
+  Sparkles,
+  PiggyBank,
+  Zap,
+  Timer,
+  BadgeCheck,
+  ChevronRight,
+  Star,
+} from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
+import { SectionDivider } from "@/components/section-divider";
+import { LogoTicker } from "@/components/logo-ticker";
+import { BackToTopButton } from "@/components/back-to-top-button";
+import { BookingProcessTimeline } from "@/components/booking-process-timeline";
+import { Reveal } from "@/components/reveal";
+import { cn } from "@/lib/utils";
+import { SERVICE_FEE_BY_CURRENCY } from "@/lib/pricing";
 
-export default function Home() {
+const usdFeeDisplay = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+}).format(SERVICE_FEE_BY_CURRENCY.usd / 100);
+
+function BookNowButton({
+  className,
+  variant = "green",
+  pulseCta = false,
+}: {
+  className?: string;
+  variant?: "green" | "outline";
+  /** Subtle glow pulse for final CTA emphasis */
+  pulseCta?: boolean;
+}) {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <Link
+      href="/book"
+      className={cn(
+        buttonVariants({ size: "lg" }),
+        "inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-xl font-semibold shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-md",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        variant === "green" &&
+          "border-0 bg-[color:var(--brand-green)] text-white hover:bg-[color:var(--brand-green)]/90",
+        variant === "outline" &&
+          "border-2 border-[color:var(--brand-blue)] bg-white/90 text-[color:var(--brand-blue)] shadow-sm hover:bg-white hover:shadow-md",
+        pulseCta && variant === "green" && "animate-cta-glow-pulse",
+        className,
+      )}
+    >
+      Book now
+      <ChevronRight className="size-5 shrink-0 opacity-90" aria-hidden />
+    </Link>
+  );
+}
+
+function HeroTicketGraphic() {
+  return (
+    <div
+      className="animate-home-ticket-float relative mx-auto w-full max-w-md rounded-xl p-5 md:p-6"
+      aria-hidden
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 1px 1px, rgb(34 98 187 / 0.11) 1px, transparent 0)",
+        backgroundSize: "16px 16px",
+      }}
+    >
+      <div className="relative rounded-xl border-2 border-dashed border-[color:var(--brand-blue)]/30 bg-subtle-ticket-face p-6 pt-7 shadow-[0_20px_50px_-12px_rgba(34,98,187,0.25)] backdrop-blur-sm">
+        <p className="absolute right-4 top-4 z-10 rounded-full bg-[color:var(--brand-green)] px-3 py-1.5 text-xs font-bold tracking-tight text-white shadow-md">
+          From {usdFeeDisplay}
+        </p>
+        <div className="flex items-start justify-between gap-4 border-b border-dashed border-[color:var(--brand-blue)]/20 pb-4">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              Departure
+            </p>
+            <p className="text-2xl font-bold text-[color:var(--brand-blue)]">
+              BKK
+            </p>
+            <p className="text-xs text-muted-foreground">Bangkok</p>
+          </div>
+          <Plane className="mt-4 h-8 w-8 shrink-0 text-[color:var(--brand-green)]" />
+          <div className="text-right">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              Arrival
+            </p>
+            <p className="text-2xl font-bold text-[color:var(--brand-blue)]">
+              NRT
+            </p>
+            <p className="text-xs text-muted-foreground">Tokyo</p>
+          </div>
+        </div>
+        <div className="mt-4 flex justify-between text-xs text-muted-foreground">
+          <span>Passenger</span>
+          <span className="font-medium text-foreground">Nomad · 1 adult</span>
+        </div>
+        <div className="mt-2 flex justify-between text-xs text-muted-foreground">
+          <span>Record locator</span>
+          <span className="font-mono font-semibold tracking-wide text-[color:var(--brand-blue)]">
+            ABC*12X
+          </span>
+        </div>
+        <div className="relative mt-6">
+          <div
+            className="pointer-events-none absolute -right-2 bottom-1 z-10 flex h-[4.25rem] w-[4.25rem] -translate-y-1 rotate-[-16deg] items-center justify-center rounded-full border-[3px] border-dashed border-[color:var(--brand-blue)]/35 bg-white/75 shadow-sm backdrop-blur-[2px]"
+            aria-hidden
+          >
+            <span className="text-center text-[0.58rem] font-extrabold uppercase leading-tight tracking-wide text-[color:var(--brand-blue)]/70">
+              Verified
+            </span>
+          </div>
+          <div className="flex gap-0.5 opacity-40">
+            {Array.from({ length: 28 }).map((_, i) => (
+              <div
+                key={i}
+                className={cn(
+                  "h-8 w-1 rounded-full bg-foreground",
+                  i % 3 === 0 && "w-1.5",
+                )}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CtaTicketWatermark() {
+  return (
+    <svg
+      aria-hidden
+      className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[min(22rem,78vw)] w-auto -translate-x-1/2 -translate-y-1/2 rotate-[12deg] text-[color:var(--brand-blue)] opacity-[0.07] select-none"
+      viewBox="0 0 220 128"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 14h184c5 0 10 5 10 10v22c-12 0-12 14 0 14v22c-12 0-12 14 0 14v22c0 5-5 10-10 10H18c-5 0-10-5-10-10V94c12 0 12-14 0-14V54c12 0 12-14 0-14V24c0-5 5-10 10-10z"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        opacity="0.9"
+      />
+      <path
+        d="M72 10v108"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeDasharray="5 6"
+        opacity="0.45"
+      />
+      <rect
+        x="82"
+        y="36"
+        width="112"
+        height="8"
+        rx="2"
+        fill="currentColor"
+        opacity="0.12"
+      />
+      <rect
+        x="82"
+        y="52"
+        width="72"
+        height="6"
+        rx="2"
+        fill="currentColor"
+        opacity="0.1"
+      />
+    </svg>
+  );
+}
+
+const faqItems = [
+  {
+    q: "What is TempTicket?",
+    a: "A service that helps you obtain a real, verifiable flight reservation (with a booking reference when the airline confirms it) for onward-travel and visa scenarios—without paying for a full fare you may not use.",
+  },
+  {
+    q: "How long is the reservation valid?",
+    a: "Validity depends on the airline’s fare rules, hold policy, or ticketing timeline. We surface what we can during booking; always confirm timing against your embassy or carrier requirements.",
+  },
+  {
+    q: "Can I verify it on the airline website?",
+    a: "When the airline issues a live record, you can typically look it up on their manage-booking or check-my-trip flow. If a route isn’t eligible for a hold, you may need an instant ticket instead.",
+  },
+  {
+    q: "Is this legal advice or a visa guarantee?",
+    a: "No. Immigration rules change by country and officer. We provide a reservation service only—check official sources for your situation.",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <div id="top" className="relative bg-mint-grain">
+      <BackToTopButton />
+      {/* Hero + trust wave: one shell so mint grain & airiness run to the wave (no extra divider band) */}
+      <div className="relative">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-0 opacity-[0.34] mix-blend-soft-light"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse 95% 62% at 50% -14%, rgb(255 255 255 / 0.92) 0%, transparent 62%), radial-gradient(ellipse 55% 48% at 86% 20%, rgb(227 238 252 / 0.3) 0%, transparent 68%)",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        <section
+          id="hero"
+          className="relative z-10 flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-24 md:pb-16 md:pt-28"
+          aria-labelledby="hero-heading"
+        >
+          <div className="relative mx-auto max-w-6xl rounded-xl bg-subtle-hero-card px-6 py-10 shadow-[0_25px_60px_-20px_rgba(34,98,187,0.2)] ring-1 ring-[color:var(--brand-blue)]/10 md:rounded-2xl md:px-12 md:py-14">
+            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14">
+              <div>
+                <p className="mb-2 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-green)] shadow-sm">
+                  Live reservations
+                </p>
+                <h1
+                  id="hero-heading"
+                  className="mt-4 text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-[3.35rem] lg:leading-[1.08]"
+                >
+                  <span className="text-[color:var(--brand-blue)]">
+                    Flight booking{" "}
+                  </span>
+                  <span className="bg-gradient-to-r from-[color:var(--brand-blue)] to-[color:var(--brand-green)] bg-clip-text text-transparent">
+                    verified in minutes
+                  </span>
+                </h1>
+                <p className="mt-5 max-w-xl text-pretty text-lg text-muted-foreground leading-relaxed">
+                  Real flight reservations you can verify on the airlines' website.
+                  Stress free travel for nomads.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <BookNowButton />
+                  <Link
+                    href="#how-it-works"
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "lg" }),
+                      "rounded-xl font-medium text-[color:var(--brand-blue)] hover:bg-[color:var(--brand-blue)]/5 hover:text-[color:var(--brand-blue)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
+                    )}
+                  >
+                    How it works
+                  </Link>
+                </div>
+              </div>
+              <HeroTicketGraphic />
+            </div>
+          </div>
+        </section>
+
+        <SectionDivider variant="hero-to-trust" className="relative z-[1]" />
+      </div>
+
+      {/* Trust + features wave: one cream shell so subtle-trust runs to the wave */}
+      <div className="relative -mt-px bg-subtle-trust">
+        <section className="bg-transparent py-10 md:py-14">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="grid gap-4 sm:grid-cols-3 sm:gap-5 md:gap-6">
+              {[
+                {
+                  stat: "Minutes",
+                  label: "Typical turnaround when airlines cooperate",
+                  icon: Timer,
+                },
+                {
+                  stat: "Real PNR",
+                  label: "Look it up on the carrier when issued",
+                  icon: BadgeCheck,
+                },
+                {
+                  stat: "24/7",
+                  label: "Support when something needs a human",
+                  icon: Headset,
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex flex-col items-center rounded-xl border border-[color:var(--brand-blue)]/10 bg-white/75 p-6 text-center shadow-sm ring-1 ring-white/80 backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--brand-blue)]/16 hover:shadow-md sm:items-start sm:p-7 sm:text-left"
+                >
+                  <div className="mb-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[color:var(--brand-blue)]/12 to-[color:var(--brand-blue)]/6 ring-1 ring-[color:var(--brand-blue)]/10">
+                    <item.icon
+                      className="h-6 w-6 text-[color:var(--brand-blue)]"
+                      aria-hidden
+                    />
+                  </div>
+                  <p className="text-2xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-[1.65rem]">
+                    {item.stat}
+                  </p>
+                  <p className="mt-2 max-w-[15rem] text-sm leading-snug text-muted-foreground sm:max-w-none">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SectionDivider variant="trust-to-features" className="relative z-[1]" />
+      </div>
+
+      {/* Features + how wave: one features-gradient shell to the wave */}
+      <div className="relative -mt-px bg-subtle-features">
+        <section className="relative overflow-hidden bg-transparent pt-8 pb-16 md:pt-12 md:pb-24">
+          <LogoTicker />
+          <div
+            aria-hidden
+            className="feature-blob feature-blob-a -left-28 top-[18%] h-72 w-72 bg-[color:var(--brand-blue)] md:h-80 md:w-80"
+          />
+          <div
+            aria-hidden
+            className="feature-blob feature-blob-b -right-24 bottom-[12%] h-80 w-80 bg-[color:var(--brand-green)] md:h-96 md:w-96"
+          />
+          <div className="relative z-[1] mx-auto max-w-6xl px-4">
+            <div
+              className="mx-auto mb-8 h-px max-w-xs bg-gradient-to-r from-transparent via-[color:var(--brand-blue)]/20 to-transparent md:mb-10 md:max-w-sm"
+              aria-hidden
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <Reveal className="text-center">
+              <h2 className="text-balance text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+                Everything you need for peace of mind
+              </h2>
+              <div className="heading-accent-bar" />
+              <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                Fast, verifiable onward travel proof—without the anxiety of buying a ticket you won&apos;t use.
+              </p>
+            </Reveal>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-7 lg:mt-14 lg:grid-cols-3 lg:gap-8">
+              {[
+                {
+                  icon: Zap,
+                  title: "Authentic reservations",
+                  body: "A genuine airline record when confirmation comes through—not a decorative PDF.",
+                  tint: "bg-feature-card-sky",
+                  iconClass: "text-[color:var(--brand-blue)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white/85 shadow-sm ring-1 ring-[color:var(--brand-blue)]/14 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+                {
+                  icon: Clock,
+                  title: "Instant delivery",
+                  body: "Most flows complete quickly so you can attach proof the same day.",
+                  tint: "bg-feature-card-blush",
+                  iconClass: "text-[color:var(--brand-green)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white/80 shadow-sm ring-1 ring-[color:var(--brand-green)]/20 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+                {
+                  icon: Globe,
+                  title: "Carrier-verifiable",
+                  body: "Use the airline’s tools to pull up the booking when someone asks.",
+                  tint: "bg-feature-card-lime",
+                  iconClass: "text-[color:var(--brand-blue)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white/80 ring-1 ring-[color:var(--brand-green)]/12 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+                {
+                  icon: PiggyBank,
+                  title: "Save money",
+                  body: "Pay a small service fee instead of a refundable long-haul fare.",
+                  tint: "bg-feature-card-warm",
+                  iconClass: "text-[color:var(--brand-green)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white/75 ring-1 ring-[color:var(--brand-blue)]/10 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+                {
+                  icon: CalendarClock,
+                  title: "Flexible plans",
+                  body: "Adjust dates when your itinerary changes—within airline policy windows.",
+                  tint: "bg-feature-card-mint",
+                  iconClass: "text-[color:var(--brand-blue)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white/70 ring-1 ring-[color:var(--brand-blue)]/10 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+                {
+                  icon: ShieldCheck,
+                  title: "Human support",
+                  body: "Stuck fares and edge cases can escalate to our team from the queue.",
+                  tint: "bg-feature-card-white",
+                  iconClass: "text-[color:var(--brand-green)]",
+                  iconWrap:
+                    "flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-surface-mint/90 ring-1 ring-[color:var(--brand-green)]/18 transition-transform duration-300 ease-out group-hover:scale-105",
+                },
+              ].map((item, i) => (
+                <Reveal key={item.title} delayMs={80 + i * 65}>
+                  <div
+                    className={cn(
+                      "group h-full rounded-xl border border-transparent p-8 shadow-sm ring-1 ring-[color:var(--brand-blue)]/10 transition duration-300 hover:-translate-y-1 hover:border-[color:var(--brand-blue)]/8 hover:shadow-lg hover:ring-[color:var(--brand-blue)]/16",
+                      item.tint,
+                    )}
+                  >
+                    <div className={item.iconWrap}>
+                      <item.icon
+                        className={cn("h-7 w-7", item.iconClass)}
+                        aria-hidden
+                      />
+                    </div>
+                    <h3 className="mt-4 text-xl font-bold tracking-tight text-[color:var(--brand-blue)]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground md:text-[0.9375rem]">
+                      {item.body}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <SectionDivider variant="features-to-how" className="relative z-[1]" />
+      </div>
+
+      {/* How it works — Sticky stacked step cards */}
+      <section
+        id="how-it-works"
+        className={cn(
+          "-mt-px scroll-mt-24 bg-subtle-how pb-20 pt-10 md:pb-28 md:pt-14",
+          "[--booking-nav-offset:5rem] md:[--booking-nav-offset:5.25rem]",
+          "[--booking-overlap-adjust:10.75rem] md:[--booking-overlap-adjust:11.5rem]",
+        )}
+      >
+        <div className="w-full px-4">
+          <BookingProcessTimeline
+            heading={
+              <div className="pb-4 text-center md:pb-5">
+                <Reveal className="text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+                    Simple booking process
+                  </h2>
+                </Reveal>
+              </div>
+            }
+          />
         </div>
-      </main>
+        <div className="mx-auto max-w-5xl px-4">
+          <Reveal className="mt-20 flex flex-wrap items-center justify-center gap-4 md:mt-28" delayMs={80}>
+            <BookNowButton className="transition duration-200 hover:brightness-105 active:scale-[0.98]" />
+            <Link
+              href="#faq"
+              className={cn(
+                buttonVariants({ size: "lg", variant: "outline" }),
+                "inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-xl border-2 border-[color:var(--brand-blue)] bg-white/90 px-8 font-semibold text-[color:var(--brand-blue)] shadow-sm transition duration-200 hover:bg-white hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-surface-mint",
+              )}
+            >
+              Common questions
+              <ChevronRight className="size-5 opacity-70" aria-hidden />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Personas */}
+      <section className="-mt-px bg-subtle-personas py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <Reveal className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+              <Logo /> is perfect for
+            </h2>
+            <div className="heading-accent-bar" />
+          </Reveal>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Sparkles,
+                title: "Visa applicants",
+                body: "When consulates want an itinerary, not necessarily a paid fare.",
+              },
+              {
+                icon: Plane,
+                title: "Frequent flyers",
+                body: "Repeatable proof for airlines that enforce return/onward rules.",
+              },
+              {
+                icon: Globe,
+                title: "Travelers",
+                body: "Simple verification story for border and carrier checks.",
+              },
+              {
+                icon: Briefcase,
+                title: "Digital nomads",
+                body: "Stay flexible without parking money in unused long-haul fares.",
+              },
+            ].map((p, i) => (
+              <Reveal key={p.title} delayMs={i * 55}>
+                <div className="h-full rounded-xl bg-subtle-persona-card p-6 shadow-sm ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:shadow-md hover:ring-black/[0.07]">
+                  <p.icon
+                    className="h-9 w-9 text-[color:var(--brand-green)]"
+                    aria-hidden
+                  />
+                  <h3 className="mt-3 text-lg font-bold text-[color:var(--brand-blue)]">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="-mt-px bg-subtle-social py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <Reveal className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+              Trusted by travelers worldwide
+            </h2>
+            <div className="heading-accent-bar" />
+            <p className="mx-auto mt-2 max-w-xl text-center text-xs text-muted-foreground">
+              {/* sample review cards for layout */}
+              Sample reviews—swap for real testimonials when you have them.
+            </p>
+            <div
+              className="mt-5 flex justify-center gap-0.5"
+              aria-hidden
+            >
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  className="size-[1.15rem] fill-[color:var(--brand-green)] text-[color:var(--brand-green)]"
+                />
+              ))}
+            </div>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                flag: "🇺🇸",
+                name: "Sample · Alex M.",
+                quote:
+                  "PNR checked out on the airline site the same week I applied.",
+                avatar: "AM",
+              },
+              {
+                flag: "🇩🇪",
+                name: "Sample · Leni K.",
+                quote:
+                  "Straightforward flow and quick answers when I asked about a route.",
+                avatar: "LK",
+              },
+              {
+                flag: "🇬🇧",
+                name: "Sample · James T.",
+                quote: "Got me through check-in with a one-way ticket policy.",
+                avatar: "JT",
+              },
+            ].map((t, i) => (
+              <Reveal key={t.name} delayMs={i * 60}>
+                <blockquote className="flex h-full flex-col rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-testimonial p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[color:var(--brand-blue)] text-sm font-bold text-white"
+                      aria-hidden
+                    >
+                      {t.avatar}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">
+                        <span aria-hidden>{t.flag}</span> {t.name}
+                      </p>
+                      <div className="mt-0.5 flex gap-0.5" aria-hidden>
+                        {Array.from({ length: 5 }).map((_, j) => (
+                          <Star
+                            key={j}
+                            className="size-3.5 fill-[color:var(--brand-green)] text-[color:var(--brand-green)]"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </blockquote>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-12 flex justify-center">
+            <BookNowButton />
+          </Reveal>
+        </div>
+      </section>
+
+      <SectionDivider variant="social-to-embassy" />
+
+      {/* Embassy themes & Visa flexibility (Merged) */}
+      <section className="-mt-px bg-subtle-embassy py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <Reveal direction="right">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+                  Greater flexibility when securing your visa
+                </h2>
+                <div className="heading-accent-bar-left" />
+                <p className="mt-4 text-muted-foreground leading-relaxed">
+                  Many missions describe accepting an itinerary or reservation rather
+                  than a fully paid ticket. Confirm on the official site for your
+                  case—we provide a real reservation you can verify while you wait.
+                </p>
+                <div className="mt-10 space-y-8">
+                  {[
+                    {
+                      n: "1",
+                      title: "Read the official checklist",
+                      body: "Embassies differ—some want a reservation, others a ticket. Start from their page, not a blog.",
+                    },
+                    {
+                      n: "2",
+                      title: "Match dates to your story",
+                      body: "Pick a route and timing that align perfectly with the application you’re filing.",
+                    },
+                    {
+                      n: "3",
+                      title: "Verify on the airline",
+                      body: "If the record is live, practice pulling it up on the carrier's site before your appointment.",
+                    },
+                  ].map((row) => (
+                    <div key={row.n} className="flex gap-4">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[color:var(--brand-green)] text-base font-bold text-white">
+                        {row.n}
+                      </span>
+                      <div>
+                        <h3 className="text-lg font-bold text-[color:var(--brand-blue)]">
+                          {row.title}
+                        </h3>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                          {row.body}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </Reveal>
+
+            <Reveal direction="left" delayMs={80}>
+              <div className="flex flex-col gap-5">
+              <p className="text-sm font-semibold uppercase tracking-wider text-[color:var(--brand-blue)]/60">
+                What embassies publish
+              </p>
+              <figure className="embassy-quote-card rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-figure p-7 pl-8 pt-10 shadow-sm">
+                <blockquote className="text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    &ldquo;Reservation for return ticket, not necessary to
+                    purchase ticket before visa is granted…&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption className="mt-4 text-xs font-medium text-foreground">
+                  Theme from public embassy FAQ (Norway)
+                </figcaption>
+              </figure>
+              <figure className="embassy-quote-card rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-figure p-7 pl-8 pt-10 shadow-sm">
+                <blockquote className="text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    &ldquo;Airline reservation… with travel reservation number…
+                    not necessarily a ticketed reservation.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption className="mt-4 text-xs font-medium text-foreground">
+                  Theme from public Schengen guidance (Spain)
+                </figcaption>
+              </figure>
+              <figure className="embassy-quote-card rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-figure p-7 pl-8 pt-10 shadow-sm">
+                <blockquote className="text-sm leading-relaxed text-muted-foreground">
+                  <p>
+                    &ldquo;Verifiable flight reservation… not a purchased
+                    ticket.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption className="mt-4 text-xs font-medium text-foreground">
+                  Theme from public visa information (India)
+                </figcaption>
+              </figure>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider variant="embassy-to-faq" />
+
+      {/* FAQ */}
+      <section id="faq" className="-mt-px scroll-mt-24 bg-subtle-faq py-16 md:py-24">
+        <div className="mx-auto max-w-2xl px-4">
+          <Reveal className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+              Do you need help?
+            </h2>
+            <div className="heading-accent-bar" />
+          </Reveal>
+          <div className="mt-10 space-y-3">
+            {faqItems.map((item, i) => (
+              <Reveal key={item.q} delayMs={i * 45}>
+                <details className="group rounded-lg border border-[color:var(--brand-blue)]/15 bg-subtle-faq-item px-5 py-1 shadow-sm open:shadow-md">
+                  <summary className="cursor-pointer list-none py-4 font-semibold text-[color:var(--brand-blue)] select-none [&::-webkit-details-marker]:hidden">
+                    <span className="flex items-center justify-between gap-2">
+                      {item.q}
+                      <span
+                        className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[color:var(--brand-green)]/15 text-lg font-medium text-[color:var(--brand-green)] transition duration-200 group-open:rotate-45"
+                        aria-hidden
+                      >
+                        +
+                      </span>
+                    </span>
+                  </summary>
+                  <p className="border-t border-[color:var(--brand-blue)]/10 pb-4 pt-3 text-sm leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-8 text-center text-sm text-muted-foreground">
+            <p>
+              More questions? Start a booking—we surface timing and carrier notes
+              as you go.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Final CTA — sky + soft clouds (outer fill avoids subpixel seam with FAQ) */}
+      <section className="relative overflow-hidden bg-[color:var(--surface-sky)] py-20 md:py-28">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-subtle-cta-bg"
+        />
+        <CtaTicketWatermark />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-20 top-10 h-48 w-72 rounded-full bg-white/70 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-16 bottom-8 h-56 w-80 rounded-full bg-white/60 blur-3xl"
+        />
+        <Reveal className="relative z-10 mx-auto max-w-3xl px-4 text-center">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+            Traveling is hard enough. Make proof of onward easier with{" "}
+            <Logo />.
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            From {usdFeeDisplay} · minutes, not guesswork
+          </p>
+          <BookNowButton className="mt-10" pulseCta />
+        </Reveal>
+      </section>
+
+      {/* Footer */}
+      <footer className="-mt-px bg-subtle-footer text-white">
+        <SectionDivider variant="footer" />
+        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
+          <div className="flex flex-col gap-10 md:flex-row md:justify-between">
+            <div>
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/tempticket.png"
+                  alt="TempTicket"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain brightness-0 invert"
+                />
+                <Logo mono className="text-xl" />
+              </div>
+              <p className="mt-3 max-w-xs text-sm leading-snug text-white/85">
+                Onward travel proof for nomads
+              </p>
+            </div>
+            <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 md:gap-16">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider opacity-80">
+                  Services
+                </p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <Link
+                      href="/book"
+                      className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+                    >
+                      Book a reservation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/login"
+                      className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+                    >
+                      Sign in
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider opacity-80">
+                  Account
+                </p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <Link
+                      href="/account/bookings"
+                      className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+                    >
+                      My bookings
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider opacity-80">
+                  Legal
+                </p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <Link
+                      href="/terms"
+                      className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+                    >
+                      Terms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/privacy"
+                      className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+                    >
+                      Privacy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/20 pt-8 text-xs opacity-80 sm:flex-row sm:text-left">
+            <p className="text-center sm:text-left">
+              © {new Date().getFullYear()} <Logo mono />. All rights reserved.
+            </p>
+            <Link
+              href="#top"
+              className="rounded-sm font-medium text-white/95 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]"
+            >
+              Back to top
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

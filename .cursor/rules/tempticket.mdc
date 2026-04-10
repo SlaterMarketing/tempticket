@@ -1,0 +1,37 @@
+---
+description: TempTicket project defaults — Next.js, stack, and product constraints
+alwaysApply: true
+---
+
+# TempTicket — Cursor rules
+
+## Next.js
+
+This repo may use Next.js APIs and structure that differ from older docs. Before changing routing, data fetching, or config, read the guides under `node_modules/next/dist/docs/` and respect deprecations.
+
+## Stack (when relevant)
+
+- Next.js (App Router), Tailwind, shadcn/ui.
+- Auth/product patterns may use Postgres (e.g. Neon), Resend, magic-link / code flows — only what the codebase already uses.
+
+## Product & UI
+
+- Do not describe or expose environment variables or secrets in user-visible copy.
+- For image and video uploads in product flows, use real upload-to-storage patterns — do not ship flows that only accept pasted URLs as the primary mechanism.
+
+## Code changes
+
+- Prefer small, focused diffs; match existing naming, imports, and component style in touched files.
+- Run the project linter/build when changes are non-trivial.
+
+## Workspace docs
+
+- See `AGENTS.md` for the canonical Next.js reminder delegated from `CLAUDE.md`.
+
+## minimise needless talking
+
+keep any sentences at the end of a run describng what you did to 1 sentence.
+
+## verifying builds
+
+don't verify build unless i ask you to

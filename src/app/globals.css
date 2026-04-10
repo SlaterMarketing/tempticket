@@ -35,6 +35,13 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-brand-green: var(--brand-green);
+  --color-brand-blue: var(--brand-blue);
+  --color-surface-mint: var(--surface-mint);
+  --color-surface-warm: var(--surface-warm);
+  --color-surface-sky: var(--surface-sky);
+  --color-surface-blush: var(--surface-blush);
+  --color-surface-lime: var(--surface-lime);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -49,14 +56,25 @@
 }
 
 :root {
+  /* Brand: tempTicket (docs/brand.md) */
+  --brand-blue: #2262bb;
+  --brand-green: #38aa90;
+  /* Pastel surfaces (marketing homepage) */
+  --surface-mint: #e5f4ef;
+  --surface-warm: #fdf4dd;
+  --surface-sky: #e3eefc;
+  /* Top of footer gradient — must match footer wave SVG fill */
+  --footer-wave-green: rgb(64 180 154);
+  --surface-blush: #fce8f1;
+  --surface-lime: #eef8e8;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: #2262bb;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -66,7 +84,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --ring: #2262bb;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -75,8 +93,8 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #2262bb;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
@@ -84,14 +102,22 @@
 }
 
 .dark {
+  --brand-blue: #3d7fd4;
+  --brand-green: #4bc4a8;
+  --footer-wave-green: rgb(45 140 120);
+  --surface-mint: oklch(0.22 0.03 175);
+  --surface-warm: oklch(0.24 0.03 85);
+  --surface-sky: oklch(0.24 0.04 250);
+  --surface-blush: oklch(0.24 0.04 350);
+  --surface-lime: oklch(0.24 0.04 145);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: #3d7fd4;
+  --primary-foreground: #ffffff;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -101,7 +127,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --ring: #3d7fd4;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -109,8 +135,8 @@
   --chart-5: oklch(0.269 0 0);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #3d7fd4;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
@@ -125,6 +151,442 @@
     @apply bg-background text-foreground;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
+  }
+}
+
+/* Marketing homepage — motion respects user preference */
+@layer utilities {
+  @keyframes home-ticket-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(1.5deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1.5deg);
+    }
+  }
+  .animate-home-ticket-float {
+    animation: home-ticket-float 6.5s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-home-ticket-float {
+      animation: none;
+    }
+  }
+
+  /*
+   * Marketing homepage — subtle gradients (noise sits on top as final layer).
+   * All use brand surface tokens from :root for light/dark consistency on surfaces.
+   */
+  .bg-mint-grain {
+    background-color: var(--surface-mint);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"),
+      radial-gradient(
+        ellipse 120% 80% at 92% 6%,
+        rgb(227 238 252 / 0.34) 0%,
+        transparent 58%
+      ),
+      radial-gradient(
+        ellipse 100% 78% at 8% 94%,
+        rgb(253 244 221 / 0.28) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        168deg,
+        rgb(236 248 243) 0%,
+        rgb(235 247 242) 18%,
+        var(--surface-mint) 42%,
+        rgb(226 241 234) 78%,
+        rgb(222 240 232) 100%
+      );
+    background-size: 200px 200px, auto, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  }
+
+  .bg-subtle-hero-card {
+    background-image: linear-gradient(
+      135deg,
+      rgb(240 246 253) 0%,
+      var(--surface-sky) 42%,
+      rgb(232 241 252) 78%,
+      rgb(226 244 248) 100%
+    );
+  }
+
+  .bg-subtle-trust {
+    background-image: linear-gradient(
+      175deg,
+      var(--surface-warm) 0%,
+      rgb(252 244 225) 32%,
+      rgb(252 240 215 / 0.92) 68%,
+      rgb(250 244 228) 100%
+    );
+  }
+
+  .bg-subtle-ticker {
+    background-image: linear-gradient(
+      90deg,
+      rgb(253 246 228 / 0.5) 0%,
+      rgb(254 250 240 / 0.75) 35%,
+      rgb(252 244 220 / 0.55) 100%
+    );
+  }
+
+  .bg-subtle-features {
+    background-image: linear-gradient(
+      180deg,
+      var(--surface-mint) 0%,
+      rgb(232 247 242 / 0.62) 12%,
+      transparent 22%,
+      transparent 62%,
+      rgb(231 244 242 / 0.45) 78%,
+      rgb(234 246 241) 100%
+    ),
+      linear-gradient(
+        125deg,
+        transparent 0%,
+        rgb(255 255 255 / 0.22) 45%,
+        transparent 70%
+      );
+  }
+
+  .bg-subtle-how {
+    background-image: linear-gradient(
+      185deg,
+      rgb(234 246 241) 0%,
+      var(--surface-mint) 48%,
+      rgb(218 237 229) 100%
+    );
+  }
+
+  /* First stop matches .bg-subtle-how final stop so the handoff reads as one continuous wash */
+  .bg-subtle-personas {
+    background-image:
+      linear-gradient(
+        125deg,
+        transparent 0%,
+        rgb(227 238 252 / 0.12) 55%,
+        rgb(227 238 252 / 0.18) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(218 237 229) 0%,
+        rgb(226 240 235) 14%,
+        rgb(236 245 242) 30%,
+        rgb(244 249 248) 48%,
+        rgb(252 253 254) 65%,
+        rgb(255 255 255) 82%,
+        rgb(250 252 253) 100%
+      );
+  }
+
+  .bg-subtle-social {
+    background-image: linear-gradient(
+      165deg,
+      rgb(255 255 255 / 0.82) 0%,
+      rgb(255 255 255 / 0.52) 45%,
+      rgb(242 249 246) 85%,
+      rgb(244 249 247) 100%
+    );
+  }
+
+  .bg-subtle-embassy {
+    background-image: linear-gradient(
+      145deg,
+      rgb(254 247 228 / 0.75) 0%,
+      rgb(252 244 220 / 0.55) 35%,
+      rgb(252 246 234) 88%,
+      rgb(253 248 236) 100%
+    );
+  }
+
+  .bg-subtle-faq {
+    background-image: linear-gradient(
+      180deg,
+      rgb(227 238 252) 0%,
+      rgb(232 243 252 / 0.42) 38%,
+      rgb(231 241 246 / 0.52) 55%,
+      rgb(230 243 248 / 0.65) 70%,
+      rgb(228 241 252 / 0.82) 84%,
+      var(--surface-sky) 100%
+    );
+  }
+
+  /* Top matches FAQ terminal (--surface-sky); no hard edge between sections */
+  .bg-subtle-cta-bg {
+    background-image: linear-gradient(
+      185deg,
+      var(--surface-sky) 0%,
+      var(--surface-sky) 14%,
+      var(--surface-mint) 40%,
+      rgb(222 235 250 / 0.95) 72%,
+      var(--surface-sky) 100%
+    );
+  }
+
+  .bg-subtle-footer {
+    background-image: linear-gradient(
+      165deg,
+      var(--footer-wave-green) 0%,
+      var(--footer-wave-green) 20%,
+      var(--brand-green) 48%,
+      rgb(47 157 132) 100%
+    );
+  }
+
+  /* Feature grid cards — tinted gradient panels */
+  .bg-feature-card-sky {
+    background-image: linear-gradient(
+      140deg,
+      rgb(231 241 252 / 0.95) 0%,
+      rgb(220 234 248 / 0.88) 100%
+    );
+  }
+  .bg-feature-card-blush {
+    background-image: linear-gradient(
+      145deg,
+      rgb(253 235 244 / 0.72) 0%,
+      rgb(248 226 239 / 0.65) 100%
+    );
+  }
+  .bg-feature-card-lime {
+    background-image: linear-gradient(
+      140deg,
+      rgb(241 249 236 / 0.9) 0%,
+      rgb(232 245 228 / 0.82) 100%
+    );
+  }
+  .bg-feature-card-warm {
+    background-image: linear-gradient(
+      145deg,
+      rgb(254 248 230 / 0.85) 0%,
+      rgb(252 240 215 / 0.78) 100%
+    );
+  }
+  .bg-feature-card-mint {
+    background-image: linear-gradient(
+      140deg,
+      rgb(236 247 241 / 0.82) 0%,
+      rgb(224 241 233 / 0.72) 100%
+    );
+  }
+  .bg-feature-card-white {
+    background-image: linear-gradient(
+      145deg,
+      rgb(255 255 255 / 0.98) 0%,
+      rgb(248 252 250 / 0.95) 100%
+    );
+  }
+
+  .bg-subtle-testimonial {
+    background-image: linear-gradient(
+      155deg,
+      rgb(229 244 239 / 0.62) 0%,
+      rgb(236 248 243 / 0.48) 100%
+    );
+  }
+
+  .bg-subtle-figure {
+    background-image: linear-gradient(
+      145deg,
+      rgb(255 255 255 / 0.98) 0%,
+      rgb(248 251 255 / 0.92) 55%,
+      rgb(252 253 255) 100%
+    );
+  }
+
+  .bg-subtle-faq-item {
+    background-image: linear-gradient(
+      145deg,
+      rgb(255 255 255 / 0.98) 0%,
+      rgb(248 251 255 / 0.94) 100%
+    );
+  }
+
+  .bg-subtle-ticket-face {
+    background-image: linear-gradient(
+      145deg,
+      rgb(255 255 255 / 0.98) 0%,
+      rgb(250 252 255 / 0.94) 48%,
+      rgb(244 249 252 / 0.92) 100%
+    );
+  }
+
+  .bg-subtle-persona-card {
+    background-image: linear-gradient(
+      155deg,
+      rgb(255 255 255 / 0.98) 0%,
+      rgb(252 254 253 / 0.96) 55%,
+      rgb(248 252 250 / 0.94) 100%
+    );
+  }
+
+  /* Section divider wave strip — hand off .bg-subtle-social mint into warm wave fill (no white band) */
+  .bg-divider-social {
+    background-image: linear-gradient(
+      180deg,
+      rgb(244 249 247) 0%,
+      rgb(248 247 240) 32%,
+      rgb(251 246 232) 62%,
+      var(--surface-warm) 100%
+    );
+  }
+
+  /* Embassy (warm) → FAQ / wave fill rgb(227 238 252) — no peach band above blue wave */
+  .bg-divider-embassy-faq {
+    background-image: linear-gradient(
+      180deg,
+      rgb(253 248 236) 0%,
+      rgb(250 242 228) 22%,
+      rgb(235 244 248) 52%,
+      rgb(227 238 252) 100%
+    );
+  }
+  /* Sky (CTA) → same teal as wave + .bg-subtle-footer top (no band above footer body) */
+  .bg-divider-footer {
+    background-image: linear-gradient(
+      180deg,
+      var(--surface-sky) 0%,
+      rgb(206 231 245) 30%,
+      rgb(130 215 195) 68%,
+      var(--footer-wave-green) 100%
+    );
+  }
+
+  /* Section heading accent (3rem × 3px) */
+  .heading-accent-bar {
+    @apply mx-auto mt-3 h-[3px] w-12 rounded-full bg-[color:var(--brand-green)];
+  }
+  .heading-accent-bar-left {
+    @apply mx-0 mt-3 h-[3px] w-12 rounded-full bg-[color:var(--brand-green)];
+  }
+
+  /* Decorative embassy card quote (large faint “, ~8% brand blue) */
+  .embassy-quote-card {
+    @apply relative overflow-hidden;
+  }
+  .embassy-quote-card::before {
+    content: "\201C";
+    pointer-events: none;
+    position: absolute;
+    left: 0.85rem;
+    top: 0.35rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.5rem, 12vw, 4.5rem);
+    line-height: 1;
+    font-weight: 700;
+    color: var(--brand-blue);
+    opacity: 0.08;
+  }
+
+  /* Scroll-reveal (used by Reveal client component) */
+  .reveal-transition {
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-no-motion {
+    transition: none !important;
+  }
+
+  /* Trust / logo ticker */
+  @keyframes logo-ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-logo-ticker {
+    animation: logo-ticker 52s linear infinite;
+  }
+  .mask-linear-fade {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  /* Decorative blobs — features section */
+  @keyframes feature-blob-drift-a {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(1.25rem, -1.5rem) scale(1.06);
+    }
+  }
+  @keyframes feature-blob-drift-b {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-1.75rem, 1.25rem) scale(1.08);
+    }
+  }
+  .feature-blob {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 9999px;
+    mix-blend-mode: multiply;
+    filter: blur(68px);
+    opacity: 0.32;
+  }
+  .feature-blob-a {
+    animation: feature-blob-drift-a 22s ease-in-out infinite;
+  }
+  .feature-blob-b {
+    animation: feature-blob-drift-b 26s ease-in-out infinite;
+  }
+
+  /* Final CTA primary button — soft glow pulse */
+  @keyframes cta-glow-pulse {
+    0%,
+    100% {
+      box-shadow:
+        0 4px 14px -2px rgb(34 98 187 / 0.18),
+        0 0 0 0 rgb(56 170 144 / 0.35);
+    }
+    50% {
+      box-shadow:
+        0 10px 28px -6px rgb(56 170 144 / 0.42),
+        0 0 0 1px rgb(255 255 255 / 0.22);
+    }
+  }
+  .animate-cta-glow-pulse {
+    animation: cta-glow-pulse 2.75s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-booking-step-card {
+      position: relative !important;
+      top: auto !important;
+      z-index: auto !important;
+    }
+    .sticky-booking-step-item {
+      min-height: 0 !important;
+      padding-block: 1.25rem;
+    }
+    .sticky-booking-step-overlap {
+      margin-top: 0 !important;
+    }
+    .animate-logo-ticker {
+      animation: none;
+    }
+    .feature-blob-a,
+    .feature-blob-b {
+      animation: none;
+    }
+    .animate-cta-glow-pulse {
+      animation: none;
+    }
   }
 }
