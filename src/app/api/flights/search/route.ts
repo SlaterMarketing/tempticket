@@ -1,4 +1,5 @@
 import { getDuffel } from "@/lib/duffel";
+import { orderOffersHoldCheapestFirst } from "@/lib/flights/pick-best-hold-offer";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -73,9 +74,11 @@ export async function POST(req: Request) {
       payment_requirements: o.payment_requirements,
     }));
 
+    const offersOrdered = orderOffersHoldCheapestFirst(slim);
+
     return NextResponse.json({
       offer_request_id: res.data.id,
-      offers: slim,
+      offers: offersOrdered,
     });
   } catch (e) {
     console.error("Duffel search error", e);

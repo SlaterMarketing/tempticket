@@ -48,9 +48,12 @@ const STEPS = [
  */
 export function BookingProcessTimeline({
   heading = null,
+  afterLastStep = null,
 }: {
   /** Shown above step 1 inside the same sticky wrapper so the title moves with step 1. */
   heading?: ReactNode;
+  /** Shown below step 3 inside that step’s sticky wrapper (e.g. CTAs) so they stick and scroll with the card. */
+  afterLastStep?: ReactNode;
 }) {
   return (
     <ol className="relative m-0 w-full list-none p-0">
@@ -64,7 +67,9 @@ export function BookingProcessTimeline({
               "min-h-[calc(100dvh+min(40rem,68dvh))] md:min-h-[calc(100dvh+min(44rem,62dvh))]",
             i === 1 && "min-h-[min(124dvh,120rem)] md:min-h-[min(130dvh,130rem)]",
             i === 2 &&
-              "min-h-[min(124dvh,120rem)] md:min-h-[min(130dvh,130rem)]",
+              (afterLastStep
+                ? "min-h-[min(132dvh,125rem)] md:min-h-[min(138dvh,135rem)]"
+                : "min-h-[min(124dvh,120rem)] md:min-h-[min(130dvh,130rem)]"),
             i > 0 &&
               "sticky-booking-step-overlap -mt-[calc(100dvh-var(--booking-overlap-adjust,7.75rem))]",
             i === STEPS.length - 1 && LAST_STEP_TAIL,
@@ -121,6 +126,9 @@ export function BookingProcessTimeline({
                 </p>
               </div>
             </article>
+            {i === STEPS.length - 1 && afterLastStep ? (
+              <div className="mt-10 w-full md:mt-14">{afterLastStep}</div>
+            ) : null}
           </div>
         </li>
       ))}

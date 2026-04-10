@@ -439,22 +439,25 @@ export default function HomePage() {
                 </Reveal>
               </div>
             }
+            afterLastStep={
+              <Reveal
+                className="flex flex-wrap items-center justify-center gap-4"
+                delayMs={80}
+              >
+                <BookNowButton className="transition duration-200 hover:brightness-105 active:scale-[0.98]" />
+                <Link
+                  href="#faq"
+                  className={cn(
+                    buttonVariants({ size: "lg", variant: "outline" }),
+                    "inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-xl border-2 border-[color:var(--brand-blue)] bg-white/90 px-8 font-semibold text-[color:var(--brand-blue)] shadow-sm transition duration-200 hover:bg-white hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-surface-mint",
+                  )}
+                >
+                  Common questions
+                  <ChevronRight className="size-5 opacity-70" aria-hidden />
+                </Link>
+              </Reveal>
+            }
           />
-        </div>
-        <div className="mx-auto max-w-5xl px-4">
-          <Reveal className="mt-20 flex flex-wrap items-center justify-center gap-4 md:mt-28" delayMs={80}>
-            <BookNowButton className="transition duration-200 hover:brightness-105 active:scale-[0.98]" />
-            <Link
-              href="#faq"
-              className={cn(
-                buttonVariants({ size: "lg", variant: "outline" }),
-                "inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-xl border-2 border-[color:var(--brand-blue)] bg-white/90 px-8 font-semibold text-[color:var(--brand-blue)] shadow-sm transition duration-200 hover:bg-white hover:shadow-md active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-surface-mint",
-              )}
-            >
-              Common questions
-              <ChevronRight className="size-5 opacity-70" aria-hidden />
-            </Link>
-          </Reveal>
         </div>
       </section>
 

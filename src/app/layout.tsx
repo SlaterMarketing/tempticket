@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Real, verifiable flight reservations for onward-travel checks. Built for digital nomads.",
   icons: {
-    icon: "/tempticket.png",
+    icon: "/favicon.ico",
     apple: "/tempticket.png",
   },
 };
@@ -42,13 +42,13 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${jakarta.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="flex min-h-0 min-h-dvh flex-col bg-background text-foreground">
         <Providers>
           <SiteHeader
             email={session?.email ?? null}
             showAdmin={showAdmin}
           />
-          <div className="flex-1">{children}</div>
+          <div className="flex min-h-0 flex-1 flex-col">{children}</div>
           <Toaster richColors position="top-center" />
         </Providers>
       </body>

@@ -16,13 +16,21 @@ export function SiteHeader({
   showAdmin?: boolean;
 }) {
   const pathname = usePathname();
+  /** Full-bleed booking flow: no top nav (step chrome lives in the page). */
+  if (pathname === "/book" || pathname.startsWith("/book/")) {
+    return null;
+  }
+
   const isHome = pathname === "/";
+
+  /** Home: sticky + transparent still sits over the body’s white bg; absolute lets the page wash show through. */
+  const isFloatingNav = isHome;
 
   return (
     <header
       className={cn(
         "z-50",
-        isHome
+        isFloatingNav
           ? "absolute inset-x-0 top-0 border-0 bg-transparent"
           : "sticky top-0 border-b bg-background/80 backdrop-blur-sm",
       )}
@@ -71,7 +79,7 @@ export function SiteHeader({
                 href="/login"
                 className={cn(
                   "rounded-lg px-4 py-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
-                  isHome
+                  isFloatingNav
                     ? "text-[color:var(--brand-blue)] hover:text-[color:var(--brand-blue)]/75"
                     : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
                 )}
