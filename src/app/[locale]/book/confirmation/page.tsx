@@ -45,7 +45,7 @@ export default async function BookConfirmationPage({
   );
 
   return (
-    <div className="min-h-full w-full bg-subtle-how pb-16 pt-8 md:pb-24 md:pt-12">
+    <div className="min-h-screen w-full bg-subtle-how pb-16 pt-8 md:pb-24 md:pt-12">
       <div className="mx-auto max-w-lg px-4 md:max-w-xl">
         <Link
           href="/"
