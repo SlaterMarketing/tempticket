@@ -82,30 +82,17 @@ export function SiteHeader({
               </form>
             </>
           ) : (
-            <>
-              <Link
-                href="/login"
-                className={cn(
-                  "rounded-lg px-4 py-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
-                  isFloatingNav
-                    ? "text-[color:var(--brand-blue)] hover:text-[color:var(--brand-blue)]/75"
-                    : "text-muted-foreground hover:bg-muted/60 hover:text-foreground",
-                )}
-              >
-                {t("signIn")}
-              </Link>
-              <Link
-                href="/book"
-                className={cn(
-                  "rounded-full px-6 py-3 font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
-                  isHome
-                    ? "bg-[color:var(--brand-green)] text-white shadow-sm hover:bg-[color:var(--brand-green)]/90"
-                    : "text-muted-foreground hover:bg-muted/80 hover:text-foreground",
-                )}
-              >
-                {t("book")}
-              </Link>
-            </>
+            <Link
+              href="/book"
+              className={cn(
+                "rounded-full px-6 py-3 font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
+                isHome
+                  ? "bg-[color:var(--brand-green)] text-white shadow-sm hover:bg-[color:var(--brand-green)]/90"
+                  : "text-muted-foreground hover:bg-muted/80 hover:text-foreground",
+              )}
+            >
+              {t("book")}
+            </Link>
           )}
         </nav>
       </div>
