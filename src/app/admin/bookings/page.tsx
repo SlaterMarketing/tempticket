@@ -1,4 +1,5 @@
 import { serializeAdminSearchParams } from "@/app/admin/_lib/range";
+import { BookingActions } from "@/app/admin/bookings/_components/booking-actions";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -21,7 +22,7 @@ import { bookings, users } from "@/lib/db/schema";
 import { cn } from "@/lib/utils";
 import { desc, eq } from "drizzle-orm";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export default async function AdminBookingsPage({
   searchParams,
@@ -59,7 +60,10 @@ export default async function AdminBookingsPage({
       <Card>
         <CardHeader>
           <CardTitle>Queue</CardTitle>
-          <CardDescription>Most recent first</CardDescription>
+          <CardDescription>
+            Retry recreates the Duffel order (re-searches if the offer has
+            expired). Refund issues a Stripe refund and cancels the booking.
+          </CardDescription>
         </CardHeader>
         <CardContent className="overflow-x-auto">
           <Table>
@@ -70,6 +74,8 @@ export default async function AdminBookingsPage({
                 <TableHead>Status</TableHead>
                 <TableHead>Offer / order</TableHead>
                 <TableHead>Ref</TableHead>
+                <TableHead>Failure</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -82,7 +88,17 @@ export default async function AdminBookingsPage({
                     {userEmail ?? b.customerEmail ?? "—"}
                   </TableCell>
                   <TableCell>
-                    <Badge variant="outline">{b.status}</Badge>
+                    <Badge
+                      variant={
+                        b.status === "failed"
+                          ? "destructive"
+                          : b.status === "confirmed"
+                            ? "default"
+                            : "outline"
+                      }
+                    >
+                      {b.status}
+                    </Badge>
                   </TableCell>
                   <TableCell className="max-w-[200px] truncate font-mono text-xs">
                     {b.duffelOfferId}
@@ -90,6 +106,23 @@ export default async function AdminBookingsPage({
                   </TableCell>
                   <TableCell className="font-mono text-xs">
                     {b.duffelBookingRef ?? "—"}
+                  </TableCell>
+                  <TableCell className="max-w-[220px] text-xs text-muted-foreground">
+                    {b.failureReason ? (
+                      <span title={b.failureReason} className="line-clamp-2">
+                        {b.failureReason}
+                      </span>
+                    ) : (
+                      "—"
+                    )}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <BookingActions
+                      bookingId={b.id}
+                      status={b.status}
+                      stripePaymentStatus={b.stripePaymentStatus}
+                      duffelOrderId={b.duffelOrderId}
+                    />
                   </TableCell>
                 </TableRow>
               ))}

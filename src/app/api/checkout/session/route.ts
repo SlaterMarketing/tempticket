@@ -128,6 +128,25 @@ export async function POST(req: Request) {
         ? { analyticsVisitorId, analyticsSessionId }
         : {};
 
+    const offerSnapshot = {
+      slices: offer.slices.map((sl) => ({
+        origin: sl.origin.iata_code,
+        destination: sl.destination.iata_code,
+        departure_date: (sl.segments?.[0]?.departing_at ?? "").slice(0, 10),
+      })),
+      passengers: offer.passengers.map((p) => ({
+        id: p.id,
+        type: p.type,
+        age: "age" in p ? p.age ?? null : null,
+      })),
+      cabin_class:
+        offer.slices?.[0]?.segments?.[0]?.passengers?.[0]?.cabin_class ??
+        "economy",
+      total_amount: offer.total_amount,
+      total_currency: offer.total_currency,
+      owner: offer.owner?.iata_code ?? null,
+    };
+
     const inserted = await db()
       .insert(bookings)
       .values({
@@ -143,6 +162,7 @@ export async function POST(req: Request) {
           duffelOrderMode,
           offer_total_amount: offer.total_amount,
           offer_total_currency: offer.total_currency,
+          offer_snapshot: offerSnapshot,
           ...analyticsIds,
         },
       })
