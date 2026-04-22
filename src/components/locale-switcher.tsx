@@ -6,13 +6,22 @@ import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { useSearchParams } from "next/navigation";
 
+/** Overrides for locales where Intl.DisplayNames returns a less idiomatic native name. */
+const NATIVE_NAME_OVERRIDES: Record<string, string> = {
+  fil: "Filipino",
+  nb: "Norsk bokmål",
+  "pt-BR": "Português (Brasil)",
+  "zh-CN": "简体中文",
+  "zh-TW": "繁體中文",
+};
+
 function localeLabel(code: string): string {
+  if (NATIVE_NAME_OVERRIDES[code]) return NATIVE_NAME_OVERRIDES[code];
   try {
-    return (
-      new Intl.DisplayNames(["en"], { type: "language" }).of(
-        code === "fil" ? "fil" : code,
-      ) ?? code
-    );
+    const name = new Intl.DisplayNames([code], { type: "language" }).of(code);
+    if (!name) return code;
+    // Capitalise the first letter so e.g. "español" renders as "Español".
+    return name.charAt(0).toLocaleUpperCase(code) + name.slice(1);
   } catch {
     return code;
   }
