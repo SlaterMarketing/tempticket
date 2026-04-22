@@ -524,9 +524,6 @@ export default async function HomePage({
               {t("socialTitle")}
             </h2>
             <div className="heading-accent-bar" />
-            <p className="mx-auto mt-2 max-w-xl text-center text-xs text-muted-foreground">
-              {t("socialNote")}
-            </p>
             <div
               className="mt-5 flex justify-center gap-0.5"
               aria-hidden

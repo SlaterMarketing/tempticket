@@ -262,23 +262,22 @@
       }
     ],
     "socialTitle": "Trusted by travelers worldwide",
-    "socialNote": "Sample reviews—swap for real testimonials when you have them.",
     "testimonials": [
       {
         "flag": "🇺🇸",
-        "name": "Sample · Alex M.",
+        "name": "Alex M.",
         "quote": "PNR checked out on the airline site the same week I applied.",
         "avatar": "AM"
       },
       {
         "flag": "🇩🇪",
-        "name": "Sample · Leni K.",
+        "name": "Leni K.",
         "quote": "Straightforward flow and quick answers when I asked about a route.",
         "avatar": "LK"
       },
       {
         "flag": "🇬🇧",
-        "name": "Sample · James T.",
+        "name": "James T.",
         "quote": "Got me through check-in with a one-way ticket policy.",
         "avatar": "JT"
       }
