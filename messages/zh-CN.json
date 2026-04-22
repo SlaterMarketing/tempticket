@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — 游牧民族继续旅行的证明",
+    "defaultDescription": "用于后续旅行检查的真实、可验证的航班预订。专为数字游民打造。",
+    "homeTitle": "TempTicket — 游牧民族继续旅行的证明",
+    "homeDescription": "用于后续旅行检查的真实、可验证的航班预订。专为数字游民打造。",
+    "bookTitle": "预订 — TempTicket",
+    "bookDescription": "查找航班保留并完成您的续程旅行预订。",
+    "bookConfirmationTitle": "收到付款 — TempTicket",
+    "bookConfirmationDescription": "我们正在与航空公司确认您的预订。",
+    "loginTitle": "登录 — TempTicket",
+    "loginDescription": "使用 6 位数代码登录神奇链接即可查看您的预订。",
+    "bookingsTitle": "我的预订 — TempTicket",
+    "bookingsDescription": "您帐户的订单和航空公司参考信息。",
+    "termsTitle": "服务条款 — TempTicket",
+    "termsDescription": "TempTicket 服务条款。",
+    "privacyTitle": "隐私 — TempTicket",
+    "privacyDescription": "TempTicket 如何处理个人数据。"
+  },
+  "SiteHeader": {
+    "brandAlt": "临时票",
+    "myBookings": "我的预订",
+    "admin": "管理",
+    "signOut": "退出",
+    "signIn": "登录",
+    "book": "书籍"
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "语言",
+    "language": "语言"
+  },
+  "PlaceAutocomplete": {
+    "searching": "正在搜索...",
+    "empty": "未找到地点。尝试其他拼写或城市。",
+    "city": "城市",
+    "airport": "机场",
+    "couldNotSearch": "无法搜索地点。"
+  },
+  "BookingTimeline": {
+    "stepLabel": "步骤{step}",
+    "steps": [
+      {
+        "label": "01",
+        "title": "输入您的信息",
+        "body": "路线、日期和乘客详细信息。"
+      },
+      {
+        "label": "02",
+        "title": "付款",
+        "body": "安全结账——预先定价。"
+      },
+      {
+        "label": "03",
+        "title": "获取参考",
+        "body": "在航空公司上线时进行验证。"
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "从建议中选择出发地和目的地",
+    "toastSearchFailed": "搜索失败",
+    "toastNoPayLater": "此搜索没有后付费票价 - 请尝试其他日期或机场。",
+    "toastOfferExpired": "优惠已过期—重新搜索",
+    "toastPassengerSlots": "无法加载此优惠的乘客时段",
+    "toastLoadOffer": "无法加载报价",
+    "toastCompleteFields": "填写所有乘客字段",
+    "toastPhoneInvalid": "输入有效的电话号码",
+    "toastReceiptEmail": "输入预订和收据的电子邮件",
+    "toastEmailInvalid": "输入有效的电子邮件地址",
+    "toastCheckoutServerError": "结账失败（服务器错误{status}）",
+    "toastCheckoutFailed": "结账失败（{status}）",
+    "toastNoPaymentLink": "结帐未返回付款链接",
+    "toastCheckoutConnection": "结帐失败 - 检查您的连接并重试",
+    "back": "返回",
+    "title": "预订",
+    "stepFindTitle": "查找航班",
+    "stepFindDescription": "键入城市、国家或机场名称。",
+    "from": "来自",
+    "to": "至",
+    "placePlaceholder": "城市、国家或机场",
+    "swapAria": "交换出发地和目的地",
+    "swapTitle": "交换出发地和目的地",
+    "departureDate": "出发日期",
+    "searchBlurb": "我们首先搜索后付费票价——在您支付我们的小额服务费后完成航空公司预订。",
+    "searching": "搜索...",
+    "findingFare": "查找票价...",
+    "searchFlights": "搜索航班",
+    "stepPayTitle": "乘客详细信息和付款",
+    "stepPayDescription": "姓名必须与旅行证件相符。",
+    "passenger": "乘客{index}",
+    "genderLabel": "性别（与护照上相同）",
+    "genderM": "M",
+    "genderF": "F",
+    "dob": "出生日期",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "电子邮件",
+    "emailPlaceholder": "you@example.com",
+    "emailHint": "用于您的航空公司预订以及付款收据和确认。",
+    "phone": "电话",
+    "dialCodeAria": "国家/地区电话代码",
+    "phonePlaceholder": "812 345 678",
+    "payInLabel": "支付服务费",
+    "preparingCheckout": "准备结帐...",
+    "payButton": "支付服务费和预订",
+    "demoOriginLabel": "素万那普机场 (BKK) · 曼谷, 泰国",
+    "demoDestinationLabel": "吉隆坡国际机场 (KUL) · 雪邦，马来西亚"
+  },
+  "BookConfirmation": {
+    "backHome": "返回首页",
+    "badge": "已收到付款",
+    "title": "我们正在努力",
+    "body": "我们正在与航空公司确认您的航班预订。您很快就会收到一封包含预订详细信息的电子邮件。",
+    "detail": "检查您的收件箱（和垃圾邮件）以进行确认。当您需要继续旅行的证明时，请使用承运商网站上的航空公司参考信息。",
+    "bookAnother": "另外预订",
+    "signInHistory": "登录历史记录"
+  },
+  "Login": {
+    "title": "登录",
+    "description": "登录以查看链接到您的帐户或电子邮件的预订。我们发送一个 6 位代码——无密码。",
+    "email": "电子邮件",
+    "sendCode": "发送代码",
+    "codeLabel": "6 位代码",
+    "verify": "验证",
+    "differentEmail": "使用不同的电子邮件",
+    "toastSendFailed": "无法发送代码",
+    "toastCodeSent": "检查您的电子邮件中是否有 6 位数代码",
+    "toastInvalid": "代码无效",
+    "toastSignedIn": "已登录"
+  },
+  "LoginPage": {
+    "loading": "加载中..."
+  },
+  "Bookings": {
+    "title": "我的预订",
+    "subtitle": "与您的帐户绑定的预订或在您登录之前使用此电子邮件进行的预订。付款后，我们会通过电子邮件向您发送航空公司参考信息。",
+    "newBooking": "新预订",
+    "orders": "订单",
+    "ordersDescription": "当您需要继续旅行的证明时，请使用承运商网站上的航空公司参考信息。",
+    "empty": "尚未预订。",
+    "colCreated": "已创建",
+    "colStatus": "状态",
+    "colAirline": "航空公司",
+    "colReference": "参考",
+    "colMode": "模式",
+    "needsAttention": "需要注意",
+    "needsAttentionDescription": "如果付款后预订失败，请提供 ID 和 Stripe 收据联系支持人员。"
+  },
+  "Terms": {
+    "title": "服务条款",
+    "lead": "最后更新时间：2026 年 4 月。这些条款仅作为入门模板 - 在邀请付费客户之前请有资格的律师对其进行审查。",
+    "serviceHeading": "服务",
+    "serviceBody": "TempTicket 提供付费服务，通过我们的预订合作伙伴为需要续程旅行文件的旅客安排真实的航班预订。我们不保证任何特定的移民或航空公司结果。官员和承运人应用他们自己的规则。",
+    "legalHeading": "并非法律建议",
+    "legalBody": "本网站上的任何内容均不构成法律、移民或税务建议。遵守适用于您的业务以及您营销和销售所在司法管辖区的法律和许可。",
+    "paymentsHeading": "付款和退款",
+    "paymentsBody": "服务费在结账时收取。如果成功付款后我们无法完成预订流程，我们将根据我们发布的政策与您合作退款或替代报价。当按照描述提供服务时，退款可能会受到争议。",
+    "useHeading": "可接受的使用",
+    "useBody": "您不得使用该服务向政府或航空公司歪曲旅行意图、测试被盗的支付方式或以任何违反供应商条款或适用法律的方式。",
+    "liabilityHeading": "有限责任",
+    "liabilityBody": "在法律允许的最大范围内，TempTicket 不对因使用服务而导致的拒绝登机、拒绝入境、错过转机或间接损害承担责任。"
+  },
+  "Privacy": {
+    "title": "隐私",
+    "summary": "摘要：我们处理电子邮件和旅行相关的个人数据以运行帐户、预订和强制收据。让顾问将此页面与您的实际数据映射（Neon、Resend、Stripe、Duffel、托管）对齐。",
+    "collectHeading": "我们收集什么",
+    "collectItems": [
+      "用于登录的电子邮件地址和会话令牌",
+      "航空公司要求的乘客姓名、出生日期、联系方式",
+      "来自我们的支付处理器的支付元数据",
+      "运行和调试服务所需的技术日志"
+    ],
+    "whyHeading": "我们为何处理它",
+    "whyBody": "履行我们与您签订的合同，遵守适用的法律义务，并追求与您的权利相平衡的合法利益（安全、欺诈预防、产品改进）。",
+    "processorsHeading": "处理器",
+    "processorsBody": "基础设施和供应商可能包括数据库托管（例如 Neon）、电子邮件发送（例如 Resend）、支付（例如 Stripe）和航班预订（Duffel 和航空公司）。他们的术语也适用于他们执行的处理部分。",
+    "retentionHeading": "保留",
+    "retentionBody": "我们根据支持、会计和法律保留的需要保留预订和账单记录（通常是几年，而不是几周），但确切的时间表应符合您的政策。",
+    "rightsHeading": "权利",
+    "rightsBody": "根据您所在的地区，您可能有权访问、更正、删除或反对某些处理。通过您为您的企业发布的地址联系我们；我们将依法核实请求。"
+  },
+  "Toasts": {
+    "paymentSuccess": "付款成功。",
+    "bookingsSuccess": "付款已收到。您的预订很快就会更新。"
+  },
+  "BackToTop": {
+    "ariaLabel": "返回顶部"
+  },
+  "Home": {
+    "bookNow": "立即预订",
+    "heroBadge": "实时预订",
+    "heroHeadingLead": "航班预订",
+    "heroHeadingAccent": "几分钟内验证",
+    "heroSub": "您可以在航空公司网站上验证真实的航班预订。游牧民族无压力旅行。",
+    "howItWorks": "工作原理",
+    "trustStats": [
+      {
+        "stat": "分钟",
+        "label": "航空公司合作时的典型转变"
+      },
+      {
+        "stat": "真实 PNR",
+        "label": "发出后在承运商处查找"
+      },
+      {
+        "stat": "24/7",
+        "label": "当事物需要人类时提供支持"
+      }
+    ],
+    "featuresTitle": "让您安心所需的一切",
+    "featuresSub": "快速、可验证的继续旅行证明——无需担心购买不会使用的机票。",
+    "features": [
+      {
+        "title": "真实的预订",
+        "body": "确认通过后的真实航空公司记录，而不是装饰性 PDF。"
+      },
+      {
+        "title": "即时交付",
+        "body": "大多数流程都能快速完成，因此您可以在当天附上证明。"
+      },
+      {
+        "title": "运营商可验证",
+        "body": "当有人询问时，使用航空公司的工具提取预订。"
+      },
+      {
+        "title": "省钱",
+        "body": "支付少量服务费，而不是可退还的长途票价。"
+      },
+      {
+        "title": "灵活的计划",
+        "body": "当您的行程发生变化时，在航空公司政策窗口内调整日期。"
+      },
+      {
+        "title": "人力支持",
+        "body": "卡住的票价和边缘情况可以从队列中升级到我们的团队。"
+      }
+    ],
+    "processTitle": "简单的预订流程",
+    "commonQuestions": "常见问题",
+    "personasTitle": "非常适合",
+    "personas": [
+      {
+        "title": "签证申请人",
+        "body": "当领事馆需要行程时，不一定是付费票价。"
+      },
+      {
+        "title": "常旅客",
+        "body": "为执行返程/续程规则的航空公司提供的重复证明。"
+      },
+      {
+        "title": "旅客",
+        "body": "边境和承运人检查的简单验证故事。"
+      },
+      {
+        "title": "数字游牧民族",
+        "body": "保持灵活性，无需将钱停放在未使用的长途票价中。"
+      }
+    ],
+    "socialTitle": "受到世界各地旅行者的信赖",
+    "socialNote": "示例评论——当您拥有真实的推荐时，可以将其替换。",
+    "testimonials": [
+      {
+        "flag": "🇺🇸",
+        "name": "样本 · Alex M.",
+        "quote": "PNR 在我申请的同一周在航空公司网站上查看。",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪",
+        "name": "样本·Leni K.",
+        "quote": "当我询问路线时，流程简单，答案快速。",
+        "avatar": "LK"
+      },
+      {
+        "flag": "🇬🇧",
+        "name": "样本·詹姆斯·T.",
+        "quote": "让我通过单程票政策办理登机手续。",
+        "avatar": "JT"
+      }
+    ],
+    "visaTitle": "获得签证时更加灵活",
+    "visaBody": "许多任务描述接受行程或预订而不是全额付款的机票。在官方网站上确认您的情况 - 我们提供真实的预订，您可以在等待时验证。",
+    "visaSteps": [
+      {
+        "n": "1",
+        "title": "阅读官方清单",
+        "body": "大使馆各有不同——有些需要预订，有些则需要机票。从他们的页面开始，而不是博客。"
+      },
+      {
+        "n": "2",
+        "title": "将日期与您的故事相匹配",
+        "body": "选择与您提交的申请完全一致的路线和时间。"
+      },
+      {
+        "n": "3",
+        "title": "向航空公司核实",
+        "body": "如果记录是实时的，请在预约前练习将其调到运营商的网站上。"
+      }
+    ],
+    "embassyPublish": "大使馆发布的内容",
+    "embassyFigures": [
+      {
+        "quote": "返程机票预订，无需在签证获批前购买机票...",
+        "caption": "公共大使馆常见问题解答主题（挪威）"
+      },
+      {
+        "quote": "航空公司预订...带有旅行预订号码...不一定是出票预订。",
+        "caption": "公共申根指南的主题（西班牙）"
+      },
+      {
+        "quote": "可验证的航班预订……不是购买的机票。",
+        "caption": "公共签证信息的主题（印度）"
+      }
+    ],
+    "faqTitle": "您需要帮助吗？",
+    "faqFooter": "还有问题吗？开始预订——我们会在您出发时显示时间安排和承运人备注。",
+    "faqItems": [
+      {
+        "q": "什么是临时票？",
+        "a": "一项服务，可帮助您获得真实、可验证的航班预订（航空公司确认时提供预订参考号），以用于续程旅行和签证情况，而无需支付您可能无法使用的全额票价。"
+      },
+      {
+        "q": "预订的有效期是多长？",
+        "a": "有效性取决于航空公司的票价规则、保留政策或出票时间表。我们在预订时会尽可能地展示；请务必根据大使馆或承运人的要求确认时间。"
+      },
+      {
+        "q": "我可以在航空公司网站上验证吗？",
+        "a": "当航空公司发布实时记录时，您通常可以在他们的管理预订或检查我的行程流程中查找该记录。如果某条路线不符合保留条件，您可能需要一张即时机票。"
+      },
+      {
+        "q": "这是法律建议还是签证保证？",
+        "a": "否。移民规则因国家和官员而异。我们仅提供预订服务——请查看官方渠道了解您的情况。"
+      }
+    ],
+    "ctaTitle": "旅行已经够辛苦的了。使后续证明变得更容易",
+    "ctaPriceLine": "从 {price} · 分钟开始，不是猜测",
+    "footerTagline": "游牧民族继续旅行证明",
+    "footerServices": "服务",
+    "footerAccount": "账户",
+    "footerLegal": "法律",
+    "footerBook": "预订",
+    "footerSignIn": "登录",
+    "footerMyBookings": "我的预订",
+    "footerTerms": "条款",
+    "footerPrivacy": "隐私",
+    "footerCopyright": "保留所有权利。",
+    "footerBackTop": "返回顶部",
+    "ticketFrom": "起价：{price}",
+    "ticketDeparture": "出发",
+    "ticketArrival": "到达",
+    "ticketBangkok": "曼谷",
+    "ticketTokyo": "东京",
+    "ticketPassenger": "乘客",
+    "ticketPassengerVal": "游牧者 · 1 名成人",
+    "ticketRecord": "记录定位器",
+    "ticketVerified": "已验证"
+  }
+}

@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket – tolimesnės kelionės įrodymas klajokliams ",
+    "defaultDescription": "Tikra, patikrinama skrydžio rezervacija tolesniems kelionės patikrinimams. Sukurta skaitmeniniams klajokliams. ",
+    "homeTitle": "TempTicket – tolimesnės kelionės įrodymas klajokliams ",
+    "homeDescription": "Tikra, patikrinama skrydžio rezervacija tolesniems kelionės patikrinimams. Sukurta skaitmeniniams klajokliams. ",
+    "bookTitle": "Rezervuoti — TempTicket ",
+    "bookDescription": "Raskite sulaikytą skrydį ir užpildykite kelionės rezervaciją. ",
+    "bookConfirmationTitle": "Mokėjimas gautas — TempTicket ",
+    "bookConfirmationDescription": "Patvirtiname jūsų rezervaciją aviakompanijoje. ",
+    "loginTitle": "Prisijungti — TempTicket ",
+    "loginDescription": "Magiška nuoroda prisijunkite naudodami 6 skaitmenų kodą, kad galėtumėte peržiūrėti savo užsakymus. ",
+    "bookingsTitle": "Mano užsakymai — TempTicket ",
+    "bookingsDescription": "Jūsų paskyros užsakymai ir oro linijų nuorodos.",
+    "termsTitle": "Paslaugų teikimo sąlygos — TempTicket ",
+    "termsDescription": "TempTicket paslaugų teikimo sąlygos. ",
+    "privacyTitle": "Privatumas — TempTicket ",
+    "privacyDescription": "Kaip TempTicket apdoroja asmens duomenis. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Mano užsakymai ",
+    "admin": "Administratorius ",
+    "signOut": "Atsijunkite ",
+    "signIn": "Prisijunkite ",
+    "book": "Knyga "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Kalba ",
+    "language": "Kalba"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Ieškoma... ",
+    "empty": "Vietų nerasta. Pabandykite kitą rašybą arba miestą. ",
+    "city": "Miestas ",
+    "airport": "Oro uostas ",
+    "couldNotSearch": "Nepavyko ieškoti vietų. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Žingsnis {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Įveskite savo informaciją ",
+        "body": "Maršrutas, datos ir keleivio informacija. "
+      },
+      {
+        "label": "02 ",
+        "title": "Sumokėkite ",
+        "body": "Saugus atsiskaitymas – išankstinė kaina."
+      },
+      {
+        "label": "03 ",
+        "title": "Gaukite savo nuorodą ",
+        "body": "Pasitikrinkite aviakompanijoje, kada ji yra tiesioginė. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Iš pasiūlymų pasirinkite kilmę ir kelionės tikslą ",
+    "toastSearchFailed": "Paieška nepavyko ",
+    "toastNoPayLater": "Šioje paieškoje nėra mokamų vėliau bilietų – išbandykite kitas datas arba oro uostus. ",
+    "toastOfferExpired": "Pasiūlymas pasibaigęs – ieškokite dar kartą ",
+    "toastPassengerSlots": "Nepavyko įkelti keleivių vietų šiam pasiūlymui ",
+    "toastLoadOffer": "Nepavyko įkelti pasiūlymo ",
+    "toastCompleteFields": "Užpildykite visus keleivių laukelius ",
+    "toastPhoneInvalid": "Įveskite galiojantį telefono numerį ",
+    "toastReceiptEmail": "Įveskite užsakymo ir kvito el. pašto adresą",
+    "toastEmailInvalid": "Įveskite galiojantį el. pašto adresą ",
+    "toastCheckoutServerError": "Patikra nepavyko (serverio klaida {status}) ",
+    "toastCheckoutFailed": "Pasiregistruoti nepavyko ({status}) ",
+    "toastNoPaymentLink": "Checkout nepateikė mokėjimo nuorodos ",
+    "toastCheckoutConnection": "Patikra nepavyko – patikrinkite ryšį ir bandykite dar kartą ",
+    "back": "Atgal ",
+    "title": "Užsisakykite rezervaciją ",
+    "stepFindTitle": "Rasti skrydį ",
+    "stepFindDescription": "Įveskite miesto, šalies arba oro uosto pavadinimą. ",
+    "from": "Nuo ",
+    "to": "Kam ",
+    "placePlaceholder": "Miestas, šalis arba oro uostas",
+    "swapAria": "Sukeisti kilmę ir paskirties vietą ",
+    "swapTitle": "Sukeisti kilmę ir paskirties vietą ",
+    "departureDate": "Išvykimo data ",
+    "searchBlurb": "Pirmiausia ieškome bilietų „mokėti vėliau“ – užbaikite oro linijų užsakymą, kai sumokėsite nedidelį aptarnavimo mokestį. ",
+    "searching": "Ieškoma... ",
+    "findingFare": "Rasti bilieto kainą... ",
+    "searchFlights": "Ieškoti skrydžių ",
+    "stepPayTitle": "Keleivių duomenys ir mokėjimas ",
+    "stepPayDescription": "Vardai turi atitikti kelionės dokumentus. ",
+    "passenger": "Keleivis {index} ",
+    "genderLabel": "Lytis (kaip nurodyta pase) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Gimimo data ",
+    "firstName": "Vardas (-ai) ",
+    "lastName": "Pavardė (-ės) ",
+    "email": "El ",
+    "emailPlaceholder": "jūs@example.com ",
+    "emailHint": "Naudojama oro linijų užsakyme ir mokėjimo kvitui bei patvirtinimui. ",
+    "phone": "Telefonas ",
+    "dialCodeAria": "Šalies iškvietimo kodas ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Sumokėkite paslaugos mokestį ",
+    "preparingCheckout": "Ruošiamas atsiskaitymas...",
+    "payButton": "Mokėkite paslaugos mokestį ir rezervuokite ",
+    "demoOriginLabel": "Suvarnabhumi oro uostas (BKK) · Bankokas, Tailandas ",
+    "demoDestinationLabel": "Kvala Lumpūro tarptautinis oro uostas (KUL) · Sepangas, Malaizija "
+  },
+  "BookConfirmation": {
+    "backHome": "Grįžti į namus ",
+    "badge": "Mokėjimas gautas ",
+    "title": "Mes tuo užsiimame ",
+    "body": "Patvirtiname jūsų skrydžio rezervaciją aviakompanijoje. Netrukus gausite el. laišką su išsamia užsakymo informacija. ",
+    "detail": "Patikrinkite gautuosius (ir šlamštą), kad gautumėte patvirtinimą. Jei reikia tolesnio kelionės įrodymo, naudokite oro linijų nuorodą vežėjo svetainėje. ",
+    "bookAnother": "Užsisakykite kitą ",
+    "signInHistory": "Prisijunkite prie istorijos "
+  },
+  "Login": {
+    "title": "Prisijunkite ",
+    "description": "Prisijunkite, kad pamatytumėte užsakymus, susietus su jūsų paskyra arba el. paštu. Siunčiame 6 skaitmenų kodą – be slaptažodžio.",
+    "email": "El ",
+    "sendCode": "Siųsti kodą ",
+    "codeLabel": "6 skaitmenų kodas ",
+    "verify": "Patikrinkite ",
+    "differentEmail": "Naudokite kitą el. pašto adresą ",
+    "toastSendFailed": "Nepavyko išsiųsti kodo ",
+    "toastCodeSent": "Patikrinkite el. paštą, ar nėra 6 skaitmenų kodo ",
+    "toastInvalid": "Neteisingas kodas ",
+    "toastSignedIn": "Prisijungęs "
+  },
+  "LoginPage": {
+    "loading": "Įkeliama... "
+  },
+  "Bookings": {
+    "title": "Mano užsakymai ",
+    "subtitle": "Užsakymai, susieti su jūsų paskyra arba atlikti naudojant šį el. laišką prieš jums prisijungiant. Sumokėję el. paštu atsiųsime jums oro linijų nuorodą.",
+    "newBooking": "Naujas užsakymas ",
+    "orders": "Įsakymai ",
+    "ordersDescription": "Naudokite oro linijų nuorodą vežėjo svetainėje, kai jums reikia tolimesnės kelionės įrodymo. ",
+    "empty": "Dar nėra užsakymų. ",
+    "colCreated": "Sukurta ",
+    "colStatus": "Būsena ",
+    "colAirline": "Aviakompanija ",
+    "colReference": "Nuoroda ",
+    "colMode": "Režimas ",
+    "needsAttention": "Reikia dėmesio ",
+    "needsAttentionDescription": "Jei užsakymas nepavyko po apmokėjimo, susisiekite su palaikymo tarnyba ir nurodykite ID ir Stripe kvitą. "
+  },
+  "Terms": {
+    "title": "Paslaugų teikimo sąlygos",
+    "lead": "Paskutinį kartą atnaujinta: 2026 m. balandžio mėn. Šios sąlygos yra tik pradedančiųjų šablonas – prieš pakviesdami mokančius klientus, paprašykite kvalifikuoto patarėjo jas peržiūrėti. ",
+    "serviceHeading": "Paslauga ",
+    "serviceBody": "TempTicket suteikia mokamą paslaugą, leidžiančią organizuoti tikrą skrydžio rezervavimą per mūsų užsakymo partnerius keliautojams, kuriems reikia tolesnių kelionių dokumentų. Mes negarantuojame jokių konkrečių imigracijos ar oro linijų rezultatų. Pareigūnai ir vežėjai taiko savo taisykles. ",
+    "legalHeading": "Ne teisinė konsultacija ",
+    "legalBody": "Niekas šioje svetainėje nėra legalus, imigracijos ar mokesčių konsultacijos. Laikykitės įstatymų ir licencijų, taikomų jūsų verslui ir jurisdikcijoms, kuriose prekiaujate ir parduodate. ",
+    "paymentsHeading": "Mokėjimai ir pinigų grąžinimas ",
+    "paymentsBody": "Paslaugų mokesčiai renkami atsiskaitant. Jei negalėsime užbaigti užsakyto srauto po sėkmingo apmokėjimo, dirbsime su jumis dėl pinigų grąžinimo arba alternatyvaus pasiūlymo pagal paskelbtą politiką. Mokesčių grąžinimas gali būti užginčytas, kai paslauga buvo suteikta taip, kaip aprašyta. ",
+    "useHeading": "Priimtinas naudojimas ",
+    "useBody": "Negalite naudoti šios paslaugos siekdami klaidingai vyriausybei ar oro linijoms pateikti kelionės ketinimų, išbandyti pavogtus mokėjimo būdus arba bet kokiu būdu, pažeidžiančiu tiekėjo sąlygas ar taikomus įstatymus. ",
+    "liabilityHeading": "Ribota atsakomybė ",
+    "liabilityBody": " Tiek, kiek leidžia įstatymai, TempTicket nėra atsakinga už atsisakymą vežti, neįsileisti, praleistą persėdimą ar netiesioginę žalą, atsiradusią dėl naudojimosi paslauga. "
+  },
+  "Privacy": {
+    "title": "Privatumas",
+    "summary": " Santrauka: apdorojame el. pašto ir su kelionėmis susijusius asmens duomenis, kad galėtume vykdyti sąskaitas, užsakymus ir privalomus kvitus. Paprašykite patarėjo suderinti šį puslapį su jūsų faktinių duomenų žemėlapiu (Neon, Resend, Stripe, Duffel, Hostingas). ",
+    "collectHeading": "Ką mes renkame ",
+    "collectItems": [
+      "El. pašto adresas ir prisijungimo seanso žetonai ",
+      "Keleivių vardai, gimimo datos, kontaktiniai duomenys, kurių reikalauja oro linijos ",
+      "Mokėjimų metaduomenys iš mūsų mokėjimų apdorojimo priemonės ",
+      "Techniniai žurnalai, reikalingi paslaugai valdyti ir derinti "
+    ],
+    "whyHeading": "Kodėl mes tai apdorojame ",
+    "whyBody": "Siekdami vykdyti sutartį su jumis, laikytis teisinių įsipareigojimų, kur jie taikomi, ir siekti teisėtų interesų (saugumo, sukčiavimo prevencijos, produkto tobulinimo), suderintų su jūsų teisėmis. ",
+    "processorsHeading": "Procesoriai ",
+    "processorsBody": "Infrastruktūra ir tiekėjai gali apimti duomenų bazių prieglobą (pvz., „Neon“, el. laiškų pristatymą (pvz., pakartotinį siuntimą), mokėjimus (pvz., „Stripe“) ir skrydžių rezervavimą („Duffel“ ir oro linijos). Jų sąlygos taip pat taikomos jų atliekamoms apdorojimo dalims. ",
+    "retentionHeading": "Išlaikymas ",
+    "retentionBody": "Saugome rezervavimo ir atsiskaitymo įrašus, jei reikia pagalbos, apskaitos ir teisinių sulaikymų – paprastai metų, o ne savaičių –, tačiau tikslūs tvarkaraščiai turi atitikti jūsų politiką.",
+    "rightsHeading": "Teisės ",
+    "rightsBody": "Priklausomai nuo jūsų regiono, galite turėti teises pasiekti, taisyti, ištrinti arba prieštarauti tam tikram apdorojimui. Susisiekite su mumis adresu, kurį skelbiate savo verslui; mes patikrinsime prašymus pagal įstatymus. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Mokėjimas sėkmingas. ",
+    "bookingsSuccess": "Mokėjimas gautas. Jūsų užsakymas bus atnaujintas akimirksniu. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Atgal į viršų "
+  },
+  "Home": {
+    "bookNow": "Užsisakykite dabar ",
+    "heroBadge": "Tiesioginės rezervacijos ",
+    "heroHeadingLead": "Skrydžio užsakymas ",
+    "heroHeadingAccent": "patvirtinama per minutes ",
+    "heroSub": "Realus skrydžių rezervacijas galite patikrinti oro linijų svetainėje. Kelionės be streso klajokliams. ",
+    "howItWorks": "Kaip tai veikia ",
+    "trustStats": [
+      {
+        "stat": "Protokolas",
+        "label": "Tipinis posūkis, kai oro linijos bendradarbiauja "
+      },
+      {
+        "stat": "Tikras PNR ",
+        "label": "Išdavus, pasidomėkite vežėju "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Parama, kai kažkam reikia žmogaus "
+      }
+    ],
+    "featuresTitle": "Viskas, ko reikia ramybei ",
+    "featuresSub": "Greitas, patikrinamas tolimesnės kelionės įrodymas – nesirūpindami pirkti bilietą, kurio nenaudosite. ",
+    "features": [
+      {
+        "title": "Autentiškos išlygos ",
+        "body": "Tikras oro linijų įrašas, kai gaunamas patvirtinimas, o ne dekoratyvinis PDF. "
+      },
+      {
+        "title": "Momentinis pristatymas ",
+        "body": "Dauguma srautų baigiami greitai, todėl tą pačią dieną galite pridėti įrodymą. "
+      },
+      {
+        "title": "Patikrinamas vežėjas",
+        "body": "Naudokite oro linijų įrankius, kad atšauktumėte užsakymą, kai kas nors to paklaus. "
+      },
+      {
+        "title": "Taupykite pinigų ",
+        "body": "Mokėkite nedidelį paslaugos mokestį vietoj grąžinamo tolimųjų reisų bilieto. "
+      },
+      {
+        "title": "Lankstūs planai ",
+        "body": "Koreguokite datas, kada pasikeičia jūsų maršrutas – oro linijų politikos lange. "
+      },
+      {
+        "title": "Žmogaus parama ",
+        "body": "Įstrigusios bilietų kainos ir ypatingi atvejai gali patekti į mūsų komandą iš eilės. "
+      }
+    ],
+    "processTitle": "Paprastas užsakymo procesas ",
+    "commonQuestions": "Dažniausi klausimai ",
+    "personasTitle": " puikiai tinka ",
+    "personas": [
+      {
+        "title": "Prašytojai dėl vizos ",
+        "body": "Kai konsulatai nori kelionės maršruto, nebūtinai mokamo bilieto."
+      },
+      {
+        "title": "Dažnai skraidantys asmenys ",
+        "body": "Pakartotinas įrodymas oro linijų bendrovėms, kurios vykdo grąžinimo/perskridimo taisykles. "
+      },
+      {
+        "title": "Keliautojai ",
+        "body": "Paprasta pasienio ir vežėjo patikrinimų istorija. "
+      },
+      {
+        "title": "Skaitmeniniai klajokliai ",
+        "body": "Būkite lankstūs be pinigų už stovėjimą nepanaudotose tolimųjų reisų kainose. "
+      }
+    ],
+    "socialTitle": "Pasitikimas keliautojų visame pasaulyje ",
+    "socialNote": "Apžvalgų pavyzdžiai – pakeiskite tikrus atsiliepimus, kai juos turite. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Pavyzdys · Aleksas M. ",
+        "quote": "PNR išsiregistravo oro linijų svetainėje tą pačią savaitę, kai kreipiausi. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Pavyzdys · Leni K. ",
+        "quote": "Tiesus srautas ir greiti atsakymai, kai paklausiau apie maršrutą. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Pavyzdys · James T. ",
+        "quote": "Pavyko užsiregistruoti taikydamas bilietą į vieną pusę. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Didesnis lankstumas ginant vizą ",
+    "visaBody": "Daugelis misijų apibūdina kelionės maršruto ar rezervacijos priėmimą, o ne visiškai apmokėtą bilietą. Patvirtinkite oficialioje savo atvejo svetainėje – pateikiame tikrą rezervaciją, kurią galite patvirtinti laukdami. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Perskaitykite oficialų kontrolinį sąrašą",
+        "body": "Ambasados ​​skiriasi – vienos nori rezervacijos, kitos bilieto. Pradėkite nuo jų puslapio, o ne nuo tinklaraščio. "
+      },
+      {
+        "n": "2 ",
+        "title": "Suderinkite datas su savo istorija ",
+        "body": "Pasirinkite maršrutą ir laiką, kuris puikiai atitiktų jūsų pateikiamą paraišką. "
+      },
+      {
+        "n": "3 ",
+        "title": "Patikrinkite aviakompanijoje ",
+        "body": "Jei įrašas yra tiesioginis, prieš susitikdami pasimokykite jį pasiimti operatoriaus svetainėje. "
+      }
+    ],
+    "embassyPublish": "Ką ambasados skelbia ",
+    "embassyFigures": [
+      {
+        "quote": "Rezervuoti bilietą atgal, nereikia pirkti bilieto prieš suteikiant vizą... ",
+        "caption": "Tema iš viešosios ambasados DUK (Norvegija) "
+      },
+      {
+        "quote": "Oro linijų rezervacija... su kelionės rezervacijos numeriu... nebūtinai bilietų rezervacija. ",
+        "caption": "Tema iš viešųjų Šengeno gairių (Ispanija)"
+      },
+      {
+        "quote": "Patikrinama skrydžio rezervacija... ne pirktas bilietas. ",
+        "caption": "Tema iš viešosios informacijos apie vizas (Indija) "
+      }
+    ],
+    "faqTitle": "Ar jums reikia pagalbos? ",
+    "faqFooter": "Daugiau klausimų? Pradėkite rezervavimą – jums vykstant pateikiame laiko ir operatoriaus pastabas. ",
+    "faqItems": [
+      {
+        "q": "Kas yra TempTicket? ",
+        "a": "Paslauga, padedanti gauti tikrą, patikrinamą skrydžio rezervaciją (su užsakymo nuoroda, kai aviakompanija tai patvirtina) tolimesnės kelionės ir vizos scenarijams – nemokėdami už visą bilieto kainą, negalite naudotis. "
+      },
+      {
+        "q": "Kiek laiko galioja rezervacija? ",
+        "a": "Galiojimo laikas priklauso nuo oro linijų bilietų kainų taisyklių, sulaikymo politikos arba bilietų pardavimo laiko juostos. Užsakymo metu pateikiame tai, ką galime; visada patvirtinkite laiką, atitinkantį jūsų ambasados ​​ar vežėjo reikalavimus. "
+      },
+      {
+        "q": "Ar galiu tai patikrinti oro linijų svetainėje? ",
+        "a": "Kai oro linijų bendrovė išduoda tiesioginį įrašą, paprastai galite jį peržiūrėti jų valdymo užsakymo arba tikrinti mano kelionę sraute. Jei maršrutas netinkamas sulaikyti, jums gali prireikti momentinio bilieto. "
+      },
+      {
+        "q": "Ar tai teisinė konsultacija ar vizos garantija? ",
+        "a": "Nr. Imigracijos taisyklės keičiasi priklausomai nuo šalies ir pareigūno. Teikiame tik rezervavimo paslaugą – patikrinkite savo situaciją oficialiuose šaltiniuose."
+      }
+    ],
+    "ctaTitle": "Keliauti pakankamai sunku. Padarykite tolesnį įrodymą lengviau ",
+    "ctaPriceLine": "Nuo {price} · minučių, o ne spėlionės ",
+    "footerTagline": "Tolimesnės kelionės įrodymas klajokliams ",
+    "footerServices": "Paslaugos ",
+    "footerAccount": "Paskyra ",
+    "footerLegal": "Teisinė ",
+    "footerBook": "Užsisakykite rezervaciją ",
+    "footerSignIn": "Prisijunkite ",
+    "footerMyBookings": "Mano užsakymai ",
+    "footerTerms": "Sąlygos ",
+    "footerPrivacy": "Privatumas ",
+    "footerCopyright": "Visos teisės saugomos.",
+    "footerBackTop": "Atgal į viršų ",
+    "ticketFrom": "Nuo {price} ",
+    "ticketDeparture": "Išvykimas ",
+    "ticketArrival": "Atvykimas ",
+    "ticketBangkok": "Bankokas ",
+    "ticketTokyo": "Tokijas ",
+    "ticketPassenger": "Keleivis ",
+    "ticketPassengerVal": "Nomad · 1 suaugęs ",
+    "ticketRecord": "Įrašo lokatorius ",
+    "ticketVerified": "Patikrinta"
+  }
+}

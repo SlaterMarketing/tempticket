@@ -1,7 +1,8 @@
 import { logBookingEvent } from "@/lib/booking/log";
 import { BOOKING_STATUS } from "@/lib/booking/status";
+import { trackInternalEventSafe } from "@/lib/analytics/track";
 import { db } from "@/lib/db";
-import { bookings, users } from "@/lib/db/schema";
+import { bookings, users, type Booking } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
 import { getEmailFrom, getResend } from "@/lib/resend";
 import { getStripe } from "@/lib/stripe";
@@ -12,6 +13,21 @@ import type {
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
+
+function analyticsContextFromBooking(b: Booking) {
+  const meta = (b.metadata ?? {}) as Record<string, unknown>;
+  return {
+    visitorId:
+      typeof meta.analyticsVisitorId === "string"
+        ? meta.analyticsVisitorId
+        : null,
+    sessionId:
+      typeof meta.analyticsSessionId === "string"
+        ? meta.analyticsSessionId
+        : null,
+    userId: b.userId,
+  };
+}
 
 export async function POST(req: Request) {
   const whSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -75,6 +91,19 @@ export async function POST(req: Request) {
     .where(eq(bookings.id, bookingId));
 
   await logBookingEvent({ id: bookingId }, "stripe_paid", { session_id: session.id });
+
+  const acPaid = analyticsContextFromBooking(booking);
+  void trackInternalEventSafe({
+    name: "checkout_completed",
+    visitorId: acPaid.visitorId,
+    sessionId: acPaid.sessionId,
+    userId: acPaid.userId,
+    path: "/api/webhooks/stripe",
+    payload: {
+      booking_id: bookingId,
+      stripe_session_id: session.id,
+    },
+  });
 
   const passengers = JSON.parse(booking.passengersJson) as {
     id: string;
@@ -146,6 +175,18 @@ export async function POST(req: Request) {
     await logBookingEvent({ id: bookingId }, "duffel_failed", {
       message: e instanceof Error ? e.message : String(e),
     });
+    const acFail = analyticsContextFromBooking(booking);
+    void trackInternalEventSafe({
+      name: "booking_failed",
+      visitorId: acFail.visitorId,
+      sessionId: acFail.sessionId,
+      userId: acFail.userId,
+      path: "/api/webhooks/stripe",
+      payload: {
+        booking_id: bookingId,
+        message: e instanceof Error ? e.message : String(e),
+      },
+    });
   }
 
   return NextResponse.json({ received: true });
@@ -178,6 +219,20 @@ async function finalizeBooking(bookingId: string, order: Order) {
     .limit(1);
   const b = bookingRows[0];
   if (!b) return;
+
+  const ac = analyticsContextFromBooking(b);
+  void trackInternalEventSafe({
+    name: "booking_confirmed",
+    visitorId: ac.visitorId,
+    sessionId: ac.sessionId,
+    userId: ac.userId,
+    path: "/api/webhooks/stripe",
+    payload: {
+      booking_id: bookingId,
+      order_id: order.id,
+      booking_reference: order.booking_reference ?? null,
+    },
+  });
 
   let to = b.customerEmail?.trim() ?? null;
   if (!to && b.userId) {

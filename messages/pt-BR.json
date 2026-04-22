@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — comprovante de viagem posterior para nômades ",
+    "defaultDescription": "Reservas de voo reais e verificáveis para verificações posteriores da viagem. Construído para nômades digitais. ",
+    "homeTitle": "TempTicket — comprovante de viagem posterior para nômades ",
+    "homeDescription": "Reservas de voo reais e verificáveis para verificações posteriores da viagem. Construído para nômades digitais. ",
+    "bookTitle": "Fazer uma reserva — TempTicket ",
+    "bookDescription": "Encontre um voo reservado e conclua sua reserva de viagem. ",
+    "bookConfirmationTitle": "Pagamento recebido — TempTicket ",
+    "bookConfirmationDescription": "Estamos confirmando sua reserva com a companhia aérea. ",
+    "loginTitle": "Iniciar sessão — TempTicket ",
+    "loginDescription": "Login por link mágico com código de 6 dígitos para visualizar suas reservas. ",
+    "bookingsTitle": "Minhas reservas — TempTicket ",
+    "bookingsDescription": "Pedidos e referências de companhias aéreas para sua conta.",
+    "termsTitle": "Termos de serviço — TempTicket ",
+    "termsDescription": "Termos de serviço do TempTicket. ",
+    "privacyTitle": "Privacidade — TempTicket ",
+    "privacyDescription": "Como a TempTicket processa os dados pessoais. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Minhas reservas ",
+    "admin": "Administrador ",
+    "signOut": "Sair ",
+    "signIn": "Fazer login ",
+    "book": "Livro "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Idioma ",
+    "language": "Idioma"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Procurando… ",
+    "empty": "Nenhum lugar encontrado. Tente outra grafia ou cidade. ",
+    "city": "Cidade ",
+    "airport": "Aeroporto ",
+    "couldNotSearch": "Não foi possível pesquisar locais. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Etapa {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Insira suas informações ",
+        "body": "Rota, datas e dados dos passageiros. "
+      },
+      {
+        "label": "02 ",
+        "title": "Efetuar um pagamento ",
+        "body": "Check-out seguro – preço antecipado."
+      },
+      {
+        "label": "03 ",
+        "title": "Obtenha sua referência ",
+        "body": "Verifique na companhia aérea quando estiver ativo. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Escolha origem e destino nas sugestões ",
+    "toastSearchFailed": "Falha na pesquisa ",
+    "toastNoPayLater": "Não há tarifas pagas depois nesta pesquisa – tente outras datas ou aeroportos. ",
+    "toastOfferExpired": "Oferta expirada – pesquise novamente ",
+    "toastPassengerSlots": "Não foi possível carregar slots de passageiros para esta oferta ",
+    "toastLoadOffer": "Não foi possível carregar a oferta ",
+    "toastCompleteFields": "Preencher todos os campos do passageiro ",
+    "toastPhoneInvalid": "Insira um número de telefone válido ",
+    "toastReceiptEmail": "Insira um e-mail para sua reserva e recibo",
+    "toastEmailInvalid": "Insira um endereço de e-mail válido ",
+    "toastCheckoutServerError": "Falha no checkout (erro do servidor {status}) ",
+    "toastCheckoutFailed": "Falha na finalização da compra ({status}) ",
+    "toastNoPaymentLink": "O checkout não retornou um link de pagamento ",
+    "toastCheckoutConnection": "Falha na finalização da compra — verifique sua conexão e tente novamente ",
+    "back": "Voltar ",
+    "title": "Reserve a sua reserva ",
+    "stepFindTitle": "Encontrar um voo ",
+    "stepFindDescription": "Digite o nome de uma cidade, país ou aeroporto. ",
+    "from": "De ",
+    "to": "Para ",
+    "placePlaceholder": "Cidade, país ou aeroporto",
+    "swapAria": "Trocar origem e destino ",
+    "swapTitle": "Trocar origem e destino ",
+    "departureDate": "Data de partida ",
+    "searchBlurb": "Procuramos primeiro as tarifas pagas depois – conclua a reserva da companhia aérea depois de pagar nossa pequena taxa de serviço. ",
+    "searching": "Procurando… ",
+    "findingFare": "Encontrar uma tarifa… ",
+    "searchFlights": "Pesquisar voos ",
+    "stepPayTitle": "Dados do passageiro e pagamento ",
+    "stepPayDescription": "Os nomes devem corresponder aos documentos de viagem. ",
+    "passenger": "Passageiro {index} ",
+    "genderLabel": "Sexo (conforme passaporte) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Data de nascimento ",
+    "firstName": "Nome(s) ",
+    "lastName": "Sobrenome(s) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "você@exemplo.com ",
+    "emailHint": "Usado na reserva da sua companhia aérea e para recebimento e confirmação do pagamento. ",
+    "phone": "Telefone ",
+    "dialCodeAria": "Código de chamada do país ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Pagar taxa de serviço em ",
+    "preparingCheckout": "Preparando a finalização da compra…",
+    "payButton": "Pagar taxa de serviço e reserva ",
+    "demoOriginLabel": "Aeroporto de Suvarnabhumi (BKK) · Bangkok, Tailândia ",
+    "demoDestinationLabel": "Aeroporto Internacional de Kuala Lumpur (KUL) · Sepang, Malásia "
+  },
+  "BookConfirmation": {
+    "backHome": "De volta para casa ",
+    "badge": "Pagamento recebido ",
+    "title": "Estamos nisso ",
+    "body": "Estamos confirmando sua reserva de voo com a companhia aérea. Você receberá um e-mail com detalhes da reserva em breve. ",
+    "detail": "Verifique sua caixa de entrada (e spam) para confirmação. Use a referência da companhia aérea no site da transportadora quando precisar de um comprovante de continuação da viagem. ",
+    "bookAnother": "Reserve outro ",
+    "signInHistory": "Iniciar sessão no histórico "
+  },
+  "Login": {
+    "title": "Iniciar sessão ",
+    "description": "Faça login para ver as reservas vinculadas à sua conta ou ao seu e-mail. Enviamos um código de 6 dígitos – sem senha.",
+    "email": "E-mail ",
+    "sendCode": "Enviar código ",
+    "codeLabel": "código de 6 dígitos ",
+    "verify": "Verificar ",
+    "differentEmail": "Use um e-mail diferente ",
+    "toastSendFailed": "Não foi possível enviar o código ",
+    "toastCodeSent": "Verifique seu e-mail para obter um código de 6 dígitos ",
+    "toastInvalid": "Código inválido ",
+    "toastSignedIn": "Conectado "
+  },
+  "LoginPage": {
+    "loading": "Carregando… "
+  },
+  "Bookings": {
+    "title": "Minhas reservas ",
+    "subtitle": "Reservas vinculadas à sua conta ou feitas com este e-mail antes de você entrar. Após o pagamento, enviaremos por e-mail a referência da companhia aérea.",
+    "newBooking": "Nova reserva ",
+    "orders": "Pedidos ",
+    "ordersDescription": "Use a referência da companhia aérea no site da transportadora quando precisar de comprovante de continuação da viagem. ",
+    "empty": "Ainda não há reservas. ",
+    "colCreated": "Criado ",
+    "colStatus": "Status ",
+    "colAirline": "Companhia Aérea ",
+    "colReference": "Referência ",
+    "colMode": "Modo ",
+    "needsAttention": "Precisa de atenção ",
+    "needsAttentionDescription": "Se a reserva falhou após o pagamento, entre em contato com o suporte com o ID e o recibo do Stripe. "
+  },
+  "Terms": {
+    "title": "Termos de serviço",
+    "lead": "Última atualização: abril de 2026. Estes termos são apenas um modelo inicial – peça a um advogado qualificado que os revise antes de convidar clientes pagantes. ",
+    "serviceHeading": "Serviço ",
+    "serviceBody": "TempTicket fornece um serviço pago para organizar uma reserva de voo real através de nossos parceiros de reserva para viajantes que precisam de documentação de continuação da viagem. Não garantimos nenhum resultado específico de imigração ou companhia aérea. Oficiais e transportadores aplicam suas próprias regras. ",
+    "legalHeading": "Não é aconselhamento jurídico ",
+    "legalBody": "Nada neste site representa aconselhamento jurídico, de imigração ou fiscal. Cumpra as leis e licenças aplicáveis ​​ao seu negócio e às jurisdições onde você comercializa e vende. ",
+    "paymentsHeading": "Pagamentos e reembolsos ",
+    "paymentsBody": "As taxas de serviço são cobradas no checkout. Se não conseguirmos concluir o fluxo reservado após o pagamento bem-sucedido, trabalharemos com você para obter um reembolso ou uma oferta alternativa de acordo com nossa política publicada. Os estornos poderão ser contestados quando o serviço for prestado conforme descrito. ",
+    "useHeading": "Uso aceitável ",
+    "useBody": "Você não pode usar o serviço para deturpar a intenção de viagem para governos ou companhias aéreas, para testar métodos de pagamento roubados ou de qualquer forma que viole os termos do fornecedor ou a lei aplicável. ",
+    "liabilityHeading": "Responsabilidade limitada ",
+    "liabilityBody": "Na medida máxima permitida por lei, a TempTicket não se responsabiliza por recusa de embarque, recusa de entrada, perda de ligações ou danos indiretos decorrentes da utilização do serviço. "
+  },
+  "Privacy": {
+    "title": "Privacidade",
+    "summary": "Resumo: Processamos e-mails e dados pessoais relacionados a viagens para administrar contas, reservas e recebimentos obrigatórios. Peça ao advogado que alinhe esta página com seu mapa de dados real (Neon, Resend, Stripe, Duffel, hospedagem). ",
+    "collectHeading": "O que coletamos ",
+    "collectItems": [
+      "Endereço de e-mail e tokens de sessão para login ",
+      "Nomes dos passageiros, datas de nascimento, detalhes de contato exigidos pelas companhias aéreas ",
+      "Metadados de pagamento do nosso processador de pagamentos ",
+      "Registros técnicos necessários para operar e depurar o serviço "
+    ],
+    "whyHeading": "Por que processamos ",
+    "whyBody": "Para cumprir o nosso contrato consigo, cumprir as obrigações legais quando aplicáveis e perseguir interesses legítimos (segurança, prevenção de fraudes, melhoria do produto) equilibrados com os seus direitos. ",
+    "processorsHeading": "Processadores ",
+    "processorsBody": "A infraestrutura e os fornecedores podem incluir hospedagem de banco de dados (por exemplo, Neon), entrega de e-mail (por exemplo, Reenviar), pagamentos (por exemplo, Stripe) e reserva de voos (Duffel e companhias aéreas). Seus termos também se aplicam às partes do processamento que realizam. ",
+    "retentionHeading": "Retenção ",
+    "retentionBody": "Mantemos registros de reservas e cobranças conforme necessário para suporte, contabilidade e retenções legais (normalmente anos, não semanas), mas os cronogramas exatos devem corresponder à sua política.",
+    "rightsHeading": "Direitos ",
+    "rightsBody": "Dependendo da sua região, você pode ter direitos para acessar, corrigir, excluir ou se opor a determinados processamentos. Contate-nos no endereço que você publica para o seu negócio; verificaremos as solicitações de acordo com a lei. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Pagamento realizado com sucesso. ",
+    "bookingsSuccess": "Pagamento recebido. Sua reserva será atualizada em instantes. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Voltar ao topo "
+  },
+  "Home": {
+    "bookNow": "Reserve agora ",
+    "heroBadge": "Reservas ao vivo ",
+    "heroHeadingLead": "Reserva de voo ",
+    "heroHeadingAccent": "verificado em minutos ",
+    "heroSub": "Reservas de voos reais que você pode verificar no site das companhias aéreas. Viagem sem estresse para nômades. ",
+    "howItWorks": "Como funciona ",
+    "trustStats": [
+      {
+        "stat": "Minutos",
+        "label": "Reviravolta típica quando as companhias aéreas cooperam "
+      },
+      {
+        "stat": "PNR real ",
+        "label": "Consulte na transportadora quando emitido "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Apoio quando algo precisa de um ser humano "
+      }
+    ],
+    "featuresTitle": "Tudo o que você precisa para ter tranquilidade ",
+    "featuresSub": "Comprovante de viagem posterior rápido e verificável — sem a ansiedade de comprar uma passagem que você não usará. ",
+    "features": [
+      {
+        "title": "Reservas autênticas ",
+        "body": "Um registro genuíno da companhia aérea quando a confirmação for recebida – não um PDF decorativo. "
+      },
+      {
+        "title": "Entrega instantânea ",
+        "body": "A maioria dos fluxos é concluída rapidamente, então você pode anexar o comprovante no mesmo dia. "
+      },
+      {
+        "title": "Verificável pela transportadora",
+        "body": "Use as ferramentas da companhia aérea para obter a reserva quando alguém perguntar. "
+      },
+      {
+        "title": "Economize dinheiro ",
+        "body": "Pague uma pequena taxa de serviço em vez de uma tarifa reembolsável de longo curso. "
+      },
+      {
+        "title": "Planos flexíveis ",
+        "body": "Ajuste as datas quando seu itinerário mudar — dentro das janelas de política da companhia aérea. "
+      },
+      {
+        "title": "Apoio humano ",
+        "body": "Tarifas travadas e casos extremos podem ser encaminhados para nossa equipe a partir da fila. "
+      }
+    ],
+    "processTitle": "Processo de reserva simples ",
+    "commonQuestions": "Perguntas comuns ",
+    "personasTitle": "é perfeito para ",
+    "personas": [
+      {
+        "title": "Requerentes de visto ",
+        "body": "Quando os consulados desejam um itinerário, não necessariamente uma tarifa paga."
+      },
+      {
+        "title": "Passageiros frequentes ",
+        "body": "Prova repetível para companhias aéreas que aplicam regras de retorno/ida. "
+      },
+      {
+        "title": "Viajantes ",
+        "body": "História de verificação simples para verificações de fronteiras e transportadoras. "
+      },
+      {
+        "title": "Nômades digitais ",
+        "body": "Mantenha-se flexível sem estacionar dinheiro em tarifas de longo curso não utilizadas. "
+      }
+    ],
+    "socialTitle": "Confiado por viajantes de todo o mundo ",
+    "socialNote": "Exemplos de avaliações – troque por depoimentos reais quando os tiver. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Amostra · Alex M. ",
+        "quote": "PNR verificado no site da companhia aérea na mesma semana em que me inscrevi. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Amostra · Leni K. ",
+        "quote": "Fluxo direto e respostas rápidas quando perguntei sobre uma rota. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Amostra · James T. ",
+        "quote": "Consegui fazer o check-in com uma política de passagem só de ida. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Maior flexibilidade na hora de garantir seu visto ",
+    "visaBody": "Muitas missões descrevem a aceitação de um itinerário ou reserva em vez de um bilhete totalmente pago. Confirme no site oficial do seu caso – oferecemos uma reserva real que você pode verificar enquanto espera. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Leia a lista de verificação oficial",
+        "body": "As embaixadas são diferentes – algumas querem uma reserva, outras uma passagem. Comece na página deles, não em um blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Corresponda as datas à sua história ",
+        "body": "Escolha uma rota e um horário que se alinhem perfeitamente com a inscrição que você está preenchendo. "
+      },
+      {
+        "n": "3 ",
+        "title": "Verifique na companhia aérea ",
+        "body": "Se o registro estiver ativo, pratique acessá-lo no site da transportadora antes da sua consulta. "
+      }
+    ],
+    "embassyPublish": "O que as embaixadas publicam ",
+    "embassyFigures": [
+      {
+        "quote": "Reserva de passagem de volta, não sendo necessária compra de passagem antes da concessão do visto… ",
+        "caption": "Tema das perguntas frequentes da embaixada pública (Noruega) "
+      },
+      {
+        "quote": "Reserva de companhia aérea… com número de reserva de viagem… não necessariamente uma reserva com bilhete emitido. ",
+        "caption": "Tema da orientação pública de Schengen (Espanha)"
+      },
+      {
+        "quote": "Reserva de voo verificável… não é uma passagem comprada. ",
+        "caption": "Tema das informações públicas sobre vistos (Índia) "
+      }
+    ],
+    "faqTitle": "Precisa de ajuda? ",
+    "faqFooter": "Mais perguntas? Inicie uma reserva - exibimos horários e notas da transportadora conforme você avança. ",
+    "faqItems": [
+      {
+        "q": "O que é TempTicket? ",
+        "a": "Um serviço que ajuda você a obter uma reserva de voo real e verificável (com uma referência de reserva quando a companhia aérea a confirmar) para cenários de continuação de viagem e visto - sem pagar por uma tarifa integral que você não pode usar. "
+      },
+      {
+        "q": "Quanto tempo é válida a reserva? ",
+        "a": "A validade depende das regras tarifárias da companhia aérea, da política de espera ou do cronograma de emissão do bilhete. Apresentamos o que podemos durante a reserva; sempre confirme o tempo de acordo com os requisitos da sua embaixada ou transportadora. "
+      },
+      {
+        "q": "Posso verificar no site da companhia aérea? ",
+        "a": "Quando a companhia aérea emite um registro ao vivo, normalmente você pode consultá-lo no fluxo de gerenciamento de reserva ou verificação de minha viagem. Se uma rota não for elegível para espera, você poderá precisar de um bilhete instantâneo. "
+      },
+      {
+        "q": "Este aconselhamento jurídico ou uma garantia de visto? ",
+        "a": "Não. As regras de imigração mudam de acordo com o país e o oficial. Fornecemos apenas um serviço de reservas – verifique as fontes oficiais para saber a sua situação."
+      }
+    ],
+    "ctaTitle": "Viajar já é bastante difícil. Torne a prova de avanço mais fácil com ",
+    "ctaPriceLine": "De {price} · minutos, sem suposições ",
+    "footerTagline": "Prova de viagem para nômades ",
+    "footerServices": "Serviços ",
+    "footerAccount": "Conta ",
+    "footerLegal": "Jurídico ",
+    "footerBook": "Fazer uma reserva ",
+    "footerSignIn": "Fazer login ",
+    "footerMyBookings": "Minhas reservas ",
+    "footerTerms": "Termos ",
+    "footerPrivacy": "Privacidade ",
+    "footerCopyright": "Todos os direitos reservados.",
+    "footerBackTop": "Voltar ao topo ",
+    "ticketFrom": "De {price} ",
+    "ticketDeparture": "Partida ",
+    "ticketArrival": "Chegada ",
+    "ticketBangkok": "Banguecoque ",
+    "ticketTokyo": "Tóquio ",
+    "ticketPassenger": "Passageiro ",
+    "ticketPassengerVal": "Nômade · 1 adulto ",
+    "ticketRecord": "Localizador de registros ",
+    "ticketVerified": "Verificado"
+  }
+}

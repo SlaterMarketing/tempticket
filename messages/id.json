@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — bukti perjalanan selanjutnya untuk pengembara ",
+    "defaultDescription": "Reservasi penerbangan yang nyata dan dapat diverifikasi untuk pemeriksaan perjalanan selanjutnya. Dibangun untuk digital nomad. ",
+    "homeTitle": "TempTicket — bukti perjalanan selanjutnya untuk pengembara ",
+    "homeDescription": "Reservasi penerbangan yang nyata dan dapat diverifikasi untuk pemeriksaan perjalanan selanjutnya. Dibangun untuk digital nomad. ",
+    "bookTitle": "Pesan reservasi — TempTicket ",
+    "bookDescription": "Temukan penundaan penerbangan dan selesaikan reservasi perjalanan selanjutnya. ",
+    "bookConfirmationTitle": "Pembayaran diterima — TempTicket ",
+    "bookConfirmationDescription": "Kami sedang mengonfirmasi reservasi Anda dengan maskapai penerbangan. ",
+    "loginTitle": "Masuk — TempTicket ",
+    "loginDescription": " Masuk tautan ajaib dengan kode 6 digit untuk melihat pemesanan Anda. ",
+    "bookingsTitle": "Pemesanan saya — TempTicket ",
+    "bookingsDescription": "Pesanan dan referensi maskapai penerbangan untuk akun Anda.",
+    "termsTitle": "Ketentuan layanan — TempTicket ",
+    "termsDescription": "Ketentuan layanan untuk TempTicket. ",
+    "privacyTitle": "Privasi — TempTicket ",
+    "privacyDescription": "Bagaimana TempTicket memproses data pribadi. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Tiket Temp ",
+    "myBookings": "Pemesanan saya ",
+    "admin": "Admin ",
+    "signOut": "Keluar ",
+    "signIn": "Masuk ",
+    "book": "Buku "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Bahasa ",
+    "language": "Bahasa"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Mencari… ",
+    "empty": "Tidak ada tempat yang ditemukan. Coba ejaan atau kota lain. ",
+    "city": "Kota ",
+    "airport": "Bandara ",
+    "couldNotSearch": "Tidak dapat mencari tempat. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Langkah {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Masukkan informasi Anda ",
+        "body": "Rute, tanggal, dan detail penumpang. "
+      },
+      {
+        "label": "02 ",
+        "title": "Lakukan pembayaran ",
+        "body": "Pembayaran aman—harga di muka."
+      },
+      {
+        "label": "03 ",
+        "title": "Dapatkan referensi Anda ",
+        "body": "Verifikasi pada maskapai penerbangan saat siaran langsung. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Pilih asal dan tujuan dari saran ",
+    "toastSearchFailed": "Pencarian gagal ",
+    "toastNoPayLater": "Tidak ada tarif bayar nanti pada pencarian ini—coba tanggal atau bandara lain. ",
+    "toastOfferExpired": " Penawaran telah habis masa berlakunya—cari lagi ",
+    "toastPassengerSlots": "Tidak dapat memuat slot penumpang untuk penawaran ini ",
+    "toastLoadOffer": "Tidak dapat memuat tawaran ",
+    "toastCompleteFields": "Lengkapi semua kolom penumpang ",
+    "toastPhoneInvalid": "Masukkan nomor telepon yang valid ",
+    "toastReceiptEmail": "Masukkan email untuk pemesanan dan tanda terima Anda",
+    "toastEmailInvalid": "Masukkan alamat email yang valid ",
+    "toastCheckoutServerError": "Checkout gagal (kesalahan server {status}) ",
+    "toastCheckoutFailed": "Pembayaran gagal ({status}) ",
+    "toastNoPaymentLink": "Checkout tidak mengembalikan tautan pembayaran ",
+    "toastCheckoutConnection": "Checkout gagal—periksa koneksi Anda dan coba lagi ",
+    "back": "Kembali ",
+    "title": "Pesan reservasi Anda ",
+    "stepFindTitle": "Cari penerbangan ",
+    "stepFindDescription": "Ketikkan nama kota, negara, atau bandara. ",
+    "from": "Dari ",
+    "to": "Ke ",
+    "placePlaceholder": "Kota, negara, atau bandara",
+    "swapAria": "Tukar asal dan tujuan ",
+    "swapTitle": "Tukar asal dan tujuan ",
+    "departureDate": "Tanggal keberangkatan ",
+    "searchBlurb": "Kami mencari tarif bayar belakangan terlebih dahulu—selesaikan pemesanan maskapai penerbangan setelah Anda membayar sedikit biaya layanan kami. ",
+    "searching": "Mencari… ",
+    "findingFare": "Mencari tarif… ",
+    "searchFlights": "Cari penerbangan ",
+    "stepPayTitle": "Detail & pembayaran penumpang ",
+    "stepPayDescription": "Nama harus sesuai dengan dokumen perjalanan. ",
+    "passenger": "Penumpang {index} ",
+    "genderLabel": "Jenis Kelamin (seperti pada paspor) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Tanggal lahir ",
+    "firstName": "Nama depan ",
+    "lastName": "Nama belakang ",
+    "email": "Email ",
+    "emailPlaceholder": "Anda@example.com ",
+    "emailHint": "Digunakan pada pemesanan maskapai penerbangan Anda dan untuk tanda terima dan konfirmasi pembayaran Anda. ",
+    "phone": " Telepon ",
+    "dialCodeAria": "Kode panggilan negara ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Bayar biaya layanan masuk ",
+    "preparingCheckout": "Mempersiapkan pembayaran…",
+    "payButton": "Bayar biaya layanan & cadangan ",
+    "demoOriginLabel": "Bandara Suvarnabhumi (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Bandara Internasional Kuala Lumpur (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Kembali ke rumah ",
+    "badge": "Pembayaran diterima ",
+    "title": "Kami sedang mengerjakannya ",
+    "body": "Kami sedang mengonfirmasi reservasi penerbangan Anda dengan maskapai penerbangan. Anda akan segera menerima email berisi detail pemesanan. ",
+    "detail": "Periksa kotak masuk Anda (dan spam) untuk konfirmasi. Gunakan referensi maskapai penerbangan di situs operator saat Anda memerlukan bukti perjalanan selanjutnya. ",
+    "bookAnother": "Pesan yang lain ",
+    "signInHistory": "Masuk untuk melihat riwayat "
+  },
+  "Login": {
+    "title": "Masuk ",
+    "description": "Masuk untuk melihat pemesanan yang ditautkan ke akun atau email Anda. Kami mengirimkan kode 6 digit—tanpa kata sandi.",
+    "email": "Email ",
+    "sendCode": "Kirim kode ",
+    "codeLabel": " kode 6 digit ",
+    "verify": "Verifikasi ",
+    "differentEmail": "Gunakan email lain ",
+    "toastSendFailed": "Tidak dapat mengirim kode ",
+    "toastCodeSent": "Periksa email Anda untuk kode 6 digit ",
+    "toastInvalid": "Kode tidak valid ",
+    "toastSignedIn": "Masuk "
+  },
+  "LoginPage": {
+    "loading": "Memuat… "
+  },
+  "Bookings": {
+    "title": "Pemesanan saya ",
+    "subtitle": "Pemesanan terkait dengan akun Anda atau dibuat dengan email ini sebelum Anda masuk. Setelah pembayaran, kami mengirimkan email berisi referensi maskapai penerbangan kepada Anda.",
+    "newBooking": "Pemesanan baru ",
+    "orders": "Pesanan ",
+    "ordersDescription": "Gunakan referensi maskapai penerbangan di situs maskapai penerbangan bila Anda memerlukan bukti perjalanan selanjutnya. ",
+    "empty": "Belum ada pemesanan. ",
+    "colCreated": "Dibuat ",
+    "colStatus": "Status ",
+    "colAirline": " Maskapai Penerbangan ",
+    "colReference": "Referensi ",
+    "colMode": "Mode ",
+    "needsAttention": "Perlu perhatian ",
+    "needsAttentionDescription": "Jika pemesanan gagal setelah pembayaran, hubungi dukungan dengan id dan tanda terima Stripe. "
+  },
+  "Terms": {
+    "title": "Ketentuan layanan",
+    "lead": "Terakhir diperbarui: April 2026. Persyaratan ini hanya template awal—mintalah penasihat yang memenuhi syarat untuk meninjaunya sebelum Anda mengundang pelanggan yang membayar. ",
+    "serviceHeading": "Layanan ",
+    "serviceBody": "TempTicket menyediakan layanan berbayar untuk mengatur reservasi penerbangan nyata melalui mitra pemesanan kami untuk pelancong yang memerlukan dokumentasi perjalanan selanjutnya. Kami tidak menjamin hasil imigrasi atau maskapai penerbangan tertentu. Petugas dan pengangkut menerapkan aturannya masing-masing. ",
+    "legalHeading": "Bukan nasihat hukum ",
+    "legalBody": "Tidak ada apa pun di situs ini yang berisi nasihat hukum, imigrasi, atau pajak. Patuhi hukum dan lisensi yang berlaku pada bisnis Anda dan yurisdiksi tempat Anda memasarkan dan menjual. ",
+    "paymentsHeading": "Pembayaran & pengembalian dana ",
+    "paymentsBody": "Biaya layanan dikumpulkan saat pembayaran. Jika kami tidak dapat menyelesaikan alur pemesanan setelah pembayaran berhasil, kami akan bekerja sama dengan Anda untuk pengembalian dana atau penawaran alternatif sesuai kebijakan yang kami terbitkan. Tagihan balik dapat digugat jika layanan diberikan seperti yang dijelaskan. ",
+    "useHeading": "Penggunaan yang dapat diterima ",
+    "useBody": "Anda tidak boleh menggunakan layanan ini untuk memberikan gambaran yang salah tentang maksud perjalanan kepada pemerintah atau maskapai penerbangan, untuk menguji metode pembayaran yang dicuri, atau dengan cara apa pun yang melanggar ketentuan pemasok atau hukum yang berlaku. ",
+    "liabilityHeading": " Tanggung jawab terbatas ",
+    "liabilityBody": "Sejauh yang diizinkan oleh hukum, TempTicket tidak bertanggung jawab atas penolakan naik pesawat, penolakan masuk, koneksi yang terlewat, atau kerusakan tidak langsung yang timbul dari penggunaan layanan. "
+  },
+  "Privacy": {
+    "title": "Privasi",
+    "summary": "Ringkasan: Kami memproses email dan data pribadi terkait perjalanan untuk menjalankan akun, pemesanan, dan tanda terima wajib. Mintalah nasihat untuk menyelaraskan halaman ini dengan peta data Anda yang sebenarnya (Neon, Kirim Ulang, Stripe, Duffel, hosting). ",
+    "collectHeading": "Apa yang kami kumpulkan ",
+    "collectItems": [
+      "Alamat email dan token sesi untuk masuk ",
+      "Nama penumpang, tanggal lahir, rincian kontak yang diperlukan oleh maskapai penerbangan ",
+      "Metadata pembayaran dari pemroses pembayaran kami ",
+      "Log teknis diperlukan untuk mengoperasikan dan men-debug layanan "
+    ],
+    "whyHeading": "Mengapa kami memprosesnya ",
+    "whyBody": "Untuk melaksanakan kontrak kami dengan Anda, patuhi kewajiban hukum jika berlaku, dan wujudkan kepentingan sah (keamanan, pencegahan penipuan, peningkatan produk) yang seimbang dengan hak Anda. ",
+    "processorsHeading": "Prosesor ",
+    "processorsBody": "Infrastruktur dan vendor dapat mencakup hosting basis data (misalnya Neon), pengiriman email (misalnya Kirim Ulang), pembayaran (misalnya Stripe), dan pemesanan penerbangan (Duffel dan maskapai penerbangan). Persyaratan mereka juga berlaku untuk bagian pemrosesan yang mereka lakukan. ",
+    "retentionHeading": "Retensi ",
+    "retentionBody": "Kami menyimpan catatan pemesanan dan penagihan sesuai kebutuhan untuk dukungan, akuntansi, dan penyimpanan legal—biasanya bertahun-tahun, bukan berminggu-minggu—namun jadwal pastinya harus sesuai dengan kebijakan Anda.",
+    "rightsHeading": "Hak ",
+    "rightsBody": "Bergantung pada wilayah Anda, Anda mungkin memiliki hak untuk mengakses, memperbaiki, menghapus, atau menolak pemrosesan tertentu. Hubungi kami di alamat yang Anda publikasikan untuk bisnis Anda; kami akan memverifikasi permintaan sesuai dengan hukum. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Pembayaran berhasil. ",
+    "bookingsSuccess": "Pembayaran diterima. Pemesanan Anda akan diperbarui sebentar lagi. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Kembali ke atas "
+  },
+  "Home": {
+    "bookNow": "Pesan sekarang ",
+    "heroBadge": "Reservasi langsung ",
+    "heroHeadingLead": "Pemesanan penerbangan ",
+    "heroHeadingAccent": "diverifikasi dalam hitungan menit ",
+    "heroSub": "Reservasi penerbangan sebenarnya dapat Anda verifikasi di situs web maskapai penerbangan. Perjalanan bebas stres bagi pengembara. ",
+    "howItWorks": "Cara kerjanya ",
+    "trustStats": [
+      {
+        "stat": "Menit",
+        "label": " Perubahan haluan yang umum ketika maskapai penerbangan bekerja sama "
+      },
+      {
+        "stat": "PNR nyata ",
+        "label": "Cari di operator saat diterbitkan "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Dukungan ketika sesuatu membutuhkan manusia "
+      }
+    ],
+    "featuresTitle": "Semua yang Anda butuhkan untuk ketenangan pikiran ",
+    "featuresSub": "Bukti perjalanan selanjutnya yang cepat dan dapat diverifikasi—tanpa kekhawatiran membeli tiket yang tidak akan Anda gunakan. ",
+    "features": [
+      {
+        "title": "Reservasi asli ",
+        "body": "Catatan maskapai penerbangan asli ketika konfirmasi diterima—bukan PDF dekoratif. "
+      },
+      {
+        "title": "Pengiriman instan ",
+        "body": "Sebagian besar alur diselesaikan dengan cepat sehingga Anda dapat melampirkan bukti pada hari yang sama. "
+      },
+      {
+        "title": "Dapat diverifikasi oleh operator",
+        "body": "Gunakan alat maskapai untuk menarik pemesanan ketika seseorang bertanya. "
+      },
+      {
+        "title": "Hemat uang ",
+        "body": "Membayar biaya layanan yang kecil dibandingkan ongkos perjalanan jarak jauh yang dapat dikembalikan. "
+      },
+      {
+        "title": "Rencana yang fleksibel ",
+        "body": "Sesuaikan tanggal kapan rencana perjalanan Anda berubah—dalam jendela kebijakan maskapai penerbangan. "
+      },
+      {
+        "title": "Dukungan manusia ",
+        "body": "Tarif macet dan kasus tepian dapat diteruskan ke tim kami dari antrean. "
+      }
+    ],
+    "processTitle": "Proses pemesanan sederhana ",
+    "commonQuestions": "Pertanyaan umum ",
+    "personasTitle": "sangat cocok untuk ",
+    "personas": [
+      {
+        "title": "Pemohon visa ",
+        "body": "Bila konsulat menginginkan rencana perjalanan, belum tentu tarif berbayar."
+      },
+      {
+        "title": "Frequent flyer ",
+        "body": "Bukti berulang untuk maskapai penerbangan yang menerapkan aturan pulang/pergi. "
+      },
+      {
+        "title": "Wisatawan ",
+        "body": "Kisah verifikasi sederhana untuk pemeriksaan perbatasan dan operator. "
+      },
+      {
+        "title": "Pengembara digital ",
+        "body": "Tetap fleksibel tanpa uang parkir pada tarif jarak jauh yang tidak terpakai. "
+      }
+    ],
+    "socialTitle": " Dipercaya oleh wisatawan di seluruh dunia ",
+    "socialNote": "Contoh ulasan—tukar testimoni nyata saat Anda memilikinya. ",
+    "testimonials": [
+      {
+        "flag": "🇮🇩 ",
+        "name": "Contoh · Alex M. ",
+        "quote": "PNR check out di situs maskapai penerbangan pada minggu yang sama saat saya melamar. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Sampel · Leni K. ",
+        "quote": "Aliran lugas dan jawaban cepat ketika saya bertanya tentang suatu rute. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇮🇧 ",
+        "name": "Contoh · James T. ",
+        "quote": "Memberi saya check-in dengan kebijakan tiket satu arah. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": " Fleksibilitas yang lebih besar saat mengamankan visa Anda ",
+    "visaBody": "Banyak misi menjelaskan penerimaan rencana perjalanan atau reservasi daripada tiket yang dibayar penuh. Konfirmasikan di situs resmi untuk kasus Anda—kami menyediakan reservasi nyata yang dapat Anda verifikasi sambil menunggu. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Baca daftar periksa resmi",
+        "body": "Kedutaan berbeda-beda—ada yang ingin reservasi, ada yang minta tiket. Mulailah dari halaman mereka, bukan blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Cocokkan tanggal dengan cerita Anda ",
+        "body": "Pilih rute dan waktu yang sesuai dengan permohonan yang Anda ajukan. "
+      },
+      {
+        "n": "3 ",
+        "title": "Verifikasi di maskapai penerbangan ",
+        "body": "Jika rekaman tersebut aktif, berlatihlah untuk menampilkannya di situs operator sebelum janji temu Anda. "
+      }
+    ],
+    "embassyPublish": "Apa yang diterbitkan kedutaan ",
+    "embassyFigures": [
+      {
+        "quote": "Reservasi tiket pulang pergi, tidak perlu membeli tiket sebelum visa diberikan… ",
+        "caption": "Tema dari FAQ Kedutaan Besar (Norwegia) "
+      },
+      {
+        "quote": "Reservasi maskapai penerbangan… dengan nomor reservasi perjalanan… belum tentu reservasi tiket. ",
+        "caption": "Tema dari panduan Schengen publik (Spanyol)"
+      },
+      {
+        "quote": "Reservasi penerbangan yang dapat diverifikasi… bukan tiket yang dibeli. ",
+        "caption": "Tema dari informasi visa publik (India) "
+      }
+    ],
+    "faqTitle": "Apakah Anda memerlukan bantuan? ",
+    "faqFooter": "Pertanyaan lain? Mulai pemesanan—kami menampilkan waktu dan catatan operator saat Anda bepergian. ",
+    "faqItems": [
+      {
+        "q": "Apa itu TempTicket? ",
+        "a": "Layanan yang membantu Anda mendapatkan reservasi penerbangan nyata dan dapat diverifikasi (dengan referensi pemesanan saat maskapai mengonfirmasinya) untuk perjalanan selanjutnya dan skenario visa—tanpa membayar tarif penuh yang tidak boleh Anda gunakan. "
+      },
+      {
+        "q": "Berapa lama masa berlaku reservasi? ",
+        "a": "Validitas bergantung pada peraturan tarif maskapai, kebijakan penangguhan, atau jadwal waktu tiket. Kami mengungkapkan apa yang kami bisa saat pemesanan; selalu konfirmasikan waktunya dengan persyaratan kedutaan atau operator Anda. "
+      },
+      {
+        "q": "Dapatkah saya memverifikasinya di situs web maskapai penerbangan? ",
+        "a": "Saat maskapai penerbangan mengeluarkan catatan langsung, Anda biasanya dapat mencarinya di alur kelola pemesanan atau periksa perjalanan saya. Jika suatu rute tidak memenuhi syarat untuk ditangguhkan, Anda mungkin memerlukan tiket instan. "
+      },
+      {
+        "q": "Apakah ini nasihat hukum atau jaminan visa? ",
+        "a": "Tidak. Aturan imigrasi berubah berdasarkan negara dan petugas. Kami hanya menyediakan layanan reservasi—periksa sumber resmi untuk situasi Anda."
+      }
+    ],
+    "ctaTitle": " Bepergian cukup sulit. Jadikan pembuktian selanjutnya lebih mudah dengan ",
+    "ctaPriceLine": "Dari {price} · menit, bukan dugaan ",
+    "footerTagline": "Bukti perjalanan selanjutnya untuk pengembara ",
+    "footerServices": "Layanan ",
+    "footerAccount": "Akun ",
+    "footerLegal": "Hukum ",
+    "footerBook": "Pesan reservasi ",
+    "footerSignIn": "Masuk ",
+    "footerMyBookings": "Pemesanan saya ",
+    "footerTerms": "Syarat ",
+    "footerPrivacy": "Privasi ",
+    "footerCopyright": "Semua hak dilindungi undang-undang.",
+    "footerBackTop": "Kembali ke atas ",
+    "ticketFrom": "Dari {price} ",
+    "ticketDeparture": "Keberangkatan ",
+    "ticketArrival": "Kedatangan ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": " Penumpang ",
+    "ticketPassengerVal": "Pengembara · 1 dewasa ",
+    "ticketRecord": " Pencari rekaman ",
+    "ticketVerified": "Terverifikasi"
+  }
+}

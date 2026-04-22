@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — göçebeler için ileriye dönük seyahat kanıtı ",
+    "defaultDescription": "İleriye dönük seyahat kontrolleri için gerçek, doğrulanabilir uçuş rezervasyonları. Dijital göçebeler için tasarlandı. ",
+    "homeTitle": "TempTicket — göçebeler için ileriye dönük seyahat kanıtı ",
+    "homeDescription": "İleriye dönük seyahat kontrolleri için gerçek, doğrulanabilir uçuş rezervasyonları. Dijital göçebeler için tasarlandı. ",
+    "bookTitle": "Rezervasyon yaptırın — TempTicket ",
+    "bookDescription": "Uçak biletinizi bulun ve ilerideki seyahat rezervasyonunuzu tamamlayın. ",
+    "bookConfirmationTitle": "Ödeme alındı — TempTicket ",
+    "bookConfirmationDescription": "Havayolu şirketinden rezervasyonunuzu onaylıyoruz. ",
+    "loginTitle": "Oturum aç — TempTicket ",
+    "loginDescription": "Rezervasyonlarınızı görüntülemek için 6 haneli kodla sihirli bağlantıyla oturum açın. ",
+    "bookingsTitle": "Rezervasyonlarım — TempTicket ",
+    "bookingsDescription": "Hesabınıza ilişkin siparişler ve havayolu referansları.",
+    "termsTitle": "Hizmet şartları — TempTicket ",
+    "termsDescription": "TempTicket'in hizmet şartları. ",
+    "privacyTitle": "Gizlilik — TempTicket ",
+    "privacyDescription": "TempTicket kişisel verileri nasıl işler? "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Rezervasyonlarım ",
+    "admin": "Yönetici ",
+    "signOut": "Oturumu kapat ",
+    "signIn": "Giriş yap ",
+    "book": "Kitap "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Dil ",
+    "language": "Dil"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Aranıyor… ",
+    "empty": "Hiçbir yer bulunamadı. Başka bir yazımı veya şehri deneyin. ",
+    "city": "Şehir ",
+    "airport": "Havaalanı ",
+    "couldNotSearch": "Yerler aranamadı. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Adım {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Bilgilerinizi girin ",
+        "body": "Güzergah, tarihler ve yolcu ayrıntıları. "
+      },
+      {
+        "label": "02 ",
+        "title": "Ödeme yap ",
+        "body": "Güvenli ödeme—önden fiyatlandırma."
+      },
+      {
+        "label": "03 ",
+        "title": "Referansınızı alın ",
+        "body": "Havayolu canlı yayındayken doğrulayın. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Önerilerden başlangıç ve varış noktasını seçin ",
+    "toastSearchFailed": "Arama başarısız oldu ",
+    "toastNoPayLater": "Bu aramada sonradan ödeme ücreti yok; diğer tarihleri veya havalimanlarını deneyin. ",
+    "toastOfferExpired": "Teklifin süresi doldu—tekrar arayın ",
+    "toastPassengerSlots": "Bu teklif için yolcu yuvaları yüklenemedi ",
+    "toastLoadOffer": "Teklif yüklenemedi ",
+    "toastCompleteFields": "Tüm yolcu alanlarını doldurun ",
+    "toastPhoneInvalid": "Geçerli bir telefon numarası girin ",
+    "toastReceiptEmail": "Rezervasyonunuz ve makbuzunuz için bir e-posta girin",
+    "toastEmailInvalid": "Geçerli bir e-posta adresi girin ",
+    "toastCheckoutServerError": "Ödeme başarısız oldu (sunucu hatası {status}) ",
+    "toastCheckoutFailed": "Ödeme başarısız oldu ({status}) ",
+    "toastNoPaymentLink": "Checkout ödeme bağlantısını döndürmedi ",
+    "toastCheckoutConnection": "Ödeme başarısız oldu—bağlantınızı kontrol edin ve tekrar deneyin ",
+    "back": "Geri ",
+    "title": "Rezervasyonunuzu yaptırın ",
+    "stepFindTitle": "Uçuş bul ",
+    "stepFindDescription": "Bir şehir, ülke veya havaalanı adı yazın. ",
+    "from": "Gönderen ",
+    "to": "Kime ",
+    "placePlaceholder": "Şehir, ülke veya havaalanı",
+    "swapAria": "Başlangıç ve varış noktasını değiştir ",
+    "swapTitle": "Başlangıç ve varış noktasını değiştir ",
+    "departureDate": "Ayrılış tarihi ",
+    "searchBlurb": "Önce sonra öde ücretlerini araştırıyoruz; küçük hizmet ücretimizi ödedikten sonra havayolu rezervasyonunu tamamlayın. ",
+    "searching": "Aranıyor… ",
+    "findingFare": "Ücret bulmak… ",
+    "searchFlights": "Uçuş ara ",
+    "stepPayTitle": "Yolcu bilgileri ve ödeme ",
+    "stepPayDescription": "Adlar seyahat belgeleriyle eşleşmelidir. ",
+    "passenger": "Yolcu {index} ",
+    "genderLabel": "Cinsiyet (pasaporttaki gibi) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Doğum tarihi ",
+    "firstName": "Ad(lar) ",
+    "lastName": "Soyadı(lar) ",
+    "email": "E-posta ",
+    "emailPlaceholder": "siz@example.com ",
+    "emailHint": "Hava yolu rezervasyonunuz ve ödeme makbuzunuz ve onayınız için kullanılır. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Ülke arama kodu ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Hizmet ücretini şu tarihte ödeyin: ",
+    "preparingCheckout": "Ödeme hazırlanıyor…",
+    "payButton": "Hizmet ücretini ödeyin ve rezerve edin ",
+    "demoOriginLabel": "Suvarnabhumi Havalimanı (BKK) · Bangkok, Tayland ",
+    "demoDestinationLabel": "Kuala Lumpur Uluslararası Havaalanı (KUL) · Sepang, Malezya "
+  },
+  "BookConfirmation": {
+    "backHome": "Eve dönüş ",
+    "badge": "Ödeme alındı ",
+    "title": "İşimizin başındayız ",
+    "body": "Havayolu şirketinden uçuş rezervasyonunuzu onaylıyoruz. Kısa süre içinde rezervasyon ayrıntılarını içeren bir e-posta alacaksınız. ",
+    "detail": "Onay için gelen kutunuzu (ve spam) kontrol edin. İleriye dönük seyahat kanıtına ihtiyaç duyduğunuzda taşıyıcının sitesindeki havayolu referansını kullanın. ",
+    "bookAnother": "Başka rezervasyon yaptırın ",
+    "signInHistory": "Geçmiş için oturum açın "
+  },
+  "Login": {
+    "title": "Giriş yap ",
+    "description": "Hesabınıza veya e-postanıza bağlı rezervasyonları görmek için oturum açın. 6 haneli bir kod gönderiyoruz; şifre yok.",
+    "email": "E-posta ",
+    "sendCode": "Kodu gönder ",
+    "codeLabel": "6 haneli kod ",
+    "verify": "Doğrula ",
+    "differentEmail": "Farklı bir e-posta kullanın ",
+    "toastSendFailed": "Kod gönderilemedi ",
+    "toastCodeSent": "E-postanızı 6 haneli kod için kontrol edin ",
+    "toastInvalid": "Geçersiz kod ",
+    "toastSignedIn": "Oturum açıldı "
+  },
+  "LoginPage": {
+    "loading": "Yükleniyor… "
+  },
+  "Bookings": {
+    "title": "Rezervasyonlarım ",
+    "subtitle": "Hesabınıza bağlanan veya oturum açmadan önce bu e-postayla yapılan rezervasyonlar. Ödeme yapıldıktan sonra size havayolu referansını e-postayla göndeririz.",
+    "newBooking": "Yeni rezervasyon ",
+    "orders": "Emirler ",
+    "ordersDescription": "İleriye dönük seyahat kanıtına ihtiyaç duyduğunuzda taşıyıcı sitesindeki havayolu referansını kullanın. ",
+    "empty": "Henüz rezervasyon yok. ",
+    "colCreated": "Oluşturuldu ",
+    "colStatus": "Durum ",
+    "colAirline": "Havayolu ",
+    "colReference": "Referans ",
+    "colMode": "Mod ",
+    "needsAttention": "Dikkat edilmesi gerekiyor ",
+    "needsAttentionDescription": "Ödeme sonrasında rezervasyon başarısız olursa, kimlik ve Stripe makbuzuyla birlikte destek ekibiyle iletişime geçin. "
+  },
+  "Terms": {
+    "title": "Hizmet şartları",
+    "lead": "Son güncelleme: Nisan 2026. Bu şartlar yalnızca başlangıç ​​şablonudur; ödeme yapan müşterileri davet etmeden önce nitelikli bir danışmanın bunları incelemesini sağlayın. ",
+    "serviceHeading": "Hizmet ",
+    "serviceBody": "TempTicket, ileriye dönük seyahat belgelerine ihtiyaç duyan yolcular için rezervasyon ortaklarımız aracılığıyla gerçek bir uçuş rezervasyonu düzenlemek üzere ücretli bir hizmet sağlar. Herhangi bir göç veya havayolu sonucunu garanti etmiyoruz. Memurlar ve taşıyıcılar kendi kurallarını uygularlar. ",
+    "legalHeading": "Yasal tavsiye değildir ",
+    "legalBody": "Bu sitedeki hiçbir şey yasal, göçmenlik veya vergi tavsiyesi değildir. İşletmeniz ve pazarlama ve satış yaptığınız yargı bölgeleri için geçerli olan yasalara ve lisanslara uyun. ",
+    "paymentsHeading": "Ödemeler ve geri ödemeler ",
+    "paymentsBody": "Hizmet ücretleri ödeme sırasında tahsil edilir. Başarılı ödeme sonrasında rezervasyon akışını tamamlayamazsak, yayınlanan politikamız uyarınca sizinle bir geri ödeme veya alternatif teklif üzerinde çalışacağız. Hizmet açıklandığı gibi teslim edildiğinde ters ibraza itiraz edilebilir. ",
+    "useHeading": "Kabul edilebilir kullanım ",
+    "useBody": "Hizmeti, seyahat niyetinizi hükümetlere veya havayollarına yanlış tanıtmak, çalıntı ödeme yöntemlerini test etmek veya tedarikçi şartlarını veya geçerli yasaları ihlal edecek şekilde kullanamazsınız. ",
+    "liabilityHeading": "Sınırlı sorumluluk ",
+    "liabilityBody": "Yasaların izin verdiği azami ölçüde, TempTicket uçağa binmenin reddedilmesinden, girişin reddedilmesinden, kaçırılan bağlantılardan veya hizmetin kullanımından kaynaklanan dolaylı zararlardan sorumlu değildir. "
+  },
+  "Privacy": {
+    "title": "Gizlilik",
+    "summary": "Özet: Hesapları, rezervasyonları ve zorunlu makbuzları yönetmek için e-posta ve seyahatle ilgili kişisel verileri işleriz. Bu sayfayı gerçek veri haritanızla (Neon, Resend, Stripe, Duffel, hosting) hizalamanızı tavsiye edin. ",
+    "collectHeading": "Ne topluyoruz ",
+    "collectItems": [
+      "Oturum açmak için e-posta adresi ve oturum belirteçleri ",
+      "Yolcu isimleri, doğum tarihleri, havayollarının talep ettiği iletişim bilgileri ",
+      "Ödeme işlemcimizden alınan ödeme meta verileri ",
+      "Hizmeti çalıştırmak ve hata ayıklamak için gereken teknik günlükler "
+    ],
+    "whyHeading": "Neden işleriz ",
+    "whyBody": "Sizinle olan sözleşmemizi yerine getirmek, geçerli olduğu yerlerde yasal yükümlülüklere uymak ve haklarınızla dengelenmiş meşru menfaatleri (güvenlik, dolandırıcılığı önleme, ürün iyileştirme) takip etmek. ",
+    "processorsHeading": "İşlemciler ",
+    "processorsBody": "Altyapı ve satıcılar arasında veritabanı barındırma (örn. Neon), e-posta dağıtımı (örn. Resend), ödemeler (örn. Stripe) ve uçuş rezervasyonu (Duffel ve havayolları) yer alabilir. Şartları aynı zamanda gerçekleştirdikleri işleme bölümleri için de geçerlidir. ",
+    "retentionHeading": "Saklama ",
+    "retentionBody": "Destek, muhasebe ve yasal bekletmeler için gerektiğinde rezervasyon ve fatura kayıtlarını tutuyoruz (genellikle haftalarca değil, yıllar boyunca) ancak kesin programlar politikanıza uygun olmalıdır.",
+    "rightsHeading": "Haklar ",
+    "rightsBody": "Bölgenize bağlı olarak belirli işlemlere erişim, düzeltme, silme veya itiraz etme haklarına sahip olabilirsiniz. İşletmeniz için yayınladığınız adresten bize ulaşın; Talepleri yasalara uygun olarak doğrulayacağız. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Ödeme başarılı. ",
+    "bookingsSuccess": "Ödeme alındı. Rezervasyonunuz birazdan güncellenecektir. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Başa dön "
+  },
+  "Home": {
+    "bookNow": "Hemen yer ayırtın ",
+    "heroBadge": "Canlı rezervasyonlar ",
+    "heroHeadingLead": "Uçuş rezervasyonu ",
+    "heroHeadingAccent": "dakikalar içinde doğrulandı ",
+    "heroSub": "Gerçek uçuş rezervasyonlarını havayollarının web sitesinden doğrulayabilirsiniz. Göçebeler için stressiz seyahat. ",
+    "howItWorks": "Nasıl çalışır? ",
+    "trustStats": [
+      {
+        "stat": "Dakika",
+        "label": "Havayollarının işbirliği yaptığı tipik geri dönüşler "
+      },
+      {
+        "stat": "Gerçek PNR ",
+        "label": "Verildiğinde taşıyıcıya bakın "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Bir şeyin insana ihtiyacı olduğunda destek "
+      }
+    ],
+    "featuresTitle": "Huzur için ihtiyacınız olan her şey ",
+    "featuresSub": "Hızlı, doğrulanabilir ileriye dönük seyahat kanıtı; kullanmayacağınız bir bilet satın alma endişesi olmadan. ",
+    "features": [
+      {
+        "title": "Gerçek rezervasyonlar ",
+        "body": "Onay geldiğinde gerçek bir havayolu kaydı; dekoratif bir PDF değil. "
+      },
+      {
+        "title": "Anında teslimat ",
+        "body": "Akışların çoğu hızlı bir şekilde tamamlanır, böylece aynı gün kanıt ekleyebilirsiniz. "
+      },
+      {
+        "title": "Taşıyıcı tarafından doğrulanabilir",
+        "body": "Biri sorduğunda rezervasyonu görüntülemek için havayolu şirketinin araçlarını kullanın. "
+      },
+      {
+        "title": "Paradan tasarruf edin ",
+        "body": "İade edilebilir uzun mesafe ücreti yerine küçük bir hizmet ücreti ödeyin. "
+      },
+      {
+        "title": "Esnek planlar ",
+        "body": "Seyahat planınız değiştiğinde tarihleri havayolu politikası pencerelerinde ayarlayın. "
+      },
+      {
+        "title": "İnsan desteği ",
+        "body": "Takılan ücretler ve uç durumlar kuyruktan ekibimize iletilebilir. "
+      }
+    ],
+    "processTitle": "Basit rezervasyon süreci ",
+    "commonQuestions": "Genel sorular ",
+    "personasTitle": "şunlar için mükemmel ",
+    "personas": [
+      {
+        "title": "Vize başvuru sahipleri ",
+        "body": "Konsolosluklar ücretli bir ücret değil, seyahat planı istediğinde."
+      },
+      {
+        "title": "Sık uçan yolcular",
+        "body": "İade/ileriye taşıma kurallarını uygulayan havayolları için tekrarlanabilir kanıt."
+      },
+      {
+        "title": "Gezginler",
+        "body": "Sınır ve taşıyıcı kontrolleri için basit doğrulama hikayesi."
+      },
+      {
+        "title": "Dijital göçebeler",
+        "body": "Kullanılmayan uzun mesafe ücretlerinde park parası olmadan esnek kalın."
+      }
+    ],
+    "socialTitle": "Dünyanın her yerindeki gezginlerin güvendiği",
+    "socialNote": "Örnek incelemeler; elinize geçtiğinde gerçek referanslarla değiştirin.",
+    "testimonials": [
+      {
+        "flag": "🇺🇸",
+        "name": "Örnek · Alex M.",
+        "quote": "Başvuru yaptığım hafta PNR havayolunun sitesinden kontrol edildi.",
+        "avatar": "sabah"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Örnek · Leni K. ",
+        "quote": "Rota hakkında soru sorduğumda anlaşılır akış ve hızlı yanıtlar. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Örnek · James T. ",
+        "quote": "Tek yön bilet politikasıyla check-in işlemini gerçekleştirdim. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Vizenizi güvence altına alırken daha fazla esneklik ",
+    "visaBody": "Birçok görev, tamamen ödenmiş bir bilet yerine bir seyahat planının veya rezervasyonun kabul edilmesini anlatır. Durumunuzu resmi sitede onaylayın; beklerken doğrulayabileceğiniz gerçek bir rezervasyon sağlıyoruz. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Resmi kontrol listesini okuyun",
+        "body": "Elçilikler farklıdır; bazıları rezervasyon ister, diğerleri bilet ister. Bir blogdan değil, onların sayfasından başlayın. "
+      },
+      {
+        "n": "2 ",
+        "title": "Tarihleri hikayenizle eşleştirin ",
+        "body": "Yaptığınız başvuruya mükemmel şekilde uyan bir rota ve zamanlama seçin. "
+      },
+      {
+        "n": "3 ",
+        "title": "Havayolu şirketini doğrulayın ",
+        "body": "Kayıt yayındaysa, randevunuzdan önce onu taşıyıcının sitesinde açmaya çalışın. "
+      }
+    ],
+    "embassyPublish": "Elçiliklerin yayınladığı şeyler ",
+    "embassyFigures": [
+      {
+        "quote": "Dönüş bileti rezervasyonu, vize verilmeden önce bilet alınmasına gerek yok… ",
+        "caption": "Kamu elçiliği SSS teması (Norveç) "
+      },
+      {
+        "quote": "Havayolu rezervasyonu… seyahat rezervasyon numarasıyla birlikte… mutlaka biletli bir rezervasyon olması gerekmez. ",
+        "caption": "Kamuya açık Schengen kılavuzundan tema (İspanya)"
+      },
+      {
+        "quote": "Doğrulanabilir uçuş rezervasyonu… satın alınmış bir bilet değil. ",
+        "caption": "Genel vize bilgilerinden tema (Hindistan) "
+      }
+    ],
+    "faqTitle": "Yardıma ihtiyacınız var mı? ",
+    "faqFooter": "Başka sorularınız mı var? Bir rezervasyon başlatın; siz ilerledikçe zamanlamayı ve operatör notlarını yüzeye çıkarırız. ",
+    "faqItems": [
+      {
+        "q": "TempTicket nedir? ",
+        "a": "İleriye dönük seyahat ve vize senaryoları için kullanamayacağınız tam ücret ödemeden gerçek, doğrulanabilir bir uçuş rezervasyonu (havayolu şirketi onayladığında rezervasyon referansıyla birlikte) almanıza yardımcı olan bir hizmet. "
+      },
+      {
+        "q": "Rezervasyon ne kadar süreyle geçerlidir? ",
+        "a": "Geçerlilik havayolunun ücret kurallarına, bekleme politikasına veya biletleme zaman çizelgesine bağlıdır. Rezervasyon sırasında elimizden geleni ortaya koyuyoruz; zamanlamayı her zaman elçilik veya taşıyıcı gereksinimlerinize göre doğrulayın. "
+      },
+      {
+        "q": "Havayolunun web sitesinden doğrulayabilir miyim? ",
+        "a": "Hava yolu canlı bir kayıt yayınladığında, bunu genellikle rezervasyon yönetimi veya yolculuğumu kontrol et akışında arayabilirsiniz. Bir rota duraklatmaya uygun değilse bunun yerine anında bilete ihtiyacınız olabilir. "
+      },
+      {
+        "q": "Bu hukuki tavsiye mi yoksa vize garantisi mi? ",
+        "a": "Hayır. Göçmenlik kuralları ülkeye ve memura göre değişir. Yalnızca rezervasyon hizmeti sağlıyoruz; durumunuzu resmi kaynaklardan kontrol edin."
+      }
+    ],
+    "ctaTitle": "Seyahat etmek yeterince zor. İle ileriye yönelik kanıtları kolaylaştırın ",
+    "ctaPriceLine": "{price} tarihinden itibaren · dakika, tahmin değil ",
+    "footerTagline": "Göçebeler için ileriye dönük seyahat kanıtı ",
+    "footerServices": "Hizmetler ",
+    "footerAccount": "Hesap ",
+    "footerLegal": "Yasal ",
+    "footerBook": "Rezervasyon yaptırın ",
+    "footerSignIn": "Giriş yap ",
+    "footerMyBookings": "Rezervasyonlarım ",
+    "footerTerms": "Şartlar ",
+    "footerPrivacy": "Gizlilik ",
+    "footerCopyright": "Tüm hakları saklıdır.",
+    "footerBackTop": "Başa dön ",
+    "ticketFrom": "Başlangıç: {price} ",
+    "ticketDeparture": "Kalkış ",
+    "ticketArrival": "Varış ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Yolcu ",
+    "ticketPassengerVal": "Göçebe · 1 yetişkin ",
+    "ticketRecord": "Kayıt bulucu ",
+    "ticketVerified": "Doğrulandı"
+  }
+}

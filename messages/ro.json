@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — dovada de călătorie pentru nomazi ",
+    "defaultDescription": "Rezervari de zbor reale, verificabile pentru verificări de călătorie ulterioară. Creat pentru nomazi digitali. ",
+    "homeTitle": "TempTicket — dovada de călătorie pentru nomazi ",
+    "homeDescription": "Rezervari de zbor reale, verificabile pentru verificări de călătorie ulterioară. Creat pentru nomazi digitali. ",
+    "bookTitle": "Rezervare — TempTicket ",
+    "bookDescription": "Găsiți un zbor în așteptare și finalizați rezervarea de călătorie. ",
+    "bookConfirmationTitle": "Plată primită — TempTicket ",
+    "bookConfirmationDescription": "Confirmăm rezervarea dumneavoastră la compania aeriană. ",
+    "loginTitle": "Conectare — TempTicket ",
+    "loginDescription": "Conectați-vă cu linkul magic cu un cod din 6 cifre pentru a vă vizualiza rezervările. ",
+    "bookingsTitle": "Rezervarile mele — TempTicket ",
+    "bookingsDescription": "Comenzi și referințe ale companiilor aeriene pentru contul dvs.",
+    "termsTitle": "Termeni și condiții — TempTicket ",
+    "termsDescription": "Termeni și condiții pentru TempTicket. ",
+    "privacyTitle": "Confidențialitate — TempTicket ",
+    "privacyDescription": "Cum procesează TempTicket datele personale. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Rezervarile mele ",
+    "admin": "Admin ",
+    "signOut": "Deconectați-vă ",
+    "signIn": "Conectați-vă ",
+    "book": "Carte "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Limba ",
+    "language": "Limba"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Se caută... ",
+    "empty": "Nu au fost găsite locuri. Încercați altă ortografie sau alt oraș. ",
+    "city": "Oraş ",
+    "airport": "Aeroport ",
+    "couldNotSearch": "Nu s-au putut căuta locuri. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Pas {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Introduceți informațiile dvs ",
+        "body": "Rută, date și detalii despre pasageri. "
+      },
+      {
+        "label": "02 ",
+        "title": "Efectuați o plată ",
+        "body": "Casare securizată — prețuri în avans."
+      },
+      {
+        "label": "03 ",
+        "title": "Obțineți referința ",
+        "body": "Verificați pe compania aeriană când este live. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Alegeți originea și destinația dintre sugestii ",
+    "toastSearchFailed": "Căutarea eșuată ",
+    "toastNoPayLater": "Fără tarife plătite mai târziu pentru această căutare — încercați alte date sau aeroporturi. ",
+    "toastOfferExpired": "Ofertă expirată—căutați din nou ",
+    "toastPassengerSlots": "Nu s-au putut încărca sloturile pentru pasageri pentru această ofertă ",
+    "toastLoadOffer": "Nu s-a putut încărca oferta ",
+    "toastCompleteFields": "Completați toate câmpurile pentru pasageri ",
+    "toastPhoneInvalid": "Introduceți un număr de telefon valid ",
+    "toastReceiptEmail": "Introduceți un e-mail pentru rezervare și primire",
+    "toastEmailInvalid": "Introduceți o adresă de e-mail validă ",
+    "toastCheckoutServerError": "Checkout eșuat (eroare de server {status}) ",
+    "toastCheckoutFailed": "Casa nu a reușit ({status}) ",
+    "toastNoPaymentLink": "Checkout nu a returnat un link de plată ",
+    "toastCheckoutConnection": "Checkout failed—verificați-vă conexiunea și încercați din nou ",
+    "back": "Înapoi ",
+    "title": "Rezervați rezervarea ",
+    "stepFindTitle": "Găsiți un zbor ",
+    "stepFindDescription": "Tastați un nume de oraș, țară sau aeroport. ",
+    "from": "De la ",
+    "to": "Pentru ",
+    "placePlaceholder": "Oraș, țară sau aeroport",
+    "swapAria": "Schimbați originea și destinația ",
+    "swapTitle": "Schimbați originea și destinația ",
+    "departureDate": "Data plecării ",
+    "searchBlurb": "Căutăm mai întâi tarifele cu plată mai târziu — finalizați rezervarea companiei aeriene după ce plătiți taxa noastră mică de serviciu. ",
+    "searching": "Se caută... ",
+    "findingFare": "Găsirea unui tarif... ",
+    "searchFlights": "Căutați zboruri ",
+    "stepPayTitle": "Detalii despre pasager și plată ",
+    "stepPayDescription": "Numele trebuie să corespundă documentelor de călătorie. ",
+    "passenger": "Pasager {index} ",
+    "genderLabel": "Sex (ca pe pașaport) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Data nașterii ",
+    "firstName": "Prenumele ",
+    "lastName": "Numele (numele) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "tu@example.com ",
+    "emailHint": "Utilizat la rezervarea companiei aeriene și pentru chitanța și confirmarea plății. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Codul de apel de țară ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Plătiți taxa de serviciu în ",
+    "preparingCheckout": "Se pregătește checkout...",
+    "payButton": "Plătiți taxa de serviciu și rezervare ",
+    "demoOriginLabel": "Aeroportul Suvarnabhumi (BKK) · Bangkok, Thailanda ",
+    "demoDestinationLabel": "Aeroportul Internațional Kuala Lumpur (KUL) · Sepang, Malaezia "
+  },
+  "BookConfirmation": {
+    "backHome": "Înapoi la casă ",
+    "badge": "Plată primită ",
+    "title": "Suntem la asta ",
+    "body": "Confirmăm rezervarea dvs. de zbor cu compania aeriană. Veți primi în curând un e-mail cu detaliile rezervării. ",
+    "detail": "Verificați căsuța de e-mail (și spam-ul) pentru confirmare. Utilizați referința companiei aeriene de pe site-ul transportatorului atunci când aveți nevoie de dovada călătoriei în continuare. ",
+    "bookAnother": "Rezervați altul ",
+    "signInHistory": "Conectați-vă pentru istorie "
+  },
+  "Login": {
+    "title": "Conectați-vă ",
+    "description": "Conectează-te pentru a vedea rezervările legate de contul tău sau de e-mailul tău. Trimitem un cod din 6 cifre, fără parolă.",
+    "email": "E-mail ",
+    "sendCode": "Trimite cod ",
+    "codeLabel": "Cod din 6 cifre ",
+    "verify": "Verificați ",
+    "differentEmail": "Utilizați un alt e-mail ",
+    "toastSendFailed": "Nu s-a putut trimite codul ",
+    "toastCodeSent": "Verificați e-mailul pentru un cod din 6 cifre ",
+    "toastInvalid": "Cod nevalid ",
+    "toastSignedIn": "Conectat "
+  },
+  "LoginPage": {
+    "loading": "Se încarcă... "
+  },
+  "Bookings": {
+    "title": "Rezervarile mele ",
+    "subtitle": "Rezervări legate de contul dvs. sau făcute cu acest e-mail înainte de a vă conecta. După plată, vă trimitem prin e-mail referința companiei aeriene.",
+    "newBooking": "Rezervare nouă ",
+    "orders": "Comenzi ",
+    "ordersDescription": "Utilizați referința companiei aeriene de pe site-ul transportatorului atunci când aveți nevoie de dovada călătoriei în continuare. ",
+    "empty": "Fără rezervări încă. ",
+    "colCreated": "Creat ",
+    "colStatus": "Stare ",
+    "colAirline": "Companie aeriană ",
+    "colReference": "Referință ",
+    "colMode": "Mod ",
+    "needsAttention": "Necesită atenție ",
+    "needsAttentionDescription": "Dacă o rezervare a eșuat după plată, contactați asistența cu id-ul și chitanța Stripe. "
+  },
+  "Terms": {
+    "title": "Termeni și condiții",
+    "lead": "Ultima actualizare: aprilie 2026. Acești termeni sunt doar un șablon de pornire – solicitați consilierului calificat să-i examineze înainte de a invita clienți plătitori. ",
+    "serviceHeading": "Serviciul ",
+    "serviceBody": "TempTicket oferă un serviciu cu plată pentru a aranja o rezervare reală de zbor prin intermediul partenerilor noștri de rezervare pentru călătorii care au nevoie de documente pentru continuarea călătoriei. Nu garantăm niciun rezultat special în materie de imigrare sau de companii aeriene. Ofițerii și transportatorii își aplică propriile reguli. ",
+    "legalHeading": "Fără consultanță juridică ",
+    "legalBody": "Nimic de pe acest site nu este consiliere legală, de imigrare sau fiscală. Respectați legile și licențele care se aplică afacerii dvs. și jurisdicțiilor în care comercializați și vindeți. ",
+    "paymentsHeading": "Plăți și rambursări ",
+    "paymentsBody": "Taxele de servicii sunt colectate la finalizare. Dacă nu putem finaliza fluxul rezervat după plata cu succes, vom colabora cu dvs. la o rambursare sau o ofertă alternativă conform politicii noastre publicate. Rambursările pot fi contestate atunci când serviciul a fost furnizat conform descrierii. ",
+    "useHeading": "Utilizare acceptabilă ",
+    "useBody": "Nu puteți utiliza serviciul pentru a denatura intenția de călătorie guvernelor sau companiilor aeriene, pentru a testa metode de plată furate sau în orice mod care încalcă termenii furnizorilor sau legea aplicabilă. ",
+    "liabilityHeading": "Răspundere limitată ",
+    "liabilityBody": "În măsura maximă permisă de lege, TempTicket nu este responsabil pentru refuzul de îmbarcare, intrarea refuzată, conexiunile ratate sau daune indirecte rezultate din utilizarea serviciului. "
+  },
+  "Privacy": {
+    "title": "Confidențialitate",
+    "summary": "Rezumat: procesăm e-mailuri și date personale legate de călătorii pentru a rula conturi, rezervări și chitanțe obligatorii. Solicitați consilierului să alinieze această pagină cu harta dvs. de date actuală (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Ce colectăm ",
+    "collectItems": [
+      "Adresă de e-mail și indicative de sesiune pentru conectare ",
+      "Numele pasagerilor, datele de naștere, datele de contact solicitate de companiile aeriene ",
+      "Metadate de plată de la procesorul nostru de plăți ",
+      "Jurnalele tehnice necesare pentru operarea și depanarea serviciului "
+    ],
+    "whyHeading": "De ce îl procesăm ",
+    "whyBody": "Pentru a îndeplini contractul nostru cu dvs., pentru a respecta obligațiile legale acolo unde acestea se aplică și pentru a urmări interese legitime (securitate, prevenirea fraudei, îmbunătățirea produsului) echilibrate cu drepturile dumneavoastră. ",
+    "processorsHeading": "Procesatori ",
+    "processorsBody": "Infrastructura și furnizorii pot include găzduirea bazei de date (de exemplu, Neon), livrare prin e-mail (de exemplu, Retrimitere), plăți (de exemplu, Stripe) și rezervare de zboruri (Duffel și companii aeriene). Termenii lor se aplică și părților de prelucrare pe care le efectuează. ",
+    "retentionHeading": "Retinere ",
+    "retentionBody": "Păstrăm înregistrările privind rezervările și facturarea, după cum este necesar, pentru asistență, contabilitate și rețineri legale - de obicei ani, nu săptămâni - dar programele exacte ar trebui să se potrivească cu politica dvs.",
+    "rightsHeading": "Drepturi ",
+    "rightsBody": "În funcție de regiunea dvs., este posibil să aveți drepturi de acces, de corectare, de ștergere sau de a vă opune anumitor procesări. Contactați-ne la adresa pe care o publicați pentru afacerea dvs.; vom verifica cererile în conformitate cu legea. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Plata reușită. ",
+    "bookingsSuccess": "Plată primită. Rezervarea dvs. se va actualiza într-un moment. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Înapoi sus "
+  },
+  "Home": {
+    "bookNow": "Rezervați acum ",
+    "heroBadge": "Rezervari live ",
+    "heroHeadingLead": "Rezervare zbor ",
+    "heroHeadingAccent": "verificat în câteva minute ",
+    "heroSub": "Rezervarile reale de zboruri pe care le puteti verifica pe site-ul companiilor aeriene. Călătorii fără stres pentru nomazi. ",
+    "howItWorks": "Cum funcționează ",
+    "trustStats": [
+      {
+        "stat": "Procese verbale",
+        "label": "Returul tipic atunci când companiile aeriene cooperează "
+      },
+      {
+        "stat": "PNR real ",
+        "label": "Căutați-l pe transportator atunci când este emis "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Sprijin atunci când ceva are nevoie de un om "
+      }
+    ],
+    "featuresTitle": "Tot ce ai nevoie pentru liniște sufletească ",
+    "featuresSub": "Dovada de călătorie rapidă, verificabilă — fără neliniștea de a cumpăra un bilet pe care nu îl veți folosi. ",
+    "features": [
+      {
+        "title": "Rezervari autentice ",
+        "body": "O înregistrare autentică a companiei aeriene când vine confirmarea — nu un PDF decorativ. "
+      },
+      {
+        "title": "Livrare instantanee ",
+        "body": "Majoritatea fluxurilor se completează rapid, astfel încât să puteți atașa dovezi în aceeași zi. "
+      },
+      {
+        "title": "Verificabil de transportator",
+        "body": "Utilizați instrumentele companiei aeriene pentru a ridica rezervarea când cineva vă întreabă. "
+      },
+      {
+        "title": "Economisiți bani ",
+        "body": "Plătiți o mică taxă de serviciu în loc de un tarif rambursabil pe distanță lungă. "
+      },
+      {
+        "title": "Planuri flexibile ",
+        "body": "Ajustați datele când itinerariul dvs. se modifică — în ferestrele politicilor companiei aeriene. "
+      },
+      {
+        "title": "Sprijin uman ",
+        "body": "Tariturile blocate și cazurile marginale pot escalada către echipa noastră din coadă. "
+      }
+    ],
+    "processTitle": "Proces simplu de rezervare ",
+    "commonQuestions": "Întrebări frecvente ",
+    "personasTitle": "este perfect pentru ",
+    "personas": [
+      {
+        "title": "Solicitanții de viză ",
+        "body": "Când consulatele doresc un itinerar, nu neapărat un tarif plătit."
+      },
+      {
+        "title": "Fugatori frecventi ",
+        "body": "Dovada repetabilă pentru companiile aeriene care aplică regulile de retur/în continuare. "
+      },
+      {
+        "title": "Călători ",
+        "body": "Povestea simplă de verificare pentru controale la frontieră și la transportator. "
+      },
+      {
+        "title": "Nomazi digitali ",
+        "body": "Rămâneți flexibil fără bani de parcare în tarifele neutilizate pe distanță lungă. "
+      }
+    ],
+    "socialTitle": "De încredere de către călători din întreaga lume ",
+    "socialNote": "Eșantion de recenzii — schimbați cu mărturii reale atunci când le aveți. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Eșantion · Alex M. ",
+        "quote": "PNR a verificat pe site-ul companiei aeriene în aceeași săptămână în care am aplicat. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Eșantion · Leni K. ",
+        "quote": "Flux direct și răspunsuri rapide când am întrebat despre o rută. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Eșantion · James T. ",
+        "quote": "Mi-a permis formalitățile de check-in cu o politică de bilete unică. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Flexibilitate mai mare atunci când vă asigurați viza ",
+    "visaBody": "Multe misiuni descriu acceptarea unui itinerar sau a unei rezervări, mai degrabă decât a unui bilet plătit integral. Confirmați pe site-ul oficial cazul dvs. - vă oferim o rezervare reală pe care o puteți verifica în timp ce așteptați. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Citiți lista de verificare oficială",
+        "body": "Ambasadele diferă — unii doresc o rezervare, alții un bilet. Începe de la pagina lor, nu de un blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Potriviți datele cu povestea dvs ",
+        "body": "Alegeți o rută și un timp care se aliniază perfect cu aplicația pe care o depuneți. "
+      },
+      {
+        "n": "3 ",
+        "title": "Verificați pe compania aeriană ",
+        "body": "Dacă înregistrarea este în direct, exersați-l să o trageți pe site-ul operatorului înainte de programare. "
+      }
+    ],
+    "embassyPublish": "Ce publică ambasadele ",
+    "embassyFigures": [
+      {
+        "quote": "Rezervare pentru bilet dus-întors, nu este necesară achiziționarea biletului înainte de acordarea vizei... ",
+        "caption": "Temă de la Întrebări frecvente ale ambasadei publice (Norvegia) "
+      },
+      {
+        "quote": "Rezervare companie aeriană... cu număr de rezervare de călătorie... nu neapărat o rezervare cu bilet. ",
+        "caption": "Temă din orientările publice Schengen (Spania)"
+      },
+      {
+        "quote": "Rezervare de zbor verificabilă... nu este un bilet achiziționat. ",
+        "caption": "Temă din informațiile publice privind vizele (India) "
+      }
+    ],
+    "faqTitle": "Ai nevoie de ajutor? ",
+    "faqFooter": "Mai multe întrebări? Începeți o rezervare - noi afișăm calendarul și notele operatorului pe măsură ce mergeți. ",
+    "faqItems": [
+      {
+        "q": "Ce este TempTicket? ",
+        "a": "Un serviciu care vă ajută să obțineți o rezervare de zbor reală, verificabilă (cu o referință de rezervare atunci când compania aeriană o confirmă) pentru scenarii de călătorie ulterioară și viză - fără a plăti un tarif complet pe care nu îl puteți utiliza. "
+      },
+      {
+        "q": "Cat timp este valabila rezervarea? ",
+        "a": "Valabilitatea depinde de regulile tarifare ale companiei aeriene, de politica de reținere sau de cronologia de emitere a biletelor. Evidențiem ceea ce putem în timpul rezervării; confirmați întotdeauna calendarul față de cerințele ambasadei sau ale transportatorului. "
+      },
+      {
+        "q": "Pot verifica pe site-ul companiei aeriene? ",
+        "a": "Când compania aeriană emite o înregistrare live, de obicei o puteți căuta în fluxul de gestionare a rezervării sau de verificare a călătoriei mele. Dacă o rută nu este eligibilă pentru reținere, este posibil să aveți nevoie de un bilet instantaneu. "
+      },
+      {
+        "q": "Este acest sfat juridic sau o garanție a vizei? ",
+        "a": "Nr. Regulile de imigrare se modifică în funcție de țară și ofițer. Oferim doar un serviciu de rezervare - verificați sursele oficiale pentru situația dvs."
+      }
+    ],
+    "ctaTitle": "Călătorind este destul de greu. Faceți dovada mai uşoară cu ",
+    "ctaPriceLine": "De la {price} · minute, nu presupuneri ",
+    "footerTagline": "Dovada de călătorie mai departe pentru nomazi ",
+    "footerServices": "Servicii ",
+    "footerAccount": "Cont ",
+    "footerLegal": "Legal ",
+    "footerBook": "Rezervați o rezervare ",
+    "footerSignIn": "Conectați-vă ",
+    "footerMyBookings": "Rezervarile mele ",
+    "footerTerms": "Termeni ",
+    "footerPrivacy": "Confidențialitate ",
+    "footerCopyright": "Toate drepturile rezervate.",
+    "footerBackTop": "Înapoi sus ",
+    "ticketFrom": "De la {price} ",
+    "ticketDeparture": "Plecare ",
+    "ticketArrival": "Sosire ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Pasager ",
+    "ticketPassengerVal": "Nomad · 1 adult ",
+    "ticketRecord": "Locator de înregistrări ",
+    "ticketVerified": "Verificat"
+  }
+}

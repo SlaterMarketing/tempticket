@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — jatkomatkustustodistus nomadeille ",
+    "defaultDescription": "Todelliset, todennettavat lentovaraukset matkatarkastuksia varten. Tehty digitaalisille nomadeille. ",
+    "homeTitle": "TempTicket — jatkomatkustustodistus nomadeille ",
+    "homeDescription": "Todelliset, todennettavat lentovaraukset matkatarkastuksia varten. Tehty digitaalisille nomadeille. ",
+    "bookTitle": "Varaa varaus — TempTicket ",
+    "bookDescription": "Etsi lentovaraus ja suorita jatkomatkavarauksesi. ",
+    "bookConfirmationTitle": "Maksu vastaanotettu — TempTicket ",
+    "bookConfirmationDescription": "Vahvistamme varauksesi lentoyhtiöltä. ",
+    "loginTitle": "Kirjaudu sisään — TempTicket ",
+    "loginDescription": "Maginen linkkikirjautuminen 6-numeroisella koodilla nähdäksesi varauksesi. ",
+    "bookingsTitle": "Omat varaukset — TempTicket ",
+    "bookingsDescription": "Tilaukset ja lentoyhtiöviitteet tilillesi.",
+    "termsTitle": "Käyttöehdot — TempTicket ",
+    "termsDescription": "TempTicketin käyttöehdot. ",
+    "privacyTitle": "Tietosuoja — TempTicket ",
+    "privacyDescription": "Miten TempTicket käsittelee henkilötietoja. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Temp Ticket ",
+    "myBookings": "Omat varaukset ",
+    "admin": "Järjestelmänvalvoja ",
+    "signOut": "Kirjaudu ulos ",
+    "signIn": "Kirjaudu sisään ",
+    "book": "Kirja "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Kieli ",
+    "language": "Kieli"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Haetaan… ",
+    "empty": "Paikkoja ei löydy. Kokeile toista kirjoitusasua tai kaupunkia. ",
+    "city": "Kaupunki ",
+    "airport": "Lentokenttä ",
+    "couldNotSearch": "Ei voitu etsiä paikkoja. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Vaihe {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Syötä tietosi ",
+        "body": "Reitti, päivämäärät ja matkustajan tiedot. "
+      },
+      {
+        "label": "02 ",
+        "title": "Suorita maksu ",
+        "body": "Turvallinen kassa – hinnoittelu etukäteen."
+      },
+      {
+        "label": "03 ",
+        "title": "Hae ohje ",
+        "body": "Varmista lentoyhtiöstä, kun se on live-tilassa. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Valitse lähtöpaikka ja kohde ehdotuksista ",
+    "toastSearchFailed": "Haku epäonnistui ",
+    "toastNoPayLater": "Ei maksa myöhemmin -hintoja tässä haussa – kokeile muita päivämääriä tai lentokenttiä. ",
+    "toastOfferExpired": "Tarjous vanhentunut — hae uudelleen ",
+    "toastPassengerSlots": "Tämän tarjouksen matkustajapaikkoja ei voitu ladata ",
+    "toastLoadOffer": "Tarjousta ei voitu ladata ",
+    "toastCompleteFields": "Täytä kaikki matkustajakentät ",
+    "toastPhoneInvalid": "Syötä kelvollinen puhelinnumero ",
+    "toastReceiptEmail": "Anna varauksesi ja kuitin sähköposti",
+    "toastEmailInvalid": "Anna kelvollinen sähköpostiosoite ",
+    "toastCheckoutServerError": "Kirjaus epäonnistui (palvelinvirhe {status}) ",
+    "toastCheckoutFailed": "Kassa epäonnistui ({status}) ",
+    "toastNoPaymentLink": "Checkout ei palauttanut maksulinkkiä ",
+    "toastCheckoutConnection": "Kassa epäonnistui — tarkista yhteys ja yritä uudelleen ",
+    "back": "Takaisin ",
+    "title": "Varaa varaus ",
+    "stepFindTitle": "Etsi lento ",
+    "stepFindDescription": "Kirjoita kaupungin, maan tai lentokentän nimi. ",
+    "from": "Alkaen ",
+    "to": "To ",
+    "placePlaceholder": "Kaupunki, maa tai lentokenttä",
+    "swapAria": "Vaihda lähtöpaikka ja kohde ",
+    "swapTitle": "Vaihda lähtöpaikka ja kohde ",
+    "departureDate": "Lähtöpäivä ",
+    "searchBlurb": "Haemme ensin pay-later -hinnat – suorita lentovaraus, kun olet maksanut pienen palvelumaksumme. ",
+    "searching": "Haetaan… ",
+    "findingFare": "Hae hintaa… ",
+    "searchFlights": "Hae lentoja ",
+    "stepPayTitle": "Matkustajan tiedot ja maksu ",
+    "stepPayDescription": "Nimien tulee vastata matkustusasiakirjoja. ",
+    "passenger": "Matkustaja {index} ",
+    "genderLabel": "Sukupuoli (kuten passissa) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Syntymäaika ",
+    "firstName": "Etunimet ",
+    "lastName": "Sukunimet ",
+    "email": "Sähköposti ",
+    "emailPlaceholder": "sinä@example.com ",
+    "emailHint": "Käytetään lentovarauksessasi sekä maksukuittissa ja -vahvistuksessa. ",
+    "phone": "Puhelin ",
+    "dialCodeAria": "Maatunnus ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Maksa palvelumaksu sisään ",
+    "preparingCheckout": "Valmistellaan kassaa…",
+    "payButton": "Maksa palvelumaksu & varaus ",
+    "demoOriginLabel": "Suvarnabhumin lentokenttä (BKK) · Bangkok, Thaimaa ",
+    "demoDestinationLabel": "Kuala Lumpurin kansainvälinen lentoasema (KUL) · Sepang, Malesia "
+  },
+  "BookConfirmation": {
+    "backHome": "Takaisin kotiin ",
+    "badge": "Maksu vastaanotettu ",
+    "title": "Olemme siinä ",
+    "body": "Vahvistamme lentovarauksesi lentoyhtiöltä. Saat pian sähköpostiisi varaustiedot. ",
+    "detail": "Tarkista saapuneet (ja roskapostit) saadaksesi vahvistuksen. Käytä lentoyhtiön viitettä liikenteenharjoittajan sivustolla, kun tarvitset todisteen jatkomatkasta. ",
+    "bookAnother": "Varaa toinen ",
+    "signInHistory": "Kirjaudu sisään historiaan "
+  },
+  "Login": {
+    "title": "Kirjaudu sisään ",
+    "description": "Kirjaudu sisään nähdäksesi tiliisi tai sähköpostiisi linkitetyt varaukset. Lähetämme 6-numeroisen koodin ilman salasanaa.",
+    "email": "Sähköposti ",
+    "sendCode": "Lähetä koodi ",
+    "codeLabel": "6-numeroinen koodi ",
+    "verify": "Varmista ",
+    "differentEmail": "Käytä toista sähköpostia ",
+    "toastSendFailed": "Koodia ei voitu lähettää ",
+    "toastCodeSent": "Tarkista sähköpostistasi 6-numeroinen koodi ",
+    "toastInvalid": "Virheellinen koodi ",
+    "toastSignedIn": "Kirjautunut sisään "
+  },
+  "LoginPage": {
+    "loading": "Ladataan… "
+  },
+  "Bookings": {
+    "title": "Omat varaukset ",
+    "subtitle": "Varaukset, jotka on sidottu tiliisi tai tehty tällä sähköpostilla ennen sisäänkirjautumista. Maksun jälkeen lähetämme sinulle lentoyhtiöviitteen.",
+    "newBooking": "Uusi varaus ",
+    "orders": "Tilaukset ",
+    "ordersDescription": "Käytä lentoyhtiön viitettä liikenteenharjoittajan sivustolla, kun tarvitset todisteen jatkomatkasta. ",
+    "empty": "Ei vielä varauksia. ",
+    "colCreated": "Luotu ",
+    "colStatus": "Tila ",
+    "colAirline": "Lentoyhtiö ",
+    "colReference": "Viite ",
+    "colMode": "Tila ",
+    "needsAttention": "Tarvitsee huomiota ",
+    "needsAttentionDescription": "Jos varaus epäonnistui maksun jälkeen, ota yhteyttä tukeen tunnuksella ja Stripe-kuitilla. "
+  },
+  "Terms": {
+    "title": "Palveluehdot",
+    "lead": "Viimeksi päivitetty: huhtikuu 2026. Nämä ehdot ovat vain aloitusmalli – pyydä pätevää neuvonantajaa tarkistamaan ne ennen kuin kutsut maksavia asiakkaita. ",
+    "serviceHeading": "Palvelu ",
+    "serviceBody": "TempTicket tarjoaa maksullisen palvelun todellisen lentovarauksen järjestämiseen varauskumppaneidemme kautta matkustajille, jotka tarvitsevat dokumentteja jatkomatkasta. Emme takaa mitään erityistä maahanmuuttoa tai lentoyhtiön tulosta. Virkailijat ja kuljettajat noudattavat omia sääntöjään. ",
+    "legalHeading": "Ei oikeudellista neuvontaa ",
+    "legalBody": "Mikään tällä sivustolla ei ole laillista, maahanmuutto- tai veroneuvontaa. Noudata lakeja ja lisenssejä, jotka koskevat liiketoimintaasi ja lainkäyttöalueita, joissa markkinoit ja myyt. ",
+    "paymentsHeading": "Maksut ja palautukset ",
+    "paymentsBody": "Palvelumaksut peritään kassalla. Jos emme pysty suorittamaan varausta onnistuneen maksun jälkeen, teemme kanssasi hyvityksen tai vaihtoehtoisen tarjouksen julkaistun käytäntömme mukaisesti. Takaisinveloitukset voidaan riitauttaa, kun palvelu toimitettiin kuvatulla tavalla. ",
+    "useHeading": "Hyväksyttävä käyttö ",
+    "useBody": "Et saa käyttää palvelua antaakseen vääriä tietoja matkustusaikoista viranomaisille tai lentoyhtiöille, testatakseen varastettuja maksutapoja tai millään tavalla, joka rikkoo toimittajan ehtoja tai sovellettavaa lakia. ",
+    "liabilityHeading": "Rajoitettu vastuu ",
+    "liabilityBody": "TempTicket ei ole vastuussa lain sallimissa rajoissa lennolle pääsyn epäämisestä, sisäänpääsyn epäämisestä, yhteyksien menettämisestä tai välillisistä vahingoista, jotka johtuvat palvelun käytöstä. "
+  },
+  "Privacy": {
+    "title": "Yksityisyys",
+    "summary": "Yhteenveto: Käsittelemme sähköposteja ja matkustamiseen liittyviä henkilötietoja tilien, varausten ja pakollisten kuittien hoitamiseksi. Pyydä neuvoja kohdistamaan tämä sivu todelliseen tietokarttaasi (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Mitä keräämme ",
+    "collectItems": [
+      "Sähköpostiosoite ja istuntotunnukset sisäänkirjautumista varten ",
+      "Matkustajien nimet, syntymäajat, lentoyhtiöiden vaatimat yhteystiedot ",
+      "Maksujen metatiedot maksujen käsittelijältämme ",
+      "Tekniset lokit, joita tarvitaan palvelun käyttämiseen ja virheenkorjaukseen "
+    ],
+    "whyHeading": "Miksi käsittelemme sitä ",
+    "whyBody": "Täyttääksemme kanssasi tekemämme sopimuksen, noudattamalla laillisia velvoitteita, jos niitä sovelletaan, ja ajamalla oikeutettuja etuja (turvallisuus, petostentorjunta, tuotteen parantaminen) tasapainossa oikeuksiesi kanssa. ",
+    "processorsHeading": "Prosessorit ",
+    "processorsBody": "Infrastruktuuri ja toimittajat voivat sisältää tietokannan isännöinnin (esim. Neon), sähköpostin toimituksen (esim. uudelleenlähetys), maksut (esim. Stripe) ja lentovarauksen (Duffel ja lentoyhtiöt). Niiden ehdot koskevat myös heidän suorittamiaan käsittelyn osia. ",
+    "retentionHeading": "Säilyttäminen ",
+    "retentionBody": "Säilytämme varaus- ja laskutustietueita tarpeen mukaan tukea, kirjanpitoa ja lykkäyksiä varten – yleensä vuosia, ei viikkoja – mutta tarkan aikataulun tulee vastata käytäntöäsi.",
+    "rightsHeading": "Oikeudet ",
+    "rightsBody": "Aluestasi riippuen sinulla voi olla oikeudet käyttää, korjata, poistaa tai vastustaa tiettyä käsittelyä. Ota yhteyttä yritystäsi varten julkaisemaasi osoitteeseen; tarkistamme pyynnöt lain mukaisesti. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Maksu onnistui. ",
+    "bookingsSuccess": "Maksu vastaanotettu. Varauksesi päivittyy hetken kuluttua. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Takaisin alkuun "
+  },
+  "Home": {
+    "bookNow": "Varaa nyt ",
+    "heroBadge": "Livevaraukset ",
+    "heroHeadingLead": "Lennonvaraus ",
+    "heroHeadingAccent": "varmennettu minuuteissa ",
+    "heroSub": "Todelliset lentovaraukset voit tarkistaa lentoyhtiöiden verkkosivuilta. Stressitöntä matkustamista nomadeille. ",
+    "howItWorks": "Miten se toimii ",
+    "trustStats": [
+      {
+        "stat": "Pöytäkirja",
+        "label": "Tyypillinen käänne, kun lentoyhtiöt tekevät yhteistyötä "
+      },
+      {
+        "stat": "Todellinen PNR ",
+        "label": "Katso se kuljetusliikkeestä, kun se on myönnetty "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Tue, kun jokin tarvitsee ihmistä "
+      }
+    ],
+    "featuresTitle": "Kaikki mitä tarvitset mielenrauhaan ",
+    "featuresSub": "Nopea, todennettavissa oleva matkatodistus – ilman pelkoa ostaa lippu, jota et käytä. ",
+    "features": [
+      {
+        "title": "Aidot varaukset ",
+        "body": "Aito lentoyhtiön tietue, kun vahvistus saapuu – ei koristeellinen PDF. "
+      },
+      {
+        "title": "Välitoimitus ",
+        "body": "Useimmat virrat valmistuvat nopeasti, joten voit liittää todisteen samana päivänä. "
+      },
+      {
+        "title": "Kantaja voi tarkistaa",
+        "body": "Väytä varaus lentoyhtiön työkaluilla, kun joku kysyy. "
+      },
+      {
+        "title": "Säästä rahaa ",
+        "body": "Maksa pieni palvelumaksu palautettavan kaukomatkalipun sijaan. "
+      },
+      {
+        "title": "Joustavat suunnitelmat ",
+        "body": "Säädä päivämääriä, kun matkasuunnitelmasi muuttuu – lentoyhtiön käytäntöikkunassa. "
+      },
+      {
+        "title": "Ihmistuki ",
+        "body": "Joksissa olevat hinnat ja reunatapaukset voivat kärjistyä tiimiimme jonosta. "
+      }
+    ],
+    "processTitle": "Yksinkertainen varausprosessi ",
+    "commonQuestions": "Yleisiä kysymyksiä ",
+    "personasTitle": "sopii täydellisesti ",
+    "personas": [
+      {
+        "title": " Viisuminhakijat ",
+        "body": "Kun konsulaatit haluavat matkareitin, ei välttämättä maksettua hintaa."
+      },
+      {
+        "title": " Kanta-lentäjät ",
+        "body": "Toistettavissa oleva todiste lentoyhtiöille, jotka noudattavat palautus-/edellettämissääntöjä. "
+      },
+      {
+        "title": "Matkailijat ",
+        "body": "Yksinkertainen tarkastuskertomus raja- ja rahdinkuljettajatarkastuksia varten. "
+      },
+      {
+        "title": "Digitaaliset nomadit ",
+        "body": "Pysy joustavasti ilman pysäköintirahaa käyttämättömissä kaukoliikenteen hinnoissa. "
+      }
+    ],
+    "socialTitle": "Matkailijat luottavat maailmanlaajuisesti ",
+    "socialNote": "Esimerkkiarvostelut — vaihda oikeisiin kokemuksiin, kun sinulla on niitä. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Esimerkki · Alex M. ",
+        "quote": "PNR kirjattiin ulos lentoyhtiön sivuilta samalla viikolla, kun hain. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Näyte · Leni K. ",
+        "quote": "Suora kulku ja nopeat vastaukset, kun kysyin reitistä. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Esimerkki · James T. ",
+        "quote": "Sain sisäänkirjautumisen läpi yhdensuuntaisen lipun käytännöllä. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Parempi joustavuus viisumin hankkimisessa ",
+    "visaBody": "Monet tehtävät kuvaavat matkasuunnitelman tai varauksen hyväksymistä täysin maksetun lipun sijaan. Vahvista tapauksesi virallisella sivustolla – tarjoamme todellisen varauksen, jonka voit tarkistaa odottaessasi. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Lue virallinen tarkistuslista",
+        "body": " Suurlähetystöt ovat erilaisia ​​– toiset haluavat varauksen, toiset lipun. Aloita heidän sivultaan, älä blogista. "
+      },
+      {
+        "n": "2 ",
+        "title": "Yhdistä päivämäärät tarinaasi ",
+        "body": "Valitse reitti ja ajoitus, jotka sopivat täydellisesti jättämäsi hakemuksen kanssa. "
+      },
+      {
+        "n": "3 ",
+        "title": "Varmista lentoyhtiöstä ",
+        "body": "Jos levy on live-tilassa, harjoittele hakemaan se operaattorin sivustolta ennen tapaamista. "
+      }
+    ],
+    "embassyPublish": "Mitä suurlähetystöt julkaisevat ",
+    "embassyFigures": [
+      {
+        "quote": "Varaus paluulipulle, ei tarvitse ostaa lippua ennen viisumin myöntämistä… ",
+        "caption": "Teema julkisesta suurlähetystöstä UKK (Norja) "
+      },
+      {
+        "quote": "Lentovaraus… matkavarausnumerolla… ei välttämättä lippuvaraus. ",
+        "caption": "Teema julkisista Schengen-ohjeista (Espanja)"
+      },
+      {
+        "quote": "Varmennettavissa oleva lentovaraus… ei ostettu lippu. ",
+        "caption": "Teema julkisista viisumitiedoista (Intia) "
+      }
+    ],
+    "faqTitle": "Tarvitsetko apua? ",
+    "faqFooter": "Lisää kysymyksiä? Aloita varaus – esittelemme ajoitus- ja operaattorimerkinnät matkasi aikana. ",
+    "faqItems": [
+      {
+        "q": "Mikä TempTicket on? ",
+        "a": "Palvelu, joka auttaa sinua saamaan todellisen, todennettavissa olevan lentovarauksen (varausviitteellä, kun lentoyhtiö vahvistaa sen) jatkomatka- ja viisumiskenaarioihin – maksamatta täyttä hintaa et voi käyttää. "
+      },
+      {
+        "q": "Kuinka kauan varaus on voimassa? ",
+        "a": "Voimassaolo riippuu lentoyhtiön hintasäännöistä, pitokäytännöstä tai lippujen aikajanasta. Näytämme mitä voimme varauksen aikana; vahvista ajoitus aina suurlähetystön tai operaattorin vaatimusten mukaisesti. "
+      },
+      {
+        "q": "Voinko tarkistaa sen lentoyhtiön verkkosivuilta? ",
+        "a": "Kun lentoyhtiö julkaisee reaaliaikaisen tietueen, voit yleensä katsoa sen heidän varauksenhallinta- tai check my-trip -virrasta. Jos reitti ei ole kelvollinen säilytykseen, saatat tarvita sen sijaan pikalipun. "
+      },
+      {
+        "q": " Onko tämä oikeudellinen neuvonta vai viisumistakuu? ",
+        "a": "No. Maahanmuuttosäännöt muuttuvat maittain ja virkamiehittäin. Tarjoamme vain varauspalvelun – tarkista tilanteesi virallisista lähteistä."
+      }
+    ],
+    "ctaTitle": "Matkustus on tarpeeksi vaikeaa. Tee todisteesta eteenpäin helpommaksi ",
+    "ctaPriceLine": "Alkaen {price} · minuuttia, ei arvailua ",
+    "footerTagline": "Edelleen matkustustodistus nomadeille ",
+    "footerServices": "Palvelut ",
+    "footerAccount": "Tili ",
+    "footerLegal": "Laki ",
+    "footerBook": "Varaa varaus ",
+    "footerSignIn": "Kirjaudu sisään ",
+    "footerMyBookings": "Omat varaukset ",
+    "footerTerms": "Ehdot ",
+    "footerPrivacy": "Yksityisyys ",
+    "footerCopyright": "Kaikki oikeudet pidätetään.",
+    "footerBackTop": "Takaisin alkuun ",
+    "ticketFrom": "Alkaen {price} ",
+    "ticketDeparture": "Lähtö ",
+    "ticketArrival": "Saapuminen ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Matkustaja ",
+    "ticketPassengerVal": "Nomad · 1 aikuinen ",
+    "ticketRecord": "Tallennuksen paikannus ",
+    "ticketVerified": "Varmennettu"
+  }
+}

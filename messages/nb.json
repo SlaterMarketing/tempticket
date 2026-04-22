@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — videre reisebevis for nomader ",
+    "defaultDescription": "Ekte, kontrollerbare flyreservasjoner for viderereisesjekker. Bygget for digitale nomader. ",
+    "homeTitle": "TempTicket — videre reisebevis for nomader ",
+    "homeDescription": "Ekte, kontrollerbare flyreservasjoner for viderereisesjekker. Bygget for digitale nomader. ",
+    "bookTitle": "Bestill en reservasjon — TempTicket ",
+    "bookDescription": "Finn en flyreise og fullfør din viderereisereservasjon. ",
+    "bookConfirmationTitle": "Betaling mottatt — TempTicket ",
+    "bookConfirmationDescription": "Vi bekrefter reservasjonen din hos flyselskapet. ",
+    "loginTitle": "Logg på — TempTicket ",
+    "loginDescription": "Magisk lenkepålogging med en 6-sifret kode for å se bestillingene dine. ",
+    "bookingsTitle": "Mine bestillinger — TempTicket ",
+    "bookingsDescription": "Bestillinger og flyselskapsreferanser for kontoen din.",
+    "termsTitle": "Tjenestevilkår — TempTicket ",
+    "termsDescription": "Tjenestevilkår for TempTicket. ",
+    "privacyTitle": "Personvern — TempTicket ",
+    "privacyDescription": "Hvordan TempTicket behandler personopplysninger. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Tempebillett ",
+    "myBookings": "Mine bestillinger ",
+    "admin": "Admin ",
+    "signOut": "Logg av ",
+    "signIn": "Logg på ",
+    "book": "Bok "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Språk ",
+    "language": "Språk"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Søker... ",
+    "empty": "Ingen steder funnet. Prøv en annen stavemåte eller by. ",
+    "city": "By ",
+    "airport": "Flyplass ",
+    "couldNotSearch": "Kunne ikke søke etter steder. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Trinn {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Skriv inn informasjonen din ",
+        "body": "Rute, datoer og passasjerdetaljer. "
+      },
+      {
+        "label": "02 ",
+        "title": "Foreta en betaling ",
+        "body": "Sikker utsjekk – priser på forhånd."
+      },
+      {
+        "label": "03 ",
+        "title": "Få din referanse ",
+        "body": "Bekreft på flyselskapet når det er live. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Velg avreise og destinasjon fra forslagene ",
+    "toastSearchFailed": "Søket mislyktes ",
+    "toastNoPayLater": "Ingen betal senere priser på dette søket – prøv andre datoer eller flyplasser. ",
+    "toastOfferExpired": "Tilbudet utløpt – søk på nytt ",
+    "toastPassengerSlots": "Kunne ikke laste inn passasjerplasser for dette tilbudet ",
+    "toastLoadOffer": "Kunne ikke laste inn tilbudet ",
+    "toastCompleteFields": "Fyll ut alle passasjerfelt ",
+    "toastPhoneInvalid": "Tast inn et gyldig telefonnummer ",
+    "toastReceiptEmail": "Skriv inn en e-post for din bestilling og kvittering",
+    "toastEmailInvalid": "Angi en gyldig e-postadresse ",
+    "toastCheckoutServerError": "Kasse mislyktes (serverfeil {status}) ",
+    "toastCheckoutFailed": "Kasse mislyktes ({status}) ",
+    "toastNoPaymentLink": "Checkout returnerte ikke en betalingslenke ",
+    "toastCheckoutConnection": "Kasse mislyktes – sjekk tilkoblingen og prøv igjen ",
+    "back": "Tilbake ",
+    "title": "Bestill din reservasjon ",
+    "stepFindTitle": "Finn et fly ",
+    "stepFindDescription": "Skriv inn et by-, land- eller flyplassnavn. ",
+    "from": "Fra ",
+    "to": "Til ",
+    "placePlaceholder": "By, land eller flyplass",
+    "swapAria": "Bytt avreise og destinasjon ",
+    "swapTitle": "Bytt avreise og destinasjon ",
+    "departureDate": "Avreisedato ",
+    "searchBlurb": "Vi søker etter betalpriser først – fullfør flyselskapsbestillingen etter at du har betalt vår lille serviceavgift. ",
+    "searching": "Søker... ",
+    "findingFare": "Finne en billettpris... ",
+    "searchFlights": "Søk etter flyreiser ",
+    "stepPayTitle": "Passasjerdetaljer og betaling ",
+    "stepPayDescription": "Navn må samsvare med reisedokumenter. ",
+    "passenger": "Passasjer {index} ",
+    "genderLabel": "Kjønn (som på pass) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Fødselsdato ",
+    "firstName": "Fornavn(e) ",
+    "lastName": "Etternavn(e) ",
+    "email": "E-post ",
+    "emailPlaceholder": "du@example.com ",
+    "emailHint": "Brukes på din flyselskapsbestilling og for din betalingskvittering og bekreftelse. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Landsnummer ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Betal serviceavgift inn ",
+    "preparingCheckout": "Forbereder kassen...",
+    "payButton": "Betal serviceavgift og reserver ",
+    "demoOriginLabel": "Suvarnabhumi flyplass (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Kuala Lumpur internasjonale lufthavn (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Tilbake til hjemmet ",
+    "badge": "Betaling mottatt ",
+    "title": "Vi er i gang ",
+    "body": "Vi bekrefter flyreservasjonen din hos flyselskapet. Du vil snart motta en e-post med bestillingsdetaljer. ",
+    "detail": "Sjekk innboksen din (og spam) for bekreftelse. Bruk flyselskapets referanse på transportørens nettsted når du trenger bevis på viderereise. ",
+    "bookAnother": "Bestill en annen ",
+    "signInHistory": "Logg på for historikk "
+  },
+  "Login": {
+    "title": "Logg på ",
+    "description": "Logg på for å se bestillinger knyttet til kontoen din eller e-posten din. Vi sender en 6-sifret kode – ikke noe passord.",
+    "email": "E-post ",
+    "sendCode": "Send kode ",
+    "codeLabel": "6-sifret kode ",
+    "verify": "Bekreft ",
+    "differentEmail": "Bruk en annen e-post ",
+    "toastSendFailed": "Kunne ikke sende koden ",
+    "toastCodeSent": "Sjekk e-posten din for en 6-sifret kode ",
+    "toastInvalid": "Ugyldig kode ",
+    "toastSignedIn": "pålogget "
+  },
+  "LoginPage": {
+    "loading": "Laster... "
+  },
+  "Bookings": {
+    "title": "Mine bestillinger ",
+    "subtitle": "Bestillinger knyttet til kontoen din eller gjort med denne e-posten før du logget på. Etter betaling sender vi deg en e-post med flyselskapsreferansen.",
+    "newBooking": "Ny booking ",
+    "orders": "Bestillinger ",
+    "ordersDescription": "Bruk flyselskapets referanse på operatørens nettsted når du trenger bevis på viderereise. ",
+    "empty": "Ingen bestillinger ennå. ",
+    "colCreated": "Opprettet ",
+    "colStatus": "Status ",
+    "colAirline": "Flyselskap ",
+    "colReference": "Referanse ",
+    "colMode": "Modus ",
+    "needsAttention": "Trenger oppmerksomhet ",
+    "needsAttentionDescription": "Hvis en bestilling mislyktes etter betaling, kontakt support med id og Stripe-kvittering. "
+  },
+  "Terms": {
+    "title": "Tjenestevilkår",
+    "lead": "Sist oppdatert: april 2026. Disse vilkårene er kun en startmal – la kvalifiserte advokater gjennomgå dem før du inviterer betalende kunder. ",
+    "serviceHeading": "Tjeneste ",
+    "serviceBody": "TempTicket tilbyr en betalt tjeneste for å arrangere en reell flyreservasjon gjennom våre bookingpartnere for reisende som trenger dokumentasjon på viderereise. Vi garanterer ikke noe spesielt immigrasjons- eller flyselskapsresultat. Offiserer og transportører bruker sine egne regler. ",
+    "legalHeading": "Ikke juridisk rådgivning ",
+    "legalBody": "Ingenting på denne siden er juridisk, immigrasjons- eller skatterådgivning. Overhold lover og lisenser som gjelder for virksomheten din og jurisdiksjonene der du markedsfører og selger. ",
+    "paymentsHeading": "Betalinger og refusjoner ",
+    "paymentsBody": "Tjenesteavgifter kreves ved kassen. Hvis vi ikke kan fullføre den bestilte flyten etter vellykket betaling, vil vi samarbeide med deg om en refusjon eller et alternativt tilbud i henhold til våre publiserte retningslinjer. Tilbakeføringer kan bestrides når tjenesten ble levert som beskrevet. ",
+    "useHeading": "Akseptabel bruk ",
+    "useBody": "Du kan ikke bruke tjenesten til å gi feilaktig fremstilling av reisehensikter til myndigheter eller flyselskaper, for å teste stjålne betalingsmetoder eller på noen måte som bryter leverandørvilkår eller gjeldende lov. ",
+    "liabilityHeading": "Begrenset ansvar ",
+    "liabilityBody": "I den maksimale utstrekning loven tillater, er TempTicket ikke ansvarlig for nektet ombordstigning, nektet adgang, tapte tilkoblinger eller indirekte skader som oppstår ved bruk av tjenesten. "
+  },
+  "Privacy": {
+    "title": "Personvern",
+    "summary": "Sammendrag: Vi behandler e-post og reiserelaterte personopplysninger for å kjøre kontoer, bestillinger og obligatoriske kvitteringer. Få advokat til å justere denne siden med ditt faktiske datakart (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Hva vi samler inn ",
+    "collectItems": [
+      "E-postadresse og økttokens for pålogging ",
+      " Passasjernavn, fødselsdatoer, kontaktinformasjon kreves av flyselskaper ",
+      "Betalingsmetadata fra vår betalingsbehandler ",
+      "Tekniske logger som trengs for å betjene og feilsøke tjenesten "
+    ],
+    "whyHeading": "Hvorfor vi behandler det ",
+    "whyBody": "For å utføre kontrakten vår med deg, overholde juridiske forpliktelser der de gjelder, og forfølge legitime interesser (sikkerhet, svindelforebygging, produktforbedring) balansert mot dine rettigheter. ",
+    "processorsHeading": "Prosessorer ",
+    "processorsBody": "Infrastruktur og leverandører kan inkludere databasehosting (f.eks. Neon), e-postlevering (f.eks. Send på nytt), betalinger (f.eks. Stripe) og flybestilling (Duffel og flyselskaper). Vilkårene deres gjelder også for delene av behandlingen de utfører. ",
+    "retentionHeading": "Oppbevaring ",
+    "retentionBody": "Vi oppbevarer bestillings- og faktureringsoppføringer etter behov for støtte, regnskap og juridiske tilbakeholdinger – vanligvis år, ikke uker – men nøyaktige tidsplaner bør samsvare med retningslinjene dine.",
+    "rightsHeading": "Rettigheter ",
+    "rightsBody": "Avhengig av din region kan du ha rettigheter til å få tilgang til, korrigere, slette eller protestere mot bestemt behandling. Kontakt oss på adressen du publiserer for din virksomhet; vi vil verifisere forespørsler i tråd med loven. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Betaling vellykket. ",
+    "bookingsSuccess": "Betaling mottatt. Bestillingen din oppdateres om et øyeblikk. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Tilbake til toppen "
+  },
+  "Home": {
+    "bookNow": "Bestill nå ",
+    "heroBadge": "Livereservasjoner ",
+    "heroHeadingLead": "Flybestilling ",
+    "heroHeadingAccent": "verifisert i protokoll ",
+    "heroSub": "Ekte flyreservasjoner kan du verifisere på flyselskapenes nettside. Stressfri reise for nomader. ",
+    "howItWorks": "Hvordan det fungerer ",
+    "trustStats": [
+      {
+        "stat": "Referat",
+        "label": "Typisk snuoperasjon når flyselskaper samarbeider "
+      },
+      {
+        "stat": "Ekte PNR ",
+        "label": "Søk det opp på transportøren ved utstedelse "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Støtte når noe trenger et menneske "
+      }
+    ],
+    "featuresTitle": "Alt du trenger for trygghet ",
+    "featuresSub": "Rask, verifiserbar viderereisebevis – uten å bekymre deg for å kjøpe en billett du ikke vil bruke. ",
+    "features": [
+      {
+        "title": "Autentiske forbehold ",
+        "body": "En ekte flyselskapsrekord når bekreftelsen kommer – ikke en dekorativ PDF. "
+      },
+      {
+        "title": "Øyeblikkelig levering ",
+        "body": "De fleste flyter fullføres raskt slik at du kan legge ved bevis samme dag. "
+      },
+      {
+        "title": "Carrier-verifiserbar",
+        "body": "Bruk flyselskapets verktøy for å trekke opp bestillingen når noen spør. "
+      },
+      {
+        "title": "Spar penger ",
+        "body": "Betal et lite servicegebyr i stedet for en refunderbar langdistansepris. "
+      },
+      {
+        "title": "Fleksible planer ",
+        "body": "Juster datoer når reiseruten endres – innenfor flyselskapets retningslinjer. "
+      },
+      {
+        "title": "Menneskelig støtte ",
+        "body": "Støtte takster og kantsaker kan eskalere til teamet vårt fra køen. "
+      }
+    ],
+    "processTitle": "Enkel bestillingsprosess ",
+    "commonQuestions": "Vanlige spørsmål ",
+    "personasTitle": "er perfekt for ",
+    "personas": [
+      {
+        "title": "Visumsøkere ",
+        "body": "Når konsulater ønsker en reiserute, ikke nødvendigvis en betalt billett."
+      },
+      {
+        "title": "Hyppige flyers ",
+        "body": "Gjentatte bevis for flyselskaper som håndhever regler for retur og videre. "
+      },
+      {
+        "title": "Reisende ",
+        "body": "Enkel verifiseringshistorie for grense- og transportørkontroller. "
+      },
+      {
+        "title": "Digitale nomader ",
+        "body": "Hold deg fleksibel uten parkeringspenger i ubrukte langdistansepriser. "
+      }
+    ],
+    "socialTitle": "Klitert av reisende over hele verden ",
+    "socialNote": "Eksempler på anmeldelser – bytt mot ekte attester når du har dem. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Eksempel · Alex M. ",
+        "quote": "PNR sjekket ut på flyselskapets side samme uke som jeg søkte. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Eksempel · Leni K. ",
+        "quote": "Riktig flyt og raske svar når jeg spurte om en rute. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Eksempel · James T. ",
+        "quote": "Fikk meg gjennom innsjekkingen med en enveisbillettpolicy. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Større fleksibilitet når du skal sikre deg visum ",
+    "visaBody": "Mange oppdrag beskriver å akseptere en reiserute eller reservasjon i stedet for en fullt betalt billett. Bekreft på den offisielle siden for saken din – vi tilbyr en ekte reservasjon som du kan bekrefte mens du venter. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Les den offisielle sjekklisten",
+        "body": "Ambassadene er forskjellige – noen ønsker en reservasjon, andre en billett. Start fra siden deres, ikke en blogg. "
+      },
+      {
+        "n": "2 ",
+        "title": "Tilpass datoer til historien din ",
+        "body": "Velg en rute og timing som passer perfekt med søknaden du sender inn. "
+      },
+      {
+        "n": "3 ",
+        "title": "Bekreft på flyselskapet ",
+        "body": "Hvis posten er live, øv deg på å trekke den opp på transportørens side før avtalen din. "
+      }
+    ],
+    "embassyPublish": "Hva ambassadene publiserer ",
+    "embassyFigures": [
+      {
+        "quote": "Reservasjon for returbillett, ikke nødvendig å kjøpe billett før visum er gitt... ",
+        "caption": "Tema fra den offentlige ambassaden FAQ (Norge) "
+      },
+      {
+        "quote": "Flyselskapsreservasjon... med reisereservasjonsnummer... ikke nødvendigvis en billettbestilling. ",
+        "caption": "Tema fra offentlig Schengen-veiledning (Spania)"
+      },
+      {
+        "quote": "Verifiserbar flyreservasjon... ikke en kjøpt billett. ",
+        "caption": "Tema fra offentlig visuminformasjon (India) "
+      }
+    ],
+    "faqTitle": "Trenger du hjelp? ",
+    "faqFooter": "Flere spørsmål? Start en bestilling – vi viser timing og operatørnotater mens du går. ",
+    "faqItems": [
+      {
+        "q": "Hva er TempTicket? ",
+        "a": "En tjeneste som hjelper deg å få en reell, verifiserbar flyreservasjon (med en bestillingsreferanse når flyselskapet bekrefter det) for viderereiser og visumscenarier – uten å betale for en full billettpris du kanskje ikke bruker. "
+      },
+      {
+        "q": "Hvor lenge er reservasjonen gyldig? ",
+        "a": "Gyldigheten avhenger av flyselskapets billettpriser, holdpolicy eller billetttidslinje. Vi overflater det vi kan under bestilling; bekreft alltid timingen i forhold til ambassadens eller transportørens krav. "
+      },
+      {
+        "q": "Kan jeg bekrefte det på flyselskapets nettside? ",
+        "a": "Når flyselskapet utsteder en live-post, kan du vanligvis slå den opp på deres administrer-booking- eller sjekk-min-tur-flyt. Hvis en rute ikke er kvalifisert for venting, kan det hende du trenger en øyeblikkelig billett i stedet. "
+      },
+      {
+        "q": "Er dette juridisk rådgivning eller en visumgaranti? ",
+        "a": "Nr. Immigrasjonsreglene endres etter land og offiser. Vi tilbyr kun en reservasjonstjeneste – sjekk offisielle kilder for din situasjon."
+      }
+    ],
+    "ctaTitle": "Å reise er vanskelig nok. Gjør bevis for videre enklere med ",
+    "ctaPriceLine": "Fra {price} · minutter, ikke gjetting ",
+    "footerTagline": "Videre reisebevis for nomader ",
+    "footerServices": "Tjenester ",
+    "footerAccount": "Konto ",
+    "footerLegal": "Juridisk ",
+    "footerBook": "Bestill reservasjon ",
+    "footerSignIn": "Logg på ",
+    "footerMyBookings": "Mine bestillinger ",
+    "footerTerms": "Vilkår ",
+    "footerPrivacy": "Personvern ",
+    "footerCopyright": "Alle rettigheter forbeholdt.",
+    "footerBackTop": "Tilbake til toppen ",
+    "ticketFrom": "Fra {price} ",
+    "ticketDeparture": "Avreise ",
+    "ticketArrival": "Ankomst ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Passasjer ",
+    "ticketPassengerVal": "Nomad · 1 voksen ",
+    "ticketRecord": "Rekordsøker ",
+    "ticketVerified": "Verifisert"
+  }
+}

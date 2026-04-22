@@ -1,3 +1,4 @@
+import { trackServerEventSafe } from "@/lib/analytics/track";
 import { getDuffel } from "@/lib/duffel";
 import { NextResponse } from "next/server";
 
@@ -13,6 +14,14 @@ export async function GET(
     const duffel = getDuffel();
     const res = await duffel.offers.get(offerId);
     const o = res.data;
+    void trackServerEventSafe("offer_viewed", {
+      path: `/api/offers/${offerId}`,
+      payload: {
+        offer_id: o.id,
+        total_currency: o.total_currency,
+        total_amount: o.total_amount,
+      },
+    });
     return NextResponse.json({
       id: o.id,
       total_amount: o.total_amount,

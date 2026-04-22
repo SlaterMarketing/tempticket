@@ -1,4 +1,5 @@
 import {
+  index,
   jsonb,
   pgTable,
   text,
@@ -64,6 +65,84 @@ export const bookingEvents = pgTable("booking_events", {
     .defaultNow()
     .notNull(),
 });
+
+/** First-party analytics: one row per browser (tt_vid cookie). */
+export const analyticsVisitors = pgTable("analytics_visitors", {
+  id: uuid("id").primaryKey(),
+  firstSeenAt: timestamp("first_seen_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  lastSeenAt: timestamp("last_seen_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  firstUtmSource: text("first_utm_source"),
+  firstUtmMedium: text("first_utm_medium"),
+  firstUtmCampaign: text("first_utm_campaign"),
+  firstUtmTerm: text("first_utm_term"),
+  firstUtmContent: text("first_utm_content"),
+  firstGclid: text("first_gclid"),
+  firstReferrerHost: text("first_referrer_host"),
+  firstLandingPath: text("first_landing_path"),
+  country: text("country"),
+  userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+});
+
+/** Sliding session (tt_sid cookie); attribution captured on first hit of session. */
+export const analyticsSessions = pgTable(
+  "analytics_sessions",
+  {
+    id: uuid("id").primaryKey(),
+    visitorId: uuid("visitor_id")
+      .references(() => analyticsVisitors.id, { onDelete: "cascade" })
+      .notNull(),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    startedAt: timestamp("started_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    lastActivityAt: timestamp("last_activity_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    utmSource: text("utm_source"),
+    utmMedium: text("utm_medium"),
+    utmCampaign: text("utm_campaign"),
+    utmTerm: text("utm_term"),
+    utmContent: text("utm_content"),
+    gclid: text("gclid"),
+    referrerHost: text("referrer_host"),
+    landingPath: text("landing_path"),
+    sessionCountry: text("session_country"),
+    userAgent: text("user_agent"),
+    device: text("device").notNull().default("unknown"),
+  },
+  (t) => [
+    index("analytics_sessions_visitor_idx").on(t.visitorId),
+    index("analytics_sessions_started_idx").on(t.startedAt),
+  ],
+);
+
+export const analyticsEvents = pgTable(
+  "analytics_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    ts: timestamp("ts", { withTimezone: true }).defaultNow().notNull(),
+    visitorId: uuid("visitor_id").references(() => analyticsVisitors.id, {
+      onDelete: "set null",
+    }),
+    sessionId: uuid("session_id").references(() => analyticsSessions.id, {
+      onDelete: "set null",
+    }),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    name: text("name").notNull(),
+    path: text("path"),
+    payload: jsonb("payload").$type<Record<string, unknown> | null>(),
+  },
+  (t) => [
+    index("analytics_events_name_ts_idx").on(t.name, t.ts),
+    index("analytics_events_session_idx").on(t.sessionId),
+    index("analytics_events_visitor_ts_idx").on(t.visitorId, t.ts),
+    index("analytics_events_user_ts_idx").on(t.userId, t.ts),
+  ],
+);
 
 export type User = typeof users.$inferSelect;
 export type Booking = typeof bookings.$inferSelect;

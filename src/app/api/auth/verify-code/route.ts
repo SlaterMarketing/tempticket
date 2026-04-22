@@ -1,3 +1,8 @@
+import {
+  ANALYTICS_VISITOR_COOKIE,
+  PG_UUID_RE,
+} from "@/lib/analytics/constants";
+import { linkVisitorToUser, trackServerEventSafe } from "@/lib/analytics/track";
 import { db } from "@/lib/db";
 import { loginCodes, users } from "@/lib/db/schema";
 import {
@@ -6,6 +11,7 @@ import {
 } from "@/lib/auth/session";
 import bcrypt from "bcryptjs";
 import { and, desc, eq, isNull } from "drizzle-orm";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -60,6 +66,7 @@ export async function POST(req: Request) {
     .where(eq(loginCodes.id, matched.id));
 
   const existing = await db().select().from(users).where(eq(users.email, email)).limit(1);
+  const isNewUser = !existing[0];
   let userId: string;
   if (existing[0]) {
     userId = existing[0].id;
@@ -71,8 +78,19 @@ export async function POST(req: Request) {
     userId = inserted[0]!.id;
   }
 
+  const jar = await cookies();
+  const vid = jar.get(ANALYTICS_VISITOR_COOKIE)?.value?.trim();
+  if (vid && PG_UUID_RE.test(vid)) {
+    await linkVisitorToUser(vid, userId);
+  }
+
   const token = await createSessionToken({ sub: userId, email });
   await setSessionCookie(token);
+
+  void trackServerEventSafe(isNewUser ? "signup" : "login", {
+    path: "/login",
+    payload: { email_domain: email.split("@")[1] ?? null },
+  });
 
   return NextResponse.json({ ok: true });
 }

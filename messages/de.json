@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket – Weiterreisenachweis für Nomaden ",
+    "defaultDescription": "Echte, nachweisbare Flugreservierungen für Weiterreisekontrollen. Gebaut für digitale Nomaden. ",
+    "homeTitle": "TempTicket – Weiterreisenachweis für Nomaden ",
+    "homeDescription": "Echte, nachweisbare Flugreservierungen für Weiterreisekontrollen. Gebaut für digitale Nomaden. ",
+    "bookTitle": "Buchen Sie eine Reservierung – TempTicket ",
+    "bookDescription": "Finden Sie einen Flugplatz und schließen Sie Ihre Weiterreisereservierung ab. ",
+    "bookConfirmationTitle": "Zahlung erhalten – TempTicket ",
+    "bookConfirmationDescription": "Wir bestätigen Ihre Reservierung bei der Fluggesellschaft. ",
+    "loginTitle": "Anmelden – TempTicket ",
+    "loginDescription": "Magic-Link-Anmeldung mit einem 6-stelligen Code, um Ihre Buchungen anzuzeigen. ",
+    "bookingsTitle": "Meine Buchungen – TempTicket ",
+    "bookingsDescription": "Bestellungen und Airline-Referenzen für Ihr Konto.",
+    "termsTitle": "Nutzungsbedingungen – TempTicket ",
+    "termsDescription": "Nutzungsbedingungen für TempTicket. ",
+    "privacyTitle": "Datenschutz – TempTicket ",
+    "privacyDescription": "Wie TempTicket personenbezogene Daten verarbeitet. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Meine Buchungen ",
+    "admin": "Admin ",
+    "signOut": "Abmelden ",
+    "signIn": "Anmelden ",
+    "book": "Buch "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Sprache ",
+    "language": "Sprache"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Suche… ",
+    "empty": "Keine Orte gefunden. Versuchen Sie es mit einer anderen Schreibweise oder Stadt. ",
+    "city": "Stadt ",
+    "airport": "Flughafen ",
+    "couldNotSearch": "Orte konnten nicht gesucht werden. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Schritt {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Geben Sie Ihre Daten ein ",
+        "body": "Route, Daten und Passagierdetails. "
+      },
+      {
+        "label": "02 ",
+        "title": "Machen Sie eine Zahlung aus ",
+        "body": "Sicherer Checkout – Preise im Voraus."
+      },
+      {
+        "label": "03 ",
+        "title": "Holen Sie sich Ihre Referenz ",
+        "body": "Überprüfen Sie bei der Fluggesellschaft, wann es online ist. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Wählen Sie Start- und Zielort aus den Vorschlägen ",
+    "toastSearchFailed": "Suche fehlgeschlagen ",
+    "toastNoPayLater": "Bei dieser Suche sind keine Tarife mit späterer Zahlung verfügbar. Versuchen Sie es mit anderen Daten oder Flughäfen. ",
+    "toastOfferExpired": "Angebot abgelaufen – suchen Sie erneut ",
+    "toastPassengerSlots": "Für dieses Angebot konnten keine Passagierslots geladen werden ",
+    "toastLoadOffer": "Das Angebot konnte nicht geladen werden ",
+    "toastCompleteFields": "Füllen Sie alle Passagierfelder aus ",
+    "toastPhoneInvalid": "Geben Sie eine gültige Telefonnummer ein ",
+    "toastReceiptEmail": "Geben Sie eine E-Mail-Adresse für Ihre Buchung und Ihren Beleg ein",
+    "toastEmailInvalid": "Geben Sie eine gültige E-Mail-Adresse ein ",
+    "toastCheckoutServerError": "Auschecken fehlgeschlagen (Serverfehler {status}) ",
+    "toastCheckoutFailed": "Checkout fehlgeschlagen ({status}) ",
+    "toastNoPaymentLink": "Der Checkout hat keinen Zahlungslink zurückgegeben ",
+    "toastCheckoutConnection": "Kaufvorgang fehlgeschlagen – überprüfen Sie Ihre Verbindung und versuchen Sie es erneut ",
+    "back": "Zurück ",
+    "title": "Buchen Sie Ihre Reservierung ",
+    "stepFindTitle": "Flug finden ",
+    "stepFindDescription": "Geben Sie den Namen einer Stadt, eines Landes oder eines Flughafens ein. ",
+    "from": "Von ",
+    "to": "An ",
+    "placePlaceholder": "Stadt, Land oder Flughafen",
+    "swapAria": "Ursprung und Ziel tauschen ",
+    "swapTitle": "Ursprung und Ziel tauschen ",
+    "departureDate": "Abreisedatum ",
+    "searchBlurb": "Wir suchen zuerst nach Tarifen mit späterer Bezahlung – schließen Sie die Buchung der Fluggesellschaft ab, nachdem Sie unsere geringe Servicegebühr bezahlt haben. ",
+    "searching": "Suchen… ",
+    "findingFare": "Einen Fahrpreis finden… ",
+    "searchFlights": "Flüge suchen ",
+    "stepPayTitle": "Passagierdaten und Zahlung ",
+    "stepPayDescription": "Namen müssen mit Reisedokumenten übereinstimmen. ",
+    "passenger": "Passagier {index} ",
+    "genderLabel": "Geschlecht (wie im Reisepass) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Geburtsdatum ",
+    "firstName": "Vorname(n) ",
+    "lastName": "Nachname(n) ",
+    "email": "E-Mail ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Wird bei Ihrer Flugbuchung sowie für Ihren Zahlungsbeleg und Ihre Zahlungsbestätigung verwendet. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Ländervorwahl ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Bezahlen Sie die Servicegebühr in ",
+    "preparingCheckout": "Bezahlen wird vorbereitet…",
+    "payButton": "Servicegebühr bezahlen und reservieren ",
+    "demoOriginLabel": "Suvarnabhumi Flughafen (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Zurück nach Hause ",
+    "badge": "Zahlung erhalten ",
+    "title": "Wir sind dabei ",
+    "body": "Wir bestätigen Ihre Flugreservierung bei der Fluggesellschaft. Sie erhalten in Kürze eine E-Mail mit den Buchungsdetails. ",
+    "detail": "Überprüfen Sie Ihren Posteingang (und Spam) auf die Bestätigung. Wenn Sie einen Nachweis über die Weiterreise benötigen, verwenden Sie die Airline-Referenz auf der Website der Fluggesellschaft. ",
+    "bookAnother": "Einen anderen buchen ",
+    "signInHistory": "Für den Verlauf anmelden "
+  },
+  "Login": {
+    "title": "Anmelden ",
+    "description": "Melden Sie sich an, um Buchungen anzuzeigen, die mit Ihrem Konto oder Ihrer E-Mail-Adresse verknüpft sind. Wir senden einen 6-stelligen Code – kein Passwort.",
+    "email": "E-Mail ",
+    "sendCode": "Code senden ",
+    "codeLabel": "6-stelliger Code ",
+    "verify": "Überprüfen ",
+    "differentEmail": "Verwenden Sie eine andere E-Mail ",
+    "toastSendFailed": "Code konnte nicht gesendet werden ",
+    "toastCodeSent": "Überprüfen Sie Ihre E-Mails auf einen 6-stelligen Code ",
+    "toastInvalid": "Ungültiger Code ",
+    "toastSignedIn": "Angemeldet "
+  },
+  "LoginPage": {
+    "loading": "Laden… "
+  },
+  "Bookings": {
+    "title": "Meine Buchungen ",
+    "subtitle": "Buchungen, die an Ihr Konto gebunden sind oder mit dieser E-Mail getätigt wurden, bevor Sie sich angemeldet haben. Nach der Zahlung senden wir Ihnen die Referenz der Fluggesellschaft per E-Mail.",
+    "newBooking": "Neue Buchung ",
+    "orders": "Bestellungen ",
+    "ordersDescription": "Verwenden Sie die Airline-Referenz auf der Website der Fluggesellschaft, wenn Sie einen Nachweis über die Weiterreise benötigen. ",
+    "empty": "Noch keine Buchungen. ",
+    "colCreated": "Erstellt ",
+    "colStatus": "Status ",
+    "colAirline": "Fluggesellschaft ",
+    "colReference": "Referenz ",
+    "colMode": "Modus ",
+    "needsAttention": "Benötigt Aufmerksamkeit ",
+    "needsAttentionDescription": "Wenn eine Buchung nach der Zahlung fehlschlägt, wenden Sie sich mit der ID und dem Stripe-Beleg an den Support. "
+  },
+  "Terms": {
+    "title": "Nutzungsbedingungen",
+    "lead": "Letzte Aktualisierung: April 2026. Bei diesen Bedingungen handelt es sich lediglich um eine Einstiegsvorlage. Lassen Sie sie von einem qualifizierten Berater prüfen, bevor Sie zahlende Kunden einladen. ",
+    "serviceHeading": "Service ",
+    "serviceBody": "TempTicket bietet einen kostenpflichtigen Service zur Vermittlung einer echten Flugreservierung über unsere Buchungspartner für Reisende, die einen Nachweis über die Weiterreise benötigen. Wir garantieren keine bestimmten Einwanderungs- oder Flugergebnisse. Offiziere und Transportunternehmen wenden ihre eigenen Regeln an. ",
+    "legalHeading": "Keine Rechtsberatung ",
+    "legalBody": "Nichts auf dieser Website stellt Rechts-, Einwanderungs- oder Steuerberatung dar. Halten Sie die Gesetze und Lizenzen ein, die für Ihr Unternehmen und die Gerichtsbarkeiten gelten, in denen Sie vermarkten und verkaufen. ",
+    "paymentsHeading": "Zahlungen und Rückerstattungen ",
+    "paymentsBody": "Servicegebühren werden an der Kasse erhoben. Wenn wir den gebuchten Vorgang nach erfolgreicher Zahlung nicht abschließen können, erarbeiten wir gemeinsam mit Ihnen eine Rückerstattung oder ein alternatives Angebot gemäß unseren veröffentlichten Richtlinien. Rückbuchungen können angefochten werden, wenn die Dienstleistung wie beschrieben erbracht wurde. ",
+    "useHeading": "Akzeptable Nutzung ",
+    "useBody": "Sie dürfen den Dienst nicht dazu nutzen, Ihre Reiseabsichten gegenüber Regierungen oder Fluggesellschaften falsch darzustellen, gestohlene Zahlungsmethoden zu testen oder in irgendeiner Weise gegen die Bedingungen des Anbieters oder geltendes Recht zu verstoßen. ",
+    "liabilityHeading": "Beschränkte Haftung ",
+    "liabilityBody": "Soweit gesetzlich zulässig, haftet TempTicket nicht für verweigerte Beförderung, verweigerten Zutritt, verpasste Anschlüsse oder indirekte Schäden, die sich aus der Nutzung des Dienstes ergeben. "
+  },
+  "Privacy": {
+    "title": "Datenschutz",
+    "summary": "Zusammenfassung: Wir verarbeiten E-Mail- und reisebezogene personenbezogene Daten, um Konten, Buchungen und obligatorische Belege zu führen. Lassen Sie sich beraten, diese Seite an Ihre aktuelle Datenkarte anzupassen (Neon, Resend, Stripe, Duffel, Hosting). ",
+    "collectHeading": "Was wir sammeln ",
+    "collectItems": [
+      "E-Mail-Adresse und Sitzungstoken für die Anmeldung ",
+      "Passagiernamen, Geburtsdaten, von Fluggesellschaften geforderte Kontaktdaten ",
+      "Zahlungsmetadaten von unserem Zahlungsabwickler ",
+      "Technische Protokolle, die zum Betrieb und Debuggen des Dienstes erforderlich sind "
+    ],
+    "whyHeading": "Warum wir es verarbeiten ",
+    "whyBody": "Zur Erfüllung unseres Vertrags mit Ihnen, zur Einhaltung gesetzlicher Verpflichtungen, sofern diese gelten, und zur Verfolgung berechtigter Interessen (Sicherheit, Betrugsprävention, Produktverbesserung) gegen Ihre Rechte. ",
+    "processorsHeading": "Verarbeiter ",
+    "processorsBody": "Infrastruktur und Anbieter können Datenbankhosting (z. B. Neon), E-Mail-Zustellung (z. B. Resend), Zahlungen (z. B. Stripe) und Flugbuchung (Duffel und Fluggesellschaften) umfassen. Ihre Bedingungen gelten auch für die von ihnen durchgeführten Verarbeitungsteile. ",
+    "retentionHeading": "Aufbewahrung ",
+    "retentionBody": "Wir führen Buchungs- und Abrechnungsunterlagen nach Bedarf für Support, Buchhaltung und gesetzliche Aufbewahrungsfristen – in der Regel Jahre, nicht Wochen – aber die genauen Zeitpläne sollten Ihren Richtlinien entsprechen.",
+    "rightsHeading": "Rechte ",
+    "rightsBody": "Abhängig von Ihrer Region haben Sie möglicherweise Rechte auf Zugriff, Berichtigung, Löschung oder Widerspruch gegen bestimmte Verarbeitungen. Kontaktieren Sie uns unter der Adresse, die Sie für Ihr Unternehmen veröffentlichen. Wir werden die Anfragen im Einklang mit dem Gesetz prüfen. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Zahlung erfolgreich. ",
+    "bookingsSuccess": "Zahlung erhalten. Ihre Buchung wird in Kürze aktualisiert. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Zurück nach oben "
+  },
+  "Home": {
+    "bookNow": "Jetzt buchen ",
+    "heroBadge": "Live-Reservierungen ",
+    "heroHeadingLead": "Flugbuchung ",
+    "heroHeadingAccent": "bestätigt in Minuten ",
+    "heroSub": "Echte Flugreservierungen können Sie auf der Website der Fluggesellschaft überprüfen. Stressfreies Reisen für Nomaden. ",
+    "howItWorks": "Wie es funktioniert ",
+    "trustStats": [
+      {
+        "stat": "Protokoll",
+        "label": "Typischer Turnaround, wenn Fluggesellschaften kooperieren "
+      },
+      {
+        "stat": "Echte PNR ",
+        "label": "Sehen Sie bei der Ausstellung beim Spediteur nach "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Unterstützung, wenn etwas einen Menschen braucht "
+      }
+    ],
+    "featuresTitle": "Alles, was Sie für Ihren Seelenfrieden brauchen ",
+    "featuresSub": "Schneller, nachweisbarer Weiterreisenachweis – ohne die Angst, ein Ticket zu kaufen, das Sie nicht nutzen werden. ",
+    "features": [
+      {
+        "title": "Authentische Reservierungen ",
+        "body": "Eine echte Aufzeichnung der Fluggesellschaft, wenn die Bestätigung eingeht – kein dekoratives PDF. "
+      },
+      {
+        "title": "Sofortige Lieferung ",
+        "body": "Die meisten Abläufe werden schnell abgeschlossen, sodass Sie den Nachweis noch am selben Tag beifügen können. "
+      },
+      {
+        "title": "Carrier-überprüfbar",
+        "body": "Verwenden Sie die Tools der Fluggesellschaft, um die Buchung aufzurufen, wenn jemand danach fragt. "
+      },
+      {
+        "title": "Sparen Sie Geld ",
+        "body": "Zahlen Sie eine geringe Servicegebühr anstelle eines erstattungsfähigen Langstreckentarifs. "
+      },
+      {
+        "title": "Flexible Pläne ",
+        "body": "Passen Sie die Daten an, wenn sich Ihre Reiseroute ändert – innerhalb der Richtlinien der Fluggesellschaft. "
+      },
+      {
+        "title": "Menschliche Unterstützung ",
+        "body": "Festgefahrene Tarife und Randfälle können aus der Warteschlange an unser Team weitergeleitet werden. "
+      }
+    ],
+    "processTitle": "Einfacher Buchungsprozess ",
+    "commonQuestions": "Häufige Fragen ",
+    "personasTitle": "ist perfekt für ",
+    "personas": [
+      {
+        "title": "Visumantragsteller ",
+        "body": "Wenn Konsulate eine Reiseroute wünschen, nicht unbedingt einen bezahlten Fahrpreis."
+      },
+      {
+        "title": "Vielflieger ",
+        "body": "Wiederholbarer Nachweis für Fluggesellschaften, die Rückflug-/Weiterflugregeln durchsetzen. "
+      },
+      {
+        "title": "Reisende ",
+        "body": "Einfache Überprüfungsgeschichte für Grenz- und Spediteurkontrollen. "
+      },
+      {
+        "title": "Digitale Nomaden ",
+        "body": "Bleiben Sie flexibel ohne Parkgeld bei ungenutzten Langstreckentarifen. "
+      }
+    ],
+    "socialTitle": "Reisende weltweit vertrauen darauf ",
+    "socialNote": "Beispielbewertungen – tauschen Sie sie gegen echte Erfahrungsberichte ein, wenn Sie welche haben. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Beispiel · Alex M. ",
+        "quote": "PNR wurde in derselben Woche, in der ich mich beworben habe, auf der Website der Fluggesellschaft ausgecheckt. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Beispiel · Leni K. ",
+        "quote": "Einfacher Ablauf und schnelle Antworten, wenn ich nach einer Route fragte. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Beispiel · James T. ",
+        "quote": "Habe mich mit einer One-Way-Ticketrichtlinie durch den Check-in gebracht. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Größere Flexibilität bei der Sicherung Ihres Visums ",
+    "visaBody": "Viele Missionen beschreiben die Annahme eines Reiseplans oder einer Reservierung anstelle eines vollständig bezahlten Tickets. Bestätigen Sie Ihren Fall auf der offiziellen Website – wir bieten eine echte Reservierung, die Sie überprüfen können, während Sie warten. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Lesen Sie die offizielle Checkliste",
+        "body": "Botschaften sind unterschiedlich – manche wollen eine Reservierung, andere ein Ticket. Beginnen Sie mit ihrer Seite, nicht mit einem Blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Passen Sie Daten an Ihre Geschichte an ",
+        "body": "Wählen Sie eine Route und einen Zeitpunkt, die perfekt zu dem Antrag passen, den Sie einreichen. "
+      },
+      {
+        "n": "3 ",
+        "title": "Überprüfen Sie dies bei der Fluggesellschaft ",
+        "body": "Wenn die Aufzeichnung live ist, üben Sie vor Ihrem Termin, sie auf der Website des Mobilfunkanbieters abzurufen. "
+      }
+    ],
+    "embassyPublish": "Was Botschaften veröffentlichen ",
+    "embassyFigures": [
+      {
+        "quote": "Reservierung für Rückflugticket, Ticketkauf vor Erteilung des Visums nicht erforderlich … ",
+        "caption": "Thema aus den FAQ der öffentlichen Botschaft (Norwegen) "
+      },
+      {
+        "quote": "Fluglinienreservierung… mit Reisereservierungsnummer… nicht unbedingt eine Ticketreservierung. ",
+        "caption": "Thema aus öffentlichen Schengen-Leitlinien (Spanien)"
+      },
+      {
+        "quote": "Überprüfbare Flugreservierung… kein gekauftes Ticket. ",
+        "caption": "Thema aus öffentlichen Visa-Informationen (Indien) "
+      }
+    ],
+    "faqTitle": "Brauchen Sie Hilfe? ",
+    "faqFooter": "Weitere Fragen? Starten Sie eine Buchung – wir zeigen Ihnen unterwegs Informationen zum Zeitplan und zum Spediteur an. ",
+    "faqItems": [
+      {
+        "q": "Was ist TempTicket? ",
+        "a": "Ein Service, der Ihnen hilft, eine echte, überprüfbare Flugreservierung (mit einer Buchungsreferenz bei Bestätigung durch die Fluggesellschaft) für Weiterreise- und Visumsszenarien zu erhalten – ohne die Zahlung des vollen Flugpreises, den Sie möglicherweise nicht nutzen. "
+      },
+      {
+        "q": "Wie lange ist die Reservierung gültig? ",
+        "a": "Die Gültigkeit hängt von den Tarifbestimmungen, den Halterichtlinien oder dem Zeitplan für die Ticketausstellung der Fluggesellschaft ab. Wir geben bei der Buchung ans Licht, was wir können. Überprüfen Sie den Zeitpunkt immer anhand der Anforderungen Ihrer Botschaft oder Ihres Spediteurs. "
+      },
+      {
+        "q": "Kann ich es auf der Website der Fluggesellschaft überprüfen? ",
+        "a": "Wenn die Fluggesellschaft eine Live-Aufzeichnung herausgibt, können Sie diese in der Regel in deren Buchungsverwaltungs- oder Check-My-Trip-Ablauf nachschlagen. Wenn für eine Strecke kein Anspruch auf eine Sperre besteht, benötigen Sie möglicherweise stattdessen ein Sofortticket. "
+      },
+      {
+        "q": "Ist das eine Rechtsberatung oder eine Visumsgarantie? ",
+        "a": "Nr. Die Einwanderungsbestimmungen ändern sich je nach Land und Beamtem. Wir bieten nur einen Reservierungsservice an – überprüfen Sie offizielle Quellen für Ihre Situation."
+      }
+    ],
+    "ctaTitle": "Reisen ist schon schwer genug. Erleichtern Sie den Weiternachweis mit ",
+    "ctaPriceLine": "Von {price} · Minuten, kein Rätselraten ",
+    "footerTagline": "Weiterreisenachweis für Nomaden ",
+    "footerServices": "Dienstleistungen ",
+    "footerAccount": "Konto ",
+    "footerLegal": "Rechtliches ",
+    "footerBook": "Buchen Sie eine Reservierung ",
+    "footerSignIn": "Anmelden ",
+    "footerMyBookings": "Meine Buchungen ",
+    "footerTerms": "Bedingungen ",
+    "footerPrivacy": "Datenschutz ",
+    "footerCopyright": "Alle Rechte vorbehalten.",
+    "footerBackTop": "Zurück nach oben ",
+    "ticketFrom": "Ab {price} ",
+    "ticketDeparture": "Abfahrt ",
+    "ticketArrival": "Ankunft ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Passagier ",
+    "ticketPassengerVal": "Nomad · 1 Erwachsener ",
+    "ticketRecord": "Datensatz-Locator ",
+    "ticketVerified": "Verifiziert"
+  }
+}

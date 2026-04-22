@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "Tiketi ya Muda - uthibitisho wa kusafiri wa kuendelea kwa wahamaji ",
+    "defaultDescription": "Nafasi za kweli za ndege zinazoweza kuthibitishwa kwa ukaguzi wa safari ya kuendelea. Imeundwa kwa wahamaji wa kidijitali. ",
+    "homeTitle": "Tiketi ya Muda - uthibitisho wa kusafiri wa kuendelea kwa wahamaji ",
+    "homeDescription": "Nafasi za kweli za ndege zinazoweza kuthibitishwa kwa ukaguzi wa safari ya kuendelea. Imeundwa kwa wahamaji wa kidijitali. ",
+    "bookTitle": "Weka nafasi - TempTicket ",
+    "bookDescription": "Tafuta muda wa ndege na ukamilishe kuhifadhi nafasi yako ya usafiri. ",
+    "bookConfirmationTitle": "Malipo yamepokelewa - TempTicket ",
+    "bookConfirmationDescription": "Tunathibitisha nafasi yako na shirika la ndege. ",
+    "loginTitle": "Ingia - TempTicket ",
+    "loginDescription": "ingia katika akaunti kwa kutumia msimbo wa tarakimu 6 ili kutazama nafasi ulizohifadhi. ",
+    "bookingsTitle": "Nafasi zangu - TempTicket ",
+    "bookingsDescription": "Marejeleo na marejeleo ya shirika la ndege kwa akaunti yako.",
+    "termsTitle": "Masharti ya huduma - TempTicket ",
+    "termsDescription": " Masharti ya huduma kwa TempTicket. ",
+    "privacyTitle": "Faragha - TempTicket ",
+    "privacyDescription": "Jinsi TempTicket huchakata data ya kibinafsi. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Tiketi ya Muda ",
+    "myBookings": "Nafasi zangu ",
+    "admin": "Msimamizi ",
+    "signOut": "Ondoka ",
+    "signIn": "Ingia ",
+    "book": "Kitabu "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Lugha ",
+    "language": "Lugha"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Inatafuta... ",
+    "empty": "Hakuna maeneo yaliyopatikana. Jaribu tahajia au jiji lingine. ",
+    "city": "Jiji ",
+    "airport": "Uwanja wa ndege ",
+    "couldNotSearch": "Haikuweza kutafuta maeneo. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Hatua {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Ingiza maelezo yako ",
+        "body": "Njia, tarehe, na maelezo ya abiria. "
+      },
+      {
+        "label": "02 ",
+        "title": "Fanya malipo ",
+        "body": " Malipo salama—bei mapema."
+      },
+      {
+        "label": "03 ",
+        "title": "Pata rejeleo lako ",
+        "body": "Thibitisha kwenye shirika la ndege wakati ni moja kwa moja. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Chagua asili na unakoenda kutoka kwa mapendekezo ",
+    "toastSearchFailed": "Utafutaji umeshindwa ",
+    "toastNoPayLater": "Hakuna nauli za kulipa baadaye kwenye utafutaji huu—jaribu tarehe au viwanja vingine vya ndege. ",
+    "toastOfferExpired": "Ofa imekwisha—tafuta tena ",
+    "toastPassengerSlots": "Haikuweza kupakia nafasi za abiria kwa ofa hii ",
+    "toastLoadOffer": "Haikuweza kupakia ofa ",
+    "toastCompleteFields": "Kamilisha sehemu zote za abiria ",
+    "toastPhoneInvalid": "Ingiza nambari halali ya simu ",
+    "toastReceiptEmail": "Ingiza barua pepe ya kuhifadhi na kupokea",
+    "toastEmailInvalid": "Ingiza anwani halali ya barua pepe ",
+    "toastCheckoutServerError": "Kulipa kumeshindwa (hitilafu ya seva {status}) ",
+    "toastCheckoutFailed": "Kulipa kumeshindwa ({status}) ",
+    "toastNoPaymentLink": "Checkout haikurejesha kiungo cha malipo ",
+    "toastCheckoutConnection": "Kulipa kumeshindwa—angalia muunganisho wako na ujaribu tena ",
+    "back": "Nyuma ",
+    "title": "Weka nafasi uliyohifadhi ",
+    "stepFindTitle": "Tafuta ndege ",
+    "stepFindDescription": "Chapa jiji, nchi au jina la uwanja wa ndege. ",
+    "from": "Kutoka ",
+    "to": "Kwa ",
+    "placePlaceholder": "Jiji, nchi, au uwanja wa ndege",
+    "swapAria": "Badilisha asili na unakoenda",
+    "swapTitle": "Badilisha asili na unakoenda",
+    "departureDate": "Tarehe ya kuondoka",
+    "searchBlurb": "Tunatafuta nauli za kulipa baadaye kwanza—kamilisha uhifadhi wa ndege baada ya kulipa ada yetu ndogo ya huduma.",
+    "searching": "Inatafuta...",
+    "findingFare": "Inatafuta nauli...",
+    "searchFlights": "Tafuta safari za ndege",
+    "stepPayTitle": "Maelezo ya abiria na malipo",
+    "stepPayDescription": "Majina lazima yalingane na hati za kusafiri.",
+    "passenger": "Abiria {index}",
+    "genderLabel": "Jinsia (kama kwenye pasipoti)",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Tarehe ya kuzaliwa ",
+    "firstName": "Jina la kwanza ",
+    "lastName": "Jina la mwisho ",
+    "email": "Barua pepe ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Hutumika kwenye uhifadhi wako wa ndege na kwa risiti yako ya malipo na uthibitisho. ",
+    "phone": "Simu ",
+    "dialCodeAria": "Msimbo wa kupiga simu wa nchi ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Lipa ada ya huduma ndani ",
+    "preparingCheckout": "Inatayarisha malipo...",
+    "payButton": "Lipa ada ya huduma na akiba ",
+    "demoOriginLabel": "Uwanja wa ndege wa Suvarnabhumi (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Uwanja wa Ndege wa Kimataifa wa Kuala Lumpur (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Rudi nyumbani ",
+    "badge": "Malipo yamepokelewa ",
+    "title": "Tunaendelea ",
+    "body": "Tunathibitisha uhifadhi wako wa safari ya ndege na shirika la ndege. Utapokea barua pepe yenye maelezo ya kuweka nafasi hivi karibuni. ",
+    "detail": "Angalia kisanduku pokezi chako (na barua taka) kwa uthibitisho. Tumia marejeleo ya shirika la ndege kwenye tovuti ya mtoa huduma unapohitaji uthibitisho wa safari ya kuendelea. ",
+    "bookAnother": " Weka kitabu kingine ",
+    "signInHistory": "Ingia kwa historia "
+  },
+  "Login": {
+    "title": "Ingia ",
+    "description": "Ingia ili kuona uhifadhi uliounganishwa na akaunti yako au barua pepe yako. Tunatuma msimbo wa tarakimu 6—hakuna nenosiri.",
+    "email": "Barua pepe ",
+    "sendCode": "Tuma msimbo ",
+    "codeLabel": " msimbo wa tarakimu 6 ",
+    "verify": "Thibitisha ",
+    "differentEmail": "Tumia barua pepe tofauti ",
+    "toastSendFailed": "Haikuweza kutuma msimbo ",
+    "toastCodeSent": "Angalia barua pepe yako kwa msimbo wa tarakimu 6 ",
+    "toastInvalid": "Msimbo batili ",
+    "toastSignedIn": "Umeingia "
+  },
+  "LoginPage": {
+    "loading": "Inapakia... "
+  },
+  "Bookings": {
+    "title": "Nafasi zangu ",
+    "subtitle": "Nafasi zilizowekwa kwenye akaunti yako au zilizofanywa kwa barua pepe hii kabla ya kuingia. Baada ya malipo tunakutumia barua pepe ya marejeleo ya ndege.",
+    "newBooking": "Nafasi mpya ",
+    "orders": "Maagizo ",
+    "ordersDescription": "Tumia rejeleo la shirika la ndege kwenye tovuti ya mtoa huduma unapohitaji uthibitisho wa safari ya kuendelea. ",
+    "empty": "Bado hakuna uhifadhi. ",
+    "colCreated": "Imeundwa ",
+    "colStatus": "Hali ",
+    "colAirline": "Shirika la ndege ",
+    "colReference": "Rejea ",
+    "colMode": "Modi ",
+    "needsAttention": "Inahitaji umakini ",
+    "needsAttentionDescription": "Kama uhifadhi haukufaulu baada ya malipo, wasiliana na usaidizi ukitumia kitambulisho na risiti ya Stripe. "
+  },
+  "Terms": {
+    "title": "Masharti ya huduma",
+    "lead": "Ilisasishwa mara ya mwisho: Aprili 2026. Masharti haya ni kiolezo cha kuanzia pekee—uwe na mshauri aliyehitimu ayapitie kabla ya kuwaalika wateja wanaolipa. ",
+    "serviceHeading": "Huduma ",
+    "serviceBody": "TempTicket hutoa huduma inayolipishwa ili kupanga uwekaji nafasi halisi wa ndege kupitia washirika wetu wa kuweka nafasi kwa wasafiri wanaohitaji hati za safari ya kuendelea. Hatutoi hakikisho la matokeo yoyote mahususi ya uhamiaji au shirika la ndege. Maafisa na wabebaji hutumia sheria zao wenyewe. ",
+    "legalHeading": "Si ushauri wa kisheria ",
+    "legalBody": "Hakuna chochote kwenye tovuti hii ambacho ni ushauri wa kisheria, uhamiaji au kodi. Zingatia sheria na leseni zinazotumika kwa biashara yako na mamlaka ambapo unauza na kuuza. ",
+    "paymentsHeading": "Malipo na marejesho ",
+    "paymentsBody": " ada za huduma hukusanywa wakati wa kulipa. Iwapo hatuwezi kukamilisha utaratibu uliowekwa baada ya malipo kufanikiwa, tutashirikiana nawe kuhusu kurejesha pesa au ofa mbadala kulingana na sera yetu iliyochapishwa. Urejeshaji pesa unaweza kupingwa wakati huduma ilitolewa kama ilivyoelezwa. ",
+    "useHeading": "Matumizi yanayokubalika ",
+    "useBody": "Huruhusiwi kutumia huduma hii kuwasilisha dhamira ya usafiri kwa serikali au mashirika ya ndege, kujaribu njia za malipo zilizoibwa, au kwa njia yoyote inayokiuka masharti ya mtoa huduma au sheria inayotumika. ",
+    "liabilityHeading": "Dhima ndogo ",
+    "liabilityBody": "Kwa kiwango cha juu kinachoruhusiwa na sheria, TempTicket haiwajibikiwi kwa kunyimwa kuabiri, kukataliwa kuingia, kukosekana kwa miunganisho, au uharibifu usio wa moja kwa moja unaotokana na matumizi ya huduma. "
+  },
+  "Privacy": {
+    "title": "Faragha",
+    "summary": "Muhtasari: Tunachakata barua pepe na data ya kibinafsi inayohusiana na usafiri ili kuendesha akaunti, kuweka nafasi na stakabadhi za lazima. Mwambie mshauri aoanishe ukurasa huu na ramani yako halisi ya data (Neon, Tuma Upya, Stripe, Duffel, hosting). ",
+    "collectHeading": "Tunachokusanya ",
+    "collectItems": [
+      "Anwani ya barua pepe na ishara za kipindi za kuingia ",
+      "Majina ya abiria, tarehe za kuzaliwa, maelezo ya mawasiliano yanayohitajika na mashirika ya ndege ",
+      "Metadata ya malipo kutoka kwa kichakataji chetu cha malipo ",
+      " Kumbukumbu za kiufundi zinahitajika ili kuendesha na kutatua huduma "
+    ],
+    "whyHeading": "Kwa nini tunaichakata ",
+    "whyBody": "Ili kutekeleza mkataba wetu nawe, tii majukumu ya kisheria pale yanapotumika, na ufuatilie maslahi halali (usalama, kuzuia ulaghai, uboreshaji wa bidhaa) sawia dhidi ya haki zako. ",
+    "processorsHeading": "Wasindikaji ",
+    "processorsBody": "Miundombinu na wachuuzi wanaweza kujumuisha upangishaji hifadhidata (k.m. Neon), uwasilishaji wa barua pepe (k.m. Tuma tena), malipo (k.m. Stripe), na kuhifadhi nafasi za ndege (Duffel na mashirika ya ndege). Masharti yao pia yanatumika kwa sehemu za usindikaji wanazofanya. ",
+    "retentionHeading": "Uhifadhi ",
+    "retentionBody": "Tunahifadhi rekodi za kuhifadhi na utozaji inapohitajika kwa usaidizi, uhasibu na zuio za kisheria—kwa kawaida miaka, si wiki—lakini ratiba kamili zinapaswa kuendana na sera yako.",
+    "rightsHeading": "Haki ",
+    "rightsBody": "Kulingana na eneo lako unaweza kuwa na haki za kufikia, kusahihisha, kufuta, au kupinga uchakataji fulani. Wasiliana nasi kwa anwani unayochapisha kwa biashara yako; tutathibitisha maombi kwa mujibu wa sheria. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Malipo yamefaulu. ",
+    "bookingsSuccess": "Malipo yamepokelewa. Nafasi uliyohifadhi itasasishwa baada ya muda mfupi. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Rudi juu "
+  },
+  "Home": {
+    "bookNow": "Weka nafasi sasa ",
+    "heroBadge": "Kuhifadhi nafasi moja kwa moja ",
+    "heroHeadingLead": "Kuhifadhi nafasi ya ndege ",
+    "heroHeadingAccent": "imethibitishwa kwa dakika ",
+    "heroSub": "Nafasi halisi za safari za ndege unaweza kuthibitisha kwenye tovuti ya mashirika ya ndege. Usafiri bila mafadhaiko kwa wahamaji. ",
+    "howItWorks": "Jinsi inavyofanya kazi ",
+    "trustStats": [
+      {
+        "stat": "Dakika",
+        "label": "Mabadiliko ya kawaida mashirika ya ndege yanaposhirikiana "
+      },
+      {
+        "stat": "PNR Halisi ",
+        "label": "Itazame kwa mtoa huduma inapotolewa "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Msaada wakati kitu kinahitaji mwanadamu "
+      }
+    ],
+    "featuresTitle": "Kila kitu unachohitaji kwa amani ya akili ",
+    "featuresSub": "Uthibitisho wa kusafiri wa haraka, unaoweza kuthibitishwa—bila wasiwasi wa kununua tikiti ambayo hutatumia. ",
+    "features": [
+      {
+        "title": "Kuhifadhi nafasi Halisi ",
+        "body": "Rekodi halisi ya shirika la ndege wakati uthibitisho unapokuja—sio PDF ya mapambo. "
+      },
+      {
+        "title": "Utoaji wa papo hapo ",
+        "body": "Mitiririko mingi hukamilika haraka ili uweze kuambatisha uthibitisho siku hiyo hiyo. "
+      },
+      {
+        "title": "Mtoa huduma-inaweza kuthibitishwa",
+        "body": "Tumia zana za shirika la ndege ili kuweka nafasi mtu anapouliza. "
+      },
+      {
+        "title": "Hifadhi pesa ",
+        "body": "Lipa ada ndogo ya huduma badala ya nauli ya masafa marefu inayoweza kurejeshwa. "
+      },
+      {
+        "title": "Mipango inayonyumbulika ",
+        "body": "Rekebisha tarehe wakati ratiba yako ya safari inabadilika-ndani ya madirisha ya sera za ndege. "
+      },
+      {
+        "title": "Msaada wa kibinadamu ",
+        "body": "Nauli zilizokwama na kesi za ukingo zinaweza kuongezeka kwa timu yetu kutoka kwa foleni. "
+      }
+    ],
+    "processTitle": "Mchakato rahisi wa kuweka nafasi ",
+    "commonQuestions": "Maswali ya kawaida ",
+    "personasTitle": "inafaa kwa ",
+    "personas": [
+      {
+        "title": "Waombaji wa Visa ",
+        "body": "Wakati balozi zinapotaka ratiba ya safari, si lazima iwe nauli iliyolipiwa."
+      },
+      {
+        "title": "Vipeperushi vya mara kwa mara ",
+        "body": "Uthibitisho unaorudiwa kwa mashirika ya ndege ambayo yanatekeleza sheria za kurudi/kuendelea. "
+      },
+      {
+        "title": "Wasafiri ",
+        "body": "Hadithi rahisi ya uthibitishaji kwa ukaguzi wa mpaka na mtoa huduma. "
+      },
+      {
+        "title": "Wahamaji wa kidijitali ",
+        "body": "Kaa rahisi bila kuegesha pesa katika nauli za masafa marefu ambazo hazijatumika. "
+      }
+    ],
+    "socialTitle": "Inaaminiwa na wasafiri duniani kote ",
+    "socialNote": "Maoni ya sampuli-badilishana kwa ushuhuda halisi unapokuwa nao. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Sampuli · Alex M. ",
+        "quote": "PNR ilitembelea tovuti ya shirika la ndege wiki ile ile niliyotuma maombi. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Sampuli · Leni K. ",
+        "quote": "Mtiririko wa moja kwa moja na majibu ya haraka nilipouliza kuhusu njia. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Sampuli · James T. ",
+        "quote": "Ilinipata kwa kuingia kwa sera ya tikiti ya njia moja. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": " Unyumbulifu mkubwa zaidi wakati wa kupata visa yako ",
+    "visaBody": "Misheni nyingi huelezea kukubali ratiba au kuweka nafasi badala ya tikiti iliyolipwa kikamilifu. Thibitisha kwenye tovuti rasmi ya kesi yako- tunatoa nafasi halisi unayoweza kuthibitisha unaposubiri. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Soma orodha rasmi",
+        "body": "Balozi zinatofautiana—wengine wanataka uhifadhi, wengine tikiti. Anza kutoka kwa ukurasa wao, sio blogi. "
+      },
+      {
+        "n": "2 ",
+        "title": "Tarehe za kulinganisha na hadithi yako ",
+        "body": "Chagua njia na muda unaolingana kikamilifu na programu unayotuma. "
+      },
+      {
+        "n": "3 ",
+        "title": "Thibitisha kwenye shirika la ndege ",
+        "body": "Kama rekodi ni ya moja kwa moja, jizoeze kuivuta kwenye tovuti ya mtoa huduma kabla ya miadi yako. "
+      }
+    ],
+    "embassyPublish": "Mabalozi gani huchapisha ",
+    "embassyFigures": [
+      {
+        "quote": "Kuweka nafasi kwa tikiti ya kurudi, sio lazima kununua tikiti kabla ya visa kutolewa… ",
+        "caption": "Mandhari kutoka kwa Maswali Yanayoulizwa Mara kwa Mara ya ubalozi wa umma (Norway) "
+      },
+      {
+        "quote": "Kuweka nafasi kwa njia ya ndege… na nambari ya uhifadhi wa safari… si lazima uhifadhi wa tikiti. ",
+        "caption": "Mandhari kutoka kwa mwongozo wa umma wa Schengen (Hispania)"
+      },
+      {
+        "quote": "Nafasi ya ndege inayoweza kuthibitishwa… si tikiti iliyonunuliwa. ",
+        "caption": "Mandhari kutoka kwa taarifa ya visa ya umma (India) "
+      }
+    ],
+    "faqTitle": "Je unahitaji msaada? ",
+    "faqFooter": "Maswali zaidi? Anzisha kuhifadhi—tutaonyesha muda na vidokezo vya mtoa huduma unapoendelea. ",
+    "faqItems": [
+      {
+        "q": "TempTicket ni nini? ",
+        "a": "Huduma inayokusaidia kupata uwekaji nafasi halisi wa ndege, unaoweza kuthibitishwa (kwa rejeleo la kuhifadhi wakati shirika la ndege limeithibitisha) kwa hali za usafiri na visa—bila kulipia nauli kamili ambayo huenda usitumie. "
+      },
+      {
+        "q": "Hifadhi ni halali kwa muda gani? ",
+        "a": "Uhalali unategemea sheria za nauli za shirika la ndege, sera ya kushikilia au ratiba ya tiketi. Tunatoa kile tunachoweza wakati wa kuhifadhi; daima thibitisha muda dhidi ya mahitaji ya ubalozi au mtoa huduma wako. "
+      },
+      {
+        "q": "Je, ninaweza kuithibitisha kwenye tovuti ya shirika la ndege? ",
+        "a": "Wakati shirika la ndege linatoa rekodi ya moja kwa moja, unaweza kuitafuta kwenye usimamizi wao wa kuhifadhi au kuangalia mtiririko wa safari yangu. Ikiwa njia haistahiki kusimamishwa, unaweza kuhitaji tiketi ya papo hapo badala yake. "
+      },
+      {
+        "q": "Je, huu ni ushauri wa kisheria au dhamana ya visa? ",
+        "a": "Na. Sheria za uhamiaji hubadilika kulingana na nchi na afisa. Tunatoa huduma ya kuhifadhi pekee—angalia vyanzo rasmi vya hali yako."
+      }
+    ],
+    "ctaTitle": "Kusafiri ni ngumu vya kutosha. Rahisisha uthibitisho wa kuendelea ",
+    "ctaPriceLine": "Kutoka kwa {price} · dakika, sio kazi ya kubahatisha ",
+    "footerTagline": "Uthibitisho wa kusafiri wa kuendelea kwa wahamaji ",
+    "footerServices": "Huduma ",
+    "footerAccount": "Akaunti ",
+    "footerLegal": "Kisheria ",
+    "footerBook": "Weka nafasi ",
+    "footerSignIn": "Ingia ",
+    "footerMyBookings": "Nafasi zangu ",
+    "footerTerms": "Masharti ",
+    "footerPrivacy": "Faragha ",
+    "footerCopyright": "Haki zote zimehifadhiwa.",
+    "footerBackTop": "Rudi juu ",
+    "ticketFrom": "Kutoka {price} ",
+    "ticketDeparture": "Kuondoka ",
+    "ticketArrival": "Kuwasili ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Abiria ",
+    "ticketPassengerVal": "Nomad · 1 mtu mzima ",
+    "ticketRecord": "Kiweka rekodi ",
+    "ticketVerified": "Imethibitishwa"
+  }
+}

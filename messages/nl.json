@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — verder reisbewijs voor nomaden ",
+    "defaultDescription": "Echte, verifieerbare vluchtreserveringen voor verdere reiscontroles. Gebouwd voor digitale nomaden. ",
+    "homeTitle": "TempTicket — verder reisbewijs voor nomaden ",
+    "homeDescription": "Echte, verifieerbare vluchtreserveringen voor verdere reiscontroles. Gebouwd voor digitale nomaden. ",
+    "bookTitle": "Een reservering maken — TempTicket ",
+    "bookDescription": "Zoek een vluchtreservering en voltooi uw verdere reisreservering. ",
+    "bookConfirmationTitle": "Betaling ontvangen — TempTicket ",
+    "bookConfirmationDescription": "Wij bevestigen uw reservering bij de luchtvaartmaatschappij. ",
+    "loginTitle": "Aanmelden — TempTicket ",
+    "loginDescription": "Magische link-inloggen met een 6-cijferige code om uw boekingen te bekijken. ",
+    "bookingsTitle": "Mijn boekingen — TempTicket ",
+    "bookingsDescription": "Bestellingen en luchtvaartmaatschappijreferenties voor uw account.",
+    "termsTitle": "Servicevoorwaarden — TempTicket ",
+    "termsDescription": "Servicevoorwaarden voor TempTicket. ",
+    "privacyTitle": "Privacy — TempTicket ",
+    "privacyDescription": "Hoe TempTicket persoonsgegevens verwerkt. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Mijn boekingen ",
+    "admin": "Admin ",
+    "signOut": "Afmelden ",
+    "signIn": "Aanmelden ",
+    "book": "Boek "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Taal ",
+    "language": "Taal"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Zoeken… ",
+    "empty": "Geen plaatsen gevonden. Probeer een andere spelling of stad. ",
+    "city": "Stad ",
+    "airport": "Luchthaven ",
+    "couldNotSearch": "Kon geen plaatsen zoeken. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Stap {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Voer uw gegevens in ",
+        "body": "Route, data en passagiersgegevens. "
+      },
+      {
+        "label": "02 ",
+        "title": "Een betaling uitvoeren ",
+        "body": "Veilig afrekenen: prijs vooraf."
+      },
+      {
+        "label": "03 ",
+        "title": "Vraag uw referentie op ",
+        "body": "Verifieer bij de luchtvaartmaatschappij wanneer deze live is. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Kies herkomst en bestemming uit de suggesties ",
+    "toastSearchFailed": "Zoeken mislukt ",
+    "toastNoPayLater": "Geen achteraf betalen-tarieven voor deze zoekopdracht. Probeer andere data of luchthavens. ",
+    "toastOfferExpired": "Aanbieding verlopen: opnieuw zoeken ",
+    "toastPassengerSlots": "Kan geen passagiersslots laden voor deze aanbieding ",
+    "toastLoadOffer": "Kan aanbieding niet laden ",
+    "toastCompleteFields": "Vul alle passagiersvelden in ",
+    "toastPhoneInvalid": "Voer een geldig telefoonnummer in ",
+    "toastReceiptEmail": "Voer een e-mailadres in voor uw boeking en ontvangstbewijs",
+    "toastEmailInvalid": "Voer een geldig e-mailadres in ",
+    "toastCheckoutServerError": "Afrekenen mislukt (serverfout {status}) ",
+    "toastCheckoutFailed": "Afrekenen mislukt ({status}) ",
+    "toastNoPaymentLink": "Checkout heeft geen betalingslink geretourneerd ",
+    "toastCheckoutConnection": "Afrekenen mislukt: controleer uw verbinding en probeer het opnieuw ",
+    "back": "Terug ",
+    "title": "Boek uw reservering ",
+    "stepFindTitle": "Zoek een vlucht ",
+    "stepFindDescription": "Typ de naam van een stad, land of luchthaven. ",
+    "from": "Vanaf ",
+    "to": "Aan ",
+    "placePlaceholder": "Stad, land of luchthaven",
+    "swapAria": "Verwissel herkomst en bestemming ",
+    "swapTitle": "Verwissel herkomst en bestemming ",
+    "departureDate": "Vertrekdatum ",
+    "searchBlurb": "Wij zoeken eerst naar tarieven voor later betalen: rond de boeking van de luchtvaartmaatschappij af nadat u onze kleine servicekosten heeft betaald. ",
+    "searching": "Zoeken… ",
+    "findingFare": "Een tarief zoeken… ",
+    "searchFlights": "Vluchten zoeken ",
+    "stepPayTitle": "Passagiersgegevens en betaling ",
+    "stepPayDescription": "Namen moeten overeenkomen met reisdocumenten. ",
+    "passenger": "Passagier {index} ",
+    "genderLabel": "Geslacht (zoals op paspoort) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Geboortedatum ",
+    "firstName": "Voornaam(-namen) ",
+    "lastName": "Achternaam(-namen) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "jij@voorbeeld.com ",
+    "emailHint": "Gebruikt bij uw luchtvaartboeking en voor uw betalingsbewijs en bevestiging. ",
+    "phone": "Telefoon ",
+    "dialCodeAria": "Landcode voor bellen ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Servicekosten betalen in ",
+    "preparingCheckout": "Afrekenen voorbereiden…",
+    "payButton": "Servicekosten betalen en reserveren ",
+    "demoOriginLabel": "Suvarnabhumi Airport (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Maleisië "
+  },
+  "BookConfirmation": {
+    "backHome": "Terug naar huis ",
+    "badge": "Betaling ontvangen ",
+    "title": "We zijn ermee bezig ",
+    "body": "Wij bevestigen uw vluchtreservering bij de luchtvaartmaatschappij. Je ontvangt binnenkort een e-mail met boekingsgegevens. ",
+    "detail": "Controleer uw inbox (en spam) voor de bevestiging. Gebruik de referentie van de luchtvaartmaatschappij op de website van de vervoerder als u een bewijs van verdere reis nodig heeft. ",
+    "bookAnother": "Een andere boeken ",
+    "signInHistory": "Log in voor geschiedenis "
+  },
+  "Login": {
+    "title": "Aanmelden ",
+    "description": "Log in om boekingen te bekijken die aan uw account of uw e-mailadres zijn gekoppeld. We sturen een code van 6 cijfers, geen wachtwoord.",
+    "email": "E-mail ",
+    "sendCode": "Code verzenden ",
+    "codeLabel": "6-cijferige code ",
+    "verify": "Verifiëren ",
+    "differentEmail": "Gebruik een ander e-mailadres ",
+    "toastSendFailed": "Kan code niet verzenden ",
+    "toastCodeSent": "Check je e-mail voor een 6-cijferige code ",
+    "toastInvalid": "Ongeldige code ",
+    "toastSignedIn": "Aangemeld "
+  },
+  "LoginPage": {
+    "loading": "Laden… "
+  },
+  "Bookings": {
+    "title": "Mijn boekingen ",
+    "subtitle": "Boekingen die aan uw account zijn gekoppeld of die met dit e-mailadres zijn gemaakt voordat u zich aanmeldde. Na betaling sturen wij u per e-mail de referentie van de luchtvaartmaatschappij.",
+    "newBooking": "Nieuwe boeking ",
+    "orders": "Bestellingen ",
+    "ordersDescription": "Gebruik de referentie van de luchtvaartmaatschappij op de site van de vervoerder als u een bewijs van verdere reis nodig heeft. ",
+    "empty": "Nog geen boekingen. ",
+    "colCreated": "Aangemaakt ",
+    "colStatus": "Status ",
+    "colAirline": "Luchtvaartmaatschappij ",
+    "colReference": "Referentie ",
+    "colMode": "Modus ",
+    "needsAttention": "Vereist aandacht ",
+    "needsAttentionDescription": "Als een boeking na betaling mislukt, neem dan contact op met de klantenservice met de ID en Stripe-bon. "
+  },
+  "Terms": {
+    "title": "Servicevoorwaarden",
+    "lead": "Laatst bijgewerkt: april 2026. Deze voorwaarden zijn slechts een startersjabloon. Laat een gekwalificeerde adviseur ze beoordelen voordat u betalende klanten uitnodigt. ",
+    "serviceHeading": "Dienst ",
+    "serviceBody": "TempTicket biedt een betaalde service voor het regelen van een echte vluchtreservering via onze boekingspartners voor reizigers die documentatie nodig hebben voor hun verdere reis. Wij garanderen geen specifieke immigratie- of luchtvaartresultaten. Officieren en vervoerders hanteren hun eigen regels. ",
+    "legalHeading": "Geen juridisch advies ",
+    "legalBody": "Niets op deze site is legaal, immigratie- of belastingadvies. Voldoe aan de wetten en licenties die van toepassing zijn op uw bedrijf en de rechtsgebieden waar u op de markt brengt en verkoopt. ",
+    "paymentsHeading": "Betalingen en terugbetalingen ",
+    "paymentsBody": "Servicekosten worden bij het afrekenen geïnd. Als we het geboekte traject niet kunnen voltooien na een succesvolle betaling, zullen we met u samenwerken aan een terugbetaling of een alternatief aanbod volgens ons gepubliceerde beleid. Terugboekingen kunnen worden betwist wanneer de service is geleverd zoals beschreven. ",
+    "useHeading": "Aanvaardbaar gebruik ",
+    "useBody": "U mag de service niet gebruiken om reisintenties verkeerd voor te stellen aan overheden of luchtvaartmaatschappijen, om gestolen betaalmethoden te testen of op enige manier die in strijd is met de voorwaarden van leveranciers of de toepasselijke wetgeving. ",
+    "liabilityHeading": "Beperkte aansprakelijkheid ",
+    "liabilityBody": "Voor zover maximaal toegestaan door de wet, is TempTicket niet aansprakelijk voor instapweigering, toegangsweigering, gemiste aansluitingen of indirecte schade die voortvloeit uit het gebruik van de dienst. "
+  },
+  "Privacy": {
+    "title": "Privacy",
+    "summary": "Samenvatting: We verwerken e-mail- en reisgerelateerde persoonlijke gegevens om accounts, boekingen en verplichte ontvangstbewijzen te beheren. Laat uw adviseur deze pagina afstemmen op uw daadwerkelijke datamap (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Wat we verzamelen ",
+    "collectItems": [
+      "E-mailadres en sessietokens voor inloggen ",
+      "Namen van passagiers, geboortedata, contactgegevens vereist door luchtvaartmaatschappijen ",
+      "Betalingsmetagegevens van onze betalingsverwerker ",
+      "Technische logboeken die nodig zijn om de dienst te laten functioneren en fouten op te sporen "
+    ],
+    "whyHeading": "Waarom we deze verwerken ",
+    "whyBody": "Om ons contract met u uit te voeren, te voldoen aan wettelijke verplichtingen waar deze van toepassing zijn, en legitieme belangen na te streven (veiligheid, fraudepreventie, productverbetering) in evenwicht met uw rechten. ",
+    "processorsHeading": "Verwerkers ",
+    "processorsBody": "Infrastructuur en leveranciers kunnen databasehosting (bijvoorbeeld Neon), e-mailbezorging (bijvoorbeeld Resend), betalingen (bijvoorbeeld Stripe) en vluchtboeking (Duffel en luchtvaartmaatschappijen) omvatten. Hun voorwaarden zijn ook van toepassing op de delen van de verwerking die zij uitvoeren. ",
+    "retentionHeading": "Bewaren ",
+    "retentionBody": "We houden boekings- en factureringsgegevens bij als dat nodig is voor ondersteuning, boekhouding en wettelijke bewaarplichten (doorgaans jaren, niet weken), maar exacte schema's moeten overeenkomen met uw beleid.",
+    "rightsHeading": "Rechten ",
+    "rightsBody": "Afhankelijk van uw regio heeft u mogelijk rechten op toegang tot, correctie, verwijdering of bezwaar tegen bepaalde verwerkingen. Neem contact met ons op op het adres dat u voor uw bedrijf publiceert; wij zullen verzoeken verifiëren in overeenstemming met de wet. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Betaling succesvol. ",
+    "bookingsSuccess": "Betaling ontvangen. Uw boeking wordt zo spoedig mogelijk bijgewerkt. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Terug naar boven "
+  },
+  "Home": {
+    "bookNow": "Boek nu ",
+    "heroBadge": "Live reserveringen ",
+    "heroHeadingLead": "Vluchtboeking ",
+    "heroHeadingAccent": "geverifieerd in minuten ",
+    "heroSub": "Echte vluchtreserveringen kunt u verifiëren op de website van de luchtvaartmaatschappij. Stressvrij reizen voor nomaden. ",
+    "howItWorks": "Hoe het werkt ",
+    "trustStats": [
+      {
+        "stat": "Notulen",
+        "label": "Typische omslag wanneer luchtvaartmaatschappijen samenwerken "
+      },
+      {
+        "stat": "Echte PNR ",
+        "label": "Zoek het op bij de vervoerder wanneer het wordt uitgegeven "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Ondersteuning als iets een mens nodig heeft "
+      }
+    ],
+    "featuresTitle": "Alles wat u nodig heeft voor gemoedsrust ",
+    "featuresSub": "Snel, verifieerbaar bewijs voor verder reizen, zonder de angst een ticket te kopen dat je niet gaat gebruiken. ",
+    "features": [
+      {
+        "title": "Authentieke reserveringen ",
+        "body": "Een echt luchtvaartdocument als de bevestiging binnenkomt – geen decoratieve pdf. "
+      },
+      {
+        "title": "Onmiddellijke levering ",
+        "body": "De meeste stromen worden snel voltooid, zodat u dezelfde dag nog een bewijs kunt bijvoegen. "
+      },
+      {
+        "title": "Verifieerbaar door vervoerder",
+        "body": "Gebruik de tools van de luchtvaartmaatschappij om de boeking op te halen als iemand daarom vraagt. "
+      },
+      {
+        "title": "Geld besparen ",
+        "body": "Betaal een kleine servicetoeslag in plaats van een terugbetaalbaar langeafstandstarief. "
+      },
+      {
+        "title": "Flexibele plannen ",
+        "body": "Pas datums aan wanneer uw reisschema verandert, binnen de beleidsvensters van luchtvaartmaatschappijen. "
+      },
+      {
+        "title": "Menselijke steun ",
+        "body": "Vastgelopen tarieven en randgevallen kunnen vanuit de wachtrij naar ons team escaleren. "
+      }
+    ],
+    "processTitle": "Eenvoudig boekingsproces ",
+    "commonQuestions": "Veelgestelde vragen ",
+    "personasTitle": "is perfect voor ",
+    "personas": [
+      {
+        "title": "Visumaanvragers ",
+        "body": "Als consulaten een reisroute willen, niet noodzakelijkerwijs een betaald tarief."
+      },
+      {
+        "title": "Veel voorkomende flyers ",
+        "body": "Herhaalbaar bewijs voor luchtvaartmaatschappijen die retour-/doorreisregels handhaven. "
+      },
+      {
+        "title": "Reizigers ",
+        "body": "Eenvoudig verificatieverhaal voor grens- en vervoerdercontroles. "
+      },
+      {
+        "title": "Digitale nomaden ",
+        "body": "Blijf flexibel zonder parkeergeld in ongebruikte langeafstandstarieven. "
+      }
+    ],
+    "socialTitle": "Vertrouwd door reizigers over de hele wereld ",
+    "socialNote": "Voorbeeldrecensies: ruil ze in voor echte getuigenissen als je die hebt. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Voorbeeld · Alex M. ",
+        "quote": "PNR checkte uit op de site van de luchtvaartmaatschappij in dezelfde week dat ik mijn aanvraag had ingediend. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Voorbeeld · Leni K. ",
+        "quote": "Een vlotte afhandeling en snelle antwoorden als ik naar een route vroeg. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Voorbeeld · James T. ",
+        "quote": "Heeft me door het inchecken geholpen met een enkeltje-ticketbeleid. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Grotere flexibiliteit bij het verkrijgen van uw visum ",
+    "visaBody": "Veel missies beschrijven het accepteren van een reisroute of reservering in plaats van een volledig betaald ticket. Bevestig uw zaak op de officiële site: wij zorgen voor een echte reservering die u kunt verifiëren terwijl u wacht. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Lees de officiële checklist",
+        "body": "Ambassades verschillen van mening: sommige willen een reservering, andere een ticket. Begin vanaf hun pagina, niet vanaf een blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Verbind de data met je verhaal ",
+        "body": "Kies een route en tijdstip die perfect aansluiten bij de aanvraag die u indient. "
+      },
+      {
+        "n": "3 ",
+        "title": "Verifiëren bij de luchtvaartmaatschappij ",
+        "body": "Als de opname live is, oefen dan vóór uw afspraak met het ophalen ervan op de site van de vervoerder. "
+      }
+    ],
+    "embassyPublish": "Wat ambassades publiceren ",
+    "embassyFigures": [
+      {
+        "quote": "Reservering voor een retourticket, het is niet nodig om een ticket te kopen voordat het visum wordt verleend... ",
+        "caption": "Thema uit veelgestelde vragen over de openbare ambassade (Noorwegen) "
+      },
+      {
+        "quote": "Reservatie van een luchtvaartmaatschappij… met reisreserveringsnummer… niet noodzakelijkerwijs een reservering op basis van een ticket. ",
+        "caption": "Thema uit openbare Schengenrichtlijnen (Spanje)"
+      },
+      {
+        "quote": "Verifieerbare vluchtreservering… geen gekocht ticket. ",
+        "caption": "Thema uit openbare visuminformatie (India) "
+      }
+    ],
+    "faqTitle": "Heeft u hulp nodig? ",
+    "faqFooter": "Meer vragen? Start een boeking: we brengen de timing en de vervoerdernota's ter sprake. ",
+    "faqItems": [
+      {
+        "q": "Wat is TempTicket? ",
+        "a": "Een dienst die u helpt bij het verkrijgen van een echte, verifieerbare vluchtreservering (met een boekingsreferentie wanneer de luchtvaartmaatschappij deze bevestigt) voor verdere reis- en visumscenario's, zonder te betalen voor een volledig tarief waar u mogelijk geen gebruik van maakt. "
+      },
+      {
+        "q": "Hoe lang is de reservering geldig? ",
+        "a": "De geldigheid hangt af van de tariefregels, het reserveringsbeleid of de tickettijdlijn van de luchtvaartmaatschappij. Tijdens het boeken komen we naar boven wat we kunnen; bevestig altijd de timing aan de hand van de vereisten van uw ambassade of vervoerder. "
+      },
+      {
+        "q": "Kan ik dit verifiëren op de website van de luchtvaartmaatschappij? ",
+        "a": "Wanneer de luchtvaartmaatschappij een live record uitgeeft, kunt u dit doorgaans opzoeken in hun boekingsbeheer- of check-my-trip-proces. Als een route niet in aanmerking komt voor een blokkade, heb je mogelijk een instant ticket nodig. "
+      },
+      {
+        "q": "Is dit juridisch advies of een visumgarantie? ",
+        "a": "Nee. Immigratieregels verschillen per land en functionaris. Wij bieden alleen een reserveringsservice. Raadpleeg officiële bronnen voor uw situatie."
+      }
+    ],
+    "ctaTitle": "Reizen is al moeilijk genoeg. Maak het bewijs van verder eenvoudiger met ",
+    "ctaPriceLine": "Vanaf {price} · minuten, geen giswerk ",
+    "footerTagline": "Doorreisbewijs voor nomaden ",
+    "footerServices": "Diensten ",
+    "footerAccount": "Rekening ",
+    "footerLegal": "Juridisch ",
+    "footerBook": "Een reservering maken ",
+    "footerSignIn": "Aanmelden ",
+    "footerMyBookings": "Mijn boekingen ",
+    "footerTerms": "Voorwaarden ",
+    "footerPrivacy": "Privacy ",
+    "footerCopyright": "Alle rechten voorbehouden.",
+    "footerBackTop": "Terug naar boven ",
+    "ticketFrom": "Vanaf {price} ",
+    "ticketDeparture": "Vertrek ",
+    "ticketArrival": "Aankomst ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Passagier ",
+    "ticketPassengerVal": "Nomad · 1 volwassene ",
+    "ticketRecord": "Opnamezoeker ",
+    "ticketVerified": "Geverifieerd"
+  }
+}

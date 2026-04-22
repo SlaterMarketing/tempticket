@@ -1,4 +1,10 @@
 import { hasLocale } from "next-intl";
+import {
+  ANALYTICS_SESSION_COOKIE,
+  ANALYTICS_VISITOR_COOKIE,
+  PG_UUID_RE,
+} from "@/lib/analytics/constants";
+import { trackServerEventSafe } from "@/lib/analytics/track";
 import { getSession } from "@/lib/auth/session";
 import { routing } from "@/i18n/routing";
 import { logBookingEvent } from "@/lib/booking/log";
@@ -9,6 +15,7 @@ import { getDuffel } from "@/lib/duffel";
 import { checkoutCurrencySchema, serviceFeeForCurrency } from "@/lib/pricing";
 import { getStripe } from "@/lib/stripe";
 import { eq } from "drizzle-orm";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -35,10 +42,6 @@ const bodySchema = z.object({
   /** BCP 47 tag; used to build locale-prefixed Stripe return URLs. */
   locale: z.string().optional(),
 });
-
-/** Postgres `uuid` type; avoids invalid/empty `sub` and FK violations after DB reset / stale JWT. */
-const PG_UUID_RE =
-  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 async function resolveBookingUserId(sub: string | undefined) {
   const raw = sub?.trim();
@@ -114,6 +117,17 @@ export async function POST(req: Request) {
 
     const bookingUserId = await resolveBookingUserId(session?.sub);
 
+    const jar = await cookies();
+    const analyticsVisitorId = jar.get(ANALYTICS_VISITOR_COOKIE)?.value?.trim();
+    const analyticsSessionId = jar.get(ANALYTICS_SESSION_COOKIE)?.value?.trim();
+    const analyticsIds =
+      analyticsVisitorId &&
+      analyticsSessionId &&
+      PG_UUID_RE.test(analyticsVisitorId) &&
+      PG_UUID_RE.test(analyticsSessionId)
+        ? { analyticsVisitorId, analyticsSessionId }
+        : {};
+
     const inserted = await db()
       .insert(bookings)
       .values({
@@ -129,6 +143,7 @@ export async function POST(req: Request) {
           duffelOrderMode,
           offer_total_amount: offer.total_amount,
           offer_total_currency: offer.total_currency,
+          ...analyticsIds,
         },
       })
       .returning({ id: bookings.id });
@@ -137,6 +152,15 @@ export async function POST(req: Request) {
     await logBookingEvent({ id: bookingId }, "checkout_started", {
       offer_id: offer.id,
       duffel_order_mode: duffelOrderMode,
+    });
+    void trackServerEventSafe("checkout_started", {
+      path: "/api/checkout/session",
+      payload: {
+        booking_id: bookingId,
+        offer_id: offer.id,
+        currency: parsed.data.currency,
+        service_fee_cents: feeCents,
+      },
     });
 
     const stripe = getStripe();

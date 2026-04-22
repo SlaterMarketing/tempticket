@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — dokazilo o nadaljnjem potovanju za nomade",
+    "defaultDescription": "Dejanske, preverljive rezervacije letov za preverjanje nadaljnjih potovanj. Ustvarjen za digitalne nomade.",
+    "homeTitle": "TempTicket — dokazilo o nadaljnjem potovanju za nomade",
+    "homeDescription": "Resnične, preverljive rezervacije letov za preverjanje nadaljnjih potovanj. Ustvarjen za digitalne nomade.",
+    "bookTitle": "Rezervirajte rezervacijo — TempTicket",
+    "bookDescription": "Poiščite zadržanje leta in dokončajte rezervacijo nadaljnjega potovanja.",
+    "bookConfirmationTitle": "Prejeto plačilo — TempTicket",
+    "bookConfirmationDescription": "Potrjujemo vašo rezervacijo pri letalski družbi.",
+    "loginTitle": "Prijava — TempTicket",
+    "loginDescription": "Prijava s čarobno povezavo s 6-mestno kodo za ogled vaših rezervacij.",
+    "bookingsTitle": "Moje rezervacije — TempTicket",
+    "bookingsDescription": "Naročila in reference letalskih družb za vaš račun.",
+    "termsTitle": "Pogoji storitve — TempTicket",
+    "termsDescription": "Pogoji storitve za TempTicket.",
+    "privacyTitle": "Zasebnost — TempTicket",
+    "privacyDescription": "Kako TempTicket obdeluje osebne podatke."
+  },
+  "SiteHeader": {
+    "brandAlt": "Začasna vstopnica",
+    "myBookings": "Moje rezervacije",
+    "admin": "Admin",
+    "signOut": "Odjava",
+    "signIn": "Prijava",
+    "book": "Knjiga"
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Jezik",
+    "language": "Jezik"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Iskanje...",
+    "empty": "Ni najdenih mest. Poskusite z drugim črkovanjem ali mestom.",
+    "city": "Mesto",
+    "airport": "Letališče",
+    "couldNotSearch": "Ni bilo mogoče iskati krajev."
+  },
+  "BookingTimeline": {
+    "stepLabel": "Korak {step}",
+    "steps": [
+      {
+        "label": "01",
+        "title": "Vnesite svoje podatke",
+        "body": "Pot, datumi in podatki o potnikih."
+      },
+      {
+        "label": "02",
+        "title": "Izvedite plačilo",
+        "body": "Varna blagajna—cena vnaprej."
+      },
+      {
+        "label": "03",
+        "title": "Pridobite svojo referenco",
+        "body": "Preverite pri letalski družbi, ko je v živo."
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Izberite izvor in cilj med predlogi",
+    "toastSearchFailed": "Iskanje ni uspelo",
+    "toastNoPayLater": "Pri tem iskanju ni cen vozovnic s plačilom pozneje – poskusite z drugimi datumi ali letališči.",
+    "toastOfferExpired": "Ponudba je potekla—išči znova",
+    "toastPassengerSlots": "Ni bilo mogoče naložiti potniških mest za to ponudbo",
+    "toastLoadOffer": "Ponudbe ni bilo mogoče naložiti",
+    "toastCompleteFields": "Izpolnite vsa polja za potnike",
+    "toastPhoneInvalid": "Vnesite veljavno telefonsko številko",
+    "toastReceiptEmail": "Vnesite e-pošto za svojo rezervacijo in potrdilo",
+    "toastEmailInvalid": "Vnesite veljaven elektronski naslov",
+    "toastCheckoutServerError": "Odjava ni uspela (napaka strežnika {status})",
+    "toastCheckoutFailed": "Odjava ni uspela ({status})",
+    "toastNoPaymentLink": "Checkout ni vrnil povezave za plačilo",
+    "toastCheckoutConnection": "Odjava ni uspela—preverite povezavo in poskusite znova",
+    "back": "Nazaj",
+    "title": "Rezervirajte svojo rezervacijo",
+    "stepFindTitle": "Poiščite let",
+    "stepFindDescription": "Vnesite ime mesta, države ali letališča.",
+    "from": "Od",
+    "to": "Za",
+    "placePlaceholder": "Mesto, država ali letališče",
+    "swapAria": "Zamenjaj izvor in cilj",
+    "swapTitle": "Zamenjaj izvor in cilj",
+    "departureDate": "Datum odhoda",
+    "searchBlurb": "Najprej iščemo vozovnice s poznejšim plačilom – zaključite rezervacijo letalskega prevoznika, ko plačate našo majhno pristojbino za storitev.",
+    "searching": "Iskanje ...",
+    "findingFare": "Iskanje cene...",
+    "searchFlights": "Iskanje letov",
+    "stepPayTitle": "Podatki o potnikih in plačilo",
+    "stepPayDescription": "Imena se morajo ujemati s potnimi listinami.",
+    "passenger": "Potnik {index}",
+    "genderLabel": "Spol (kot v potnem listu)",
+    "genderM": "M",
+    "genderF": "F",
+    "dob": "Datum rojstva",
+    "firstName": "Ime(imena)",
+    "lastName": "Priimek(i)",
+    "email": "E-pošta",
+    "emailPlaceholder": "you@example.com",
+    "emailHint": "Uporablja se pri rezervaciji letalskega prevoznika ter za potrdilo in potrditev plačila.",
+    "phone": "Telefon",
+    "dialCodeAria": "Klicna koda države",
+    "phonePlaceholder": "812 345 678",
+    "payInLabel": "Plačajte pristojbino za storitve v",
+    "preparingCheckout": "Priprava blagajne …",
+    "payButton": "Plačajte storitev in rezervirajte",
+    "demoOriginLabel": "Letališče Suvarnabhumi (BKK) · Bangkok, Tajska",
+    "demoDestinationLabel": "Mednarodno letališče Kuala Lumpur (KUL) · Sepang, Malezija"
+  },
+  "BookConfirmation": {
+    "backHome": "Nazaj domov",
+    "badge": "Prejeto plačilo",
+    "title": "Smo na tem",
+    "body": "Potrjujemo vašo rezervacijo leta pri letalski družbi. Kmalu boste prejeli e-poštno sporočilo s podrobnostmi o rezervaciji.",
+    "detail": "Preverite svojo mapo »Prejeto« (in vsiljeno pošto) za potrditev. Uporabite referenco letalske družbe na spletnem mestu prevoznika, ko potrebujete dokazilo o nadaljnjem potovanju.",
+    "bookAnother": "Rezerviraj drugo",
+    "signInHistory": "Prijava za zgodovino"
+  },
+  "Login": {
+    "title": "Prijava",
+    "description": "Prijavite se za ogled rezervacij, povezanih z vašim računom ali vašo e-pošto. Pošljemo 6-mestno kodo – brez gesla.",
+    "email": "E-pošta",
+    "sendCode": "Pošlji kodo",
+    "codeLabel": "6-mestna koda",
+    "verify": "Preveri",
+    "differentEmail": "Uporabite drugo e-pošto",
+    "toastSendFailed": "Ni bilo mogoče poslati kode",
+    "toastCodeSent": "Preverite svojo e-pošto za 6-mestno kodo",
+    "toastInvalid": "Neveljavna koda",
+    "toastSignedIn": "Prijavljen"
+  },
+  "LoginPage": {
+    "loading": "Nalaganje…"
+  },
+  "Bookings": {
+    "title": "Moje rezervacije",
+    "subtitle": "Rezervacije, povezane z vašim računom ali opravljene s tem e-poštnim sporočilom, preden ste se prijavili. Po plačilu vam po e-pošti pošljemo referenco letalske družbe.",
+    "newBooking": "Nova rezervacija",
+    "orders": "Naročila",
+    "ordersDescription": "Uporabite referenco letalske družbe na spletnem mestu prevoznika, ko potrebujete dokazilo o nadaljnjem potovanju.",
+    "empty": "Ni še nobenih rezervacij.",
+    "colCreated": "Ustvarjeno",
+    "colStatus": "Stanje",
+    "colAirline": "Letalski prevoznik",
+    "colReference": "Referenca",
+    "colMode": "Način",
+    "needsAttention": "Potrebuje pozornost",
+    "needsAttentionDescription": "Če rezervacija po plačilu ni uspela, se obrnite na podporo z ID-jem in potrdilom Stripe."
+  },
+  "Terms": {
+    "title": "Pogoji storitve",
+    "lead": "Nazadnje posodobljeno: april 2026. Ti pogoji so samo začetna predloga – preden povabite plačljive stranke, naj jih pregleda kvalificirani svetovalec.",
+    "serviceHeading": "Storitev",
+    "serviceBody": "TempTicket zagotavlja plačljivo storitev za organizacijo prave rezervacije leta prek naših rezervacijskih partnerjev za potnike, ki potrebujejo dokumentacijo za nadaljnje potovanje. Ne jamčimo za noben poseben izid priseljevanja ali letalskega prevoznika. Uradniki in prevozniki uporabljajo svoja pravila.",
+    "legalHeading": "Ni pravni nasvet",
+    "legalBody": "Nič na tem spletnem mestu ni pravno, priseljensko ali davčno svetovanje. Upoštevajte zakone in licence, ki veljajo za vaše podjetje in jurisdikcije, kjer tržite in prodajate.",
+    "paymentsHeading": "Plačila in povračila",
+    "paymentsBody": "Pristojbine za storitve se zaračunajo na blagajni. Če po uspešnem plačilu ne moremo dokončati rezerviranega toka, bomo z vami sodelovali pri vračilu ali nadomestni ponudbi v skladu z našim objavljenim pravilnikom. Povratne bremenitve se lahko izpodbijajo, ko je bila storitev opravljena, kot je opisano.",
+    "useHeading": "Sprejemljiva uporaba",
+    "useBody": "Storitve ne smete uporabljati za lažno predstavljanje namere potovanja vladam ali letalskim družbam, za testiranje ukradenih načinov plačila ali na kakršen koli način, ki krši pogoje dobavitelja ali veljavno zakonodajo.",
+    "liabilityHeading": "Omejena odgovornost",
+    "liabilityBody": "Do največjega obsega, ki ga dovoljuje zakonodaja, TempTicket ni odgovoren za zavrnjeno vkrcanje, zavrnjen vstop, zamujene povezave ali posredno škodo, ki izhaja iz uporabe storitve."
+  },
+  "Privacy": {
+    "title": "Zasebnost",
+    "summary": "Povzetek: e-pošto in osebne podatke, povezane s potovanji, obdelujemo za vodenje računov, rezervacij in obveznih potrdil. Svetovalec naj to stran uskladi z vašim dejanskim zemljevidom podatkov (Neon, Resend, Stripe, Duffel, gostovanje).",
+    "collectHeading": "Kaj zbiramo",
+    "collectItems": [
+      "E-poštni naslov in žetoni seje za prijavo",
+      "Imena potnikov, rojstni datumi, kontaktni podatki, ki jih zahtevajo letalske družbe",
+      "Metapodatki o plačilih iz našega procesorja plačil",
+      "Tehnični dnevniki, potrebni za delovanje in odpravljanje napak v storitvi"
+    ],
+    "whyHeading": "Zakaj ga obdelujemo",
+    "whyBody": "Za izvajanje naše pogodbe z vami, izpolnjevanje zakonskih obveznosti, kjer veljajo, in zasledovanje zakonitih interesov (varnost, preprečevanje goljufij, izboljšanje izdelkov) v ravnovesju z vašimi pravicami.",
+    "processorsHeading": "Procesorji",
+    "processorsBody": "Infrastruktura in prodajalci lahko vključujejo gostovanje baze podatkov (npr. Neon), dostavo e-pošte (npr. Resend), plačila (npr. Stripe) in rezervacijo letov (Duffel in letalske družbe). Njihovi pogoji veljajo tudi za dele obdelave, ki jih izvajajo.",
+    "retentionHeading": "Pridržanje",
+    "retentionBody": "Vzdržujemo evidenco rezervacij in zaračunavanja, kot je potrebno za podporo, računovodstvo in pravne zadržke—običajno leta, ne tedne—vendar se morajo natančni urniki ujemati z vašo politiko.",
+    "rightsHeading": "Pravice",
+    "rightsBody": "Odvisno od vaše regije imate morda pravico do dostopa, popravka, brisanja ali ugovora določeni obdelavi. Kontaktirajte nas na naslovu, ki ga objavite za svoje podjetje; zahteve bomo preverili v skladu z zakonom."
+  },
+  "Toasts": {
+    "paymentSuccess": "Plačilo uspešno.",
+    "bookingsSuccess": "Prejeto plačilo. Vaša rezervacija bo posodobljena v trenutku."
+  },
+  "BackToTop": {
+    "ariaLabel": "Nazaj na vrh"
+  },
+  "Home": {
+    "bookNow": "Rezervirajte zdaj",
+    "heroBadge": "Rezervacije v živo",
+    "heroHeadingLead": "Rezervacija leta",
+    "heroHeadingAccent": "preverjeno v minutah",
+    "heroSub": "Dejanske rezervacije letov lahko preverite na spletni strani letalske družbe. Potovanje brez stresa za nomade.",
+    "howItWorks": "Kako deluje",
+    "trustStats": [
+      {
+        "stat": "Zapisnik",
+        "label": "Tipičen preobrat, ko letalske družbe sodelujejo"
+      },
+      {
+        "stat": "Pravi PNR",
+        "label": "Poiščite ga pri prevozniku, ko je bil izdan"
+      },
+      {
+        "stat": "24/7",
+        "label": "Podpora, ko nekaj potrebuje človeka"
+      }
+    ],
+    "featuresTitle": "Vse, kar potrebujete za duševni mir",
+    "featuresSub": "Hiter, preverljiv dokaz o nadaljnjem potovanju – brez skrbi zaradi nakupa vozovnice, ki je ne boste uporabili.",
+    "features": [
+      {
+        "title": "Avtentični pridržki",
+        "body": "Pristen zapis letalske družbe, ko prejme potrditev – ne okrasni PDF."
+      },
+      {
+        "title": "Takojšnja dostava",
+        "body": "Večina tokov se zaključi hitro, tako da lahko dokazilo priložite še isti dan."
+      },
+      {
+        "title": "Preverljivo s prevoznikom",
+        "body": "Uporabite orodja letalske družbe, da prikažete rezervacijo, ko nekdo vpraša."
+      },
+      {
+        "title": "Prihranite denar",
+        "body": "Plačajte majhno pristojbino za storitve namesto vračljive vozovnice na dolge razdalje."
+      },
+      {
+        "title": "Fleksibilni načrti",
+        "body": "Prilagodite datume, ko se vaš načrt poti spremeni—v okvirih pravilnika letalske družbe."
+      },
+      {
+        "title": "Človeška podpora",
+        "body": "Zastale cene vozovnic in robni primeri se lahko iz čakalne vrste prenesejo na našo ekipo."
+      }
+    ],
+    "processTitle": "Preprost postopek rezervacije",
+    "commonQuestions": "Pogosta vprašanja",
+    "personasTitle": "je kot nalašč za",
+    "personas": [
+      {
+        "title": "Prosilci za vizum",
+        "body": "Kadar konzulati želijo načrt poti, ni nujno plačana vozovnica."
+      },
+      {
+        "title": "Pogosti potniki",
+        "body": "Ponovljivo dokazilo za letalske družbe, ki uveljavljajo pravila vračanja/nadaljevanja."
+      },
+      {
+        "title": "Popotniki",
+        "body": "Preprosta zgodba o preverjanju za mejno in prevozniško kontrolo."
+      },
+      {
+        "title": "Digitalni nomadi",
+        "body": "Ostanite prilagodljivi brez denarja za parkiranje pri neizkoriščenih cenah vozovnic na dolge razdalje."
+      }
+    ],
+    "socialTitle": "Zaupajo mu popotniki po vsem svetu",
+    "socialNote": "Vzorci pregledov – zamenjajte za resnična pričevanja, ko jih imate.",
+    "testimonials": [
+      {
+        "flag": "🇺🇸",
+        "name": "Vzorec · Alex M.",
+        "quote": "PNR je bil odjavljen na spletnem mestu letalske družbe isti teden, ko sem se prijavil.",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪",
+        "name": "Vzorec · Leni K.",
+        "quote": "Preprost tok in hitri odgovori, ko sem vprašal o poti.",
+        "avatar": "LK"
+      },
+      {
+        "flag": "🇬🇧",
+        "name": "Vzorec · James T.",
+        "quote": "Poskrbel sem za prijavo s politiko enosmerne vozovnice.",
+        "avatar": "JT"
+      }
+    ],
+    "visaTitle": "Večja prilagodljivost pri zagotavljanju vizuma",
+    "visaBody": "Številne misije opisujejo sprejemanje načrta poti ali rezervacije namesto v celoti plačane vozovnice. Potrdite na uradni strani za vaš primer – ponujamo resnično rezervacijo, ki jo lahko preverite med čakanjem.",
+    "visaSteps": [
+      {
+        "n": "1",
+        "title": "Preberite uradni kontrolni seznam",
+        "body": "Veleposlaništva se razlikujejo — nekatera želijo rezervacijo, druga vstopnico. Začnite z njihove strani, ne z bloga."
+      },
+      {
+        "n": "2",
+        "title": "Ujemite datume z vašo zgodbo",
+        "body": "Izberite pot in čas, ki se popolnoma ujema s prijavo, ki jo vlagate."
+      },
+      {
+        "n": "3",
+        "title": "Preverite pri letalski družbi",
+        "body": "Če je zapis v živo, vadite, da ga povlečete na spletno mesto prevoznika pred vašim terminom."
+      }
+    ],
+    "embassyPublish": "Kaj objavljajo veleposlaništva",
+    "embassyFigures": [
+      {
+        "quote": "Rezervacija povratne vozovnice, nakup vozovnice ni potreben pred izdajo vizuma…",
+        "caption": "Tema s pogostih vprašanj javnega veleposlaništva (Norveška)"
+      },
+      {
+        "quote": "Letalska rezervacija ... s številko potovalne rezervacije ... ni nujno rezervacija z vozovnico.",
+        "caption": "Tema iz javnih schengenskih smernic (Španija)"
+      },
+      {
+        "quote": "Preverljiva rezervacija leta ... ne kupljena vozovnica.",
+        "caption": "Tema iz javnih informacij o vizumih (Indija)"
+      }
+    ],
+    "faqTitle": "Potrebujete pomoč?",
+    "faqFooter": "Več vprašanj? Začnite z rezervacijo – sproti bomo prikazovali informacije o času in prevozniku.",
+    "faqItems": [
+      {
+        "q": "Kaj je TempTicket?",
+        "a": "Storitev, ki vam pomaga pridobiti pravo, preverljivo rezervacijo leta (z referenco rezervacije, ko jo letalska družba potrdi) za scenarije nadaljnjega potovanja in vizuma—brez plačila celotne cene vozovnice, ki je morda ne boste uporabili."
+      },
+      {
+        "q": "Kako dolgo velja rezervacija?",
+        "a": "Veljavnost je odvisna od pravil letalskega prevoznika o cenah vozovnic, politike zadrževanja ali časovnice prodaje vozovnic. Med rezervacijo prikažemo, kar lahko; vedno potrdite čas glede na zahteve vašega veleposlaništva ali prevoznika."
+      },
+      {
+        "q": "Ali ga lahko preverim na spletni strani letalske družbe?",
+        "a": "Ko letalski prevoznik izda zapis v živo, ga lahko običajno poiščete v njihovem toku upravljanja rezervacij ali preverjanja mojega potovanja. Če pot ni primerna za čakanje, boste morda potrebovali takojšnjo vozovnico."
+      },
+      {
+        "q": "Je to pravni nasvet ali jamstvo za vizum?",
+        "a": "št. Pravila priseljevanja se spreminjajo glede na državo in uradnika. Nudimo samo rezervacijsko storitev – preverite uradne vire za svojo situacijo."
+      }
+    ],
+    "ctaTitle": "Potovanje je dovolj težko. Poenostavite dokazovanje naprej z",
+    "ctaPriceLine": "Od {price} · minut, ne ugibanja",
+    "footerTagline": "Dokazilo o nadaljnjem potovanju za nomade",
+    "footerServices": "Storitve",
+    "footerAccount": "Račun",
+    "footerLegal": "Pravno",
+    "footerBook": "Rezervirajte rezervacijo",
+    "footerSignIn": "Prijava",
+    "footerMyBookings": "Moje rezervacije",
+    "footerTerms": "Pogoji",
+    "footerPrivacy": "Zasebnost",
+    "footerCopyright": "Vse pravice pridržane.",
+    "footerBackTop": "Nazaj na vrh",
+    "ticketFrom": "Od {price}",
+    "ticketDeparture": "Odhod",
+    "ticketArrival": "Prihod",
+    "ticketBangkok": "Bangkok",
+    "ticketTokyo": "Tokio",
+    "ticketPassenger": "Potnik",
+    "ticketPassengerVal": "Nomad · 1 odrasel",
+    "ticketRecord": "Lokator zapisov",
+    "ticketVerified": "Preverjeno"
+  }
+}

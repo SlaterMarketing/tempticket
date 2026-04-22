@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — továbbutazási igazolás nomádok számára ",
+    "defaultDescription": "Valódi, ellenőrizhető repülőjegy-foglalás az utazási ellenőrzéshez. Digitális nomádok számára készült. ",
+    "homeTitle": "TempTicket — továbbutazási igazolás nomádok számára ",
+    "homeDescription": "Valódi, ellenőrizhető repülőjegy-foglalás a továbbutazási ellenőrzéshez. Digitális nomádok számára készült. ",
+    "bookTitle": "Foglaljon foglalást — TempTicket ",
+    "bookDescription": "Keressen egy járatot, és fejezze be a továbbutazási foglalást. ",
+    "bookConfirmationTitle": "Befizetés megérkezett — TempTicket ",
+    "bookConfirmationDescription": "Megerősítjük foglalását a légitársasággal. ",
+    "loginTitle": "Bejelentkezés — TempTicket ",
+    "loginDescription": "Varázslatos link-bejelentkezés egy 6 számjegyű kóddal a foglalások megtekintéséhez. ",
+    "bookingsTitle": "Foglalásaim — TempTicket ",
+    "bookingsDescription": "Rendelések és légitársaság referenciák a fiókjához.",
+    "termsTitle": "Szolgáltatási feltételek — TempTicket ",
+    "termsDescription": "A TempTicket szolgáltatási feltételei. ",
+    "privacyTitle": "Adatvédelem — TempTicket ",
+    "privacyDescription": "Hogyan kezeli a TempTicket a személyes adatokat. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Temp Ticket ",
+    "myBookings": "Foglalásaim ",
+    "admin": "Admin ",
+    "signOut": "Jelentkezzen ki ",
+    "signIn": "Jelentkezzen be ",
+    "book": "Könyv "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Nyelv ",
+    "language": "Nyelv"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Keresés… ",
+    "empty": "Nincsenek helyek. Próbálkozzon más írásmóddal vagy várossal. ",
+    "city": "Város ",
+    "airport": "Repülőtér ",
+    "couldNotSearch": "Nem sikerült a helyek keresése. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Step {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Adja meg adatait ",
+        "body": "Útvonal, dátumok és utasadatok. "
+      },
+      {
+        "label": "02 ",
+        "title": "Befizetés ",
+        "body": "Biztonságos fizetés – előzetes árképzés."
+      },
+      {
+        "label": "03 ",
+        "title": "Kérje referenciáját ",
+        "body": " Ellenőrizd a légitársaságnál, hogy az éles-e. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Válassza ki a kiindulópontot és a célállomást a javaslatok közül ",
+    "toastSearchFailed": "A keresés sikertelen ",
+    "toastNoPayLater": "Nincs később fizetendő viteldíj ennél a keresésnél – próbálkozzon más dátumokkal vagy repülőterekkel. ",
+    "toastOfferExpired": "Ajánlat lejárt – keressen újra ",
+    "toastPassengerSlots": "Nem sikerült betölteni az utashelyeket ehhez az ajánlathoz ",
+    "toastLoadOffer": "Nem sikerült betölteni az ajánlatot ",
+    "toastCompleteFields": "Töltse ki az összes utas mezőt ",
+    "toastPhoneInvalid": "Írjon be egy érvényes telefonszámot ",
+    "toastReceiptEmail": "Adjon meg egy e-mailt a foglaláshoz és a nyugtához",
+    "toastEmailInvalid": "Írjon be érvényes e-mail címet ",
+    "toastCheckoutServerError": "A kijelentkezés sikertelen (szerverhiba {status}) ",
+    "toastCheckoutFailed": "A fizetés sikertelen ({status}) ",
+    "toastNoPaymentLink": "A Checkout nem adott vissza fizetési linket ",
+    "toastCheckoutConnection": "A kijelentkezés sikertelen – ellenőrizze a kapcsolatot, és próbálja újra ",
+    "back": "Vissza ",
+    "title": "Foglalja le foglalását ",
+    "stepFindTitle": "Keressen egy járatot ",
+    "stepFindDescription": "Írja be a város, ország vagy repülőtér nevét. ",
+    "from": "-tól ",
+    "to": "To ",
+    "placePlaceholder": "Város, ország vagy repülőtér",
+    "swapAria": "Cserélje fel az eredetet és a célt ",
+    "swapTitle": "Cserélje fel az eredetet és a célt ",
+    "departureDate": "Indulás dátuma ",
+    "searchBlurb": "Először a fizetés utáni viteldíjakat keressük – a kis szolgáltatási díj kifizetése után fejezze be a légitársaság foglalását. ",
+    "searching": "Keresés… ",
+    "findingFare": "Viteldíj keresése… ",
+    "searchFlights": "Járatok keresése ",
+    "stepPayTitle": "Az utas adatai és fizetés ",
+    "stepPayDescription": "A neveknek meg kell egyeznie az úti okmányokkal. ",
+    "passenger": "Utas {index} ",
+    "genderLabel": "Nem (mint az útlevélben) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Születési dátum ",
+    "firstName": "Keresztnév(ek) ",
+    "lastName": "Vezetéknév(ek) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "A légitársaság foglalásánál, valamint a fizetési nyugtánál és a visszaigazolásnál használatos. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Országhívó kód ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Szolgáltatási díj befizetése ",
+    "preparingCheckout": "Fizetés előkészítése…",
+    "payButton": "Szolgáltatási díj és tartalék fizetése ",
+    "demoOriginLabel": "Suvarnabhumi repülőtér (BKK) · Bangkok, Thaiföld ",
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malajzia "
+  },
+  "BookConfirmation": {
+    "backHome": "Vissza a főoldalra ",
+    "badge": "Befizetés megérkezett ",
+    "title": " Rajtuk vagyunk ",
+    "body": "Megerősítjük járatfoglalását a légitársasággal. Hamarosan kapni fog egy e-mailt a foglalás részleteivel. ",
+    "detail": "Nézze meg a beérkezett üzeneteket (és a spameket) a megerősítésért. Használja a légitársaság hivatkozását a fuvarozó webhelyén, ha igazolásra van szüksége a továbbutazásról. ",
+    "bookAnother": "Foglaljon másikat ",
+    "signInHistory": "Jelentkezzen be az előzményekért "
+  },
+  "Login": {
+    "title": "Jelentkezzen be ",
+    "description": "Jelentkezzen be a fiókjához vagy e-mailjéhez kapcsolódó foglalások megtekintéséhez. 6 számjegyű kódot küldünk – jelszó nélkül.",
+    "email": "E-mail ",
+    "sendCode": "Kód küldése ",
+    "codeLabel": "6 számjegyű kód ",
+    "verify": "Ellenőrzés ",
+    "differentEmail": "Használjon másik e-mailt ",
+    "toastSendFailed": "Nem sikerült elküldeni a kódot ",
+    "toastCodeSent": "E-mailben keresse meg a 6 számjegyű kódot ",
+    "toastInvalid": "Érvénytelen kód ",
+    "toastSignedIn": "Bejelentkezve "
+  },
+  "LoginPage": {
+    "loading": "Betöltés… "
+  },
+  "Bookings": {
+    "title": "Foglalásaim ",
+    "subtitle": "A fiókjához kötött vagy ezzel az e-mail-címmel történt foglalások, mielőtt Ön bejelentkezett volna. Fizetés után e-mailben elküldjük Önnek a légitársaság referenciáját.",
+    "newBooking": "Új foglalás ",
+    "orders": "Parancsok ",
+    "ordersDescription": "Használja a légitársaság hivatkozását a fuvarozó honlapján, ha igazolásra van szüksége a továbbutazásról. ",
+    "empty": "Még nincs foglalás. ",
+    "colCreated": "Létrehozva ",
+    "colStatus": "Állapot ",
+    "colAirline": "Légitársaság ",
+    "colReference": "Referencia ",
+    "colMode": "Mód ",
+    "needsAttention": "Figyelmet igényel ",
+    "needsAttentionDescription": "Ha a foglalás fizetés után meghiúsult, forduljon az ügyfélszolgálathoz az azonosítóval és a Stripe nyugtával. "
+  },
+  "Terms": {
+    "title": "Szolgáltatási feltételek",
+    "lead": "Utolsó frissítés: 2026. április. Ezek a feltételek csak kezdő sablonként szolgálnak – a fizető ügyfelek meghívása előtt kérje meg szakképzett tanácsadót, hogy tekintse át őket. ",
+    "serviceHeading": "Szolgáltatás ",
+    "serviceBody": "TempTicket fizetős szolgáltatást nyújt a valódi repülőjegy-foglalás megszervezéséhez foglalási partnereinken keresztül azoknak az utazóknak, akiknek a továbbutazáshoz dokumentálniuk kell. Nem garantálunk semmilyen konkrét bevándorlási vagy légitársasági eredményt. A tisztek és a fuvarozók saját szabályaikat alkalmazzák. ",
+    "legalHeading": "Nem jogi tanácsadás ",
+    "legalBody": " Ezen az oldalon semmi sem jogi, bevándorlási vagy adótanácsadás. Tartsa be a vállalkozására és azokra a joghatóságokra vonatkozó törvényeket és licenceket, ahol forgalmazza és értékesíti. ",
+    "paymentsHeading": "Fizetések és visszatérítések ",
+    "paymentsBody": "A szolgáltatási díjakat a pénztárnál szedjük. Ha nem tudjuk befejezni a lefoglalt folyamatot a sikeres fizetés után, akkor közzétett szabályzatunknak megfelelően visszatérítést vagy alternatív ajánlatot dolgozunk ki Önnel. A visszaterhelések vitathatók, amikor a szolgáltatást a leírtak szerint nyújtották. ",
+    "useHeading": "Elfogadható használat ",
+    "useBody": "Nem használhatja a szolgáltatást az utazási szándékok kormányok vagy légitársaságok felé való hamis bemutatására, lopott fizetési módok tesztelésére, vagy bármilyen olyan módon, amely sérti a szállítói feltételeket vagy a vonatkozó jogszabályokat. ",
+    "liabilityHeading": "Korlátozott felelősség ",
+    "liabilityBody": "A törvény által megengedett maximális mértékig a TempTicket nem vállal felelősséget a beszállás visszautasításáért, a belépés megtagadásáért, a csatlakozások elmaradásáért vagy a szolgáltatás használatából eredő közvetett károkért. "
+  },
+  "Privacy": {
+    "title": "Adatvédelem",
+    "summary": "Összefoglalás: Az e-mailekkel és az utazással kapcsolatos személyes adatokat számlák, foglalások és kötelező nyugták futtatásához dolgozzuk fel. Kérje meg tanácsadóját, hogy igazítsa ezt az oldalt az Ön tényleges adattérképéhez (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Amit gyűjtünk ",
+    "collectItems": [
+      "E-mail cím és munkamenet tokenek a bejelentkezéshez ",
+      "A légitársaságok által kért utasok nevei, születési dátumai, elérhetőségei ",
+      "Fizetési metaadatok fizetésfeldolgozónktól ",
+      "A szolgáltatás működéséhez és hibakereséséhez szükséges műszaki naplók "
+    ],
+    "whyHeading": "Miért dolgozzuk fel ",
+    "whyBody": "Az Önnel kötött szerződésünk teljesítése érdekében a törvényi kötelezettségek betartása, ahol azok vonatkoznak, és az Ön jogaival egyensúlyban lévő jogos érdekek (biztonság, csalásmegelőzés, termékfejlesztés) érvényesítése. ",
+    "processorsHeading": "Feldolgozók ",
+    "processorsBody": "Az infrastruktúra és a szállítók közé tartozhat az adatbázis-tárhely (pl. Neon), az e-mailek kézbesítése (pl. újraküldés), a fizetés (pl. Stripe) és a repülőjegy-foglalás (Duffel és légitársaságok). Feltételeik az általuk végzett feldolgozási részekre is vonatkoznak. ",
+    "retentionHeading": "Megtartás ",
+    "retentionBody": "A foglalási és számlázási nyilvántartásokat szükség szerint vezetjük a támogatáshoz, a könyveléshez és a jogi megőrzéshez – jellemzően évekre, nem hetekre –, de a pontos ütemezésnek meg kell egyeznie az Ön szabályzatával.",
+    "rightsHeading": "Jogok ",
+    "rightsBody": "Régiójától függően Ön jogosult bizonyos feldolgozások elérésére, javítására, törlésére vagy tiltakozásra. Vegye fel velünk a kapcsolatot a vállalkozása számára közzétett címen; a kéréseket a törvénynek megfelelően ellenőrizzük. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Befizetés sikeres. ",
+    "bookingsSuccess": "Befizetés megérkezett. Foglalása pillanatokon belül frissül. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Vissza az elejére "
+  },
+  "Home": {
+    "bookNow": "Foglaljon most ",
+    "heroBadge": "Élő foglalások ",
+    "heroHeadingLead": "Repülőjegy foglalás ",
+    "heroHeadingAccent": "percben ellenőrizve ",
+    "heroSub": "A valós repülőjegy-foglalásokat a légitársaságok honlapján ellenőrizheti. Stresszmentes utazás nomádok számára. ",
+    "howItWorks": " Hogyan működik ",
+    "trustStats": [
+      {
+        "stat": "Jegyzőkönyv",
+        "label": "Tipikus fordulat, amikor a légitársaságok együttműködnek"
+      },
+      {
+        "stat": "Valódi PNR",
+        "label": "Kiadáskor nézd meg a szállítónál"
+      },
+      {
+        "stat": "24/7",
+        "label": "Támogatás, ha valaminek emberre van szüksége"
+      }
+    ],
+    "featuresTitle": "Minden, ami a nyugalomhoz kell",
+    "featuresSub": "Gyors, ellenőrizhető továbbutazási igazolás – anélkül, hogy aggodalomra adna egy olyan jegyet, amelyet nem fog használni.",
+    "features": [
+      {
+        "title": "Hiteles foglalások",
+        "body": "Eredeti légitársasági rekord, amikor megérkezik a megerősítés – nem egy dekoratív PDF."
+      },
+      {
+        "title": "Azonnali szállítás",
+        "body": "A legtöbb folyamat gyorsan befejeződik, így még aznap csatolhatja a bizonyítékot."
+      },
+      {
+        "title": "Fuvarozó által igazolható",
+        "body": "Használja a légitársaság eszközeit a foglalás feloldásához, ha valaki kéri. "
+      },
+      {
+        "title": "Takarítson meg pénzt ",
+        "body": " Fizessen egy kis szolgáltatási díjat a visszatérítendő távolsági viteldíj helyett. "
+      },
+      {
+        "title": "Rugalmas tervek ",
+        "body": "Állítsa be a dátumokat, amikor az útiterv megváltozik – a légitársaság szabályzatain belül. "
+      },
+      {
+        "title": "Emberi támogatás ",
+        "body": "Az elakadt viteldíjak és szélsőséges esetek a sorból csapatunkhoz eskalálódhatnak. "
+      }
+    ],
+    "processTitle": "Egyszerű foglalási folyamat ",
+    "commonQuestions": "Gyakori kérdések ",
+    "personasTitle": " tökéletes ",
+    "personas": [
+      {
+        "title": "Vízumkérelmezők ",
+        "body": "Ha a konzulátusok útvonalat akarnak, nem feltétlenül fizetett viteldíjat."
+      },
+      {
+        "title": "Rendszerrepülők ",
+        "body": "Ismételhető bizonyíték azon légitársaságok számára, amelyek betartják a visszaküldési/továbbküldési szabályokat. "
+      },
+      {
+        "title": "Utazók ",
+        "body": "Egyszerű ellenőrzési történet a határellenőrzésekhez és a fuvarozói ellenőrzésekhez. "
+      },
+      {
+        "title": "Digitális nomádok ",
+        "body": "Maradjon rugalmas parkolási pénz nélkül a fel nem használt hosszú távú viteldíjakban. "
+      }
+    ],
+    "socialTitle": "Az utazók megbíznak világszerte ",
+    "socialNote": "Példaértékelések – cserélje ki valódi beszámolókra, ha van. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Minta · Alex M. ",
+        "quote": "PNR kijelentkezett a légitársaság oldalán ugyanazon a héten, amikor jelentkeztem. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪",
+        "name": "Minta · Leni K.",
+        "quote": "Egyszerű áramlás és gyors válaszok, amikor az útvonalról kérdeztem.",
+        "avatar": "LK"
+      },
+      {
+        "flag": "🇬🇧",
+        "name": "Minta · James T.",
+        "quote": "Átmentem a bejelentkezéskor az egyirányú jegyekkel.",
+        "avatar": "JT"
+      }
+    ],
+    "visaTitle": "Nagyobb rugalmasság a vízum biztosításakor",
+    "visaBody": "Sok küldetés inkább egy útvonal vagy foglalás elfogadását írja le, nem pedig egy teljesen kifizetett jegyet. Erősítse meg ügyét a hivatalos webhelyen – valódi foglalást biztosítunk, amelyet várakozás közben ellenőrizhet.",
+    "visaSteps": [
+      {
+        "n": "1",
+        "title": "Olvassa el a hivatalos ellenőrzőlistát",
+        "body": "A nagykövetségek eltérőek – egyesek foglalást, mások jegyet szeretnének. Kezdje az oldalukról, ne egy blogról. "
+      },
+      {
+        "n": "2 ",
+        "title": "Parassza a dátumokat a történetéhez ",
+        "body": "Válasszon olyan útvonalat és időpontot, amely tökéletesen illeszkedik a benyújtott kérelemhez. "
+      },
+      {
+        "n": "3 ",
+        "title": " Ellenőrizze a légitársaságnál ",
+        "body": "Ha a felvétel élő, gyakorolja a szolgáltató webhelyén való felhúzását a találkozó előtt. "
+      }
+    ],
+    "embassyPublish": "Mit adnak ki a követségek ",
+    "embassyFigures": [
+      {
+        "quote": "Retúrjegy foglalása, nem szükséges jegyet vásárolni a vízum megadása előtt… ",
+        "caption": "Téma a nyilvános nagykövetség GYIK-ből (Norvégia) "
+      },
+      {
+        "quote": "Légitársaság foglalás… utazási foglalási számmal… nem feltétlenül jegyes foglalás. ",
+        "caption": "Téma a nyilvános schengeni útmutatásból (Spanyolország)"
+      },
+      {
+        "quote": "Igazolható repülőjegy foglalás… nem vásárolt jegy. ",
+        "caption": "Téma a nyilvános vízuminformációkból (India) "
+      }
+    ],
+    "faqTitle": "Segítségre van szüksége? ",
+    "faqFooter": "További kérdései vannak? Kezdje el a foglalást – menet közben megjelenítjük az időzítést és a fuvarozói megjegyzéseket. ",
+    "faqItems": [
+      {
+        "q": "Mi az a TempTicket? ",
+        "a": "Szolgáltatás, amely segít valós, ellenőrizhető repülőjegy-foglalás megszerzésében (foglalási hivatkozással, ha a légitársaság visszaigazolja azt) továbbutazási és vízum-forgatókönyvekhez – a teljes viteldíj fizetése nélkül, amelyet nem használhat. "
+      },
+      {
+        "q": "Meddig érvényes a foglalás? ",
+        "a": "Az érvényesség a légitársaság viteldíjszabályaitól, a visszatartási szabályzattól vagy a jegykiadási idővonaltól függ. A foglalás során amit tudunk, felszínre hozunk; mindig ellenőrizze az időzítést a nagykövetség vagy a fuvarozó követelményei szerint. "
+      },
+      {
+        "q": " Ellenőrizhetem a légitársaság honlapján? ",
+        "a": "Amikor a légitársaság élő rekordot ad ki, általában megtekintheti a foglalás kezelésében vagy az utazásom ellenőrzésében. Ha egy útvonal nem jogosult visszatartásra, szükség lehet egy azonnali jegyre. "
+      },
+      {
+        "q": " Ez jogi tanács vagy vízumgarancia? ",
+        "a": "No. A bevándorlási szabályok országonként és tisztviselőnként változnak. Csak foglalási szolgáltatást nyújtunk – ellenőrizze a hivatalos forrásokat az Ön helyzetére vonatkozóan."
+      }
+    ],
+    "ctaTitle": "Az utazás elég nehéz. Tegye könnyebbé a továbblépés bizonyítását ",
+    "ctaPriceLine": "-tól {price} · perc, nem találgatás ",
+    "footerTagline": "További utazási igazolás nomádok számára ",
+    "footerServices": "Szolgáltatások ",
+    "footerAccount": "Fiók ",
+    "footerLegal": "Jogi ",
+    "footerBook": "Foglaljon időpontot ",
+    "footerSignIn": "Jelentkezzen be ",
+    "footerMyBookings": "Foglalásaim ",
+    "footerTerms": "Feltételek ",
+    "footerPrivacy": "Adatvédelem ",
+    "footerCopyright": "Minden jog fenntartva.",
+    "footerBackTop": "Vissza az elejére ",
+    "ticketFrom": "-tól {price} ",
+    "ticketDeparture": "Indulás ",
+    "ticketArrival": "Érkezés ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokió ",
+    "ticketPassenger": "Utas ",
+    "ticketPassengerVal": "Nomád · 1 felnőtt ",
+    "ticketRecord": "Felvételkereső ",
+    "ticketVerified": "Ellenőrzött"
+  }
+}

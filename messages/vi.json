@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — bằng chứng du lịch tiếp theo cho những người du mục ",
+    "defaultDescription": "Đặt chỗ chuyến bay thực tế, có thể kiểm chứng để kiểm tra chuyến đi tiếp theo. Được xây dựng cho những người du mục kỹ thuật số. ",
+    "homeTitle": "TempTicket — bằng chứng du lịch tiếp theo cho những người du mục ",
+    "homeDescription": "Đặt chỗ chuyến bay thực tế, có thể kiểm chứng để kiểm tra chuyến đi tiếp theo. Được xây dựng cho những người du mục kỹ thuật số. ",
+    "bookTitle": "Đặt chỗ — TempTicket ",
+    "bookDescription": "Tìm chỗ giữ chuyến bay và hoàn tất việc đặt chỗ cho chuyến đi tiếp theo của bạn. ",
+    "bookConfirmationTitle": "Đã nhận được thanh toán — TempTicket ",
+    "bookConfirmationDescription": "Chúng tôi đang xác nhận việc đặt chỗ của bạn với hãng hàng không. ",
+    "loginTitle": "Đăng nhập — TempTicket ",
+    "loginDescription": "Đăng nhập bằng liên kết ma thuật bằng mã gồm 6 chữ số để xem các lượt đặt chỗ của bạn. ",
+    "bookingsTitle": "Đặt chỗ của tôi — TempTicket ",
+    "bookingsDescription": "Đơn đặt hàng và tài liệu tham khảo hãng hàng không cho tài khoản của bạn.",
+    "termsTitle": "Điều khoản dịch vụ — TempTicket ",
+    "termsDescription": "Điều khoản dịch vụ của TempTicket. ",
+    "privacyTitle": "Quyền riêng tư — TempTicket ",
+    "privacyDescription": "Cách TempTicket xử lý dữ liệu cá nhân. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Ticket tạm thời ",
+    "myBookings": "Đặt chỗ của tôi ",
+    "admin": "Quản trị viên ",
+    "signOut": "Đăng xuất ",
+    "signIn": "Đăng nhập ",
+    "book": "Sách "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Ngôn ngữ ",
+    "language": "Ngôn ngữ"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Đang tìm kiếm… ",
+    "empty": "Không tìm thấy địa điểm nào. Hãy thử cách viết khác hoặc thành phố. ",
+    "city": "Thành phố ",
+    "airport": "Sân bay ",
+    "couldNotSearch": "Không thể tìm kiếm địa điểm. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Bước {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Nhập thông tin của bạn ",
+        "body": "Tuyến đường, ngày tháng và thông tin chi tiết về hành khách. "
+      },
+      {
+        "label": "02 ",
+        "title": "Thanh toán ",
+        "body": "Thanh toán an toàn—đặt giá trước."
+      },
+      {
+        "label": "03 ",
+        "title": "Nhận tài liệu tham khảo của bạn ",
+        "body": "Xác minh trên hãng hàng không khi nó hoạt động. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Chọn điểm đi và điểm đến từ các gợi ý ",
+    "toastSearchFailed": "Tìm kiếm không thành công ",
+    "toastNoPayLater": "Không có giá vé trả sau trong tìm kiếm này—hãy thử các ngày hoặc sân bay khác. ",
+    "toastOfferExpired": "Ưu đãi đã hết hạn—tìm kiếm lại ",
+    "toastPassengerSlots": "Không thể tải chỗ hành khách cho ưu đãi này ",
+    "toastLoadOffer": "Không thể tải ưu đãi ",
+    "toastCompleteFields": "Hoàn thành tất cả các trường hành khách ",
+    "toastPhoneInvalid": "Nhập số điện thoại hợp lệ ",
+    "toastReceiptEmail": "Nhập email để đặt chỗ và biên nhận",
+    "toastEmailInvalid": "Nhập địa chỉ email hợp lệ ",
+    "toastCheckoutServerError": "Kiểm tra không thành công (lỗi máy chủ {status}) ",
+    "toastCheckoutFailed": "Thanh toán không thành công ({status}) ",
+    "toastNoPaymentLink": "Checkout không trả lại liên kết thanh toán ",
+    "toastCheckoutConnection": "Thanh toán không thành công—hãy kiểm tra kết nối của bạn và thử lại ",
+    "back": "Quay lại ",
+    "title": "Đặt chỗ trước ",
+    "stepFindTitle": "Tìm chuyến bay ",
+    "stepFindDescription": "Nhập tên thành phố, quốc gia hoặc sân bay. ",
+    "from": "Từ ",
+    "to": "Tới ",
+    "placePlaceholder": "Thành phố, quốc gia hoặc sân bay",
+    "swapAria": "Hoán đổi điểm đi và điểm đến ",
+    "swapTitle": "Hoán đổi điểm đi và điểm đến ",
+    "departureDate": "Ngày khởi hành ",
+    "searchBlurb": "Trước tiên, chúng tôi tìm kiếm giá vé trả sau—hoàn tất việc đặt vé máy bay sau khi bạn thanh toán khoản phí dịch vụ nhỏ của chúng tôi. ",
+    "searching": "Đang tìm kiếm… ",
+    "findingFare": "Đang tìm giá vé… ",
+    "searchFlights": "Tìm kiếm chuyến bay ",
+    "stepPayTitle": "Chi tiết hành khách và thanh toán ",
+    "stepPayDescription": "Tên phải khớp với giấy thông hành. ",
+    "passenger": "Hành khách {index} ",
+    "genderLabel": "Giới tính (như trên hộ chiếu) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Ngày sinh ",
+    "firstName": "Tên ",
+    "lastName": "Họ ",
+    "email": "Email ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Được sử dụng khi đặt vé máy bay cũng như để nhận và xác nhận thanh toán của bạn. ",
+    "phone": "Điện thoại ",
+    "dialCodeAria": "Mã gọi quốc gia ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Thanh toán phí dịch vụ bằng ",
+    "preparingCheckout": "Đang chuẩn bị thanh toán…",
+    "payButton": "Thanh toán phí dịch vụ và đặt trước ",
+    "demoOriginLabel": "Sân bay Suvarnabhumi (BKK) · Bangkok, Thái Lan ",
+    "demoDestinationLabel": "Sân bay Quốc tế Kuala Lumpur (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Trở về nhà ",
+    "badge": "Đã nhận được thanh toán ",
+    "title": "Chúng tôi đang cố gắng ",
+    "body": "Chúng tôi đang xác nhận việc đặt chỗ chuyến bay của bạn với hãng hàng không. Bạn sẽ sớm nhận được email có thông tin đặt chỗ. ",
+    "detail": "Kiểm tra hộp thư đến (và thư rác) của bạn để xác nhận. Sử dụng tài liệu tham khảo của hãng hàng không trên trang web của hãng vận chuyển khi bạn cần bằng chứng về chuyến đi tiếp theo. ",
+    "bookAnother": "Đặt chỗ khác ",
+    "signInHistory": "Đăng nhập để xem lịch sử "
+  },
+  "Login": {
+    "title": "Đăng nhập ",
+    "description": "Đăng nhập để xem các lượt đặt chỗ được liên kết với tài khoản hoặc email của bạn. Chúng tôi gửi mã gồm 6 chữ số—không có mật khẩu.",
+    "email": "Email ",
+    "sendCode": "Gửi mã ",
+    "codeLabel": "mã 6 chữ số ",
+    "verify": "Xác minh ",
+    "differentEmail": "Sử dụng một email khác ",
+    "toastSendFailed": "Không thể gửi mã ",
+    "toastCodeSent": "Kiểm tra email của bạn để tìm mã gồm 6 chữ số ",
+    "toastInvalid": "Mã không hợp lệ ",
+    "toastSignedIn": "Đã đăng nhập "
+  },
+  "LoginPage": {
+    "loading": "Đang tải… "
+  },
+  "Bookings": {
+    "title": "Đặt chỗ của tôi ",
+    "subtitle": "Việc đặt chỗ được liên kết với tài khoản của bạn hoặc được thực hiện bằng email này trước khi bạn đăng nhập. Sau khi thanh toán, chúng tôi sẽ gửi email giới thiệu hãng hàng không cho bạn.",
+    "newBooking": "Đặt phòng mới ",
+    "orders": "Đơn đặt hàng ",
+    "ordersDescription": "Sử dụng thông tin tham khảo của hãng hàng không trên trang web của hãng vận chuyển khi bạn cần bằng chứng về chuyến đi tiếp theo. ",
+    "empty": "Chưa có đặt chỗ nào. ",
+    "colCreated": "Đã tạo ",
+    "colStatus": "Trạng thái ",
+    "colAirline": "Hãng hàng không ",
+    "colReference": "Tham khảo ",
+    "colMode": "Chế độ ",
+    "needsAttention": "Cần chú ý ",
+    "needsAttentionDescription": "Nếu việc đặt chỗ không thành công sau khi thanh toán, hãy liên hệ với bộ phận hỗ trợ kèm theo id và biên lai Stripe. "
+  },
+  "Terms": {
+    "title": "Điều khoản dịch vụ",
+    "lead": "Cập nhật lần cuối: Tháng 4 năm 2026. Các điều khoản này chỉ là mẫu ban đầu—hãy nhờ cố vấn đủ trình độ xem xét trước khi bạn mời khách hàng trả tiền. ",
+    "serviceHeading": "Dịch vụ ",
+    "serviceBody": "TempTicket cung cấp dịch vụ trả phí để sắp xếp đặt chỗ chuyến bay thực sự thông qua các đối tác đặt vé của chúng tôi cho những du khách cần giấy tờ về chuyến đi tiếp theo. Chúng tôi không đảm bảo bất kỳ kết quả nhập cư hoặc hãng hàng không cụ thể nào. Các quan chức và người vận chuyển áp dụng các quy tắc riêng của họ. ",
+    "legalHeading": "Không phải tư vấn pháp lý ",
+    "legalBody": "Không có gì trên trang web này là lời khuyên về pháp lý, nhập cư hoặc thuế. Tuân thủ luật pháp và giấy phép áp dụng cho doanh nghiệp của bạn cũng như khu vực pháp lý nơi bạn tiếp thị và bán hàng. ",
+    "paymentsHeading": "Thanh toán và hoàn tiền ",
+    "paymentsBody": "Phí dịch vụ được thu khi thanh toán. Nếu chúng tôi không thể hoàn thành quy trình đã đặt sau khi thanh toán thành công, chúng tôi sẽ làm việc với bạn về khoản hoàn tiền hoặc ưu đãi thay thế theo chính sách đã công bố của chúng tôi. Khoản bồi hoàn có thể bị tranh chấp khi dịch vụ được cung cấp như mô tả. ",
+    "useHeading": "Sử dụng được chấp nhận ",
+    "useBody": "Bạn không được sử dụng dịch vụ này để trình bày sai mục đích du lịch với chính phủ hoặc hãng hàng không, để kiểm tra các phương thức thanh toán bị đánh cắp hoặc theo bất kỳ cách nào vi phạm các điều khoản của nhà cung cấp hoặc luật hiện hành. ",
+    "liabilityHeading": "Trách nhiệm hữu hạn ",
+    "liabilityBody": "Trong phạm vi tối đa được pháp luật cho phép, TempTicket không chịu trách nhiệm pháp lý đối với việc bị từ chối lên máy bay, từ chối nhập cảnh, lỡ kết nối hoặc thiệt hại gián tiếp phát sinh từ việc sử dụng dịch vụ. "
+  },
+  "Privacy": {
+    "title": "Quyền riêng tư",
+    "summary": "Tóm tắt: Chúng tôi xử lý email và dữ liệu cá nhân liên quan đến du lịch để chạy tài khoản, đặt chỗ và biên nhận bắt buộc. Nhờ tư vấn căn chỉnh trang này với bản đồ dữ liệu thực tế của bạn (Neon, Gửi lại, Stripe, Duffel, lưu trữ). ",
+    "collectHeading": "Những gì chúng tôi thu thập ",
+    "collectItems": [
+      "Địa chỉ email và mã thông báo phiên để đăng nhập ",
+      "Tên hành khách, ngày sinh, thông tin liên lạc do hãng hàng không yêu cầu ",
+      "Siêu dữ liệu thanh toán từ bộ xử lý thanh toán của chúng tôi ",
+      "Nhật ký kỹ thuật cần thiết để vận hành và gỡ lỗi dịch vụ "
+    ],
+    "whyHeading": "Tại sao chúng tôi xử lý nó ",
+    "whyBody": "Để thực hiện hợp đồng của chúng tôi với bạn, tuân thủ các nghĩa vụ pháp lý khi áp dụng và theo đuổi các lợi ích hợp pháp (bảo mật, phòng chống gian lận, cải tiến sản phẩm) cân bằng với các quyền của bạn. ",
+    "processorsHeading": "Bộ xử lý ",
+    "processorsBody": "Cơ sở hạ tầng và nhà cung cấp có thể bao gồm lưu trữ cơ sở dữ liệu (ví dụ: Neon), gửi email (ví dụ: Gửi lại), thanh toán (ví dụ: Stripe) và đặt vé máy bay (Duffel và các hãng hàng không). Các điều khoản của họ cũng áp dụng cho các phần xử lý mà họ thực hiện. ",
+    "retentionHeading": "Lưu giữ ",
+    "retentionBody": "Chúng tôi lưu giữ hồ sơ đặt chỗ và thanh toán khi cần thiết cho việc hỗ trợ, kế toán và lưu giữ pháp lý—thường là hàng năm chứ không phải hàng tuần—nhưng lịch trình chính xác phải phù hợp với chính sách của bạn.",
+    "rightsHeading": "Quyền ",
+    "rightsBody": "Tùy thuộc vào khu vực của bạn, bạn có thể có quyền truy cập, sửa, xóa hoặc phản đối một số quy trình xử lý nhất định. Liên hệ với chúng tôi theo địa chỉ bạn công bố cho doanh nghiệp của mình; chúng tôi sẽ xác minh các yêu cầu theo quy định của pháp luật. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Thanh toán thành công. ",
+    "bookingsSuccess": "Đã nhận được thanh toán. Đặt phòng của bạn sẽ cập nhật trong giây lát. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Quay lại đầu trang "
+  },
+  "Home": {
+    "bookNow": "Đặt ngay ",
+    "heroBadge": "Đặt chỗ trực tiếp ",
+    "heroHeadingLead": "Đặt vé máy bay ",
+    "heroHeadingAccent": "được xác minh sau vài phút ",
+    "heroSub": "Bạn có thể xác minh việc đặt chỗ chuyến bay thực tế trên trang web của hãng hàng không. Du lịch thoải mái cho người du mục. ",
+    "howItWorks": "Cách thức hoạt động ",
+    "trustStats": [
+      {
+        "stat": "Phút",
+        "label": "Sự thay đổi điển hình khi các hãng hàng không hợp tác "
+      },
+      {
+        "stat": "PNR thực ",
+        "label": "Tra cứu nhà cung cấp dịch vụ khi phát hành "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Hỗ trợ khi có việc gì đó cần con người "
+      }
+    ],
+    "featuresTitle": "Mọi thứ bạn cần để yên tâm ",
+    "featuresSub": "Bằng chứng du lịch tiếp theo nhanh chóng, có thể kiểm chứng—mà không phải lo lắng về việc mua vé mà bạn sẽ không sử dụng. ",
+    "features": [
+      {
+        "title": "Đặt chỗ xác thực ",
+        "body": "Một hồ sơ hãng hàng không chính hãng khi có xác nhận—không phải là một bản PDF trang trí. "
+      },
+      {
+        "title": "Giao hàng ngay lập tức ",
+        "body": "Hầu hết các quy trình đều hoàn tất nhanh chóng nên bạn có thể đính kèm bằng chứng ngay trong ngày. "
+      },
+      {
+        "title": "Nhà cung cấp dịch vụ có thể xác minh",
+        "body": "Sử dụng các công cụ của hãng hàng không để hiển thị thông tin đặt chỗ khi có ai đó yêu cầu. "
+      },
+      {
+        "title": "Tiết kiệm tiền ",
+        "body": "Trả một khoản phí dịch vụ nhỏ thay vì hoàn lại tiền vé đường dài. "
+      },
+      {
+        "title": "Kế hoạch linh hoạt ",
+        "body": "Điều chỉnh ngày khi hành trình của bạn thay đổi—trong khoảng thời gian chính sách của hãng hàng không. "
+      },
+      {
+        "title": "Hỗ trợ con người ",
+        "body": "Giá vé bị mắc kẹt và các trường hợp khó khăn có thể được chuyển đến nhóm của chúng tôi từ hàng đợi. "
+      }
+    ],
+    "processTitle": "Quy trình đặt phòng đơn giản ",
+    "commonQuestions": "Các câu hỏi thường gặp ",
+    "personasTitle": " là hoàn hảo cho ",
+    "personas": [
+      {
+        "title": "Người xin thị thực ",
+        "body": "Khi lãnh sự quán muốn có một hành trình, không nhất thiết phải trả tiền vé."
+      },
+      {
+        "title": "Người bay thường xuyên ",
+        "body": "Bằng chứng có thể lặp lại cho các hãng hàng không thực thi các quy tắc về/đi tiếp. "
+      },
+      {
+        "title": "Du khách ",
+        "body": "Câu chuyện xác minh đơn giản để kiểm tra biên giới và nhà cung cấp dịch vụ. "
+      },
+      {
+        "title": "Những người du mục kỹ thuật số ",
+        "body": "Luôn linh hoạt mà không cần tốn tiền gửi xe đối với giá vé đường dài chưa sử dụng. "
+      }
+    ],
+    "socialTitle": "Được du khách trên toàn thế giới tin tưởng ",
+    "socialNote": "Đánh giá mẫu—đổi lấy lời chứng thực thực tế khi bạn có chúng. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Mẫu · Alex M. ",
+        "quote": "PNR đã được kiểm tra trên trang web của hãng hàng không vào cùng tuần tôi đăng ký. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Mẫu · Leni K. ",
+        "quote": "Luồng đơn giản và câu trả lời nhanh chóng khi tôi hỏi về tuyến đường. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Mẫu · James T. ",
+        "quote": "Giúp tôi làm thủ tục chuyến bay với chính sách vé một chiều. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Linh hoạt hơn khi đảm bảo thị thực của bạn ",
+    "visaBody": "Nhiều nhiệm vụ mô tả việc chấp nhận hành trình hoặc đặt chỗ thay vì vé đã thanh toán đầy đủ. Xác nhận trên trang web chính thức cho trường hợp của bạn—chúng tôi cung cấp đặt chỗ thực sự mà bạn có thể xác minh trong khi chờ đợi. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Đọc danh sách kiểm tra chính thức",
+        "body": "Các đại sứ quán khác nhau—một số muốn đặt chỗ, số khác muốn có vé. Bắt đầu từ trang của họ, không phải blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Ghép ngày tháng với câu chuyện của bạn ",
+        "body": "Chọn lộ trình và thời gian phù hợp hoàn hảo với đơn đăng ký bạn đang nộp. "
+      },
+      {
+        "n": "3 ",
+        "title": "Xác minh trên hãng hàng không ",
+        "body": "Nếu hồ sơ tồn tại, hãy thực hành tải nó lên trang web của nhà cung cấp dịch vụ trước cuộc hẹn của bạn. "
+      }
+    ],
+    "embassyPublish": "Đại sứ quán công bố những gì ",
+    "embassyFigures": [
+      {
+        "quote": "Đặt vé khứ hồi, không cần mua vé trước khi được cấp visa… ",
+        "caption": "Chủ đề từ Câu hỏi thường gặp về đại sứ quán công cộng (Na Uy) "
+      },
+      {
+        "quote": "Đặt vé máy bay… với số đặt chỗ du lịch… không nhất thiết phải là đặt chỗ đã có vé. ",
+        "caption": "Chủ đề từ hướng dẫn công cộng của Schengen (Tây Ban Nha)"
+      },
+      {
+        "quote": "Đặt chỗ chuyến bay có thể xác minh… không phải vé đã mua. ",
+        "caption": "Chủ đề từ thông tin thị thực công cộng (Ấn Độ) "
+      }
+    ],
+    "faqTitle": "Bạn có cần trợ giúp không? ",
+    "faqFooter": "Thêm câu hỏi? Bắt đầu đặt chỗ—chúng tôi sẽ hiển thị ghi chú về thời gian và nhà cung cấp dịch vụ khi bạn thực hiện. ",
+    "faqItems": [
+      {
+        "q": "TempTicket là gì? ",
+        "a": "Dịch vụ giúp bạn đặt chỗ chuyến bay thực tế, có thể kiểm chứng (có tham chiếu đặt chỗ khi hãng hàng không xác nhận) cho các trường hợp đi lại và xin thị thực—mà không phải trả toàn bộ giá vé mà bạn không thể sử dụng. "
+      },
+      {
+        "q": "Thời gian đặt chỗ có hiệu lực trong bao lâu? ",
+        "a": " Hiệu lực tùy thuộc vào quy định về giá vé, chính sách giữ chỗ hoặc thời gian xuất vé của hãng hàng không. Chúng tôi hiển thị những gì có thể trong quá trình đặt chỗ; luôn xác nhận thời gian theo yêu cầu của đại sứ quán hoặc nhà cung cấp dịch vụ của bạn. "
+      },
+      {
+        "q": "Tôi có thể xác minh thông tin này trên trang web của hãng hàng không không? ",
+        "a": "Khi hãng hàng không phát hành bản ghi trực tiếp, bạn thường có thể tra cứu bản ghi đó trên quy trình quản lý đặt chỗ hoặc kiểm tra chuyến đi của tôi. Nếu tuyến đường không đủ điều kiện để tạm dừng, bạn có thể cần vé ngay lập tức. "
+      },
+      {
+        "q": "Đây có phải là tư vấn pháp lý hay đảm bảo về thị thực? ",
+        "a": "Không. Quy định nhập cư thay đổi theo quốc gia và quan chức. Chúng tôi chỉ cung cấp dịch vụ đặt chỗ—hãy kiểm tra các nguồn chính thức để biết trường hợp của bạn."
+      }
+    ],
+    "ctaTitle": "Đi du lịch đã đủ khó khăn rồi. Làm cho bằng chứng trở đi dễ dàng hơn với ",
+    "ctaPriceLine": "Từ {price} · phút, không phải phỏng đoán ",
+    "footerTagline": "Bằng chứng du lịch tiếp theo dành cho người du mục ",
+    "footerServices": "Dịch vụ ",
+    "footerAccount": "Tài khoản ",
+    "footerLegal": "Pháp lý ",
+    "footerBook": "Đặt chỗ trước ",
+    "footerSignIn": "Đăng nhập ",
+    "footerMyBookings": "Đặt chỗ của tôi ",
+    "footerTerms": "Điều khoản ",
+    "footerPrivacy": "Quyền riêng tư ",
+    "footerCopyright": "Mọi quyền được bảo lưu.",
+    "footerBackTop": "Quay lại đầu trang ",
+    "ticketFrom": "Từ {price} ",
+    "ticketDeparture": "Khởi hành ",
+    "ticketArrival": "Đến ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Hành khách ",
+    "ticketPassengerVal": "Nomad · 1 người lớn ",
+    "ticketRecord": "Định vị bản ghi ",
+    "ticketVerified": "Đã xác minh"
+  }
+}

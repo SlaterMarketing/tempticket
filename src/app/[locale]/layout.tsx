@@ -3,6 +3,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { AnalyticsBeacon } from "@/components/analytics-beacon";
 import { SiteHeader } from "@/components/site-header";
 import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
@@ -74,6 +75,7 @@ export default async function LocaleLayout({
       <body className="flex min-h-0 min-h-dvh flex-col bg-background text-foreground">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
+            <AnalyticsBeacon />
             <SiteHeader email={session?.email ?? null} showAdmin={showAdmin} />
             <div className="flex min-h-0 flex-1 flex-col">{children}</div>
             <Toaster richColors position="top-center" />

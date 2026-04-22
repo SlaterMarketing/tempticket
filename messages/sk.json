@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — doklad o ďalšej ceste pre nomádov ",
+    "defaultDescription": "Skutočné, overiteľné rezervácie letov pre ďalšie cestovné kontroly. Postavené pre digitálnych nomádov. ",
+    "homeTitle": "TempTicket — doklad o ďalšej ceste pre nomádov ",
+    "homeDescription": "Skutočné, overiteľné rezervácie letov pre ďalšie cestovné kontroly. Postavené pre digitálnych nomádov. ",
+    "bookTitle": "Rezervácia — TempTicket ",
+    "bookDescription": "Nájdite pozdržaný let a dokončite rezerváciu ďalšej cesty. ",
+    "bookConfirmationTitle": "Platba prijatá — TempTicket ",
+    "bookConfirmationDescription": "Potvrdzujeme vašu rezerváciu s leteckou spoločnosťou. ",
+    "loginTitle": "Prihlásiť sa — TempTicket ",
+    "loginDescription": "Prihlásenie pomocou magického odkazu so 6-miestnym kódom na zobrazenie vašich rezervácií. ",
+    "bookingsTitle": "Moje rezervácie — TempTicket ",
+    "bookingsDescription": "Objednávky a referencie leteckých spoločností pre váš účet.",
+    "termsTitle": "Podmienky služby — TempTicket ",
+    "termsDescription": "Podmienky služby TempTicket. ",
+    "privacyTitle": "Ochrana osobných údajov — TempTicket ",
+    "privacyDescription": "Ako TempTicket spracúva osobné údaje. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Moje rezervácie ",
+    "admin": "Správca ",
+    "signOut": "Odhláste sa ",
+    "signIn": "Prihláste sa ",
+    "book": "Kniha "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Jazyk ",
+    "language": "Jazyk"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Hľadám… ",
+    "empty": "Nenašli sa žiadne miesta. Skúste iný pravopis alebo mesto. ",
+    "city": "Mesto ",
+    "airport": "Letisko ",
+    "couldNotSearch": "Nepodarilo sa vyhľadať miesta. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Krok {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Zadajte svoje údaje ",
+        "body": "Trasa, dátumy a podrobnosti o cestujúcom. "
+      },
+      {
+        "label": "02 ",
+        "title": "Uskutočnite platbu ",
+        "body": "Bezpečná platba—cena vopred."
+      },
+      {
+        "label": "03 ",
+        "title": "Získajte referenciu ",
+        "body": "Verifikujte u leteckej spoločnosti, keď je naživo. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Vyberte si pôvod a cieľ z návrhov ",
+    "toastSearchFailed": "Hľadanie zlyhalo ",
+    "toastNoPayLater": "Pri tomto vyhľadávaní nie sú žiadne tarify s platbou neskôr – skúste iné dátumy alebo letiská. ",
+    "toastOfferExpired": "Platnosť ponuky uplynula—hľadajte znova ",
+    "toastPassengerSlots": "Pre túto ponuku sa nepodarilo načítať miesta pre cestujúcich ",
+    "toastLoadOffer": "Ponuku sa nepodarilo načítať ",
+    "toastCompleteFields": "Vyplňte všetky polia pre cestujúcich ",
+    "toastPhoneInvalid": "Zadajte platné telefónne číslo ",
+    "toastReceiptEmail": "Zadajte e-mail pre vašu rezerváciu a potvrdenie",
+    "toastEmailInvalid": "Zadajte platnú e-mailovú adresu ",
+    "toastCheckoutServerError": "Odhlásenie zlyhalo (chyba servera {status}) ",
+    "toastCheckoutFailed": "Odhlásenie zlyhalo ({status}) ",
+    "toastNoPaymentLink": "Pokladňa nevrátila odkaz na platbu ",
+    "toastCheckoutConnection": "Odhlásenie zlyhalo—skontrolujte pripojenie a skúste to znova ",
+    "back": "Späť ",
+    "title": "Zarezervujte si rezerváciu ",
+    "stepFindTitle": "Nájdite let ",
+    "stepFindDescription": "Napíšte názov mesta, krajiny alebo letiska. ",
+    "from": "Od ",
+    "to": "Komu ",
+    "placePlaceholder": "Mesto, krajina alebo letisko",
+    "swapAria": "Vymeňte pôvod a cieľ ",
+    "swapTitle": "Vymeňte pôvod a cieľ ",
+    "departureDate": "Dátum odchodu ",
+    "searchBlurb": "Najprv hľadáme tarify s platbou neskôr – dokončite rezerváciu leteckej spoločnosti po zaplatení nášho malého servisného poplatku. ",
+    "searching": "Hľadám… ",
+    "findingFare": "Vyhľadanie cestovného... ",
+    "searchFlights": "Vyhľadať lety ",
+    "stepPayTitle": "Údaje o cestujúcom a platba ",
+    "stepPayDescription": "Mená sa musia zhodovať s cestovnými dokladmi. ",
+    "passenger": "Cestujúci {index} ",
+    "genderLabel": "Pohlavie (ako v pase) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Dátum narodenia ",
+    "firstName": "Krstné meno(á) ",
+    "lastName": "Priezvisko(-á) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "vy@example.com ",
+    "emailHint": "Používa sa pri rezervácii vašej leteckej spoločnosti a na potvrdenie a potvrdenie platby. ",
+    "phone": "Telefón ",
+    "dialCodeAria": "Kód hovoru do krajiny ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Zaplatiť servisný poplatok v ",
+    "preparingCheckout": "Príprava pokladne…",
+    "payButton": "Zaplaťte servisný poplatok a rezervu ",
+    "demoOriginLabel": "Letisko Suvarnabhumi (BKK) · Bangkok, Thajsko ",
+    "demoDestinationLabel": " Medzinárodné letisko Kuala Lumpur (KUL) · Sepang, Malajzia "
+  },
+  "BookConfirmation": {
+    "backHome": "Späť domov ",
+    "badge": "Prijatá platba ",
+    "title": "Sme na tom ",
+    "body": "Potvrdzujeme vašu rezerváciu letu s leteckou spoločnosťou. Čoskoro dostanete e-mail s podrobnosťami rezervácie. ",
+    "detail": "Skontrolujte svoju doručenú poštu (a spam) kvôli potvrdeniu. Ak potrebujete dôkaz o ďalšej ceste, použite referenciu leteckej spoločnosti na stránke dopravcu. ",
+    "bookAnother": "Zarezervujte si ďalšie ",
+    "signInHistory": "Prihláste sa do histórie "
+  },
+  "Login": {
+    "title": "Prihláste sa ",
+    "description": "Ak chcete zobraziť rezervácie prepojené s vaším účtom alebo e-mailom, prihláste sa. Posielame 6-miestny kód – žiadne heslo.",
+    "email": "E-mail ",
+    "sendCode": "Odoslať kód ",
+    "codeLabel": "6-miestny kód ",
+    "verify": "Overiť ",
+    "differentEmail": "Použiť iný e-mail ",
+    "toastSendFailed": "Nepodarilo sa odoslať kód ",
+    "toastCodeSent": "Skontrolujte svoj e-mail pre 6-miestny kód ",
+    "toastInvalid": "Neplatný kód ",
+    "toastSignedIn": "Prihlásený "
+  },
+  "LoginPage": {
+    "loading": "Načítavam... "
+  },
+  "Bookings": {
+    "title": "Moje rezervácie ",
+    "subtitle": "Rezervácie spojené s vaším účtom alebo uskutočnené pomocou tohto e-mailu predtým, ako ste sa prihlásili. Po zaplatení vám pošleme e-mailom referenciu leteckej spoločnosti.",
+    "newBooking": "Nová rezervácia ",
+    "orders": "Objednávky ",
+    "ordersDescription": "Ak potrebujete dôkaz o ďalšej ceste, použite referenciu leteckej spoločnosti na stránke prepravcu. ",
+    "empty": "Zatiaľ žiadne rezervácie. ",
+    "colCreated": "Vytvorené ",
+    "colStatus": "Stav ",
+    "colAirline": "Letecká spoločnosť ",
+    "colReference": "Odkaz ",
+    "colMode": "Režim ",
+    "needsAttention": "Vyžaduje pozornosť ",
+    "needsAttentionDescription": "Ak rezervácia po zaplatení zlyhala, kontaktujte podporu a uveďte ID a potvrdenie Stripe. "
+  },
+  "Terms": {
+    "title": "Podmienky služby",
+    "lead": "Posledná aktualizácia: apríl 2026. Tieto podmienky sú len úvodnou šablónou – pred pozvaním platiacich zákazníkov si ich prečítajte kvalifikovaným poradcom. ",
+    "serviceHeading": "Služba ",
+    "serviceBody": "TempTicket poskytuje platenú službu na zabezpečenie skutočnej rezervácie letu prostredníctvom našich rezervačných partnerov pre cestujúcich, ktorí potrebujú dokumentáciu o ďalšej ceste. Nezaručujeme žiadny konkrétny výsledok v oblasti imigrácie alebo leteckej spoločnosti. Policajti a dopravcovia uplatňujú svoje vlastné pravidlá. ",
+    "legalHeading": "Nie je právne poradenstvo ",
+    "legalBody": "Nič na tejto stránke nie je legálne, imigračné ani daňové poradenstvo. Dodržiavajte zákony a licencie, ktoré sa vzťahujú na vaše podnikanie a jurisdikcie, v ktorých uvádzate na trh a predávate. ",
+    "paymentsHeading": "Platby a refundácie ",
+    "paymentsBody": "Poplatky za služby sa vyberajú pri pokladni. Ak po úspešnej platbe nemôžeme dokončiť rezervovaný tok, budeme s vami spolupracovať na vrátení peňazí alebo alternatívnej ponuke podľa našich zverejnených pravidiel. Poplatky môžu byť napadnuté, keď bola služba dodaná podľa popisu. ",
+    "useHeading": "Prípustné použitie ",
+    "useBody": "Službu nesmiete používať na skresľovanie cestovných zámerov vládam alebo leteckým spoločnostiam, na testovanie ukradnutých platobných metód alebo akýmkoľvek spôsobom, ktorý porušuje podmienky dodávateľa alebo platné zákony. ",
+    "liabilityHeading": "Obmedzená zodpovednosť ",
+    "liabilityBody": " TempTicket nezodpovedá v maximálnom rozsahu povolenom zákonom za odmietnutie nástupu do lietadla, odmietnutie vstupu, zmeškanie spojenia alebo nepriame škody vyplývajúce z používania služby. "
+  },
+  "Privacy": {
+    "title": "Ochrana osobných údajov",
+    "summary": "Zhrnutie: Spracúvame e-maily a osobné údaje súvisiace s cestovaním, aby sme mohli prevádzkovať účty, rezervácie a povinné potvrdenia. Nechajte si poradiť, aby túto stránku zarovnal s vašou aktuálnou dátovou mapou (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Čo zbierame ",
+    "collectItems": [
+      "E-mailová adresa a tokeny relácie na prihlásenie ",
+      "Mená cestujúcich, dátumy narodenia, kontaktné údaje požadované leteckými spoločnosťami ",
+      "Platobné metadáta od nášho spracovateľa platieb ",
+      "Technické denníky potrebné na prevádzku a ladenie služby "
+    ],
+    "whyHeading": "Prečo to spracovávame ",
+    "whyBody": "Na plnenie našej zmluvy s vami, dodržiavanie zákonných povinností tam, kde sa uplatňujú, a sledovanie legitímnych záujmov (bezpečnosť, predchádzanie podvodom, zlepšovanie produktov), ktoré sú vyvážené vašimi právami. ",
+    "processorsHeading": "Spracovatelia ",
+    "processorsBody": "Infraštruktúra a dodávatelia môžu zahŕňať hosting databázy (napr. Neon), doručovanie e-mailov (napr. Znova odoslať), platby (napr. Stripe) a rezerváciu letov (Duffel a letecké spoločnosti). Ich podmienky sa vzťahujú aj na časti spracovania, ktoré vykonávajú. ",
+    "retentionHeading": "Uchovávanie ",
+    "retentionBody": "Uchovávame záznamy o rezerváciách a fakturácii podľa potreby pre podporu, účtovníctvo a právne zadržania – zvyčajne roky, nie týždne – ale presné plány by mali zodpovedať vašim pravidlám.",
+    "rightsHeading": "Práva ",
+    "rightsBody": "V závislosti od vášho regiónu môžete mať práva na prístup, opravu, vymazanie alebo námietku proti určitému spracovaniu. Kontaktujte nás na adrese, ktorú zverejňujete pre svoje podnikanie; žiadosti preveríme v súlade so zákonom. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Platba prebehla úspešne. ",
+    "bookingsSuccess": "Prijatá platba. Vaša rezervácia sa o chvíľu aktualizuje. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Späť na začiatok "
+  },
+  "Home": {
+    "bookNow": "Rezervujte teraz ",
+    "heroBadge": "Živé rezervácie ",
+    "heroHeadingLead": "Rezervácia letu ",
+    "heroHeadingAccent": "overené v minútach ",
+    "heroSub": "Reálne rezervácie letov si môžete overiť na webovej stránke leteckých spoločností. Cestovanie bez stresu pre nomádov. ",
+    "howItWorks": "Ako to funguje ",
+    "trustStats": [
+      {
+        "stat": "Minúty",
+        "label": "Typický obrat, keď letecké spoločnosti spolupracujú "
+      },
+      {
+        "stat": "Skutočné PNR ",
+        "label": "Po vydaní si ho vyhľadajte na nosiči "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Podpora, keď niečo potrebuje človeka "
+      }
+    ],
+    "featuresTitle": "Všetko, čo potrebujete pre pokoj ",
+    "featuresSub": "Rýchly, overiteľný doklad o ďalšej ceste – bez obáv z nákupu lístka, ktorý nepoužijete. ",
+    "features": [
+      {
+        "title": "Autentické rezervácie ",
+        "body": "Originálny záznam leteckej spoločnosti po prijatí potvrdenia – nie dekoratívne PDF. "
+      },
+      {
+        "title": "Okamžité doručenie ",
+        "body": "Väčšina tokov sa dokončí rýchlo, takže dôkaz môžete pripojiť ešte v ten istý deň. "
+      },
+      {
+        "title": "Overiteľné dopravcom",
+        "body": "Použite nástroje leteckej spoločnosti na stiahnutie rezervácie, keď sa vás niekto opýta. "
+      },
+      {
+        "title": "Ušetrite peniaze ",
+        "body": "Zaplaťte malý servisný poplatok namiesto vratného cestovného na diaľkovú dopravu. "
+      },
+      {
+        "title": "Flexibilné plány ",
+        "body": "Upravte dátumy zmeny vášho itinerára – v rámci okienok pravidiel leteckej spoločnosti. "
+      },
+      {
+        "title": "Ľudská podpora ",
+        "body": "Zaseknuté cestovné a okrajové prípady sa môžu nášmu tímu dostať z radu. "
+      }
+    ],
+    "processTitle": "Jednoduchý proces rezervácie ",
+    "commonQuestions": "Bežné otázky ",
+    "personasTitle": "je ideálny pre ",
+    "personas": [
+      {
+        "title": "Žiadatelia o víza ",
+        "body": "Keď konzuláty chcú itinerár, nie nevyhnutne zaplatené cestovné."
+      },
+      {
+        "title": "Fakté letáky ",
+        "body": "Opakovateľný dôkaz pre letecké spoločnosti, ktoré presadzujú pravidlá návratu/pokračovania. "
+      },
+      {
+        "title": "Cestovatelia ",
+        "body": "Jednoduchý overovací príbeh pre hraničné kontroly a kontroly dopravcu. "
+      },
+      {
+        "title": "Digitálni nomádi ",
+        "body": "Zachovajte si flexibilitu bez parkovacích peňazí za nevyužité cestovné na dlhé vzdialenosti. "
+      }
+    ],
+    "socialTitle": "Dôverujú cestujúcim po celom svete ",
+    "socialNote": "Ukážkové recenzie—vymeňte ich za skutočné posudky, keď ich budete mať. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Ukážka · Alex M. ",
+        "quote": "PNR odhlásené na stránke leteckej spoločnosti v ten istý týždeň, ako som podal žiadosť. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Ukážka · Leni K. ",
+        "quote": "Priamy tok a rýchle odpovede, keď som sa spýtal na trasu. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Ukážka · James T. ",
+        "quote": "Prihlásili ste ma na základe zásady jednosmernej letenky. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Väčšia flexibilita pri zabezpečovaní víz ",
+    "visaBody": "Mnohé misie popisujú prijatie itinerára alebo rezervácie namiesto plne zaplatenej letenky. Potvrďte svoj prípad na oficiálnej stránke – poskytujeme skutočnú rezerváciu, ktorú si môžete overiť na počkanie. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Prečítajte si oficiálny kontrolný zoznam",
+        "body": "Veľvyslanectvá sa líšia – niektoré chcú rezerváciu, iné lístok. Začnite na ich stránke, nie na blogu. "
+      },
+      {
+        "n": "2 ",
+        "title": "Priraďte dátumy k vášmu príbehu ",
+        "body": "Vyberte si trasu a načasovanie, ktoré sa dokonale zhodujú s prihláškou, ktorú podávate. "
+      },
+      {
+        "n": "3 ",
+        "title": "Overiť u leteckej spoločnosti ",
+        "body": "Ak je záznam aktívny, nacvičte si jeho stiahnutie na stránke dopravcu pred stretnutím. "
+      }
+    ],
+    "embassyPublish": "Aké ambasády zverejňujú ",
+    "embassyFigures": [
+      {
+        "quote": "Rezervácia na spiatočnú letenku, nie je potrebné kupovať letenku pred udelením víz… ",
+        "caption": "Téma z často kladených otázok verejného veľvyslanectva (Nórsko) "
+      },
+      {
+        "quote": "Rezervácia leteckej spoločnosti... s číslom cestovnej rezervácie... nemusí to byť rezervácia s letenkou. ",
+        "caption": "Téma z verejných schengenských usmernení (Španielsko)"
+      },
+      {
+        "quote": "Overiteľná rezervácia letu... nie zakúpená letenka. ",
+        "caption": "Téma z informácií o verejných vízach (India) "
+      }
+    ],
+    "faqTitle": "Potrebujete pomoc? ",
+    "faqFooter": "Ďalšie otázky? Spustite rezerváciu – priebežne uvádzame načasovanie a poznámky dopravcu. ",
+    "faqItems": [
+      {
+        "q": "Čo je TempTicket? ",
+        "a": "Služba, ktorá vám pomôže získať skutočnú, overiteľnú rezerváciu letu (s referenciou na rezerváciu, keď to letecká spoločnosť potvrdí) pre ďalšiu cestu a vízové ​​scenáre – bez toho, aby ste zaplatili celé cestovné, ktoré nemôžete použiť. "
+      },
+      {
+        "q": "Ako dlho je rezervácia platná? ",
+        "a": "Platnosť závisí od pravidiel taríf leteckej spoločnosti, pravidiel držania alebo časového harmonogramu predaja leteniek. Počas rezervácie odhalíme, čo môžeme; vždy potvrďte načasovanie podľa požiadaviek veľvyslanectva alebo prepravcu. "
+      },
+      {
+        "q": "Môžem si to overiť na webovej stránke leteckej spoločnosti? ",
+        "a": "Keď letecká spoločnosť vydá záznam naživo, zvyčajne si ho môžete vyhľadať v ich riadenom rezervovaní alebo kontrole cesty. Ak trasa nie je vhodná na pozastavenie, možno budete namiesto toho potrebovať okamžitý lístok. "
+      },
+      {
+        "q": "Je toto právna rada alebo záruka na víza? ",
+        "a": "Č. Imigračné pravidlá sa menia podľa krajiny a úradníka. Poskytujeme iba rezervačnú službu – pre vašu situáciu si overte oficiálne zdroje."
+      }
+    ],
+    "ctaTitle": "Cestovanie je dosť ťažké. Uľahčite si dôkaz o ďalšom postupe ",
+    "ctaPriceLine": "Od {price} · minút, nie dohady ",
+    "footerTagline": "Doklad o ďalšej ceste pre nomádov ",
+    "footerServices": "Služby ",
+    "footerAccount": "Účet ",
+    "footerLegal": "Právne ",
+    "footerBook": "Zarezervujte si rezerváciu ",
+    "footerSignIn": "Prihláste sa ",
+    "footerMyBookings": "Moje rezervácie ",
+    "footerTerms": "Podmienky ",
+    "footerPrivacy": "Ochrana osobných údajov ",
+    "footerCopyright": "Všetky práva vyhradené.",
+    "footerBackTop": "Späť na začiatok ",
+    "ticketFrom": "Od {price} ",
+    "ticketDeparture": "Odchod ",
+    "ticketArrival": "Príchod ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Cestujúci ",
+    "ticketPassengerVal": "Nomád · 1 dospelý ",
+    "ticketRecord": "Vyhľadávač záznamov ",
+    "ticketVerified": "Overené"
+  }
+}

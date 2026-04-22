@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "Tiket Temp — bukti perjalanan seterusnya untuk nomad ",
+    "defaultDescription": "Tempahan penerbangan yang sebenar dan boleh disahkan untuk semakan perjalanan seterusnya. Dibina untuk nomad digital. ",
+    "homeTitle": "Tiket Temp — bukti perjalanan seterusnya untuk nomad ",
+    "homeDescription": "Tempahan penerbangan sebenar dan boleh disahkan untuk semakan perjalanan seterusnya. Dibina untuk nomad digital. ",
+    "bookTitle": "Tempah tempahan — TempTicket ",
+    "bookDescription": "Cari penahanan penerbangan dan lengkapkan tempahan perjalanan seterusnya anda. ",
+    "bookConfirmationTitle": "Pembayaran diterima — TempTicket ",
+    "bookConfirmationDescription": "Kami mengesahkan tempahan anda dengan syarikat penerbangan. ",
+    "loginTitle": "Log masuk — TempTicket ",
+    "loginDescription": "Log masuk pautan ajaib dengan kod 6 digit untuk melihat tempahan anda. ",
+    "bookingsTitle": "Tempahan saya — TempTicket ",
+    "bookingsDescription": "Pesanan dan rujukan syarikat penerbangan untuk akaun anda.",
+    "termsTitle": "Syarat perkhidmatan — TempTicket ",
+    "termsDescription": "Syarat perkhidmatan untuk TempTicket. ",
+    "privacyTitle": "Privasi — TempTicket ",
+    "privacyDescription": "Cara TempTicket memproses data peribadi. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Tiket Temp ",
+    "myBookings": "Tempahan saya ",
+    "admin": "Pentadbir ",
+    "signOut": "Log keluar ",
+    "signIn": "Log masuk ",
+    "book": "Buku "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Bahasa ",
+    "language": "Bahasa"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Mencari… ",
+    "empty": "Tiada tempat ditemui. Cuba ejaan atau bandar lain. ",
+    "city": "Bandar ",
+    "airport": "Lapangan terbang ",
+    "couldNotSearch": "Tidak dapat mencari tempat. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Langkah {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Masukkan maklumat anda ",
+        "body": "Laluan, tarikh, dan butiran penumpang. "
+      },
+      {
+        "label": "02 ",
+        "title": "Buat pembayaran ",
+        "body": "Daftar keluar selamat—harga awal."
+      },
+      {
+        "label": "03 ",
+        "title": "Dapatkan rujukan anda ",
+        "body": "Sahkan pada syarikat penerbangan apabila ia disiarkan secara langsung. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Pilih asal dan destinasi daripada cadangan ",
+    "toastSearchFailed": "Carian gagal ",
+    "toastNoPayLater": "Tiada tambang bayar kemudian pada carian ini—cuba tarikh atau lapangan terbang lain. ",
+    "toastOfferExpired": "Tawaran tamat tempoh—cari semula ",
+    "toastPassengerSlots": "Tidak dapat memuatkan slot penumpang untuk tawaran ini ",
+    "toastLoadOffer": "Tidak dapat memuatkan tawaran ",
+    "toastCompleteFields": "Lengkapkan semua medan penumpang ",
+    "toastPhoneInvalid": "Masukkan nombor telefon yang sah ",
+    "toastReceiptEmail": "Masukkan e-mel untuk tempahan dan resit anda",
+    "toastEmailInvalid": "Masukkan alamat e-mel yang sah ",
+    "toastCheckoutServerError": "Daftar keluar gagal (ralat pelayan {status}) ",
+    "toastCheckoutFailed": "Daftar keluar gagal ({status}) ",
+    "toastNoPaymentLink": "Daftar keluar tidak mengembalikan pautan pembayaran ",
+    "toastCheckoutConnection": "Daftar keluar gagal—periksa sambungan anda dan cuba lagi ",
+    "back": "Kembali ",
+    "title": "Tempah tempahan anda ",
+    "stepFindTitle": "Cari penerbangan ",
+    "stepFindDescription": "Taip nama bandar, negara atau lapangan terbang. ",
+    "from": "Daripada ",
+    "to": "Kepada ",
+    "placePlaceholder": "Bandar, negara, atau lapangan terbang",
+    "swapAria": "Tukar asal dan destinasi ",
+    "swapTitle": "Tukar asal dan destinasi ",
+    "departureDate": "Tarikh berlepas ",
+    "searchBlurb": "Kami mencari tambang bayar kemudian dahulu—lengkapkan tempahan syarikat penerbangan selepas anda membayar yuran perkhidmatan kami yang kecil. ",
+    "searching": "Mencari… ",
+    "findingFare": "Mencari tambang… ",
+    "searchFlights": "Cari penerbangan ",
+    "stepPayTitle": "Butiran & pembayaran penumpang ",
+    "stepPayDescription": "Nama mesti sepadan dengan dokumen perjalanan. ",
+    "passenger": "Penumpang {index} ",
+    "genderLabel": "Jantina (seperti pada pasport) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Tarikh lahir ",
+    "firstName": "Nama pertama ",
+    "lastName": "Nama keluarga ",
+    "email": "E-mel ",
+    "emailPlaceholder": "anda@example.com ",
+    "emailHint": "Digunakan pada tempahan syarikat penerbangan anda dan untuk resit dan pengesahan pembayaran anda. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Kod panggilan negara ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Bayar yuran perkhidmatan dalam ",
+    "preparingCheckout": "Menyediakan pembayaran…",
+    "payButton": "Bayar yuran perkhidmatan & rizab ",
+    "demoOriginLabel": "Lapangan Terbang Suvarnabhumi (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Lapangan Terbang Antarabangsa Kuala Lumpur (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Balik ke rumah ",
+    "badge": "Bayaran diterima ",
+    "title": "Kami akan melakukannya ",
+    "body": "Kami sedang mengesahkan tempahan penerbangan anda dengan syarikat penerbangan itu. Anda akan mendapat e-mel dengan butiran tempahan tidak lama lagi. ",
+    "detail": "Semak peti masuk anda (dan spam) untuk pengesahan. Gunakan rujukan syarikat penerbangan di tapak pembawa apabila anda memerlukan bukti perjalanan seterusnya. ",
+    "bookAnother": "Tempah yang lain ",
+    "signInHistory": "Log masuk untuk sejarah "
+  },
+  "Login": {
+    "title": "Log masuk ",
+    "description": "Log masuk untuk melihat tempahan yang dipautkan ke akaun anda atau e-mel anda. Kami menghantar kod 6 digit—tiada kata laluan.",
+    "email": "E-mel ",
+    "sendCode": "Hantar kod ",
+    "codeLabel": "6 digit kod ",
+    "verify": "Sahkan ",
+    "differentEmail": "Gunakan e-mel yang berbeza ",
+    "toastSendFailed": "Tidak dapat menghantar kod ",
+    "toastCodeSent": "Semak e-mel anda untuk kod 6 digit ",
+    "toastInvalid": "Kod tidak sah ",
+    "toastSignedIn": "Daftar masuk "
+  },
+  "LoginPage": {
+    "loading": "Memuatkan… "
+  },
+  "Bookings": {
+    "title": "Tempahan saya ",
+    "subtitle": "Tempahan terikat pada akaun anda atau dibuat dengan e-mel ini sebelum anda melog masuk. Selepas pembayaran, kami menghantar e-mel kepada anda rujukan syarikat penerbangan.",
+    "newBooking": "Tempahan baharu ",
+    "orders": "Perintah ",
+    "ordersDescription": "Gunakan rujukan syarikat penerbangan di tapak pembawa apabila anda memerlukan bukti perjalanan seterusnya. ",
+    "empty": "Tiada tempahan lagi. ",
+    "colCreated": "Dicipta ",
+    "colStatus": "Status ",
+    "colAirline": "Syarikat penerbangan ",
+    "colReference": "Rujukan ",
+    "colMode": "Mod ",
+    "needsAttention": "Memerlukan perhatian ",
+    "needsAttentionDescription": "Jika tempahan gagal selepas pembayaran, hubungi sokongan dengan id dan resit Stripe. "
+  },
+  "Terms": {
+    "title": "Syarat perkhidmatan",
+    "lead": "Terakhir dikemas kini: April 2026. Syarat ini hanyalah templat permulaan sahaja—suruh peguam yang berkelayakan menyemaknya sebelum anda menjemput pelanggan yang membayar. ",
+    "serviceHeading": "Perkhidmatan ",
+    "serviceBody": "TempTicket menyediakan perkhidmatan berbayar untuk mengatur tempahan penerbangan sebenar melalui rakan kongsi tempahan kami untuk pengembara yang memerlukan dokumentasi perjalanan seterusnya. Kami tidak menjamin sebarang hasil imigresen atau syarikat penerbangan tertentu. Pegawai dan pengangkut menggunakan peraturan mereka sendiri. ",
+    "legalHeading": "Bukan nasihat undang-undang ",
+    "legalBody": "Tiada apa-apa di tapak ini yang sah, imigresen atau nasihat cukai. Mematuhi undang-undang dan lesen yang digunakan untuk perniagaan anda dan bidang kuasa tempat anda memasarkan dan menjual. ",
+    "paymentsHeading": "Pembayaran & bayaran balik ",
+    "paymentsBody": "Yuran perkhidmatan dikutip semasa daftar keluar. Jika kami tidak dapat melengkapkan aliran yang ditempah selepas pembayaran berjaya, kami akan bekerjasama dengan anda untuk bayaran balik atau tawaran alternatif mengikut dasar kami yang diterbitkan. Caj balik mungkin dipertikaikan apabila perkhidmatan dihantar seperti yang diterangkan. ",
+    "useHeading": "Penggunaan yang boleh diterima ",
+    "useBody": "Anda tidak boleh menggunakan perkhidmatan untuk menyalahgambarkan niat perjalanan kepada kerajaan atau syarikat penerbangan, untuk menguji kaedah pembayaran yang dicuri, atau dalam apa jua cara yang melanggar syarat pembekal atau undang-undang yang berkenaan. ",
+    "liabilityHeading": "Liabiliti terhad ",
+    "liabilityBody": "Setakat maksimum yang dibenarkan oleh undang-undang, TempTicket tidak bertanggungjawab untuk dinafikan menaiki pesawat, ditolak kemasukan, sambungan terlepas atau kerosakan tidak langsung yang timbul daripada penggunaan perkhidmatan. "
+  },
+  "Privacy": {
+    "title": "Privasi",
+    "summary": "Ringkasan: Kami memproses e-mel dan data peribadi berkaitan perjalanan untuk menjalankan akaun, tempahan dan resit mandatori. Minta penasihat menjajarkan halaman ini dengan peta data sebenar anda (Neon, Hantar Semula, Stripe, Duffel, pengehosan). ",
+    "collectHeading": "Apa yang kami kumpulkan ",
+    "collectItems": [
+      "Alamat e-mel dan token sesi untuk log masuk ",
+      "Nama penumpang, tarikh lahir, butiran hubungan yang diperlukan oleh syarikat penerbangan ",
+      "Metadata pembayaran daripada pemproses pembayaran kami ",
+      "Log teknikal diperlukan untuk mengendalikan dan nyahpepijat perkhidmatan "
+    ],
+    "whyHeading": "Mengapa kami memprosesnya ",
+    "whyBody": "Untuk melaksanakan kontrak kami dengan anda, mematuhi kewajipan undang-undang apabila ia terpakai, dan mengejar kepentingan sah (keselamatan, pencegahan penipuan, penambahbaikan produk) yang seimbang dengan hak anda. ",
+    "processorsHeading": "Pemproses ",
+    "processorsBody": "Infrastruktur dan vendor mungkin termasuk pengehosan pangkalan data (cth. Neon), penghantaran e-mel (cth. Hantar semula), pembayaran (cth. Stripe) dan tempahan penerbangan (Duffel dan syarikat penerbangan). Syarat mereka juga terpakai pada bahagian pemprosesan yang mereka lakukan. ",
+    "retentionHeading": "Pengekalan ",
+    "retentionBody": "Kami menyimpan rekod tempahan dan pengebilan seperti yang diperlukan untuk sokongan, perakaunan dan pegangan undang-undang—biasanya bertahun-tahun, bukan minggu—tetapi jadual yang tepat harus sepadan dengan dasar anda.",
+    "rightsHeading": "Hak ",
+    "rightsBody": "Bergantung pada wilayah anda, anda mungkin mempunyai hak untuk mengakses, membetulkan, memadam atau membantah pemprosesan tertentu. Hubungi kami di alamat yang anda terbitkan untuk perniagaan anda; kami akan mengesahkan permintaan selaras dengan undang-undang. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Pembayaran berjaya. ",
+    "bookingsSuccess": "Bayaran diterima. Tempahan anda akan dikemas kini sebentar lagi. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Kembali ke atas "
+  },
+  "Home": {
+    "bookNow": "Tempah sekarang ",
+    "heroBadge": "Tempahan langsung ",
+    "heroHeadingLead": "Tempahan penerbangan ",
+    "heroHeadingAccent": "disahkan dalam beberapa minit ",
+    "heroSub": "Tempahan penerbangan sebenar yang anda boleh sahkan di tapak web syarikat penerbangan. Perjalanan bebas tekanan untuk perantau. ",
+    "howItWorks": "Cara ia berfungsi ",
+    "trustStats": [
+      {
+        "stat": "Minit",
+        "label": "Pemulihan biasa apabila syarikat penerbangan bekerjasama "
+      },
+      {
+        "stat": "PNR sebenar ",
+        "label": "Cari ia pada pembawa apabila dikeluarkan "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Sokongan apabila sesuatu memerlukan manusia "
+      }
+    ],
+    "featuresTitle": "Semua yang anda perlukan untuk ketenangan fikiran ",
+    "featuresSub": "Bukti perjalanan seterusnya yang pantas dan boleh disahkan—tanpa rasa bimbang untuk membeli tiket yang anda tidak akan gunakan. ",
+    "features": [
+      {
+        "title": "Tempahan sahih ",
+        "body": "Rekod syarikat penerbangan yang tulen apabila pengesahan dibuat—bukan PDF hiasan. "
+      },
+      {
+        "title": "Penghantaran segera ",
+        "body": "Kebanyakan aliran selesai dengan cepat supaya anda boleh melampirkan bukti pada hari yang sama. "
+      },
+      {
+        "title": "Boleh disahkan oleh pembawa",
+        "body": "Gunakan alatan syarikat penerbangan untuk menarik tempahan apabila seseorang bertanya. "
+      },
+      {
+        "title": "Jimatkan wang ",
+        "body": "Bayar yuran perkhidmatan yang kecil dan bukannya tambang jarak jauh yang boleh dikembalikan. "
+      },
+      {
+        "title": "Pelan yang fleksibel ",
+        "body": "Laraskan tarikh apabila jadual perjalanan anda berubah—dalam tetingkap dasar syarikat penerbangan. "
+      },
+      {
+        "title": "Sokongan manusia ",
+        "body": "Tambang tersekat dan kes tepi boleh meningkat kepada pasukan kami dari baris gilir. "
+      }
+    ],
+    "processTitle": "Proses tempahan yang mudah ",
+    "commonQuestions": "Soalan biasa ",
+    "personasTitle": "sangat sesuai untuk ",
+    "personas": [
+      {
+        "title": "Pemohon visa ",
+        "body": "Apabila konsulat mahukan jadual perjalanan, tidak semestinya tambang berbayar."
+      },
+      {
+        "title": "Pelayang yang kerap ",
+        "body": "Bukti berulang untuk syarikat penerbangan yang menguatkuasakan peraturan pemulangan/seterusnya. "
+      },
+      {
+        "title": "Pelancong ",
+        "body": "Kisah pengesahan mudah untuk pemeriksaan sempadan dan pembawa. "
+      },
+      {
+        "title": "Nomad digital ",
+        "body": "Kekal fleksibel tanpa wang letak kereta dalam tambang jarak jauh yang tidak digunakan. "
+      }
+    ],
+    "socialTitle": "Dipercayai oleh pengembara di seluruh dunia ",
+    "socialNote": "Contoh ulasan—tukar untuk mendapatkan testimoni sebenar apabila anda memilikinya. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Sampel · Alex M. ",
+        "quote": "PNR mendaftar keluar di tapak syarikat penerbangan pada minggu yang sama saya memohon. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Sampel · Leni K. ",
+        "quote": "Alir lurus dan jawapan pantas apabila saya bertanya tentang laluan. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Sampel · James T. ",
+        "quote": "Mendapat saya melalui daftar masuk dengan polisi tiket sehala. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Fleksibiliti yang lebih besar apabila mendapatkan visa anda ",
+    "visaBody": "Banyak misi menerangkan menerima jadual perjalanan atau tempahan dan bukannya tiket berbayar penuh. Sahkan di tapak rasmi untuk kes anda—kami menyediakan tempahan sebenar yang boleh anda sahkan semasa anda menunggu. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Baca senarai semak rasmi",
+        "body": "Kedutaan berbeza—sesetengahnya mahukan tempahan, yang lain tiket. Mulakan dari halaman mereka, bukan blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Padankan tarikh dengan cerita anda ",
+        "body": "Pilih laluan dan pemasaan yang sejajar dengan aplikasi yang anda failkan. "
+      },
+      {
+        "n": "3 ",
+        "title": "Sahkan pada syarikat penerbangan ",
+        "body": "Jika rekod itu disiarkan secara langsung, berlatih menariknya ke atas di tapak pembawa sebelum janji temu anda. "
+      }
+    ],
+    "embassyPublish": "Apa yang diterbitkan oleh kedutaan ",
+    "embassyFigures": [
+      {
+        "quote": "Tempahan untuk tiket pergi balik, tidak perlu membeli tiket sebelum visa diberikan… ",
+        "caption": "Soalan Lazim Tema daripada kedutaan awam (Norway) "
+      },
+      {
+        "quote": "Tempahan syarikat penerbangan… dengan nombor tempahan perjalanan… tidak semestinya tempahan bertiket. ",
+        "caption": "Tema daripada bimbingan Schengen awam (Sepanyol)"
+      },
+      {
+        "quote": "Tempahan penerbangan yang boleh disahkan… bukan tiket yang dibeli. ",
+        "caption": "Tema daripada maklumat visa awam (India) "
+      }
+    ],
+    "faqTitle": "Adakah anda memerlukan bantuan? ",
+    "faqFooter": "Lagi soalan? Mulakan tempahan—kami memaparkan masa dan nota pembawa semasa anda pergi. ",
+    "faqItems": [
+      {
+        "q": "Apakah TempTicket? ",
+        "a": "Perkhidmatan yang membantu anda mendapatkan tempahan penerbangan sebenar yang boleh disahkan (dengan rujukan tempahan apabila syarikat penerbangan mengesahkannya) untuk senario perjalanan seterusnya dan visa—tanpa membayar tambang penuh yang anda tidak boleh gunakan. "
+      },
+      {
+        "q": "Berapa lama tempahan sah? ",
+        "a": "Kesahihan bergantung pada peraturan tambang syarikat penerbangan, polisi penahanan atau garis masa tiket. Kami memaparkan apa yang kami boleh semasa membuat tempahan; sentiasa mengesahkan masa terhadap keperluan kedutaan atau pembawa anda. "
+      },
+      {
+        "q": "Bolehkah saya mengesahkannya di tapak web syarikat penerbangan? ",
+        "a": "Apabila syarikat penerbangan mengeluarkan rekod langsung, anda biasanya boleh mencarinya pada aliran urus tempahan atau semak perjalanan saya. Jika laluan tidak layak untuk ditahan, anda mungkin memerlukan tiket segera. "
+      },
+      {
+        "q": "Adakah ini nasihat undang-undang atau jaminan visa? ",
+        "a": "No. Peraturan imigresen berubah mengikut negara dan pegawai. Kami menyediakan perkhidmatan tempahan sahaja—semak sumber rasmi untuk situasi anda."
+      }
+    ],
+    "ctaTitle": "Melancong cukup sukar. Jadikan bukti seterusnya lebih mudah dengan ",
+    "ctaPriceLine": "Dari {price} · minit, bukan tekaan ",
+    "footerTagline": "Bukti perjalanan seterusnya untuk perantau ",
+    "footerServices": "Perkhidmatan ",
+    "footerAccount": "Akaun ",
+    "footerLegal": "Sah ",
+    "footerBook": "Tempah tempahan ",
+    "footerSignIn": "Log masuk ",
+    "footerMyBookings": "Tempahan saya ",
+    "footerTerms": "Syarat ",
+    "footerPrivacy": "Privasi ",
+    "footerCopyright": "Semua hak terpelihara.",
+    "footerBackTop": "Kembali ke atas ",
+    "ticketFrom": "Dari {price} ",
+    "ticketDeparture": "Berlepas ",
+    "ticketArrival": "Ketibaan ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Penumpang ",
+    "ticketPassengerVal": "Nomad · 1 dewasa ",
+    "ticketRecord": "Pencari rekod ",
+    "ticketVerified": "Disahkan"
+  }
+}

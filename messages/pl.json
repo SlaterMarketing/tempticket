@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — dowód dalszej podróży dla nomadów ",
+    "defaultDescription": "Prawdziwe, weryfikowalne rezerwacje lotów w celu kontroli dalszej podróży. Stworzony dla cyfrowych nomadów. ",
+    "homeTitle": "TempTicket — dowód dalszej podróży dla nomadów ",
+    "homeDescription": "Prawdziwe, weryfikowalne rezerwacje lotów w celu kontroli dalszej podróży. Stworzony dla cyfrowych nomadów. ",
+    "bookTitle": "Dokonaj rezerwacji — TempTicket ",
+    "bookDescription": "Znajdź miejsce na lot i dokończ rezerwację na dalszą podróż. ",
+    "bookConfirmationTitle": "Płatność otrzymana — TempTicket ",
+    "bookConfirmationDescription": "Potwierdzamy Twoją rezerwację w linii lotniczej. ",
+    "loginTitle": "Zaloguj się — TempTicket ",
+    "loginDescription": "Zaloguj się za pomocą magicznego linku za pomocą 6-cyfrowego kodu, aby zobaczyć swoje rezerwacje. ",
+    "bookingsTitle": "Moje rezerwacje — TempTicket ",
+    "bookingsDescription": "Zamówienia i referencje linii lotniczych dla Twojego konta.",
+    "termsTitle": "Warunki korzystania z usługi — TempTicket ",
+    "termsDescription": "Warunki korzystania z usługi TempTicket. ",
+    "privacyTitle": "Prywatność — TempTicket ",
+    "privacyDescription": "Jak TempTicket przetwarza dane osobowe. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Bilet tymczasowy ",
+    "myBookings": "Moje rezerwacje ",
+    "admin": "Admin ",
+    "signOut": "Wyloguj się ",
+    "signIn": "Zaloguj się ",
+    "book": "Książka "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Język ",
+    "language": "Język"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Wyszukiwanie… ",
+    "empty": "Nie znaleziono miejsc. Spróbuj innej pisowni lub miasta. ",
+    "city": "Miasto ",
+    "airport": "Lotnisko ",
+    "couldNotSearch": "Nie udało się wyszukać miejsc. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Krok {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Wprowadź swoje dane ",
+        "body": "Trasa, daty i dane pasażerów. "
+      },
+      {
+        "label": "02 ",
+        "title": "Dokonaj płatności ",
+        "body": "Bezpieczna płatność — cena z góry."
+      },
+      {
+        "label": "03 ",
+        "title": "Zdobądź referencje ",
+        "body": "Sprawdź, czy linia lotnicza jest aktywna. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Wybierz miejsce początkowe i docelowe spośród sugestii ",
+    "toastSearchFailed": "Wyszukiwanie nie powiodło się ",
+    "toastNoPayLater": "Brak opłat za późniejszą płatność przy tym wyszukiwaniu — wypróbuj inne daty lub lotniska. ",
+    "toastOfferExpired": "Oferta wygasła – wyszukaj ponownie ",
+    "toastPassengerSlots": "Nie można załadować miejsc pasażerskich dla tej oferty ",
+    "toastLoadOffer": "Nie można wczytać oferty ",
+    "toastCompleteFields": "Wypełnij wszystkie pola dotyczące pasażerów ",
+    "toastPhoneInvalid": "Wprowadź prawidłowy numer telefonu ",
+    "toastReceiptEmail": "Wprowadź adres e-mail dla rezerwacji i potwierdzenia",
+    "toastEmailInvalid": "Wprowadź prawidłowy adres e-mail ",
+    "toastCheckoutServerError": "Zamówienie nie powiodło się (błąd serwera {status}) ",
+    "toastCheckoutFailed": "Zamówienie nie powiodło się ({status}) ",
+    "toastNoPaymentLink": "Kasa nie zwróciła linku do płatności ",
+    "toastCheckoutConnection": "Zamówienie nie powiodło się — sprawdź połączenie i spróbuj ponownie ",
+    "back": "Wstecz ",
+    "title": "Dokonaj rezerwacji ",
+    "stepFindTitle": "Znajdź lot ",
+    "stepFindDescription": "Wpisz nazwę miasta, kraju lub lotniska. ",
+    "from": "Od ",
+    "to": "Do ",
+    "placePlaceholder": "Miasto, kraj lub lotnisko",
+    "swapAria": "Zamień miejsce początkowe i docelowe ",
+    "swapTitle": "Zamień miejsce początkowe i docelowe ",
+    "departureDate": "Data wyjazdu ",
+    "searchBlurb": "Najpierw wyszukujemy oferty płatne później — dokończ rezerwację linii lotniczej po uiszczeniu naszej niewielkiej opłaty za usługę. ",
+    "searching": "Wyszukiwanie… ",
+    "findingFare": "Wyszukiwanie taryfy… ",
+    "searchFlights": "Wyszukaj loty ",
+    "stepPayTitle": "Dane pasażera i płatność ",
+    "stepPayDescription": "Imiona i nazwiska muszą odpowiadać dokumentom podróży. ",
+    "passenger": "Pasażer {index} ",
+    "genderLabel": "Płeć (jak w paszporcie) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Data urodzenia ",
+    "firstName": "Imię (imiona) ",
+    "lastName": "Nazwisko(imiona) ",
+    "email": "E-mail ",
+    "emailPlaceholder": "ty@example.com ",
+    "emailHint": "Wykorzystywane przy rezerwacji linii lotniczych oraz potwierdzeniu i potwierdzeniu płatności. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Krajowy numer kierunkowy ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Zapłać opłatę za usługę w ",
+    "preparingCheckout": "Przygotowanie do kasy…",
+    "payButton": "Zapłać opłatę za usługę i rezerwę ",
+    "demoOriginLabel": "Lotnisko Suvarnabhumi (BKK) · Bangkok, Tajlandia ",
+    "demoDestinationLabel": "Międzynarodowy port lotniczy Kuala Lumpur (KUL) · Sepang, Malezja "
+  },
+  "BookConfirmation": {
+    "backHome": "Powrót do domu ",
+    "badge": "Płatność otrzymana ",
+    "title": "Zaczynamy to ",
+    "body": "Potwierdzamy Twoją rezerwację lotu w linii lotniczej. Wkrótce otrzymasz e-mail ze szczegółami rezerwacji. ",
+    "detail": "Sprawdź swoją skrzynkę odbiorczą (i spam), aby uzyskać potwierdzenie. Jeśli potrzebujesz dowodu dalszej podróży, użyj numeru linii lotniczej na stronie przewoźnika. ",
+    "bookAnother": "Zarezerwuj inny ",
+    "signInHistory": "Zaloguj się do historii "
+  },
+  "Login": {
+    "title": "Zaloguj się ",
+    "description": "Zaloguj się, aby zobaczyć rezerwacje powiązane z Twoim kontem lub adresem e-mail. Wysyłamy 6-cyfrowy kod – bez hasła.",
+    "email": "E-mail ",
+    "sendCode": "Wyślij kod ",
+    "codeLabel": "6-cyfrowy kod ",
+    "verify": "Sprawdź ",
+    "differentEmail": "Użyj innego adresu e-mail ",
+    "toastSendFailed": "Nie można wysłać kodu ",
+    "toastCodeSent": "Sprawdź, czy w skrzynce e-mail znajduje się 6-cyfrowy kod ",
+    "toastInvalid": "Nieprawidłowy kod ",
+    "toastSignedIn": "Zalogowano "
+  },
+  "LoginPage": {
+    "loading": "Ładowanie… "
+  },
+  "Bookings": {
+    "title": "Moje rezerwacje ",
+    "subtitle": "Rezerwacje powiązane z Twoim kontem lub dokonane przy użyciu tego adresu e-mail przed zalogowaniem. Po dokonaniu płatności prześlemy Ci e-mailem numer referencyjny linii lotniczej.",
+    "newBooking": "Nowa rezerwacja ",
+    "orders": "Rozkazy ",
+    "ordersDescription": "Jeśli potrzebujesz dowodu dalszej podróży, użyj numeru linii lotniczej na stronie przewoźnika. ",
+    "empty": "Brak jeszcze rezerwacji. ",
+    "colCreated": "Utworzono ",
+    "colStatus": "Status ",
+    "colAirline": "Linia lotnicza ",
+    "colReference": "Odniesienie ",
+    "colMode": "Tryb ",
+    "needsAttention": "Wymaga uwagi ",
+    "needsAttentionDescription": "Jeśli rezerwacja nie powiodła się po dokonaniu płatności, skontaktuj się z obsługą klienta, przekazując dowód tożsamości i paragon z paskiem. "
+  },
+  "Terms": {
+    "title": "Regulamin świadczenia usług",
+    "lead": "Ostatnia aktualizacja: kwiecień 2026 r. Niniejsze warunki stanowią jedynie szablon początkowy — przed zaproszeniem płacących klientów należy zapoznać się z nimi wykwalifikowanym doradcą prawnym. ",
+    "serviceHeading": "Serwis ",
+    "serviceBody": "TempTicket zapewnia płatną usługę rezerwacji rzeczywistej rezerwacji lotu za pośrednictwem naszych partnerów zajmujących się rezerwacjami dla podróżnych, którzy potrzebują dokumentacji dotyczącej dalszej podróży. Nie gwarantujemy żadnego konkretnego wyniku dotyczącego imigracji lub linii lotniczej. Funkcjonariusze i przewoźnicy stosują własne zasady. ",
+    "legalHeading": "Nie jest to porada prawna ",
+    "legalBody": "Żadne informacje zawarte na tej stronie nie stanowią porad prawnych, imigracyjnych ani podatkowych. Przestrzegaj przepisów i licencji mających zastosowanie do Twojej firmy oraz jurysdykcji, w których promujesz i sprzedajesz. ",
+    "paymentsHeading": "Płatności i zwroty pieniędzy ",
+    "paymentsBody": "Opłaty za usługę pobierane są przy kasie. Jeśli po pomyślnej płatności nie będziemy mogli dokończyć zarezerwowanego przepływu, skontaktujemy się z Tobą w sprawie zwrotu środków lub oferty alternatywnej zgodnie z naszymi opublikowanymi zasadami. Obciążenia zwrotne mogą zostać zakwestionowane, jeśli usługa została wykonana zgodnie z opisem. ",
+    "useHeading": "Dopuszczalne użycie ",
+    "useBody": "Użytkownik nie może korzystać z usługi w celu fałszywego przedstawiania rządom lub liniom lotniczym zamiarów podróży, w celu testowania skradzionych metod płatności lub w jakikolwiek sposób naruszający warunki dostawcy lub obowiązujące prawo. ",
+    "liabilityHeading": "Ograniczona odpowiedzialność ",
+    "liabilityBody": "W maksymalnym zakresie dozwolonym przez prawo TempTicket nie ponosi odpowiedzialności za odmowę przyjęcia na pokład, odmowę wstępu, utracone połączenia lub szkody pośrednie wynikające z korzystania z usługi. "
+  },
+  "Privacy": {
+    "title": "Prywatność",
+    "summary": "Podsumowanie: Przetwarzamy pocztę elektroniczną i dane osobowe związane z podróżami w celu prowadzenia kont, rezerwacji i obowiązkowych rachunków. Poproś o poradę, aby dopasować tę stronę do aktualnej mapy danych (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Co zbieramy ",
+    "collectItems": [
+      "Adres e-mail i tokeny sesji do logowania ",
+      "Imiona i nazwiska pasażerów, daty urodzenia, dane kontaktowe wymagane przez linie lotnicze ",
+      "Metadane płatności pochodzące od naszego procesora płatności ",
+      "Dzienniki techniczne potrzebne do obsługi i debugowania usługi "
+    ],
+    "whyHeading": "Dlaczego je przetwarzamy ",
+    "whyBody": "Aby wykonać naszą umowę z Tobą, przestrzegać obowiązków prawnych tam, gdzie mają one zastosowanie i realizować uzasadnione interesy (bezpieczeństwo, zapobieganie oszustwom, ulepszanie produktów) zrównoważone z Twoimi prawami. ",
+    "processorsHeading": "Przetwarzacze ",
+    "processorsBody": "Infrastruktura i dostawcy mogą obejmować hosting baz danych (np. Neon), dostarczanie wiadomości e-mail (np. Resend), płatności (np. Stripe) i rezerwację lotów (Duffel i linie lotnicze). Ich warunki dotyczą również części przetwarzania, które wykonują. ",
+    "retentionHeading": "Zatrzymanie ",
+    "retentionBody": "Prowadzimy dokumentację rezerwacji i rozliczeń niezbędną do celów wsparcia, księgowości i blokad prawnych – zazwyczaj lata, a nie tygodnie – ale dokładne harmonogramy powinny być zgodne z Twoją polityką.",
+    "rightsHeading": "Prawa ",
+    "rightsBody": "W zależności od regionu możesz mieć prawo dostępu, poprawiania, usuwania lub sprzeciwu wobec określonego przetwarzania. Skontaktuj się z nami pod adresem, który publikujesz dla swojej firmy; zweryfikujemy żądania zgodnie z prawem. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Płatność powiodła się. ",
+    "bookingsSuccess": "Płatność otrzymana. Twoja rezerwacja zostanie zaktualizowana za chwilę. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Powrót do góry "
+  },
+  "Home": {
+    "bookNow": "Zarezerwuj teraz ",
+    "heroBadge": "Rezerwacje na żywo ",
+    "heroHeadingLead": "Rezerwacja lotu ",
+    "heroHeadingAccent": "weryfikacja w ciągu kilku minut ",
+    "heroSub": "Prawdziwe rezerwacje lotów możesz sprawdzić na stronie internetowej linii lotniczych. Bezstresowe podróżowanie dla nomadów. ",
+    "howItWorks": "Jak to działa ",
+    "trustStats": [
+      {
+        "stat": "Protokoły",
+        "label": "Typowy zwrot w przypadku współpracy linii lotniczych "
+      },
+      {
+        "stat": "Prawdziwy PNR ",
+        "label": "Sprawdź to u przewoźnika po wydaniu "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Wsparcie, gdy coś potrzebuje człowieka "
+      }
+    ],
+    "featuresTitle": "Wszystko, czego potrzebujesz dla spokoju ducha ",
+    "featuresSub": "Szybki, sprawdzalny dowód dalszej podróży – bez obawy, że kupisz bilet, którego nie wykorzystasz. ",
+    "features": [
+      {
+        "title": "Zastrzeżenia autentyczne ",
+        "body": "Prawdziwy dokument linii lotniczej po otrzymaniu potwierdzenia — a nie ozdobny plik PDF. "
+      },
+      {
+        "title": "Natychmiastowa dostawa ",
+        "body": "Większość przepływów jest realizowana szybko, dlatego możesz dołączyć dowód jeszcze tego samego dnia. "
+      },
+      {
+        "title": "Przewoźnik weryfikowalny",
+        "body": "Korzystaj z narzędzi linii lotniczej, aby wyświetlić rezerwację, gdy ktoś o to poprosi. "
+      },
+      {
+        "title": "Oszczędzaj pieniądze ",
+        "body": "Zapłać niewielką opłatę za usługę zamiast podlegającej zwrotowi opłaty za podróż długodystansową. "
+      },
+      {
+        "title": "Plany elastyczne ",
+        "body": "Dostosuj daty zmian planu podróży — w ramach zasad linii lotniczych. "
+      },
+      {
+        "title": "Wsparcie ludzkie ",
+        "body": "Zablokowane taryfy i przypadki skrajne mogą zostać przekazane naszemu zespołowi z kolejki. "
+      }
+    ],
+    "processTitle": "Prosty proces rezerwacji ",
+    "commonQuestions": "Często zadawane pytania ",
+    "personasTitle": "jest idealny do ",
+    "personas": [
+      {
+        "title": "Osoby ubiegające się o wizę ",
+        "body": "Kiedy konsulaty chcą otrzymać plan podróży, niekoniecznie płatny bilet."
+      },
+      {
+        "title": "Często podróżujący ",
+        "body": "Powtarzalny dowód dla linii lotniczych egzekwujących zasady dotyczące powrotów/dalszych podróży. "
+      },
+      {
+        "title": "Podróżni ",
+        "body": "Prosta historia weryfikacji podczas kontroli granicznej i przewoźnika. "
+      },
+      {
+        "title": "Cyfrowi nomadzi ",
+        "body": "Bądź elastyczny i nie będziesz musiał płacić za parkowanie w niewykorzystanych biletach na trasach długodystansowych. "
+      }
+    ],
+    "socialTitle": "Zaufali podróżnicy na całym świecie ",
+    "socialNote": "Przykładowe recenzje — zamień na prawdziwe referencje, jeśli je posiadasz. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Przykład · Alex M. ",
+        "quote": "PNR pobrany na stronie linii lotniczej w tym samym tygodniu, w którym złożyłem wniosek. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Przykład · Leni K. ",
+        "quote": "Prosta obsługa i szybkie odpowiedzi, gdy pytam o trasę. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Przykład · James T. ",
+        "quote": "Przeprowadziłem mnie przez odprawę zgodnie z polityką biletu w jedną stronę. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Większa elastyczność przy zabezpieczaniu wizy ",
+    "visaBody": "W wielu misjach opisano akceptację planu podróży lub rezerwacji, a nie w pełni opłaconego biletu. Potwierdź na oficjalnej stronie swojej sprawy — zapewniamy prawdziwą rezerwację, którą możesz zweryfikować na poczekaniu. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Przeczytaj oficjalną listę kontrolną",
+        "body": "Ambasady są różne – niektóre chcą rezerwacji, inne biletu. Zacznij od ich strony, a nie bloga. "
+      },
+      {
+        "n": "2 ",
+        "title": "Dopasuj daty do swojej historii ",
+        "body": "Wybierz trasę i termin idealnie dopasowane do składanego wniosku. "
+      },
+      {
+        "n": "3 ",
+        "title": "Sprawdź w linii lotniczej ",
+        "body": "Jeśli nagranie jest aktualne, przed spotkaniem przećwicz sprawdzenie go na stronie przewoźnika. "
+      }
+    ],
+    "embassyPublish": "Co publikują ambasady ",
+    "embassyFigures": [
+      {
+        "quote": "Rezerwacja biletu powrotnego, niewymagająca zakupu biletu przed wydaniem wizy… ",
+        "caption": "Temat z często zadawanych pytań dotyczących ambasady publicznej (Norwegia) "
+      },
+      {
+        "quote": "Rezerwacja lotnicza… z numerem rezerwacji podróżnej… niekoniecznie rezerwacja biletowa. ",
+        "caption": "Temat z publicznych wytycznych Schengen (Hiszpania)"
+      },
+      {
+        "quote": "Weryfikowalna rezerwacja lotu… nie zakupiony bilet. ",
+        "caption": "Temat z publicznych informacji wizowych (Indie) "
+      }
+    ],
+    "faqTitle": "Potrzebujesz pomocy? ",
+    "faqFooter": "Więcej pytań? Rozpocznij rezerwację – na bieżąco sprawdzamy termin i notatki przewoźnika. ",
+    "faqItems": [
+      {
+        "q": "Co to jest TempTicket? ",
+        "a": "Usługa pomagająca uzyskać rzeczywistą, możliwą do zweryfikowania rezerwację lotu (z numerem rezerwacji, gdy linia lotnicza ją potwierdzi) na potrzeby dalszej podróży i wizy – bez płacenia za pełną cenę, z której nie można skorzystać. "
+      },
+      {
+        "q": "Jak długo ważna jest rezerwacja? ",
+        "a": "Ważność zależy od zasad taryfy linii lotniczej, zasad dotyczących wstrzymania lub harmonogramu sprzedaży biletów. Podczas rezerwacji ujawniamy, co możemy; zawsze sprawdzaj termin zgodnie z wymaganiami ambasady lub przewoźnika. "
+      },
+      {
+        "q": "Czy mogę to zweryfikować na stronie linii lotniczej? ",
+        "a": "Kiedy linia lotnicza wystawia aktualny zapis, zazwyczaj można go sprawdzić w procesie zarządzania rezerwacją lub sprawdzaniu mojej podróży. Jeśli trasa nie kwalifikuje się do wstrzymania, zamiast tego możesz potrzebować biletu natychmiastowego. "
+      },
+      {
+        "q": "Czy jest to porada prawna czy gwarancja wizowa? ",
+        "a": "Nie. Zasady imigracyjne różnią się w zależności od kraju i urzędnika. Zapewniamy wyłącznie usługę rezerwacji — sprawdź oficjalne źródła swojej sytuacji."
+      }
+    ],
+    "ctaTitle": "Podróżowanie jest wystarczająco trudne. Ułatw sobie dowód dalszego działania dzięki ",
+    "ctaPriceLine": "Od {price} · minut, bez domysłów ",
+    "footerTagline": "Dowód dalszej podróży dla nomadów ",
+    "footerServices": "Usługi ",
+    "footerAccount": "Konto ",
+    "footerLegal": "Prawne ",
+    "footerBook": "Dokonaj rezerwacji ",
+    "footerSignIn": "Zaloguj się ",
+    "footerMyBookings": "Moje rezerwacje ",
+    "footerTerms": "Warunki ",
+    "footerPrivacy": "Prywatność ",
+    "footerCopyright": "Wszelkie prawa zastrzeżone.",
+    "footerBackTop": "Powrót do góry ",
+    "ticketFrom": "Od {price} ",
+    "ticketDeparture": "Wyjazd ",
+    "ticketArrival": "Przyjazd ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokio ",
+    "ticketPassenger": "Pasażer ",
+    "ticketPassengerVal": "Nomad · 1 osoba dorosła ",
+    "ticketRecord": "Lokalizator nagrań ",
+    "ticketVerified": "Zweryfikowano"
+  }
+}

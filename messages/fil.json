@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — patunay sa paglalakbay para sa mga lagalag ",
+    "defaultDescription": "Totoo, nabe-verify na reservation ng flight para sa mga onward-travel checks. Binuo para sa mga digital na nomad. ",
+    "homeTitle": "TempTicket — patunay sa paglalakbay para sa mga lagalag ",
+    "homeDescription": "Totoo, nabe-verify na reserbasyon ng flight para sa mga onward-travel checks. Binuo para sa mga digital na nomad. ",
+    "bookTitle": "Mag-book ng reserbasyon — TempTicket ",
+    "bookDescription": "Maghanap ng flight hold at kumpletuhin ang iyong onward travel reservation. ",
+    "bookConfirmationTitle": "Natanggap ang pagbabayad — TempTicket ",
+    "bookConfirmationDescription": "Kinukumpirma namin ang iyong reserbasyon sa airline. ",
+    "loginTitle": "Mag-sign in — TempTicket ",
+    "loginDescription": "Magic link sign-in na may 6 na digit na code upang tingnan ang iyong mga booking. ",
+    "bookingsTitle": "Aking mga booking — TempTicket ",
+    "bookingsDescription": "Mga order at reference sa airline para sa iyong account.",
+    "termsTitle": "Mga tuntunin ng serbisyo — TempTicket ",
+    "termsDescription": "Mga tuntunin ng serbisyo para sa TempTicket. ",
+    "privacyTitle": "Privacy — TempTicket ",
+    "privacyDescription": "Paano pinoproseso ng TempTicket ang personal na data. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Ang aking mga booking ",
+    "admin": "Admin ",
+    "signOut": "Mag-sign out ",
+    "signIn": "Mag-sign in ",
+    "book": "Aklat "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Wika ",
+    "language": "Wika"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Naghahanap… ",
+    "empty": "Walang nakitang mga lugar. Subukan ang ibang spelling o lungsod. ",
+    "city": "Lungsod ",
+    "airport": "Paliparan ",
+    "couldNotSearch": "Hindi makapaghanap ng mga lugar. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Hakbang {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Ilagay ang iyong impormasyon ",
+        "body": "Ruta, petsa, at mga detalye ng pasahero. "
+      },
+      {
+        "label": "02 ",
+        "title": "Magbayad ",
+        "body": "Secure na pag-checkout—paunang pagpepresyo."
+      },
+      {
+        "label": "03 ",
+        "title": "Kunin ang iyong sanggunian ",
+        "body": "I-verify sa airline kapag ito ay live. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Pumili ng pinanggalingan at patutunguhan mula sa mga mungkahi ",
+    "toastSearchFailed": "Nabigo ang paghahanap ",
+    "toastNoPayLater": "Walang pay-later na pamasahe sa paghahanap na ito—subukan ang ibang mga petsa o paliparan. ",
+    "toastOfferExpired": "Nag-expire ang alok—maghanap muli ",
+    "toastPassengerSlots": "Hindi makapag-load ng mga puwang ng pasahero para sa alok na ito ",
+    "toastLoadOffer": "Hindi ma-load ang alok ",
+    "toastCompleteFields": "Kumpletuhin ang lahat ng field ng pasahero ",
+    "toastPhoneInvalid": "Magpasok ng wastong numero ng telepono ",
+    "toastReceiptEmail": "Maglagay ng email para sa iyong booking at resibo",
+    "toastEmailInvalid": "Maglagay ng wastong email address ",
+    "toastCheckoutServerError": "Nabigo ang pag-checkout (error sa server {status}) ",
+    "toastCheckoutFailed": "Nabigo ang pag-checkout ({status}) ",
+    "toastNoPaymentLink": "Hindi nagbalik ng link sa pagbabayad ang Checkout ",
+    "toastCheckoutConnection": "Nabigo ang pag-checkout—tingnan ang iyong koneksyon at subukang muli ",
+    "back": "Bumalik ",
+    "title": "I-book ang iyong reserbasyon ",
+    "stepFindTitle": "Maghanap ng flight ",
+    "stepFindDescription": "Mag-type ng pangalan ng lungsod, bansa o airport. ",
+    "from": "Mula sa ",
+    "to": "Para ",
+    "placePlaceholder": "Lungsod, bansa, o paliparan",
+    "swapAria": "Pagpalitin ang pinanggalingan at patutunguhan ",
+    "swapTitle": "Pagpalitin ang pinanggalingan at patutunguhan ",
+    "departureDate": "Petsa ng pag-alis ",
+    "searchBlurb": "Naghahanap muna kami ng pay-later fare—kumpletuhin ang booking ng airline pagkatapos mong bayaran ang aming maliit na bayad sa serbisyo. ",
+    "searching": "Naghahanap… ",
+    "findingFare": "Paghahanap ng pamasahe... ",
+    "searchFlights": "Maghanap ng mga flight ",
+    "stepPayTitle": "Mga detalye ng pasahero at pagbabayad ",
+    "stepPayDescription": "Ang mga pangalan ay dapat tumugma sa mga dokumento sa paglalakbay. ",
+    "passenger": "Pasahero {index} ",
+    "genderLabel": "Kasarian (tulad ng nasa pasaporte) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Petsa ng kapanganakan ",
+    "firstName": "Unang pangalan (mga) ",
+    "lastName": "Apelyido (mga) ",
+    "email": "Email ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Ginamit sa iyong booking sa airline at para sa iyong resibo at kumpirmasyon ng pagbabayad. ",
+    "phone": "Telepono ",
+    "dialCodeAria": "Code sa pagtawag ng bansa ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Bayaran ang bayad sa serbisyo sa ",
+    "preparingCheckout": "Inihahanda ang pag-checkout...",
+    "payButton": "Bayaran ang bayad sa serbisyo at reserba ",
+    "demoOriginLabel": "Paliparan ng Suvarnabhumi (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Paliparang Pandaigdig ng Kuala Lumpur (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Bumalik sa bahay ",
+    "badge": "Natanggap ang bayad ",
+    "title": "Ayon na kami ",
+    "body": "Kinukumpirma namin ang iyong pagpapareserba ng flight sa airline. Makakatanggap ka ng email na may mga detalye ng booking sa ilang sandali. ",
+    "detail": "Suriin ang iyong inbox (at spam) para sa kumpirmasyon. Gamitin ang sanggunian ng airline sa site ng carrier kapag kailangan mo ng patunay ng pasulong na paglalakbay. ",
+    "bookAnother": "Mag-book ng isa pa ",
+    "signInHistory": "Mag-sign in para sa kasaysayan "
+  },
+  "Login": {
+    "title": "Mag-sign in ",
+    "description": "Mag-sign in para makita ang mga booking na naka-link sa iyong account o sa iyong email. Nagpapadala kami ng 6 na digit na code—walang password.",
+    "email": "Email ",
+    "sendCode": "Ipadala ang code ",
+    "codeLabel": "6 na digit na code ",
+    "verify": "I-verify ",
+    "differentEmail": "Gumamit ng ibang email ",
+    "toastSendFailed": "Hindi maipadala ang code ",
+    "toastCodeSent": "Suriin ang iyong email para sa isang 6 na digit na code ",
+    "toastInvalid": "Di-wastong code ",
+    "toastSignedIn": "Naka-sign in "
+  },
+  "LoginPage": {
+    "loading": "Naglo-load… "
+  },
+  "Bookings": {
+    "title": "Ang aking mga booking ",
+    "subtitle": "Mga booking na nauugnay sa iyong account o ginawa gamit ang email na ito bago ka mag-sign in. Pagkatapos ng pagbabayad, i-email namin sa iyo ang sanggunian ng airline.",
+    "newBooking": "Bagong booking ",
+    "orders": "Mga Kautusan ",
+    "ordersDescription": "Gamitin ang sanggunian ng airline sa site ng carrier kapag kailangan mo ng patunay ng pasulong na paglalakbay. ",
+    "empty": "Wala pang booking. ",
+    "colCreated": "Nilikha ",
+    "colStatus": "Katayuan ",
+    "colAirline": "Airline ",
+    "colReference": "Sanggunian ",
+    "colMode": "Mode ",
+    "needsAttention": "Nangangailangan ng pansin ",
+    "needsAttentionDescription": "Kung nabigo ang booking pagkatapos ng pagbabayad, makipag-ugnayan sa suporta gamit ang id at Stripe na resibo. "
+  },
+  "Terms": {
+    "title": "Mga tuntunin ng serbisyo",
+    "lead": "Huling na-update: Abril 2026. Ang mga tuntuning ito ay isang panimulang template lamang—magsuri sa kanila ng kwalipikadong tagapayo bago ka mag-imbita ng mga nagbabayad na customer. ",
+    "serviceHeading": "Serbisyo ",
+    "serviceBody": "Ang TempTicket ay nagbibigay ng bayad na serbisyo upang ayusin ang isang tunay na pagpapareserba ng flight sa pamamagitan ng aming mga kasosyo sa booking para sa mga manlalakbay na nangangailangan ng dokumentasyon ng pasulong na paglalakbay. Hindi namin ginagarantiya ang anumang partikular na resulta ng imigrasyon o airline. Ang mga opisyal at carrier ay naglalapat ng kanilang sariling mga patakaran. ",
+    "legalHeading": "Hindi legal na payo ",
+    "legalBody": "Wala sa site na ito ang legal, imigrasyon, o payo sa buwis. Sumunod sa mga batas at lisensya na nalalapat sa iyong negosyo at sa mga hurisdiksyon kung saan ka nag-market at nagbebenta. ",
+    "paymentsHeading": "Mga pagbabayad at refund ",
+    "paymentsBody": "Ang mga bayarin sa serbisyo ay kinokolekta sa pag-checkout. Kung hindi namin makumpleto ang naka-book na daloy pagkatapos ng matagumpay na pagbabayad, makikipagtulungan kami sa iyo sa isang refund o kahaliling alok alinsunod sa aming na-publish na patakaran. Maaaring labanan ang mga chargeback kapag naihatid ang serbisyo gaya ng inilarawan. ",
+    "useHeading": "Katanggap-tanggap na paggamit ",
+    "useBody": "Hindi mo maaaring gamitin ang serbisyo upang maling sabihin ang layunin ng paglalakbay sa mga gobyerno o airline, upang subukan ang mga ninakaw na paraan ng pagbabayad, o sa anumang paraan na lumalabag sa mga tuntunin ng supplier o naaangkop na batas. ",
+    "liabilityHeading": "Limitadong pananagutan ",
+    "liabilityBody": "Sa maximum na saklaw na pinahihintulutan ng batas, ang TempTicket ay hindi mananagot para sa tinanggihan na pagsakay, hindi pagpasok, hindi nakuhang koneksyon, o hindi direktang pinsalang dulot ng paggamit ng serbisyo. "
+  },
+  "Privacy": {
+    "title": "Privacy",
+    "summary": "Buod: Pinoproseso namin ang email at personal na data na nauugnay sa paglalakbay upang magpatakbo ng mga account, booking, at mandatoryong resibo. Hayaang ihanay ng tagapayo ang pahinang ito sa iyong aktwal na mapa ng data (Neon, Muling Ipadala, Stripe, Duffel, pagho-host). ",
+    "collectHeading": "Ang kinokolekta namin ",
+    "collectItems": [
+      "Email address at mga token ng session para sa pag-sign-in ",
+      "Mga pangalan ng pasahero, petsa ng kapanganakan, mga detalye ng contact na kinakailangan ng mga airline ",
+      "Metadata ng pagbabayad mula sa aming processor ng mga pagbabayad ",
+      "Mga teknikal na log na kailangan para patakbuhin at i-debug ang serbisyo "
+    ],
+    "whyHeading": "Bakit namin pinoproseso ito ",
+    "whyBody": "Upang maisagawa ang aming kontrata sa iyo, sumunod sa mga legal na obligasyon kung saan nalalapat ang mga ito, at ituloy ang mga lehitimong interes (seguridad, pag-iwas sa panloloko, pagpapabuti ng produkto) na balanse laban sa iyong mga karapatan. ",
+    "processorsHeading": "Mga Proseso ",
+    "processorsBody": "Maaaring kasama sa imprastraktura at mga vendor ang pagho-host ng database (hal. Neon), paghahatid ng email (hal. Muling ipadala), mga pagbabayad (hal. Stripe), at booking ng flight (Duffel at mga airline). Nalalapat din ang kanilang mga tuntunin sa mga bahagi ng pagproseso na kanilang ginagawa. ",
+    "retentionHeading": "Pagpapanatili ",
+    "retentionBody": "Pinapanatili namin ang mga talaan ng booking at pagsingil kung kinakailangan para sa suporta, accounting, at legal na pag-hold—karaniwang mga taon, hindi linggo—ngunit ang mga eksaktong iskedyul ay dapat tumugma sa iyong patakaran.",
+    "rightsHeading": "Mga Karapatan ",
+    "rightsBody": "Depende sa iyong rehiyon maaari kang magkaroon ng mga karapatan na i-access, itama, tanggalin, o tutol sa ilang partikular na pagproseso. Makipag-ugnayan sa amin sa address na iyong nai-publish para sa iyong negosyo; ibe-verify namin ang mga kahilingan alinsunod sa batas. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Matagumpay ang pagbabayad. ",
+    "bookingsSuccess": "Natanggap ang bayad. Maa-update ang iyong booking sa ilang sandali. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Bumalik sa itaas "
+  },
+  "Home": {
+    "bookNow": "Mag-book ngayon ",
+    "heroBadge": "Mga live na reserbasyon ",
+    "heroHeadingLead": "Pagbu-book ng flight ",
+    "heroHeadingAccent": "na-verify sa ilang minuto ",
+    "heroSub": "Mga totoong flight reservation na maaari mong i-verify sa website ng mga airline. Stress free travel para sa mga nomad. ",
+    "howItWorks": "Paano ito gumagana ",
+    "trustStats": [
+      {
+        "stat": "Mga minuto",
+        "label": "Karaniwang turnaround kapag nagtutulungan ang mga airline "
+      },
+      {
+        "stat": "Tunay na PNR ",
+        "label": "Hanapin ito sa carrier kapag inisyu "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Suportahan kapag may nangangailangan ng tao "
+      }
+    ],
+    "featuresTitle": "Lahat ng kailangan mo para sa kapayapaan ng isip ",
+    "featuresSub": "Mabilis, mabe-verify pasulong na patunay sa paglalakbay—nang walang pagkabahala sa pagbili ng tiket na hindi mo gagamitin. ",
+    "features": [
+      {
+        "title": "Mga tunay na reserbasyon ",
+        "body": "Isang tunay na rekord ng airline kapag dumating ang kumpirmasyon—hindi isang pandekorasyon na PDF. "
+      },
+      {
+        "title": "Agad na paghahatid ",
+        "body": "Mabilis na kumpleto ang karamihan sa mga daloy upang makapag-attach ka ng patunay sa parehong araw. "
+      },
+      {
+        "title": "Mabe-verify ng carrier",
+        "body": "Gamitin ang mga tool ng airline para makuha ang booking kapag may nagtanong. "
+      },
+      {
+        "title": "Magtipid ng pera ",
+        "body": "Magbayad ng maliit na bayad sa serbisyo sa halip na isang maibabalik na long-haul na pamasahe. "
+      },
+      {
+        "title": "Mga flexible na plano ",
+        "body": "Isaayos ang mga petsa kung kailan nagbago ang iyong itinerary—sa loob ng mga window ng patakaran sa airline. "
+      },
+      {
+        "title": "Suporta ng tao ",
+        "body": "Ang mga stuck na pamasahe at edge case ay maaaring tumaas sa aming team mula sa pila. "
+      }
+    ],
+    "processTitle": "Simpleng proseso ng booking ",
+    "commonQuestions": "Mga karaniwang tanong ",
+    "personasTitle": "ay perpekto para sa ",
+    "personas": [
+      {
+        "title": "Mga aplikante ng visa ",
+        "body": "Kapag gusto ng mga konsulado ng itineraryo, hindi kinakailangang bayad na pamasahe."
+      },
+      {
+        "title": "Mga madalas na flyer ",
+        "body": "Patunay na paulit-ulit para sa mga airline na nagpapatupad ng mga panuntunan sa pagbabalik/patuloy. "
+      },
+      {
+        "title": "Mga Manlalakbay ",
+        "body": "Simpleng kwento ng pag-verify para sa mga pagsusuri sa hangganan at carrier. "
+      },
+      {
+        "title": "Mga digital na nomad ",
+        "body": "Manatiling flexible nang walang paradahan ng pera sa hindi nagamit na long-haul na pamasahe. "
+      }
+    ],
+    "socialTitle": "Pinagkakatiwalaan ng mga manlalakbay sa buong mundo ",
+    "socialNote": "Mga halimbawang review—magpalit para sa mga tunay na testimonial kapag mayroon ka ng mga ito. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Sample · Alex M. ",
+        "quote": "Nag-check out ang PNR sa site ng airline sa parehong linggong nag-apply ako. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Sample · Leni K. ",
+        "quote": "Diretso na daloy at mabilis na mga sagot kapag nagtanong ako tungkol sa isang ruta. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Sample · James T. ",
+        "quote": "Nakuha ako sa pamamagitan ng check-in gamit ang one-way ticket policy. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Higit na kakayahang umangkop kapag sinisiguro ang iyong visa ",
+    "visaBody": "Maraming misyon ang naglalarawan ng pagtanggap ng isang itineraryo o reserbasyon sa halip na isang ganap na bayad na tiket. Kumpirmahin sa opisyal na site para sa iyong kaso—nagbibigay kami ng tunay na reserbasyon na maaari mong i-verify habang naghihintay ka. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Basahin ang opisyal na checklist",
+        "body": "Magkaiba ang mga embahada—ang ilan ay gustong magpareserba, ang iba ay tiket. Magsimula sa kanilang pahina, hindi sa isang blog. "
+      },
+      {
+        "n": "2 ",
+        "title": "Itugma ang mga petsa sa iyong kuwento ",
+        "body": "Pumili ng ruta at timing na perpektong nakaayon sa application na iyong inihain. "
+      },
+      {
+        "n": "3 ",
+        "title": "I-verify sa airline ",
+        "body": "Kung live ang rekord, magsanay na hilahin ito pataas sa site ng carrier bago ang iyong appointment. "
+      }
+    ],
+    "embassyPublish": "Ano ang inilathala ng mga embahada ",
+    "embassyFigures": [
+      {
+        "quote": "Reservation para sa return ticket, hindi kailangan para bumili ng ticket bago ibigay ang visa… ",
+        "caption": "Tema mula sa pampublikong embahada FAQ (Norway) "
+      },
+      {
+        "quote": "Pagpapareserba ng eroplano… na may numero ng pagpapareserba sa paglalakbay... hindi kinakailangang isang reserbasyon na may tiket. ",
+        "caption": "Tema mula sa pampublikong gabay ng Schengen (Spain)"
+      },
+      {
+        "quote": "Nabe-verify na reservation ng flight... hindi isang biniling ticket. ",
+        "caption": "Tema mula sa impormasyon ng pampublikong visa (India) "
+      }
+    ],
+    "faqTitle": "Kailangan mo ba ng tulong? ",
+    "faqFooter": "Higit pang mga tanong? Magsimula ng booking—nagpapalabas kami ng timing at mga tala ng carrier habang nagpapatuloy ka. ",
+    "faqItems": [
+      {
+        "q": "Ano ang TempTicket? ",
+        "a": "Isang serbisyo na tumutulong sa iyo na makakuha ng isang tunay, nabe-verify na flight reservation (na may booking reference kapag kinumpirma ito ng airline) para sa onward-travel at visa na mga sitwasyon—nang hindi nagbabayad para sa buong pamasahe na hindi mo magagamit. "
+      },
+      {
+        "q": "Gaano katagal ang bisa ng reserbasyon? ",
+        "a": "Ang validity ay depende sa mga tuntunin sa pamasahe, patakaran sa hold, o timeline ng ticketing ng airline. Inilabas namin ang aming makakaya habang nagbu-book; palaging kumpirmahin ang timing laban sa iyong mga kinakailangan sa embahada o carrier. "
+      },
+      {
+        "q": "Maaari ko bang i-verify ito sa website ng airline? ",
+        "a": "Kapag nag-isyu ang airline ng live na record, karaniwan mong makikita ito sa kanilang pamamahala-booking o check-my-trip na daloy. Kung ang isang ruta ay hindi kwalipikado para sa isang hold, maaaring kailangan mo na lang ng instant ticket. "
+      },
+      {
+        "q": "Ito ba ay legal na payo o garantiya ng visa? ",
+        "a": "Hindi. Ang mga patakaran sa imigrasyon ay nagbabago ayon sa bansa at opisyal. Nagbibigay lamang kami ng serbisyo sa pagpapareserba—tingnan ang mga opisyal na mapagkukunan para sa iyong sitwasyon."
+      }
+    ],
+    "ctaTitle": "Ang paglalakbay ay sapat na mahirap. Gawing mas madali ang patunay ng pasulong sa ",
+    "ctaPriceLine": "Mula sa {price} · minuto, hindi hula ",
+    "footerTagline": "Patunay sa paglalakbay para sa mga lagalag ",
+    "footerServices": "Mga Serbisyo ",
+    "footerAccount": "Account ",
+    "footerLegal": "Legal ",
+    "footerBook": "Mag-book ng reserbasyon ",
+    "footerSignIn": "Mag-sign in ",
+    "footerMyBookings": "Ang aking mga booking ",
+    "footerTerms": "Mga Tuntunin ",
+    "footerPrivacy": "Privacy ",
+    "footerCopyright": "Lahat ng karapatan ay nakalaan.",
+    "footerBackTop": "Bumalik sa itaas ",
+    "ticketFrom": "Mula sa {price} ",
+    "ticketDeparture": "Pag-alis ",
+    "ticketArrival": "Pagdating ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Pasahero ",
+    "ticketPassengerVal": "Nomad · 1 matanda ",
+    "ticketRecord": "Tagahanap ng record ",
+    "ticketVerified": "Na-verify"
+  }
+}

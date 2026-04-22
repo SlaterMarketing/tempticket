@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — edasireisitõend nomaadidele ",
+    "defaultDescription": "Reaalsed, kontrollitavad lennubroneeringud edasiseks reisitšekiks. Loodud digitaalsetele nomaadidele. ",
+    "homeTitle": "TempTicket — edasireisitõend nomaadidele ",
+    "homeDescription": "Reaalsed, kontrollitavad lennubroneeringud edasiseks reisitšekiks. Loodud digitaalsetele nomaadidele. ",
+    "bookTitle": "Broneerige broneering — TempTicket ",
+    "bookDescription": "Leidke ootel lend ja viige lõpule edasireisi broneering. ",
+    "bookConfirmationTitle": "Makse laekunud — TempTicket ",
+    "bookConfirmationDescription": "Kinnitame teie broneeringut lennufirmaga. ",
+    "loginTitle": "Logi sisse — TempTicket ",
+    "loginDescription": "Sisselogimine 6-kohalise koodiga maagilise lingi abil, et vaadata oma broneeringuid. ",
+    "bookingsTitle": "Minu broneeringud — TempTicket ",
+    "bookingsDescription": "Tellimused ja lennufirma viited teie kontole.",
+    "termsTitle": "Teenuse tingimused — TempTicket ",
+    "termsDescription": "Teemipileti kasutustingimused. ",
+    "privacyTitle": "Privaatsus — TempTicket ",
+    "privacyDescription": "Kuidas TempTicket isikuandmeid töötleb. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Minu broneeringud ",
+    "admin": "Admin ",
+    "signOut": "Logi välja ",
+    "signIn": "Logi sisse ",
+    "book": "Raamat "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Keel ",
+    "language": "Keel"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Otsimine… ",
+    "empty": "Kohti ei leitud. Proovige teist õigekirja või linna. ",
+    "city": "Linn ",
+    "airport": "Lennujaam ",
+    "couldNotSearch": "Ei saanud kohti otsida. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Step {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Sisestage oma andmed ",
+        "body": "Marsruut, kuupäevad ja reisija andmed. "
+      },
+      {
+        "label": "02 ",
+        "title": "Soorita makse ",
+        "body": "Turvaline kassa – hinnakujundus ette."
+      },
+      {
+        "label": "03 ",
+        "title": "Hankige viide ",
+        "body": "Kontrollige lennufirmas, kui see on reaalajas. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Vali soovituste hulgast lähtekoht ja sihtkoht ",
+    "toastSearchFailed": "Otsing ebaõnnestus ",
+    "toastNoPayLater": "Selles otsingus ei tasu hiljem maksta – proovige teisi kuupäevi või lennujaamu. ",
+    "toastOfferExpired": "Pakkumine aegunud – otsi uuesti ",
+    "toastPassengerSlots": "Ei saanud selle pakkumise jaoks reisijate kohti laadida ",
+    "toastLoadOffer": "Pakkumist ei saanud laadida ",
+    "toastCompleteFields": "Täitke kõik reisija väljad ",
+    "toastPhoneInvalid": "Sisesta kehtiv telefoninumber ",
+    "toastReceiptEmail": "Sisestage broneeringu ja kviitungi e-kiri",
+    "toastEmailInvalid": "Sisesta kehtiv e-posti aadress ",
+    "toastCheckoutServerError": "Väljaregistreerimine ebaõnnestus (serveri viga {status}) ",
+    "toastCheckoutFailed": "Väljavõtt ebaõnnestus ({status}) ",
+    "toastNoPaymentLink": "Checkout ei tagastanud makselinki ",
+    "toastCheckoutConnection": "Checkout nurjus – kontrollige ühendust ja proovige uuesti ",
+    "back": "Tagasi ",
+    "title": "Broneerige oma broneering ",
+    "stepFindTitle": "Leia lend ",
+    "stepFindDescription": "Sisestage linna, riigi või lennujaama nimi. ",
+    "from": "Alates ",
+    "to": "Kuni ",
+    "placePlaceholder": "Linn, riik või lennujaam",
+    "swapAria": "Vaheta lähte- ja sihtkoht ",
+    "swapTitle": "Vaheta lähte- ja sihtkoht ",
+    "departureDate": "Väljumiskuupäev ",
+    "searchBlurb": "Kõigepealt otsime tasu hiljem – viige lennufirma broneering lõpule pärast meie väikese teenustasu maksmist. ",
+    "searching": "Otsimine… ",
+    "findingFare": "Hinna leidmine… ",
+    "searchFlights": "Otsi lende ",
+    "stepPayTitle": "Reisija andmed ja tasumine ",
+    "stepPayDescription": "Nimed peavad ühtima reisidokumentidega. ",
+    "passenger": "Reisija {index} ",
+    "genderLabel": "Sugu (nagu passis) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Sünniaeg ",
+    "firstName": "Eesnimi(d) ",
+    "lastName": "Perekonnanimi(d) ",
+    "email": "E-post ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Kasutatakse teie lennufirma broneerimisel ning teie maksekviitungi ja -kinnituse jaoks. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Valitseja kood ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Maksa teenustasu sisse ",
+    "preparingCheckout": "Kassa ettevalmistamine…",
+    "payButton": "Maksa teenustasu ja reserv ",
+    "demoOriginLabel": "Suvarnabhumi lennujaam (BKK) · Bangkok, Tai ",
+    "demoDestinationLabel": "Kuala Lumpuri rahvusvaheline lennujaam (KUL) · Sepang, Malaisia "
+  },
+  "BookConfirmation": {
+    "backHome": "Tagasi koju ",
+    "badge": "Makse laekunud ",
+    "title": "Me tegeleme sellega ",
+    "body": "Kinnitame teie lennubroneeringut lennufirmaga. Peagi saate broneeringu üksikasjadega meili. ",
+    "detail": "Kinnituse saamiseks kontrollige oma postkasti (ja rämpsposti). Kasutage lennufirma viidet vedaja saidil, kui vajate edasireisi tõendit. ",
+    "bookAnother": "Broneerige teine ",
+    "signInHistory": "Logi ajalugu sisse "
+  },
+  "Login": {
+    "title": "Logi sisse ",
+    "description": "Logige sisse, et näha oma konto või e-postiga seotud broneeringuid. Saadame 6-kohalise koodi – parooli pole.",
+    "email": "E-post ",
+    "sendCode": "Saada kood ",
+    "codeLabel": "6-kohaline kood ",
+    "verify": "Kontrolli ",
+    "differentEmail": "Kasutage mõnda muud e-posti ",
+    "toastSendFailed": "Koodi ei saanud saata ",
+    "toastCodeSent": "Kontrolli oma meililt 6-kohalist koodi ",
+    "toastInvalid": "Vigane kood ",
+    "toastSignedIn": "Sisse logitud "
+  },
+  "LoginPage": {
+    "loading": "Laadimine… "
+  },
+  "Bookings": {
+    "title": "Minu broneeringud ",
+    "subtitle": "Broneeringud, mis on seotud teie kontoga või tehtud selle e-kirjaga enne sisselogimist. Pärast maksmist saadame teile lennufirma viite.",
+    "newBooking": "Uus broneering ",
+    "orders": "korraldused ",
+    "ordersDescription": "Kasutage lennufirma viidet vedaja saidil, kui vajate edasireisi tõendit. ",
+    "empty": "Broneeringuid veel pole. ",
+    "colCreated": "Loodud ",
+    "colStatus": "Seisund ",
+    "colAirline": "Lennufirma ",
+    "colReference": "Viide ",
+    "colMode": "Režiim ",
+    "needsAttention": "Vajab tähelepanu ",
+    "needsAttentionDescription": "Kui broneering ebaõnnestus pärast maksmist, võtke ID ja Stripe kviitungiga ühendust tugiteenusega. "
+  },
+  "Terms": {
+    "title": "Teenuse tingimused",
+    "lead": "Viimati värskendatud: aprill 2026. Need tingimused on ainult algmallid – enne maksvate klientide kutsumist laske kvalifitseeritud nõustajatel need üle vaadata. ",
+    "serviceHeading": "Teenus ",
+    "serviceBody": "TempTicket pakub tasulist teenust reaalse lennu broneerimise korraldamiseks meie broneerimispartnerite kaudu reisijatele, kes vajavad edasireisi dokumente. Me ei garanteeri mingit konkreetset immigratsiooni ega lennufirma tulemust. Ametnikud ja vedajad kohaldavad oma reegleid. ",
+    "legalHeading": "Ei ole juriidiline nõustamine ",
+    "legalBody": "Miski sellel saidil ei ole seaduslik, immigratsiooni- ega maksunõustamine. Järgige seadusi ja litsentse, mis kehtivad teie ettevõttele ja jurisdiktsioonidele, kus turustate ja müüte. ",
+    "paymentsHeading": "Maksed ja tagasimaksed ",
+    "paymentsBody": "Teenustasud kogutakse kassas. Kui me ei saa pärast edukat makset broneeritud voogu lõpule viia, töötame teiega koos meie avaldatud eeskirjade kohaselt tagasimakse või alternatiivse pakkumisega. Tagasimakseid saab vaidlustada, kui teenust osutati kirjeldatud viisil. ",
+    "useHeading": "Vastuvõetav kasutamine ",
+    "useBody": "Te ei tohi kasutada teenust valitsustele või lennufirmadele reisikavatsuste valeandmete esitamiseks, varastatud makseviiside testimiseks ega muul viisil, mis rikub tarnija tingimusi või kohaldatavat seadust. ",
+    "liabilityHeading": "Piiratud vastutus ",
+    "liabilityBody": "Seadusega lubatud maksimaalses ulatuses ei vastuta TempTicket pardale jätmise, sissesõidukeelu, ümberistumisest mahajäämise ega teenuse kasutamisest tulenevate kaudsete kahjude eest. "
+  },
+  "Privacy": {
+    "title": "Privaatsus",
+    "summary": "Kokkuvõte: töötleme e-posti ja reisimisega seotud isikuandmeid kontode, broneeringute ja kohustuslike kviitungite käitamiseks. Laske nõustajatel viia see leht vastavusse teie tegelike andmete kaardiga (Neoon, Resend, Stripe, Duffel, hostimine). ",
+    "collectHeading": "Mida me kogume ",
+    "collectItems": [
+      "Sisselogimise meiliaadress ja seansimärgid ",
+      "Reisijate nimed, sünniajad, lennufirmade nõutavad kontaktandmed ",
+      "Maksete metaandmed meie maksete töötlejalt ",
+      "Teenuse kasutamiseks ja silumiseks vajalikud tehnilised logid "
+    ],
+    "whyHeading": "Miks me seda töötleme ",
+    "whyBody": "Selleks, et täita meiega sõlmitud lepingut, järgida seaduslikke kohustusi, kui need kehtivad, ja järgida õigustatud huve (turvalisus, pettuste vältimine, toote täiustamine), mis on tasakaalustatud teie õigustega. ",
+    "processorsHeading": "Protsessorid ",
+    "processorsBody": "Taristu ja tarnijad võivad hõlmata andmebaasi hostimist (nt Neon), e-posti saatmist (nt uuesti saatmine), makseid (nt Stripe) ja lendude broneerimist (Duffel ja lennufirmad). Nende tingimused kehtivad ka nende töötlemise osade kohta. ",
+    "retentionHeading": "Säilitamine ",
+    "retentionBody": "Säilitame broneerimis- ja arveldusandmeid vastavalt vajadusele tugiteenuste, raamatupidamise ja juriidiliste kinnipidamiste jaoks – tavaliselt aastaid, mitte nädalaid –, kuid täpsed ajakavad peaksid vastama teie poliitikale.",
+    "rightsHeading": "Õigused ",
+    "rightsBody": "Sõltuvalt teie piirkonnast võivad teil olla õigused juurdepääsuks, parandamiseks, kustutamiseks või teatud töötlemisele vastuväiteid. Võtke meiega ühendust aadressil, mille oma ettevõtte kohta avaldate; kontrollime taotlusi kooskõlas seadusega. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Makse õnnestus. ",
+    "bookingsSuccess": "Makse laekunud. Teie broneering värskendatakse hetke pärast. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Tagasi üles "
+  },
+  "Home": {
+    "bookNow": "Broneerige kohe ",
+    "heroBadge": "Reaalajas broneeringud ",
+    "heroHeadingLead": "Lennu broneerimine ",
+    "heroHeadingAccent": "kontrollitud minutitega ",
+    "heroSub": "Reaalsed lennubroneeringud saate kontrollida lennufirmade veebisaidil. Stressivaba reisimine nomaadidele. ",
+    "howItWorks": "Kuidas see toimib ",
+    "trustStats": [
+      {
+        "stat": "Protokoll",
+        "label": "Tüüpiline pöördumine lennufirmade koostööl "
+      },
+      {
+        "stat": "Reaalne broneeringuinfo ",
+        "label": "Vaadake väljastamisel vedajalt "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Toetage, kui miski vajab inimest "
+      }
+    ],
+    "featuresTitle": "Kõik hingerahu jaoks vajalik ",
+    "featuresSub": "Kiire, kontrollitav edasine reisitõend – ilma mureta pileti ostmise pärast, mida te ei kasuta. ",
+    "features": [
+      {
+        "title": "Autentsed reservatsioonid ",
+        "body": "Ehtne lennufirma rekord, kui kinnitus saabub – mitte dekoratiivne PDF. "
+      },
+      {
+        "title": "Kohe kohaletoimetamine ",
+        "body": "Enamik vooge valmib kiiresti, nii et saate tõendi lisada samal päeval. "
+      },
+      {
+        "title": "Vedaja kontrollitav",
+        "body": "Kasutage lennufirma tööriistu, et broneering üles tõmmata, kui keegi seda küsib. "
+      },
+      {
+        "title": "Säästa raha ",
+        "body": "Tagastatava kauglennupileti asemel makske väikest teenustasu. "
+      },
+      {
+        "title": "Paindlikud plaanid ",
+        "body": "Reguleerige kuupäevi, kui teie marsruut muutub – lennufirma poliitika aknas. "
+      },
+      {
+        "title": "Inimtoetus ",
+        "body": "Kinnijäänud piletihinnad ja äärmuslikud juhtumid võivad järjekorrast meie meeskonnani eskaleeruda. "
+      }
+    ],
+    "processTitle": "Lihtne broneerimisprotsess ",
+    "commonQuestions": "Levinud küsimused ",
+    "personasTitle": " sobib ideaalselt ",
+    "personas": [
+      {
+        "title": "Viisataotlejad ",
+        "body": "Kui konsulaadid soovivad reisikava, mitte tingimata tasulist piletihinda."
+      },
+      {
+        "title": "Sagedased lendajad ",
+        "body": "Korduv tõend lennufirmadele, kes jõustavad tagastamise/edasimise reegleid. "
+      },
+      {
+        "title": "Reisijad ",
+        "body": "Lihtne kontrolllugu piiri- ja vedajakontrolli jaoks. "
+      },
+      {
+        "title": "Digitaalsed nomaadid ",
+        "body": "Olge paindlik ilma parkimisrahata kasutamata kaugliinide piletite puhul. "
+      }
+    ],
+    "socialTitle": "Usaldavad reisijad kogu maailmas ",
+    "socialNote": "Näidisarvustused – vaheta tõeliste iseloomustuste vastu, kui need on olemas. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Näidis · Alex M. ",
+        "quote": "PNR registreeriti lennufirma saidil samal nädalal, kui taotlesin. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Näidis · Leni K. ",
+        "quote": "Suurepärane käik ja kiired vastused, kui küsisin marsruudi kohta. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Näidis · James T. ",
+        "quote": "Sain ühe suuna piletipoliitikaga check-ini kaudu. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Suurem paindlikkus viisa hankimisel ",
+    "visaBody": "Paljud missioonid kirjeldavad pigem marsruudi või broneeringu vastuvõtmist kui täielikult tasutud piletit. Kinnitage oma juhtumi ametlikul saidil – pakume tõelist broneeringut, mida saate ootamise ajal kontrollida. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Lugege ametlikku kontrollnimekirja",
+        "body": "Saatkonnad erinevad — ühed soovivad broneeringut, teised piletit. Alustage nende lehelt, mitte blogist. "
+      },
+      {
+        "n": "2 ",
+        "title": "Koosta kuupäevad oma looga ",
+        "body": "Valige marsruut ja ajastus, mis sobivad ideaalselt teie esitatava taotlusega. "
+      },
+      {
+        "n": "3 ",
+        "title": "Kontrollige lennufirmas ",
+        "body": "Kui salvestus on reaalajas, proovige see enne kohtumist operaatori saidilt üles tõmmata. "
+      }
+    ],
+    "embassyPublish": "Mida saatkonnad avaldavad ",
+    "embassyFigures": [
+      {
+        "quote": "Tagasipileti reserveerimine, enne viisa saamist ei pea piletit ostma... ",
+        "caption": "Teema avalikust saatkonnast KKK (Norra) "
+      },
+      {
+        "quote": "Lennufirma broneering… reisibroneeringu numbriga… mitte tingimata pileti broneering. ",
+        "caption": "Teema avalikest Schengeni juhistest (Hispaania)"
+      },
+      {
+        "quote": "Kinnitatav lennubroneering… mitte ostetud pilet. ",
+        "caption": "Teema avalikust viisateabest (India) "
+      }
+    ],
+    "faqTitle": "Kas vajate abi? ",
+    "faqFooter": "Veel küsimusi? Alustage broneerimist – teeme aja ja operaatori märkmed teie töö käigus. ",
+    "faqItems": [
+      {
+        "q": "Mis on TempTicket? ",
+        "a": "Teenus, mis aitab teil saada tõelise kontrollitava lennubroneeringu (koos broneeringu viitega, kui lennufirma selle kinnitab) edasireisi ja viisa stsenaariumide jaoks – ilma täishinna eest tasumata ei tohi te seda kasutada. "
+      },
+      {
+        "q": "Kui kaua broneering kehtib? ",
+        "a": "Kehtivus sõltub lennufirma piletihindade reeglitest, kinnipidamise poliitikast või piletimüügi ajagraafikust. Broneerimise ajal tõstame esile, mida saame; alati kinnitage ajastus vastavalt saatkonna või operaatori nõuetele. "
+      },
+      {
+        "q": "Kas ma saan seda lennufirma veebisaidil kontrollida? ",
+        "a": "Kui lennufirma väljastab reaalajas rekordi, saate seda tavaliselt vaadata tema broneeringu haldamise või reisi kontrollimise voost. Kui marsruut ei ole ooteloleku jaoks sobilik, võite vajada kiirpiletit. "
+      },
+      {
+        "q": "Kas see on juriidiline nõustamine või viisatagatis? ",
+        "a": "Nr. Immigratsioonireeglid muutuvad riigiti ja ametnike lõikes. Pakume ainult broneerimisteenust – kontrollige oma olukorda ametlikest allikatest."
+      }
+    ],
+    "ctaTitle": "Reisimine on piisavalt raske. Tee edasitõendamine lihtsamaks ",
+    "ctaPriceLine": "Alates {price} · minutit, mitte oletus ",
+    "footerTagline": "Edasi reisitõend nomaadidele ",
+    "footerServices": "Teenused ",
+    "footerAccount": "Konto ",
+    "footerLegal": "Õiguslik ",
+    "footerBook": "Broneerige broneering ",
+    "footerSignIn": "Logi sisse ",
+    "footerMyBookings": "Minu broneeringud ",
+    "footerTerms": "Tingimused ",
+    "footerPrivacy": "Privaatsus ",
+    "footerCopyright": "Kõik õigused kaitstud.",
+    "footerBackTop": "Tagasi üles ",
+    "ticketFrom": "Alates {price} ",
+    "ticketDeparture": "Väljasõit ",
+    "ticketArrival": "Saabumine ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Reisija ",
+    "ticketPassengerVal": "Nomad · 1 täiskasvanu ",
+    "ticketRecord": "Kirjeldur ",
+    "ticketVerified": "Kontrollitud"
+  }
+}

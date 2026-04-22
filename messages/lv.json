@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — tālāka ceļojuma pierādījums nomadiem ",
+    "defaultDescription": "Reālas, pārbaudāmas lidojumu rezervācijas turpmākajām ceļojumu pārbaudēm. Paredzēts digitālajiem nomadiem. ",
+    "homeTitle": "TempTicket — ceļojuma pierādījums nomadiem ",
+    "homeDescription": "Reālas, pārbaudāmas lidojumu rezervācijas turpmākajām ceļojumu pārbaudēm. Paredzēts digitālajiem nomadiem. ",
+    "bookTitle": "Rezervēt — TempTicket ",
+    "bookDescription": "Atrodiet aizturētu lidojumu un pabeidziet ceļojuma rezervāciju. ",
+    "bookConfirmationTitle": "Maksājums saņemts — TempTicket ",
+    "bookConfirmationDescription": "Mēs apstiprinām jūsu rezervāciju aviokompānijā. ",
+    "loginTitle": "Pierakstīties — TempTicket ",
+    "loginDescription": "Maģiskās saites pierakstīšanās ar 6 ciparu kodu, lai skatītu savus rezervācijas. ",
+    "bookingsTitle": "Manas rezervācijas — TempTicket ",
+    "bookingsDescription": "Pasūtījumi un aviokompāniju atsauces jūsu kontam.",
+    "termsTitle": "Pakalpojuma noteikumi — TempTicket ",
+    "termsDescription": "TempTicket pakalpojumu sniegšanas noteikumi. ",
+    "privacyTitle": "Konfidencialitāte — TempTicket ",
+    "privacyDescription": "Kā TempTicket apstrādā personas datus. "
+  },
+  "SiteHeader": {
+    "brandAlt": "TempTicket ",
+    "myBookings": "Manas rezervācijas ",
+    "admin": "Admin ",
+    "signOut": "Izrakstīties ",
+    "signIn": "Pierakstīties ",
+    "book": "Grāmata "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Valoda ",
+    "language": "Valoda"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Notiek meklēšana… ",
+    "empty": "Netika atrasta neviena vieta. Izmēģiniet citu pareizrakstību vai pilsētu. ",
+    "city": "Pilsēta ",
+    "airport": "Lidosta ",
+    "couldNotSearch": "Nevarēja meklēt vietas. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Step {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Ievadiet savu informāciju ",
+        "body": "Maršruts, datumi un informācija par pasažieri. "
+      },
+      {
+        "label": "02 ",
+        "title": " Veiciet maksājumu ",
+        "body": "Droša izrakstīšanās — cenu noteikšana iepriekš."
+      },
+      {
+        "label": "03 ",
+        "title": "Saņemiet atsauci ",
+        "body": "Pārbaudiet aviokompāniju, kad tā ir tiešraidē. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Izvēlieties izcelsmi un galamērķi no ieteikumiem ",
+    "toastSearchFailed": "Meklēšana neizdevās ",
+    "toastNoPayLater": "Šajā meklēšanā nav jāmaksā vēlāk — izmēģiniet citus datumus vai lidostas. ",
+    "toastOfferExpired": "Piedāvājums beidzies — meklējiet vēlreiz ",
+    "toastPassengerSlots": "Nevarēja ielādēt pasažieru vietas šim piedāvājumam ",
+    "toastLoadOffer": "Nevarēja ielādēt piedāvājumu ",
+    "toastCompleteFields": "Aizpildiet visus pasažieru laukus ",
+    "toastPhoneInvalid": "Ievadiet derīgu tālruņa numuru ",
+    "toastReceiptEmail": "Ievadiet rezervācijas un kvīts e-pasta adresi",
+    "toastEmailInvalid": "Ievadiet derīgu e-pasta adresi ",
+    "toastCheckoutServerError": "Izrakstīšanās neizdevās (servera kļūda {status}) ",
+    "toastCheckoutFailed": "Izrakstīšanās neizdevās ({status}) ",
+    "toastNoPaymentLink": "Checkout neatgrieza maksājuma saiti ",
+    "toastCheckoutConnection": "Izrakstīšanās neizdevās — pārbaudiet savienojumu un mēģiniet vēlreiz ",
+    "back": "Atpakaļ ",
+    "title": "Rezervējiet savu rezervāciju ",
+    "stepFindTitle": "Atrodiet lidojumu ",
+    "stepFindDescription": "Ierakstiet pilsētas, valsts vai lidostas nosaukumu. ",
+    "from": "No ",
+    "to": "Kam ",
+    "placePlaceholder": "Pilsēta, valsts vai lidosta",
+    "swapAria": "Samainīt izcelsmi un galamērķi ",
+    "swapTitle": "Samainīt izcelsmi un galamērķi ",
+    "departureDate": "Izbraukšanas datums ",
+    "searchBlurb": "Vispirms meklējam cenas “maksāt vēlāk” — pabeidziet aviokompānijas rezervāciju pēc tam, kad esat samaksājis mūsu nelielo pakalpojuma maksu. ",
+    "searching": "Notiek meklēšana… ",
+    "findingFare": "Notiek cenas atrašana… ",
+    "searchFlights": "Meklēt lidojumus ",
+    "stepPayTitle": " Pasažiera informācija un maksājums ",
+    "stepPayDescription": "Vārdiem ir jāatbilst ceļošanas dokumentiem. ",
+    "passenger": "Pasažieris {index} ",
+    "genderLabel": "Dzimums (kā norādīts pasē) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Dzimšanas datums ",
+    "firstName": "Vārds(-i) ",
+    "lastName": "Uzvārds(-i) ",
+    "email": "E-pasts ",
+    "emailPlaceholder": "you@example.com ",
+    "emailHint": "Izmanto aviokompānijas rezervācijā un maksājuma kvīts un apstiprinājuma saņemšanai. ",
+    "phone": "Tālrunis ",
+    "dialCodeAria": "Valsts zvanīšanas kods ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Maksājiet pakalpojuma maksu iekšā ",
+    "preparingCheckout": "Notiek izrakstīšanās sagatavošana...",
+    "payButton": "Maksājiet pakalpojuma maksu un rezervi ",
+    "demoOriginLabel": "Suvarnabhumi lidosta (BKK) · Bangkoka, Taizeme ",
+    "demoDestinationLabel": "Kualalumpuras Starptautiskā lidosta (KUL) · Sepanga, Malaizija "
+  },
+  "BookConfirmation": {
+    "backHome": "Atgriezties mājās ",
+    "badge": "Maksājums saņemts ",
+    "title": "Mēs esam par to ",
+    "body": "Mēs apstiprinām jūsu lidojuma rezervāciju ar aviokompāniju. Drīzumā jūs saņemsit e-pasta ziņojumu ar rezervācijas informāciju. ",
+    "detail": "Pārbaudiet iesūtni (un surogātpastu), lai saņemtu apstiprinājumu. Izmantojiet aviokompānijas atsauci pārvadātāja vietnē, ja jums ir nepieciešams pierādījums par tālāko ceļojumu. ",
+    "bookAnother": "Rezervējiet citu ",
+    "signInHistory": "Pierakstieties vēsturei "
+  },
+  "Login": {
+    "title": "Pierakstīties ",
+    "description": "Pierakstieties, lai redzētu rezervācijas, kas ir saistītas ar jūsu kontu vai jūsu e-pastu. Mēs nosūtām 6 ciparu kodu — bez paroles.",
+    "email": "E-pasts ",
+    "sendCode": "Nosūtīt kodu ",
+    "codeLabel": "6 ciparu kods ",
+    "verify": "Pārbaudiet ",
+    "differentEmail": "Izmantojiet citu e-pastu ",
+    "toastSendFailed": "Nevarēja nosūtīt kodu ",
+    "toastCodeSent": "Pārbaudiet e-pastā 6 ciparu kodu ",
+    "toastInvalid": "Nederīgs kods ",
+    "toastSignedIn": "Pierakstījies "
+  },
+  "LoginPage": {
+    "loading": "Notiek ielāde... "
+  },
+  "Bookings": {
+    "title": "Manas rezervācijas ",
+    "subtitle": "Rezervācijas, kas saistītas ar jūsu kontu vai veiktas ar šo e-pasta ziņojumu pirms pierakstīšanās. Pēc maksājuma mēs jums pa e-pastu nosūtām aviokompānijas atsauci.",
+    "newBooking": "Jauna rezervācija ",
+    "orders": "Pavēles ",
+    "ordersDescription": "Izmantojiet aviokompānijas atsauci pārvadātāja vietnē, ja nepieciešams pierādījums par tālāko ceļojumu. ",
+    "empty": "Vēl nav rezervāciju. ",
+    "colCreated": "Izveidots ",
+    "colStatus": "Statuss ",
+    "colAirline": "Aviokompānija ",
+    "colReference": "Atsauce ",
+    "colMode": "Režīms ",
+    "needsAttention": "Nepieciešama uzmanība ",
+    "needsAttentionDescription": "Ja rezervācija pēc maksājuma veikšanas neizdevās, sazinieties ar atbalsta dienestu, norādot ID un Stripe kvīti. "
+  },
+  "Terms": {
+    "title": "Pakalpojuma noteikumi",
+    "lead": "Pēdējoreiz atjaunināts: 2026. gada aprīlī. Šie noteikumi ir tikai sākuma veidne — pirms maksājošo klientu uzaicināšanas lūdziet tos pārskatīt kvalificētam konsultantam. ",
+    "serviceHeading": "Pakalpojums ",
+    "serviceBody": "TempTicket nodrošina maksas pakalpojumu, lai ar mūsu rezervēšanas partneru starpniecību organizētu reālu lidojuma rezervāciju ceļotājiem, kuriem nepieciešama tālāka ceļojuma dokumentācija. Mēs negarantējam nekādu konkrētu imigrācijas vai aviokompāniju iznākumu. Amatpersonas un pārvadātāji piemēro savus noteikumus. ",
+    "legalHeading": "Nav juridiskas konsultācijas ",
+    "legalBody": "Nekas šajā vietnē nav juridisks, imigrācijas vai nodokļu konsultācijas. Ievērojiet likumus un licences, kas attiecas uz jūsu uzņēmumu un jurisdikcijām, kurās jūs tirgojat un pārdodat. ",
+    "paymentsHeading": "Maksājumi un atmaksas ",
+    "paymentsBody": "Pakalpojuma maksa tiek iekasēta izrakstīšanās laikā. Ja nevarēsim pabeigt rezervēto plūsmu pēc veiksmīga maksājuma, mēs sadarbosimies ar jums, lai izstrādātu atmaksu vai alternatīvu piedāvājumu saskaņā ar mūsu publicēto politiku. Maksājumu atdošana var tikt apstrīdēta, kad pakalpojums tika sniegts, kā aprakstīts. ",
+    "useHeading": "Pieņemama lietošana ",
+    "useBody": "Jūs nedrīkstat izmantot pakalpojumu, lai valdībām vai aviokompānijām sniegtu maldinošu informāciju par ceļošanas nodomiem, pārbaudītu zagtus maksājumu veidus vai jebkādā veidā, kas pārkāpj piegādātāja noteikumus vai piemērojamos likumus. ",
+    "liabilityHeading": "Ierobežota atbildība ",
+    "liabilityBody": "Ciktāl to pieļauj likums, TempTicket nav atbildīgs par iekāpšanas atteikumu, ieceļošanas atteikumu, nokavētu pārsēšanos vai netiešiem zaudējumiem, kas radušies pakalpojuma izmantošanas rezultātā. "
+  },
+  "Privacy": {
+    "title": "Privātums",
+    "summary": "Kopsavilkums: mēs apstrādājam e-pastu un ar ceļojumiem saistītus personas datus, lai nodrošinātu kontu, rezervāciju un obligāto kvīšu darbību. Lūdziet, lai padomdevējs šo lapu saskaņotu ar jūsu faktisko datu karti (Neon, Resend, Stripe, Duffel, hostings). ",
+    "collectHeading": "Ko mēs ievācam ",
+    "collectItems": [
+      "E-pasta adrese un sesijas marķieri pierakstīšanai ",
+      "Pasažieru vārdi, dzimšanas datumi, kontaktinformācija, ko pieprasa aviosabiedrības ",
+      "Maksājumu metadati no mūsu maksājumu apstrādātāja ",
+      "Tehniskie žurnāli, kas nepieciešami pakalpojuma darbībai un atkļūdošanai "
+    ],
+    "whyHeading": "Kāpēc mēs to apstrādājam ",
+    "whyBody": "Lai izpildītu mūsu līgumu ar jums, ievērotu juridiskos pienākumus, kur tie ir spēkā, un īstenotu likumīgas intereses (drošība, krāpšanas novēršana, produktu uzlabošana), kas ir līdzsvarotas ar jūsu tiesībām. ",
+    "processorsHeading": "Procesori ",
+    "processorsBody": "Infrastruktūra un pakalpojumu sniedzēji var ietvert datu bāzu mitināšanu (piem., Neon), e-pasta piegādi (piemēram, atkārtoti nosūtīt), maksājumus (piem., Stripe) un lidojumu rezervēšanu (Duffel un aviokompānijas). To noteikumi attiecas arī uz to veiktajām apstrādes daļām. ",
+    "retentionHeading": "Saglabāšana ",
+    "retentionBody": "Mēs saglabājam rezervāciju un norēķinu ierakstus, kas nepieciešami atbalsta, grāmatvedības un juridisko aizturēšanas nodrošināšanai — parasti gadiem, nevis nedēļām, taču precīziem grafikiem ir jāatbilst jūsu politikai.",
+    "rightsHeading": "Tiesības ",
+    "rightsBody": "Atkarībā no jūsu reģiona jums var būt tiesības piekļūt noteiktai apstrādei, labot, dzēst vai iebilst pret to. Sazinieties ar mums uz adresi, kuru publicējat savam uzņēmumam; mēs pārbaudīsim pieprasījumus saskaņā ar likumu. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Maksājums veiksmīgs. ",
+    "bookingsSuccess": "Maksājums saņemts. Jūsu rezervācija tiks atjaunināta pēc brīža. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Atpakaļ uz augšu "
+  },
+  "Home": {
+    "bookNow": "Rezervējiet tūlīt ",
+    "heroBadge": "Tiešraides rezervācijas ",
+    "heroHeadingLead": "Lidojuma rezervēšana ",
+    "heroHeadingAccent": "pārbaudīts minūtēs ",
+    "heroSub": "Reālas lidojumu rezervācijas varat pārbaudīt aviokompāniju vietnē. Ceļošana bez stresa nomadiem. ",
+    "howItWorks": "Kā tas darbojas ",
+    "trustStats": [
+      {
+        "stat": "Protokols",
+        "label": "Tipisks risinājums, kad aviosabiedrības sadarbojas "
+      },
+      {
+        "stat": "Reāls PDR ",
+        "label": "Izsniegšanas brīdī meklējiet to pārvadātājam "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Atbalsti, kad kaut kam vajadzīgs cilvēks "
+      }
+    ],
+    "featuresTitle": "Viss, kas nepieciešams sirdsmieram ",
+    "featuresSub": "Ātrs, pārbaudāms tālāka ceļojuma pierādījums — bez bailēm iegādāties biļeti, kuru neizmantosit. ",
+    "features": [
+      {
+        "title": "Autentiskas atrunas ",
+        "body": "Patiess aviokompānijas ieraksts, kad tiek saņemts apstiprinājums, nevis dekoratīvs PDF. "
+      },
+      {
+        "title": "Tūlītēja piegāde ",
+        "body": "Lielākā daļa plūsmu tiek pabeigtas ātri, lai jūs varētu pievienot pierādījumus tajā pašā dienā. "
+      },
+      {
+        "title": " Pārvadātājs pārbauda",
+        "body": "Izmantojiet aviokompānijas rīkus, lai atvērtu rezervāciju, kad kāds to jautā. "
+      },
+      {
+        "title": "Taupiet naudu ",
+        "body": "Maksājiet nelielu pakalpojuma maksu, nevis atmaksājamu tālsatiksmes lidojumu. "
+      },
+      {
+        "title": "Elastīgi plāni ",
+        "body": "Pielāgojiet datumus, kad jūsu maršruts mainās — aviokompāniju politikas logos. "
+      },
+      {
+        "title": "Cilvēku atbalsts ",
+        "body": "Iestrēgušās cenas un malu gadījumi var pāriet uz mūsu komandu no rindas. "
+      }
+    ],
+    "processTitle": "Vienkāršs rezervēšanas process ",
+    "commonQuestions": "Biežākie jautājumi ",
+    "personasTitle": " ir ideāli piemērots ",
+    "personas": [
+      {
+        "title": "Vīzas pretendenti ",
+        "body": "Kad konsulāti vēlas maršrutu, ne vienmēr apmaksātu cenu."
+      },
+      {
+        "title": "Bieži lidotāji ",
+        "body": "Atkārtots pierādījums aviosabiedrībām, kas ievēro atgriešanas/pārsūtīšanas noteikumus. "
+      },
+      {
+        "title": "Ceļotāji ",
+        "body": "Vienkāršs verifikācijas stāsts robežpārbaudēm un pārvadātāju pārbaudēm. "
+      },
+      {
+        "title": "Digitālie nomadi ",
+        "body": "Esiet elastīgs, neizmantojot autostāvvietas naudu neizmantotajās tālsatiksmes biļetēs. "
+      }
+    ],
+    "socialTitle": "Uzticas ceļotāji visā pasaulē ",
+    "socialNote": "Atsauksmju paraugi — nomainiet pret īstām atsauksmēm, kad tādas ir. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Paraugs · Alekss M. ",
+        "quote": "PNR izrakstījās aviokompānijas vietnē tajā pašā nedēļā, kad es pieteicos. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Paraugs · Leni K. ",
+        "quote": "Tieša plūsma un ātras atbildes, kad jautāju par maršrutu. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Paraugs · Džeimss T. ",
+        "quote": "Man izdevās reģistrēties ar vienvirziena biļešu politiku. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Lielāka elastība, nodrošinot vīzu ",
+    "visaBody": "Daudzās misijās ir aprakstīta maršruta vai rezervācijas pieņemšana, nevis pilnībā apmaksāta biļete. Apstipriniet sava gadījuma oficiālajā vietnē — mēs piedāvājam reālu rezervāciju, kuru varat pārbaudīt, kamēr gaidāt. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Izlasiet oficiālo kontrolsarakstu",
+        "body": "Vēstniecības atšķiras — dažas vēlas rezervēt, citas biļeti. Sāciet ar viņu lapu, nevis emuāru. "
+      },
+      {
+        "n": "2 ",
+        "title": "Saskaņojiet datumus savam stāstam ",
+        "body": "Izvēlieties maršrutu un laiku, kas lieliski saskan ar jūsu iesniegto pieteikumu. "
+      },
+      {
+        "n": "3 ",
+        "title": "Pārbaudiet aviokompāniju ",
+        "body": "Ja ieraksts ir tiešraidē, praktizējiet to paņemt uz augšu operatora vietnē pirms tikšanās. "
+      }
+    ],
+    "embassyPublish": "Ko vēstniecības publicē ",
+    "embassyFigures": [
+      {
+        "quote": "Rezervācija atgriešanās biļetei, nav nepieciešams iegādāties biļeti pirms vīzas saņemšanas... ",
+        "caption": "Tēma no publiskās vēstniecības FAQ (Norvēģija) "
+      },
+      {
+        "quote": "Aviokompānijas rezervācija... ar ceļojuma rezervācijas numuru... ne vienmēr biļetes rezervācija. ",
+        "caption": "Tēma no publiskajām Šengenas vadlīnijām (Spānija)"
+      },
+      {
+        "quote": "Pārbaudāma lidojuma rezervācija... nevis iegādāta biļete. ",
+        "caption": "Tēma no publiskās informācijas par vīzām (Indija) "
+      }
+    ],
+    "faqTitle": "Vai jums nepieciešama palīdzība? ",
+    "faqFooter": "Vai ir vairāk jautājumu? Sāciet rezervāciju — mēs publicējam laiku un operatora piezīmes, kad dodaties. ",
+    "faqItems": [
+      {
+        "q": " Kas ir TempTicket? ",
+        "a": "Pakalpojums, kas palīdz iegūt reālu, pārbaudāmu lidojuma rezervāciju (ar rezervācijas atsauci, kad aviokompānija to apstiprina) tālāka ceļojuma un vīzu scenārijiem — nemaksājot par pilnu cenu, kuru jūs nevarat izmantot. "
+      },
+      {
+        "q": "Cik ilgi ir spēkā rezervācija? ",
+        "a": "Derīgums ir atkarīgs no aviokompānijas tarifu noteikumiem, aizturēšanas politikas vai biļešu pārdošanas laika grafika. Mēs piedāvājam visu, ko varam rezervēšanas laikā; vienmēr apstipriniet laiku, kas atbilst jūsu vēstniecības vai pārvadātāja prasībām. "
+      },
+      {
+        "q": "Vai es varu to pārbaudīt aviokompānijas tīmekļa vietnē? ",
+        "a": "Kad aviokompānija izdod tiešraides ierakstu, parasti varat to meklēt aviokompānijas pārvaldīto rezervāciju vai ceļojumu pārbaudīšanas plūsmā. Ja maršruts nav piemērots aizturēšanai, iespējams, tā vietā būs nepieciešama tūlītēja biļete. "
+      },
+      {
+        "q": "Vai šī juridiskā konsultācija vai vīzas garantija? ",
+        "a": "Nr. Imigrācijas noteikumi mainās atkarībā no valsts un amatpersonas. Mēs sniedzam tikai rezervēšanas pakalpojumu — pārbaudiet oficiālos avotus, lai uzzinātu savu situāciju."
+      }
+    ],
+    "ctaTitle": "Ceļošana ir pietiekami grūta. Padariet tālāku pierādījumu vieglāku ",
+    "ctaPriceLine": "No {price} · minūtes, nevis minējumi ",
+    "footerTagline": "Tālāk ceļošanas pierādījums nomadiem ",
+    "footerServices": "Pakalpojumi ",
+    "footerAccount": "Konts ",
+    "footerLegal": "Juridiskā ",
+    "footerBook": "Rezervējiet ",
+    "footerSignIn": "Pierakstīties ",
+    "footerMyBookings": "Manas rezervācijas ",
+    "footerTerms": "Noteikumi ",
+    "footerPrivacy": "Privātums ",
+    "footerCopyright": " Visas tiesības paturētas.",
+    "footerBackTop": "Atpakaļ uz augšu ",
+    "ticketFrom": "No {price} ",
+    "ticketDeparture": "Izbraukšana ",
+    "ticketArrival": "Ieradīšanās ",
+    "ticketBangkok": "Bankoka ",
+    "ticketTokyo": "Tokija ",
+    "ticketPassenger": "Pasažieris ",
+    "ticketPassengerVal": "Nomad · 1 pieaugušais ",
+    "ticketRecord": "Ierakstu meklētājs ",
+    "ticketVerified": "Pārbaudīts"
+  }
+}

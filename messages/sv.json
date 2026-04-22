@@ -1,1 +1,358 @@
-{}
+{
+  "Metadata": {
+    "defaultTitle": "TempTicket — vidare resebevis för nomader ",
+    "defaultDescription": "Äkta, verifierbara flygreservationer för vidareresekontroller. Byggd för digitala nomader. ",
+    "homeTitle": "TempTicket — vidare resebevis för nomader ",
+    "homeDescription": "Äkta, verifierbara flygreservationer för vidareresekontroller. Byggd för digitala nomader. ",
+    "bookTitle": "Boka en bokning — TempTicket ",
+    "bookDescription": "Hitta ett flygstopp och slutför din vidareresereservation. ",
+    "bookConfirmationTitle": "Betalning mottagen — TempTicket ",
+    "bookConfirmationDescription": "Vi bekräftar din bokning hos flygbolaget. ",
+    "loginTitle": "Logga in — TempTicket ",
+    "loginDescription": "Magisk länkinloggning med en 6-siffrig kod för att se dina bokningar. ",
+    "bookingsTitle": "Mina bokningar — TempTicket ",
+    "bookingsDescription": "Beställningar och flygbolagsreferenser för ditt konto.",
+    "termsTitle": "Användarvillkor — TempTicket ",
+    "termsDescription": "Användarvillkor för TempTicket. ",
+    "privacyTitle": "Sekretess — TempTicket ",
+    "privacyDescription": "Hur TempTicket behandlar personuppgifter. "
+  },
+  "SiteHeader": {
+    "brandAlt": "Templarbiljett ",
+    "myBookings": "Mina bokningar ",
+    "admin": "Admin ",
+    "signOut": "Logga ut ",
+    "signIn": "Logga in ",
+    "book": "Boka "
+  },
+  "LocaleSwitcher": {
+    "ariaLabel": "Språk ",
+    "language": "Språk"
+  },
+  "PlaceAutocomplete": {
+    "searching": "Söker... ",
+    "empty": "Inga platser hittades. Försök med en annan stavning eller stad. ",
+    "city": "Stad ",
+    "airport": "Flygplats ",
+    "couldNotSearch": "Kunde inte söka platser. "
+  },
+  "BookingTimeline": {
+    "stepLabel": "Steg {step} ",
+    "steps": [
+      {
+        "label": "01 ",
+        "title": "Ange dina uppgifter ",
+        "body": "Rutt, datum och passagerarinformation. "
+      },
+      {
+        "label": "02 ",
+        "title": "Gör en betalning ",
+        "body": "Säker utcheckning—prissättning i förskott."
+      },
+      {
+        "label": "03 ",
+        "title": "Få din referens ",
+        "body": "Verifiera på flygbolaget när det är live. "
+      }
+    ]
+  },
+  "BookFlow": {
+    "toastChoosePlaces": "Välj ursprung och destination bland förslagen ",
+    "toastSearchFailed": "Sökningen misslyckades ",
+    "toastNoPayLater": "Inga betal-efter-priser för den här sökningen – prova andra datum eller flygplatser. ",
+    "toastOfferExpired": "Erbjudandet har löpt ut – sök igen ",
+    "toastPassengerSlots": "Kunde inte ladda passagerarplatser för detta erbjudande ",
+    "toastLoadOffer": "Kunde inte ladda erbjudandet ",
+    "toastCompleteFields": "Fyll i alla passagerarfält ",
+    "toastPhoneInvalid": "Ange ett giltigt telefonnummer ",
+    "toastReceiptEmail": "Ange e-post för din bokning och kvitto",
+    "toastEmailInvalid": "Ange en giltig e-postadress ",
+    "toastCheckoutServerError": "Utcheckningen misslyckades (serverfel {status}) ",
+    "toastCheckoutFailed": "Utcheckningen misslyckades ({status}) ",
+    "toastNoPaymentLink": "Kassa returnerade ingen betalningslänk ",
+    "toastCheckoutConnection": "Utcheckningen misslyckades – kontrollera din anslutning och försök igen ",
+    "back": "Tillbaka ",
+    "title": "Boka din bokning ",
+    "stepFindTitle": "Hitta ett flyg ",
+    "stepFindDescription": "Skriv ett namn på en stad, ett land eller en flygplats. ",
+    "from": "Från ",
+    "to": "Till ",
+    "placePlaceholder": "Stad, land eller flygplats",
+    "swapAria": "Byt ursprung och destination ",
+    "swapTitle": "Byt ursprung och destination ",
+    "departureDate": "Avresedatum ",
+    "searchBlurb": "Vi söker efter betalpriser först – slutför flygbolagsbokningen efter att du har betalat vår lilla serviceavgift. ",
+    "searching": "Söker... ",
+    "findingFare": "Hitta ett pris... ",
+    "searchFlights": "Sök flyg ",
+    "stepPayTitle": "Passageraruppgifter & betalning ",
+    "stepPayDescription": "Namn måste stämma överens med resehandlingar. ",
+    "passenger": "Passagerare {index} ",
+    "genderLabel": "Kön (som på pass) ",
+    "genderM": "M",
+    "genderF": "F ",
+    "dob": "Födelsedatum ",
+    "firstName": "Förnamn(n) ",
+    "lastName": "Efternamn ",
+    "email": "Mejla ",
+    "emailPlaceholder": "du@example.com ",
+    "emailHint": "Används på din flygbolagsbokning och för ditt betalningskvitto och bekräftelse. ",
+    "phone": "Telefon ",
+    "dialCodeAria": "Landsnummer ",
+    "phonePlaceholder": "812 345 678 ",
+    "payInLabel": "Betala serviceavgift in ",
+    "preparingCheckout": "Förbereder kassan...",
+    "payButton": "Betala serviceavgift & reservera ",
+    "demoOriginLabel": "Suvarnabhumi Airport (BKK) · Bangkok, Thailand ",
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malaysia "
+  },
+  "BookConfirmation": {
+    "backHome": "Tillbaka till hemmet ",
+    "badge": "Betalning mottagen ",
+    "title": "Vi är på gång ",
+    "body": "Vi bekräftar din flygbokning hos flygbolaget. Du kommer att få ett e-postmeddelande med bokningsinformation inom kort. ",
+    "detail": "Kontrollera din inkorg (och spam) för bekräftelse. Använd flygbolagsreferensen på flygbolagets webbplats när du behöver bevis på vidareresa. ",
+    "bookAnother": "Boka en till ",
+    "signInHistory": "Logga in för historik "
+  },
+  "Login": {
+    "title": "Logga in ",
+    "description": "Logga in för att se bokningar kopplade till ditt konto eller din e-post. Vi skickar en 6-siffrig kod – inget lösenord.",
+    "email": "Mejla ",
+    "sendCode": "Skicka kod ",
+    "codeLabel": "6-siffrig kod ",
+    "verify": "Verifiera ",
+    "differentEmail": "Använd en annan e-post ",
+    "toastSendFailed": "Kunde inte skicka koden ",
+    "toastCodeSent": "Kontrollera din e-post för en 6-siffrig kod ",
+    "toastInvalid": "Ogiltig kod ",
+    "toastSignedIn": "Inloggad "
+  },
+  "LoginPage": {
+    "loading": "Laster... "
+  },
+  "Bookings": {
+    "title": "Mina bokningar ",
+    "subtitle": "Bokning kopplade till ditt konto eller gjorda med detta e-postmeddelande innan du loggade in. Efter betalning skickar vi e-post till flygbolagsreferensen.",
+    "newBooking": "Ny bokning ",
+    "orders": "Beställningar ",
+    "ordersDescription": "Använd flygbolagsreferensen på flygbolagets webbplats när du behöver bevis på vidareresa. ",
+    "empty": "Inga bokningar ännu. ",
+    "colCreated": "Skapat ",
+    "colStatus": "Status ",
+    "colAirline": "Flygbolag ",
+    "colReference": "Referens ",
+    "colMode": "Läge ",
+    "needsAttention": "Behöver uppmärksamhet ",
+    "needsAttentionDescription": "Om en bokning misslyckades efter betalning, kontakta supporten med id och Stripe-kvitto. "
+  },
+  "Terms": {
+    "title": "Användarvillkor",
+    "lead": "Senast uppdaterad: april 2026. Dessa villkor är endast en startmall – låt en kvalificerad advokat granska dem innan du bjuder in betalande kunder. ",
+    "serviceHeading": "Service ",
+    "serviceBody": "TempTicket tillhandahåller en betaltjänst för att ordna en riktig flygbokning genom våra bokningspartners för resenärer som behöver dokumentation om vidareresa. Vi garanterar inte någon speciell immigration eller flygbolagsresultat. Befäl och transportörer tillämpar sina egna regler. ",
+    "legalHeading": "Inte juridisk rådgivning ",
+    "legalBody": "Inget på den här webbplatsen är juridiskt, immigrations- eller skatterådgivning. Följ lagar och licenser som gäller för ditt företag och de jurisdiktioner där du marknadsför och säljer. ",
+    "paymentsHeading": "Betalningar & återbetalningar ",
+    "paymentsBody": "Serviceavgifter debiteras i kassan. Om vi ​​inte kan slutföra det bokade flödet efter en lyckad betalning, kommer vi att arbeta med dig om en återbetalning eller ett alternativt erbjudande enligt vår publicerade policy. Återkrav kan bestridas när tjänsten levererades enligt beskrivningen. ",
+    "useHeading": "Acceptabel användning ",
+    "useBody": "Du får inte använda tjänsten för att missvisa reseavsikter för regeringar eller flygbolag, för att testa stulna betalningsmetoder eller på något sätt som bryter mot leverantörsvillkor eller tillämplig lag. ",
+    "liabilityHeading": "Begränsat ansvar ",
+    "liabilityBody": "I den utsträckning som lagen tillåter, är TempTicket inte ansvarigt för nekad ombordstigning, nekad inträde, missade anslutningar eller indirekta skador som uppstår vid användning av tjänsten. "
+  },
+  "Privacy": {
+    "title": "Sekretess",
+    "summary": "Sammanfattning: Vi behandlar e-post och reserelaterade personuppgifter för att sköta konton, bokningar och obligatoriska kvitton. Låt ombud anpassa den här sidan med din faktiska datakarta (Neon, Resend, Stripe, Duffel, hosting). ",
+    "collectHeading": "Vad vi samlar in ",
+    "collectItems": [
+      "E-postadress och sessionstokens för inloggning ",
+      "Passagerarnas namn, födelsedatum, kontaktuppgifter som krävs av flygbolagen ",
+      "Betalningsmetadata från vår betalningsbehandlare ",
+      "Tekniska loggar som behövs för att driva och felsöka tjänsten "
+    ],
+    "whyHeading": "Varför vi behandlar det ",
+    "whyBody": "För att utföra vårt avtal med dig, följa rättsliga skyldigheter där de gäller, och sträva efter legitima intressen (säkerhet, bedrägeriförebyggande, produktförbättring) balanserat mot dina rättigheter. ",
+    "processorsHeading": "Behandlare ",
+    "processorsBody": "Infrastruktur och leverantörer kan inkludera databasvärd (t.ex. Neon), e-postleverans (t.ex. Skicka om), betalningar (t.ex. Stripe) och flygbokning (Duffel och flygbolag). Deras villkor gäller även för de delar av behandlingen som de utför. ",
+    "retentionHeading": "Behållning ",
+    "retentionBody": "Vi behåller boknings- och faktureringsuppgifter efter behov för support, redovisning och juridiska spärrar – vanligtvis år, inte veckor – men exakta scheman bör matcha din policy.",
+    "rightsHeading": "Rättigheter ",
+    "rightsBody": "Beroende på din region kan du ha rättigheter att komma åt, korrigera, ta bort eller invända mot viss behandling. Kontakta oss på adressen du publicerar för ditt företag; vi kommer att verifiera förfrågningar i enlighet med lag. "
+  },
+  "Toasts": {
+    "paymentSuccess": "Betalning lyckad. ",
+    "bookingsSuccess": "Betalning mottagen. Din bokning kommer att uppdateras inom ett ögonblick. "
+  },
+  "BackToTop": {
+    "ariaLabel": "Tillbaka till toppen "
+  },
+  "Home": {
+    "bookNow": "Boka nu ",
+    "heroBadge": "Livereservationer ",
+    "heroHeadingLead": "Flygbokning ",
+    "heroHeadingAccent": "kontrolleras i protokoll ",
+    "heroSub": "Riktiga flygbokningar kan du verifiera på flygbolagens hemsida. Stressfria resor för nomader. ",
+    "howItWorks": "Hur det fungerar ",
+    "trustStats": [
+      {
+        "stat": "protokoll",
+        "label": "Typisk vändning när flygbolag samarbetar "
+      },
+      {
+        "stat": "Äkta PNR ",
+        "label": "Se upp det på transportören när det utfärdas "
+      },
+      {
+        "stat": "24/7 ",
+        "label": "Stöd när något behöver en människa "
+      }
+    ],
+    "featuresTitle": "Allt du behöver för sinnesfrid ",
+    "featuresSub": "Snabbt, verifierbart vidare resebevis – utan ångesten för att köpa en biljett som du inte kommer att använda. ",
+    "features": [
+      {
+        "title": "Autentiska reservationer ",
+        "body": "Ett äkta flygbolagsrekord när bekräftelse kommer fram – inte en dekorativ PDF. "
+      },
+      {
+        "title": "Omedelbar leverans ",
+        "body": "De flesta flöden går snabbt så att du kan bifoga bevis samma dag. "
+      },
+      {
+        "title": "Carrier-verifierbar",
+        "body": "Använd flygbolagets verktyg för att dra upp bokningen när någon frågar. "
+      },
+      {
+        "title": "Spara pengar ",
+        "body": "Betala en liten serviceavgift istället för en återbetalningsbar långdistansbiljett. "
+      },
+      {
+        "title": "Flexibla planer ",
+        "body": "Justera datum när din resplan ändras – inom flygbolagens policyfönster. "
+      },
+      {
+        "title": "Mänskligt stöd ",
+        "body": "Stickade priser och kantfall kan eskalera till vårt team från kön. "
+      }
+    ],
+    "processTitle": "Enkel bokningsprocess ",
+    "commonQuestions": "Vanliga frågor ",
+    "personasTitle": "är perfekt för ",
+    "personas": [
+      {
+        "title": "Visumsökande ",
+        "body": "När konsulaten vill ha en resplan, inte nödvändigtvis en betald biljett."
+      },
+      {
+        "title": "Frequent flyers ",
+        "body": "Repeterbart bevis för flygbolag som tillämpar regler för retur/vidareresa. "
+      },
+      {
+        "title": "Resenare ",
+        "body": "Enkel verifieringshistoria för gräns- och transportkontroller. "
+      },
+      {
+        "title": "Digitala nomader ",
+        "body": "Var flexibel utan parkeringspengar i outnyttjade långdistanspriser. "
+      }
+    ],
+    "socialTitle": "Betrodd av resenärer över hela världen ",
+    "socialNote": "Exempelrecensioner – byt ut mot riktiga vittnesmål när du har dem. ",
+    "testimonials": [
+      {
+        "flag": "🇺🇸 ",
+        "name": "Exempel · Alex M. ",
+        "quote": "PNR checkade ut på flygbolagets sajt samma vecka som jag ansökte. ",
+        "avatar": "AM"
+      },
+      {
+        "flag": "🇩🇪 ",
+        "name": "Exempel · Leni K. ",
+        "quote": "Riktigt flöde och snabba svar när jag frågade om en rutt. ",
+        "avatar": "LK "
+      },
+      {
+        "flag": "🇬🇧 ",
+        "name": "Exempel · James T. ",
+        "quote": "Fick mig igenom incheckningen med en enkel biljettpolicy. ",
+        "avatar": "JT "
+      }
+    ],
+    "visaTitle": "Större flexibilitet när du säkrar ditt visum ",
+    "visaBody": "Många uppdrag beskriver att acceptera en resplan eller bokning snarare än en fullt betald biljett. Bekräfta på den officiella webbplatsen för ditt ärende – vi tillhandahåller en riktig reservation som du kan verifiera medan du väntar. ",
+    "visaSteps": [
+      {
+        "n": "1 ",
+        "title": "Läs den officiella checklistan",
+        "body": "Ambassaderna skiljer sig åt – vissa vill ha en reservation, andra en biljett. Börja från deras sida, inte en blogg. "
+      },
+      {
+        "n": "2 ",
+        "title": " Matcha datum med din berättelse ",
+        "body": "Välj en rutt och tidpunkt som passar perfekt med den ansökan du lämnar in. "
+      },
+      {
+        "n": "3 ",
+        "title": "Verifiera på flygbolaget ",
+        "body": "Om skivan är live, öva på att dra upp den på operatörens webbplats innan ditt möte. "
+      }
+    ],
+    "embassyPublish": "Vad ambassader publicerar ",
+    "embassyFigures": [
+      {
+        "quote": "Reservation för returbiljett, inte nödvändigt att köpa biljett innan visum beviljas... ",
+        "caption": "Tema från offentliga ambassadens vanliga frågor (Norge) "
+      },
+      {
+        "quote": "Flygbolagsbokning... med resebokningsnummer... inte nödvändigtvis en biljettbokning. ",
+        "caption": "Tema från offentlig Schengen-vägledning (Spanien)"
+      },
+      {
+        "quote": "Verifierbar flygbokning... inte en köpt biljett. ",
+        "caption": "Tema från offentlig viseringsinformation (Indien) "
+      }
+    ],
+    "faqTitle": "Behöver du hjälp? ",
+    "faqFooter": "Fler frågor? Starta en bokning – vi visar timing och transportnoteringar när du går. ",
+    "faqItems": [
+      {
+        "q": "Vad är TempTicket? ",
+        "a": "En tjänst som hjälper dig att få en riktig, verifierbar flygbokning (med en bokningsreferens när flygbolaget bekräftar det) för vidareresor och visumscenarier – utan att betala för ett helt biljettpris som du inte får använda. "
+      },
+      {
+        "q": "Hur länge är bokningen giltig? ",
+        "a": "Giltigheten beror på flygbolagets biljettpriser, hållpolicy eller biljetttidslinje. Vi lägger fram vad vi kan under bokningen; bekräfta alltid timing mot din ambassad eller operatörskrav. "
+      },
+      {
+        "q": "Kan jag verifiera det på flygbolagets webbplats? ",
+        "a": "När flygbolaget utfärdar ett liverekord kan du vanligtvis slå upp det på deras hantera-bokning eller check-my-trip-flöde. Om en rutt inte är berättigad till en spärr kan du behöva en omedelbar biljett istället. "
+      },
+      {
+        "q": "Är detta juridisk rådgivning eller viseringsgaranti? ",
+        "a": "Nr. Immigrationsreglerna ändras beroende på land och tjänsteman. Vi tillhandahåller endast en bokningstjänst – kolla officiella källor för din situation."
+      }
+    ],
+    "ctaTitle": "Att resa är svårt nog. Gör bevis på vidare enklare med ",
+    "ctaPriceLine": "Från {price} · minuter, inte gissningar ",
+    "footerTagline": "Vidare resebevis för nomader ",
+    "footerServices": "Tjänster ",
+    "footerAccount": "Konto ",
+    "footerLegal": "Juridik ",
+    "footerBook": "Boka en bokning ",
+    "footerSignIn": "Logga in ",
+    "footerMyBookings": "Mina bokningar ",
+    "footerTerms": "Villkor ",
+    "footerPrivacy": "Sekretess ",
+    "footerCopyright": "Alla rättigheter reserverade.",
+    "footerBackTop": "Tillbaka till toppen ",
+    "ticketFrom": "Från {price} ",
+    "ticketDeparture": "Avresa ",
+    "ticketArrival": "Ankomst ",
+    "ticketBangkok": "Bangkok ",
+    "ticketTokyo": "Tokyo ",
+    "ticketPassenger": "Passagerare ",
+    "ticketPassengerVal": "Nomad · 1 vuxen ",
+    "ticketRecord": "Postlokaliserare ",
+    "ticketVerified": "Verifierad"
+  }
+}

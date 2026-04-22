@@ -1,3 +1,4 @@
+import { trackServerEventSafe } from "@/lib/analytics/track";
 import { getDuffel } from "@/lib/duffel";
 import { orderOffersHoldCheapestFirst } from "@/lib/flights/pick-best-hold-offer";
 import { NextResponse } from "next/server";
@@ -75,6 +76,18 @@ export async function POST(req: Request) {
     }));
 
     const offersOrdered = orderOffersHoldCheapestFirst(slim);
+
+    const firstSlice = parsed.data.slices[0];
+    if (firstSlice) {
+      void trackServerEventSafe("search_performed", {
+        path: "/api/flights/search",
+        payload: {
+          origin: firstSlice.origin,
+          destination: firstSlice.destination,
+          date: firstSlice.departure_date,
+        },
+      });
+    }
 
     return NextResponse.json({
       offer_request_id: res.data.id,
