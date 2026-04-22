@@ -497,7 +497,9 @@ function ItineraryDocument({ order }: { order: Order }) {
 
 export async function renderItineraryPdf(input: ItineraryPdfInput) {
   const element = createElement(ItineraryDocument, { order: input.order });
-  return renderToBuffer(element);
+  // @react-pdf's renderToBuffer expects a Document element; our wrapper
+  // renders one but the generic types don't line up without a cast.
+  return renderToBuffer(element as unknown as Parameters<typeof renderToBuffer>[0]);
 }
 
 export function itineraryFilename(order: Order) {
