@@ -6,6 +6,7 @@ import { createDuffelOrderForBooking } from "@/lib/booking/finalize";
 import { db } from "@/lib/db";
 import { bookings, type Booking } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
+import { formatDuffelError } from "@/lib/duffel-error";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
@@ -25,11 +26,23 @@ function getSnapshot(booking: Booking): OfferSnapshot | null {
   return raw as OfferSnapshot;
 }
 
-/** Duffel offer-request → pick the cheapest offer matching the original itinerary. */
-async function findFreshOffer(
-  booking: Booking,
-  snapshot: OfferSnapshot,
-): Promise<
+/** Returns true if the offer is still bookable (exists and not expired). */
+async function isExistingOfferBookable(offerId: string): Promise<boolean> {
+  try {
+    const duffel = getDuffel();
+    const res = await duffel.offers.get(offerId);
+    const expiresAt = res.data.expires_at
+      ? new Date(res.data.expires_at).getTime()
+      : 0;
+    if (!expiresAt) return false;
+    return expiresAt - Date.now() > 30_000;
+  } catch {
+    return false;
+  }
+}
+
+/** Duffel offer-request → pick the cheapest matching offer. */
+async function findFreshOffer(snapshot: OfferSnapshot): Promise<
   | {
       ok: true;
       offerId: string;
@@ -99,11 +112,28 @@ async function findFreshOffer(
       totalCurrency: pick.total_currency,
     };
   } catch (e) {
-    return {
-      ok: false,
-      message: e instanceof Error ? e.message : "Offer re-search failed",
-    };
+    return { ok: false, message: formatDuffelError(e) };
   }
+}
+
+async function swapOfferOnBooking(
+  booking: Booking,
+  offerId: string,
+  amount: string,
+  currency: string,
+): Promise<Booking> {
+  await db()
+    .update(bookings)
+    .set({ duffelOfferId: offerId, updatedAt: new Date() })
+    .where(eq(bookings.id, booking.id));
+
+  await logBookingEvent({ id: booking.id }, "retry_offer_replaced", {
+    new_offer_id: offerId,
+    new_total_amount: amount,
+    new_total_currency: currency,
+  });
+
+  return { ...booking, duffelOfferId: offerId };
 }
 
 export async function POST(
@@ -132,9 +162,7 @@ export async function POST(
     booking.status !== BOOKING_STATUS.PAID
   ) {
     return NextResponse.json(
-      {
-        error: `Cannot retry a booking in status "${booking.status}"`,
-      },
+      { error: `Cannot retry a booking in status "${booking.status}"` },
       { status: 409 },
     );
   }
@@ -149,6 +177,15 @@ export async function POST(
     );
   }
 
+  if (booking.duffelOrderId) {
+    return NextResponse.json(
+      {
+        error: `Booking already has Duffel order ${booking.duffelOrderId}; nothing to retry.`,
+      },
+      { status: 409 },
+    );
+  }
+
   await logBookingEvent({ id: booking.id }, "retry_started", {
     actor: session.email,
     previous_status: booking.status,
@@ -156,63 +193,71 @@ export async function POST(
   });
 
   let working = booking;
-  const duffel = getDuffel();
-  let existingOfferAlive = false;
-  try {
-    await duffel.offers.get(booking.duffelOfferId);
-    existingOfferAlive = true;
-  } catch {
-    existingOfferAlive = false;
-  }
+  const snapshot = getSnapshot(booking);
 
-  if (!existingOfferAlive) {
-    const snapshot = getSnapshot(booking);
-    if (!snapshot || snapshot.slices.length === 0) {
-      return NextResponse.json(
-        {
-          error:
-            "Original offer has expired and no search snapshot is stored. Refund instead.",
-        },
-        { status: 409 },
-      );
-    }
-    const fresh = await findFreshOffer(booking, snapshot);
-    if (!fresh.ok) {
-      await logBookingEvent({ id: booking.id }, "retry_no_offer", {
-        message: fresh.message,
+  // 1. If the existing offer is still bookable, try it first.
+  const existingAlive = await isExistingOfferBookable(booking.duffelOfferId);
+
+  if (existingAlive) {
+    const first = await createDuffelOrderForBooking(
+      working,
+      "/api/admin/bookings/retry",
+    );
+    if (first.ok) {
+      return NextResponse.json({
+        ok: true,
+        order_id: first.order.id,
+        booking_reference: first.order.booking_reference ?? null,
       });
-      return NextResponse.json({ error: fresh.message }, { status: 409 });
     }
 
-    await db()
-      .update(bookings)
-      .set({
-        duffelOfferId: fresh.offerId,
-        updatedAt: new Date(),
-      })
-      .where(eq(bookings.id, booking.id));
-
-    await logBookingEvent({ id: booking.id }, "retry_offer_replaced", {
-      new_offer_id: fresh.offerId,
-      new_total_amount: fresh.totalAmount,
-      new_total_currency: fresh.totalCurrency,
+    // First attempt failed; if we have a snapshot, try a fresh search.
+    if (!snapshot || snapshot.slices.length === 0) {
+      return NextResponse.json({ error: first.message }, { status: 502 });
+    }
+    await logBookingEvent({ id: booking.id }, "retry_first_attempt_failed", {
+      message: first.message,
     });
-
-    working = { ...booking, duffelOfferId: fresh.offerId };
   }
 
-  const result = await createDuffelOrderForBooking(
+  // 2. Fresh-search fallback.
+  if (!snapshot || snapshot.slices.length === 0) {
+    return NextResponse.json(
+      {
+        error:
+          "Original offer has expired and no search snapshot is stored for this booking. Refund instead.",
+      },
+      { status: 409 },
+    );
+  }
+
+  const fresh = await findFreshOffer(snapshot);
+  if (!fresh.ok) {
+    await logBookingEvent({ id: booking.id }, "retry_no_offer", {
+      message: fresh.message,
+    });
+    return NextResponse.json({ error: fresh.message }, { status: 409 });
+  }
+
+  working = await swapOfferOnBooking(
+    working,
+    fresh.offerId,
+    fresh.totalAmount,
+    fresh.totalCurrency,
+  );
+
+  const second = await createDuffelOrderForBooking(
     working,
     "/api/admin/bookings/retry",
   );
 
-  if (!result.ok) {
-    return NextResponse.json({ error: result.message }, { status: 502 });
+  if (!second.ok) {
+    return NextResponse.json({ error: second.message }, { status: 502 });
   }
 
   return NextResponse.json({
     ok: true,
-    order_id: result.order.id,
-    booking_reference: result.order.booking_reference ?? null,
+    order_id: second.order.id,
+    booking_reference: second.order.booking_reference ?? null,
   });
 }

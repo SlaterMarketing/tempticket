@@ -4,6 +4,7 @@ import { trackInternalEventSafe } from "@/lib/analytics/track";
 import { db } from "@/lib/db";
 import { bookings, users, type Booking } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
+import { formatDuffelError } from "@/lib/duffel-error";
 import { getEmailFrom, getResend } from "@/lib/resend";
 import type {
   CreateOrderPassenger,
@@ -100,7 +101,7 @@ export async function createDuffelOrderForBooking(
     await finalizeBooking(booking.id, orderRes.data, source);
     return { ok: true, order: orderRes.data };
   } catch (e) {
-    const message = e instanceof Error ? e.message : "Duffel booking failed";
+    const message = formatDuffelError(e);
     console.error("Duffel order failed", e);
     await db()
       .update(bookings)
