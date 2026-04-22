@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { useRouter } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 export function LoginForm() {
@@ -21,11 +21,17 @@ export function LoginForm() {
   const router = useRouter();
   const params = useSearchParams();
   const next = params.get("next") ?? "/account/bookings";
+  const linkError = params.get("error");
 
   const [step, setStep] = useState<"email" | "code">("email");
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (linkError === "expired_link") toast.error(t("linkErrorExpired"));
+    else if (linkError === "invalid_link") toast.error(t("linkErrorInvalid"));
+  }, [linkError, t]);
 
   async function sendCode(e: React.FormEvent) {
     e.preventDefault();
@@ -34,7 +40,7 @@ export function LoginForm() {
       const res = await fetch("/api/auth/send-code", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, next }),
       });
       if (!res.ok) {
         toast.error(t("toastSendFailed"));
@@ -105,6 +111,9 @@ export function LoginForm() {
                 onChange={(e) => setCode(e.target.value)}
                 required
               />
+              <p className="text-xs text-muted-foreground">
+                {t("codeHelper")}
+              </p>
             </div>
             <Button type="submit" className="w-full" disabled={loading}>
               {t("verify")}

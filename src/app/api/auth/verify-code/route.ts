@@ -1,17 +1,8 @@
-import {
-  ANALYTICS_VISITOR_COOKIE,
-  PG_UUID_RE,
-} from "@/lib/analytics/constants";
-import { linkVisitorToUser, trackServerEventSafe } from "@/lib/analytics/track";
+import { completeLogin } from "@/lib/auth/complete-login";
 import { db } from "@/lib/db";
-import { loginCodes, users } from "@/lib/db/schema";
-import {
-  createSessionToken,
-  setSessionCookie,
-} from "@/lib/auth/session";
+import { loginCodes } from "@/lib/db/schema";
 import bcrypt from "bcryptjs";
 import { and, desc, eq, isNull } from "drizzle-orm";
-import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -37,12 +28,7 @@ export async function POST(req: Request) {
   const rows = await db()
     .select()
     .from(loginCodes)
-    .where(
-      and(
-        eq(loginCodes.email, email),
-        isNull(loginCodes.usedAt),
-      ),
-    )
+    .where(and(eq(loginCodes.email, email), isNull(loginCodes.usedAt)))
     .orderBy(desc(loginCodes.createdAt))
     .limit(5);
 
@@ -57,7 +43,10 @@ export async function POST(req: Request) {
   }
 
   if (!matched) {
-    return NextResponse.json({ error: "Invalid or expired code" }, { status: 401 });
+    return NextResponse.json(
+      { error: "Invalid or expired code" },
+      { status: 401 },
+    );
   }
 
   await db()
@@ -65,32 +54,7 @@ export async function POST(req: Request) {
     .set({ usedAt: new Date() })
     .where(eq(loginCodes.id, matched.id));
 
-  const existing = await db().select().from(users).where(eq(users.email, email)).limit(1);
-  const isNewUser = !existing[0];
-  let userId: string;
-  if (existing[0]) {
-    userId = existing[0].id;
-  } else {
-    const inserted = await db()
-      .insert(users)
-      .values({ email })
-      .returning({ id: users.id });
-    userId = inserted[0]!.id;
-  }
-
-  const jar = await cookies();
-  const vid = jar.get(ANALYTICS_VISITOR_COOKIE)?.value?.trim();
-  if (vid && PG_UUID_RE.test(vid)) {
-    await linkVisitorToUser(vid, userId);
-  }
-
-  const token = await createSessionToken({ sub: userId, email });
-  await setSessionCookie(token);
-
-  void trackServerEventSafe(isNewUser ? "signup" : "login", {
-    path: "/login",
-    payload: { email_domain: email.split("@")[1] ?? null },
-  });
+  await completeLogin(email, "/login");
 
   return NextResponse.json({ ok: true });
 }

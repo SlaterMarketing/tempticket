@@ -107,6 +107,7 @@ export default async function BookingsPage({
                   <TableHead>{t("colAirline")}</TableHead>
                   <TableHead>{t("colReference")}</TableHead>
                   <TableHead>{t("colMode")}</TableHead>
+                  <TableHead className="text-right">{t("colItinerary")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -123,6 +124,18 @@ export default async function BookingsPage({
                       {b.duffelBookingRef ?? b.duffelOrderId ?? "—"}
                     </TableCell>
                     <TableCell>{b.orderType}</TableCell>
+                    <TableCell className="text-right">
+                      {b.duffelOrderId ? (
+                        <a
+                          href={`/api/bookings/${b.id}/itinerary`}
+                          className="text-sm font-medium text-primary underline underline-offset-2 hover:opacity-80"
+                        >
+                          {t("downloadPdf")}
+                        </a>
+                      ) : (
+                        <span className="text-muted-foreground text-xs">—</span>
+                      )}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>

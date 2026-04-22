@@ -20,6 +20,8 @@ export const loginCodes = pgTable("login_codes", {
   id: uuid("id").primaryKey().defaultRandom(),
   email: text("email").notNull(),
   codeHash: text("code_hash").notNull(),
+  /** SHA-256 hash of the opaque magic-link token. Null for legacy rows. */
+  tokenHash: text("token_hash"),
   expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
   usedAt: timestamp("used_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true })

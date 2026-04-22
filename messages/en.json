@@ -117,16 +117,19 @@
   },
   "Login": {
     "title": "Sign in",
-    "description": "Sign in to see bookings linked to your account or your email. We send a 6-digit code—no password.",
+    "description": "Sign in to see bookings linked to your account or your email. We send a 6-digit code and a one-click sign-in link—no password.",
     "email": "Email",
     "sendCode": "Send code",
     "codeLabel": "6-digit code",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
     "verify": "Verify",
     "differentEmail": "Use a different email",
     "toastSendFailed": "Could not send code",
-    "toastCodeSent": "Check your email for a 6-digit code",
+    "toastCodeSent": "Check your email for a code and one-click sign-in link",
     "toastInvalid": "Invalid code",
-    "toastSignedIn": "Signed in"
+    "toastSignedIn": "Signed in",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Loading…"
@@ -143,6 +146,8 @@
     "colAirline": "Airline",
     "colReference": "Reference",
     "colMode": "Mode",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF",
     "needsAttention": "Needs attention",
     "needsAttentionDescription": "If a booking failed after payment, contact support with the id and Stripe receipt."
   },

@@ -5,6 +5,11 @@ import { db } from "@/lib/db";
 import { bookings, users, type Booking } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
 import { formatDuffelError } from "@/lib/duffel-error";
+import { buildConfirmationEmail } from "@/lib/booking/confirmation-email";
+import {
+  itineraryFilename,
+  renderItineraryPdf,
+} from "@/lib/booking/itinerary-pdf";
 import { getEmailFrom, getResend } from "@/lib/resend";
 import type {
   CreateOrderPassenger,
@@ -187,15 +192,41 @@ async function finalizeBooking(
   }
   if (!to) return;
 
-  const appName = process.env.NEXT_PUBLIC_APP_NAME ?? "TempTicket";
-  const ref = order.booking_reference ?? order.id;
+  let pdfBuffer: Buffer | null = null;
+  try {
+    pdfBuffer = await renderItineraryPdf({ order, bookingId });
+  } catch (err) {
+    console.error("Itinerary PDF render failed", err);
+    await logBookingEvent({ id: bookingId }, "itinerary_pdf_failed", {
+      message: err instanceof Error ? err.message : String(err),
+    });
+  }
+
+  const appUrl = (
+    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
+  ).replace(/\/$/, "");
+  const { subject, html, text } = buildConfirmationEmail({
+    order,
+    bookingId,
+    itineraryUrl: `${appUrl}/api/bookings/${bookingId}/itinerary`,
+  });
+
   try {
     const resend = getResend();
     await resend.emails.send({
       from: getEmailFrom(),
       to,
-      subject: `${appName} — Your reservation details`,
-      text: `Your booking reference is ${ref}. Keep order id ${order.id} for support. Check the airline's website with your name and this reference to verify the reservation. This is documentation for onward-travel requirements only—not legal or immigration advice.`,
+      subject,
+      html,
+      text,
+      attachments: pdfBuffer
+        ? [
+            {
+              filename: itineraryFilename(order),
+              content: pdfBuffer,
+            },
+          ]
+        : undefined,
     });
   } catch (err) {
     console.error("Booking confirmation email failed", err);
