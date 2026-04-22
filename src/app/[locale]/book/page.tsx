@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { BookFlow } from "./book-flow";
 import { trackServerEventSafe } from "@/lib/analytics/track";
+import { isAdminEmail } from "@/lib/auth/admin";
 import { getSession } from "@/lib/auth/session";
 import { buildPublicMetadata } from "@/lib/i18n/metadata";
 
@@ -31,7 +32,12 @@ export default async function BookPage({
   void trackServerEventSafe("book_page_view", {
     path: `/${locale}/book`,
   });
+  const isAdmin = session ? isAdminEmail(session.email) : false;
   return (
-    <BookFlow receiptEmailDefault={session?.email ?? null} locale={locale} />
+    <BookFlow
+      receiptEmailDefault={session?.email ?? null}
+      locale={locale}
+      isAdmin={isAdmin}
+    />
   );
 }

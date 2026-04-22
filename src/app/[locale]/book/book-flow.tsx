@@ -107,9 +107,11 @@ function TypeformStep({
 export function BookFlow({
   receiptEmailDefault,
   locale,
+  isAdmin = false,
 }: {
   receiptEmailDefault: string | null;
   locale: string;
+  isAdmin?: boolean;
 }) {
   const t = useTranslations("BookFlow");
   const [originPlace, setOriginPlace] = useState<SelectedPlace | null>({
@@ -142,6 +144,7 @@ export function BookFlow({
   const [currency, setCurrency] = useState<CheckoutCurrencyCode>("usd");
 
   const [wizardStep, setWizardStep] = useState<1 | 2>(1);
+  const [adminSkipStripe, setAdminSkipStripe] = useState(false);
 
   const [dialCodeOptions, setDialCodeOptions] =
     useState(COUNTRY_DIAL_CODES);
@@ -320,6 +323,8 @@ export function BookFlow({
       return;
     }
 
+    const useAdminTest = isAdmin && adminSkipStripe;
+
     setLoadingCheckout(true);
     try {
       const res = await fetch("/api/checkout/session", {
@@ -331,9 +336,15 @@ export function BookFlow({
           currency,
           receipt_email: receipt,
           locale,
+          ...(useAdminTest ? { admin_test: true } : {}),
         }),
       });
-      let data: { error?: string; url?: string } = {};
+      let data: {
+        error?: string;
+        url?: string;
+        admin_test?: boolean;
+        booking_reference?: string | null;
+      } = {};
       try {
         data = (await res.json()) as typeof data;
       } catch {
@@ -346,6 +357,15 @@ export function BookFlow({
           data.error ?? t("toastCheckoutFailed", { status: res.status }),
         );
         setLoadingCheckout(false);
+        return;
+      }
+      if (data.admin_test && data.url) {
+        toast.success(
+          data.booking_reference
+            ? `Admin test booking confirmed: ${data.booking_reference}`
+            : "Admin test booking confirmed",
+        );
+        window.location.href = data.url;
         return;
       }
       if (data.url) {
@@ -699,29 +719,46 @@ export function BookFlow({
                       </SelectContent>
                     </Select>
                   </div>
-                  <Button
-                    type="button"
-                    className={cn(primaryButtonClass, "gap-2 self-stretch sm:self-auto")}
-                    disabled={loadingCheckout}
-                    aria-busy={loadingCheckout}
-                    onClick={startCheckout}
-                  >
-                    {loadingCheckout ? (
-                      <>
-                        {t("preparingCheckout")}
-                        <Loader2
-                          className="size-4 shrink-0 animate-spin opacity-90"
-                          aria-hidden
+                  <div className="flex flex-col items-stretch gap-3 sm:items-end">
+                    {isAdmin ? (
+                      <label className="flex items-center gap-2 rounded-lg border border-dashed border-amber-400/60 bg-amber-50/80 px-3 py-2 text-xs font-medium text-amber-900 shadow-sm">
+                        <input
+                          type="checkbox"
+                          className="size-4 accent-amber-600"
+                          checked={adminSkipStripe}
+                          onChange={(e) => setAdminSkipStripe(e.target.checked)}
                         />
-                      </>
-                    ) : (
-                      <>
-                        <CreditCard className="size-4 opacity-90" aria-hidden />
-                        {t("payButton")}
-                        <ChevronRight className="size-4 opacity-90" aria-hidden />
-                      </>
-                    )}
-                  </Button>
+                        <span>Admin test — skip Stripe, book Duffel directly</span>
+                      </label>
+                    ) : null}
+                    <Button
+                      type="button"
+                      className={cn(primaryButtonClass, "gap-2 self-stretch sm:self-auto")}
+                      disabled={loadingCheckout}
+                      aria-busy={loadingCheckout}
+                      onClick={startCheckout}
+                    >
+                      {loadingCheckout ? (
+                        <>
+                          {adminSkipStripe && isAdmin
+                            ? "Booking directly…"
+                            : t("preparingCheckout")}
+                          <Loader2
+                            className="size-4 shrink-0 animate-spin opacity-90"
+                            aria-hidden
+                          />
+                        </>
+                      ) : (
+                        <>
+                          <CreditCard className="size-4 opacity-90" aria-hidden />
+                          {adminSkipStripe && isAdmin
+                            ? "Book without Stripe"
+                            : t("payButton")}
+                          <ChevronRight className="size-4 opacity-90" aria-hidden />
+                        </>
+                      )}
+                    </Button>
+                  </div>
                 </div>
               </div>
             </TypeformStep>

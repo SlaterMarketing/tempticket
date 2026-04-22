@@ -26,12 +26,17 @@ export default async function BookConfirmationPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ session_id?: string }>;
+  searchParams: Promise<{
+    session_id?: string;
+    admin_test?: string;
+    booking_id?: string;
+  }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("BookConfirmation");
   const sp = await searchParams;
+  const isAdminTest = sp.admin_test === "1";
 
   const primary = cn(
     buttonVariants({ size: "lg" }),
@@ -56,6 +61,22 @@ export default async function BookConfirmationPage({
         </Link>
 
         <ConfirmationToast sessionId={sp.session_id} />
+
+        {isAdminTest ? (
+          <div className="mt-6 rounded-lg border border-dashed border-amber-500/70 bg-amber-50/90 px-4 py-3 text-sm text-amber-900">
+            <p className="font-semibold">Admin test booking</p>
+            <p className="mt-1 text-amber-900/80">
+              Stripe was skipped; the Duffel order was created directly.
+              {sp.booking_id ? (
+                <>
+                  {" "}
+                  Booking id:{" "}
+                  <span className="font-mono text-xs">{sp.booking_id}</span>
+                </>
+              ) : null}
+            </p>
+          </div>
+        ) : null}
 
         <section className="mt-8 overflow-hidden rounded-2xl border border-[color:var(--brand-blue)]/10 bg-feature-card-sky shadow-[0_20px_50px_-14px_rgba(34,98,187,0.18)] ring-1 ring-[color:var(--brand-blue)]/8 md:mt-10 md:rounded-3xl">
           <div className="p-6 md:p-8">

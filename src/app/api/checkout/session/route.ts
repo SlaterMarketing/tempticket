@@ -4,9 +4,11 @@ import {
   ANALYTICS_VISITOR_COOKIE,
   PG_UUID_RE,
 } from "@/lib/analytics/constants";
-import { trackServerEventSafe } from "@/lib/analytics/track";
+import { trackInternalEventSafe, trackServerEventSafe } from "@/lib/analytics/track";
+import { isAdminEmail } from "@/lib/auth/admin";
 import { getSession } from "@/lib/auth/session";
 import { routing } from "@/i18n/routing";
+import { createDuffelOrderForBooking } from "@/lib/booking/finalize";
 import { logBookingEvent } from "@/lib/booking/log";
 import { BOOKING_STATUS } from "@/lib/booking/status";
 import { db } from "@/lib/db";
@@ -41,6 +43,8 @@ const bodySchema = z.object({
   receipt_email: z.string().email(),
   /** BCP 47 tag; used to build locale-prefixed Stripe return URLs. */
   locale: z.string().optional(),
+  /** Admin-only: skip Stripe and create the Duffel order directly. Server re-checks the session. */
+  admin_test: z.boolean().optional(),
 });
 
 async function resolveBookingUserId(sub: string | undefined) {
@@ -147,12 +151,26 @@ export async function POST(req: Request) {
       owner: offer.owner?.iata_code ?? null,
     };
 
+    const adminTestRequested = parsed.data.admin_test === true;
+    const isAdminSession = session ? isAdminEmail(session.email) : false;
+    const adminTestMode = adminTestRequested && isAdminSession;
+
+    if (adminTestRequested && !isAdminSession) {
+      return NextResponse.json(
+        { error: "Admin test mode requires an admin session." },
+        { status: 403 },
+      );
+    }
+
     const inserted = await db()
       .insert(bookings)
       .values({
         userId: bookingUserId,
         customerEmail: receiptEmail,
-        status: BOOKING_STATUS.PENDING_CHECKOUT,
+        status: adminTestMode
+          ? BOOKING_STATUS.PAID
+          : BOOKING_STATUS.PENDING_CHECKOUT,
+        stripePaymentStatus: adminTestMode ? "admin_test" : null,
         duffelOfferId: offer.id,
         orderType: duffelOrderMode,
         passengersJson: JSON.stringify(passengersWithTitle),
@@ -163,6 +181,9 @@ export async function POST(req: Request) {
           offer_total_amount: offer.total_amount,
           offer_total_currency: offer.total_currency,
           offer_snapshot: offerSnapshot,
+          ...(adminTestMode
+            ? { adminTest: true, adminTestActor: session?.email ?? null }
+            : {}),
           ...analyticsIds,
         },
       })
@@ -172,6 +193,7 @@ export async function POST(req: Request) {
     await logBookingEvent({ id: bookingId }, "checkout_started", {
       offer_id: offer.id,
       duffel_order_mode: duffelOrderMode,
+      admin_test: adminTestMode,
     });
     void trackServerEventSafe("checkout_started", {
       path: "/api/checkout/session",
@@ -180,8 +202,62 @@ export async function POST(req: Request) {
         offer_id: offer.id,
         currency: parsed.data.currency,
         service_fee_cents: feeCents,
+        admin_test: adminTestMode,
       },
     });
+
+    if (adminTestMode) {
+      await logBookingEvent({ id: bookingId }, "admin_test_skip_stripe", {
+        actor: session?.email ?? null,
+      });
+      void trackInternalEventSafe({
+        name: "checkout_completed",
+        visitorId:
+          "analyticsVisitorId" in analyticsIds
+            ? analyticsIds.analyticsVisitorId
+            : null,
+        sessionId:
+          "analyticsSessionId" in analyticsIds
+            ? analyticsIds.analyticsSessionId
+            : null,
+        userId: bookingUserId,
+        path: "/api/checkout/session",
+        payload: {
+          booking_id: bookingId,
+          admin_test: true,
+        },
+      });
+
+      const freshRows = await db()
+        .select()
+        .from(bookings)
+        .where(eq(bookings.id, bookingId))
+        .limit(1);
+      const freshBooking = freshRows[0]!;
+      const result = await createDuffelOrderForBooking(
+        freshBooking,
+        "/api/checkout/session (admin_test)",
+      );
+
+      if (!result.ok) {
+        return NextResponse.json(
+          {
+            admin_test: true,
+            error: `Admin test booking failed at Duffel: ${result.message}`,
+            booking_id: bookingId,
+          },
+          { status: 502 },
+        );
+      }
+
+      return NextResponse.json({
+        admin_test: true,
+        booking_id: bookingId,
+        order_id: result.order.id,
+        booking_reference: result.order.booking_reference ?? null,
+        url: `${appUrl}${localePath}/book/confirmation?admin_test=1&booking_id=${bookingId}`,
+      });
+    }
 
     const stripe = getStripe();
     const checkoutSession = await stripe.checkout.sessions.create({
