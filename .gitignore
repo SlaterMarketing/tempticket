@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local DB dumps (migration / backup)
+neon-backup.dump
+*.pgdump

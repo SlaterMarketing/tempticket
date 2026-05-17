@@ -1,0 +1,23 @@
+# deps & build output
+node_modules
+.next
+out
+
+# git / IDE
+.git
+.gitignore
+.cursor
+
+# env & secrets (inject via Dokploy / runtime)
+.env
+.env.*
+
+# dumps & tooling noise
+neon-backup.dump
+*.pgdump
+coverage
+*.tsbuildinfo
+
+# misc
+README.md
+.vercel

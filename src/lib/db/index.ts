@@ -1,21 +1,23 @@
-import { neon } from "@neondatabase/serverless";
-import { drizzle, type NeonHttpDatabase } from "drizzle-orm/neon-http";
+import { drizzle, type PostgresJsDatabase } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
 import * as schema from "./schema";
 
-let sqlInstance: ReturnType<typeof neon> | null = null;
-let dbInstance: NeonHttpDatabase<typeof schema> | undefined;
+let sqlInstance: ReturnType<typeof postgres> | null = null;
+let dbInstance: PostgresJsDatabase<typeof schema> | undefined;
 
 function getSql() {
   if (!process.env.DATABASE_URL) {
     throw new Error("DATABASE_URL is not set");
   }
   if (!sqlInstance) {
-    sqlInstance = neon(process.env.DATABASE_URL);
+    sqlInstance = postgres(process.env.DATABASE_URL, {
+      prepare: false,
+    });
   }
   return sqlInstance;
 }
 
-export function db(): NeonHttpDatabase<typeof schema> {
+export function db(): PostgresJsDatabase<typeof schema> {
   if (!dbInstance) {
     dbInstance = drizzle(getSql(), { schema });
   }
