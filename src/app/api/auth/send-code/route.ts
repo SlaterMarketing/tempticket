@@ -3,6 +3,7 @@ import { loginCodes } from "@/lib/db/schema";
 import { OTP_TTL_MINUTES } from "@/lib/auth/constants";
 import { buildLoginEmail } from "@/lib/auth/login-email";
 import { getEmailFrom, getResend } from "@/lib/resend";
+import { getServerSiteUrl } from "@/lib/site-url";
 import bcrypt from "bcryptjs";
 import { createHash, randomBytes } from "node:crypto";
 import { eq } from "drizzle-orm";
@@ -58,9 +59,7 @@ export async function POST(req: Request) {
 
     insertedId = inserted?.id;
 
-    const appUrl = (
-      process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-    ).replace(/\/$/, "");
+    const appUrl = getServerSiteUrl();
     const magicLinkUrl = new URL(`${appUrl}/api/auth/magic`);
     magicLinkUrl.searchParams.set("email", email);
     magicLinkUrl.searchParams.set("token", token);

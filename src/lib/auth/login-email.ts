@@ -1,3 +1,5 @@
+import { getServerSiteUrl } from "@/lib/site-url";
+
 const BRAND_BLUE = "#2262bb";
 const BRAND_GREEN = "#38aa90";
 const MUTED = "#6b7280";
@@ -6,12 +8,6 @@ const CARD_ACCENT = "#2b5da8";
 const PAGE_BG = "#f5f7fb";
 
 const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME ?? "TempTicket";
-
-function appUrl() {
-  return (
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-  ).replace(/\/$/, "");
-}
 
 function escapeHtml(s: string) {
   return s
@@ -34,7 +30,7 @@ export function buildLoginEmail({
   ttlMinutes,
 }: LoginEmailInput): { subject: string; html: string; text: string } {
   const subject = `Your ${APP_NAME} sign-in code: ${code}`;
-  const logoUrl = `${appUrl()}/tempticket.png`;
+  const logoUrl = `${getServerSiteUrl()}/tempticket.png`;
   const supportEmail = `support@${process.env.EMAIL_DOMAIN ?? "tempticket.com"}`;
 
   const digitBlocks = code

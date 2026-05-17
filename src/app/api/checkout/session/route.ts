@@ -15,6 +15,7 @@ import { db } from "@/lib/db";
 import { bookings, users } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
 import { checkoutCurrencySchema, serviceFeeForCurrency } from "@/lib/pricing";
+import { getServerSiteUrl } from "@/lib/site-url";
 import { getStripe } from "@/lib/stripe";
 import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
@@ -105,9 +106,7 @@ export async function POST(req: Request) {
     const duffelOrderMode = requiresInstant ? "instant" : "pay_later";
 
     const feeCents = serviceFeeForCurrency(parsed.data.currency);
-    const appUrl = (
-      process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-    ).replace(/\/$/, "");
+    const appUrl = getServerSiteUrl();
     const locale =
       parsed.data.locale && hasLocale(routing.locales, parsed.data.locale)
         ? parsed.data.locale

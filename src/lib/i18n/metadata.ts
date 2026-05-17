@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
+import { getServerSiteUrl } from "@/lib/site-url";
 
 function appBase(): URL {
-  return new URL(
-    process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ?? "http://localhost:3000",
-  );
+  return new URL(getServerSiteUrl());
 }
 
 /**

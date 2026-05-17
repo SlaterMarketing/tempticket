@@ -11,6 +11,7 @@ import { rtlLocales } from "@/i18n/config";
 import { routing } from "@/i18n/routing";
 import { isAdminEmail } from "@/lib/auth/admin";
 import { getSession } from "@/lib/auth/session";
+import { getServerSiteUrl } from "@/lib/site-url";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -36,10 +37,7 @@ export async function generateMetadata({
   if (!hasLocale(routing.locales, locale)) notFound();
   const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") ??
-        "http://localhost:3000",
-    ),
+    metadataBase: new URL(getServerSiteUrl()),
     title: t("defaultTitle"),
     description: t("defaultDescription"),
     icons: {

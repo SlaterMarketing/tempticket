@@ -11,6 +11,7 @@ import {
   renderItineraryPdf,
 } from "@/lib/booking/itinerary-pdf";
 import { getEmailFrom, getResend } from "@/lib/resend";
+import { getServerSiteUrl } from "@/lib/site-url";
 import type {
   CreateOrderPassenger,
   Order,
@@ -202,9 +203,7 @@ async function finalizeBooking(
     });
   }
 
-  const appUrl = (
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-  ).replace(/\/$/, "");
+  const appUrl = getServerSiteUrl();
   const { subject, html, text } = buildConfirmationEmail({
     order,
     bookingId,

@@ -1,4 +1,5 @@
 import type { Order } from "@duffel/api/dist/booking/Orders/OrdersTypes";
+import { getServerSiteUrl } from "@/lib/site-url";
 
 type SegmentPassenger = {
   cabin_class?: string | null;
@@ -15,12 +16,6 @@ const CARD_ACCENT = "#2b5da8";
 const PAGE_BG = "#f5f7fb";
 
 const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME ?? "TempTicket";
-
-function appUrl() {
-  return (
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-  ).replace(/\/$/, "");
-}
 
 function escapeHtml(s: string) {
   return s
@@ -106,8 +101,8 @@ export function buildConfirmationEmail(
   const allPassengerNames = order.passengers.map((p) => passengerDisplay(p));
   const pnr = order.booking_reference ?? order.id;
   const airlineName = order.owner?.name ?? "—";
-  const logoUrl = `${appUrl()}/tempticket.png`;
-  const accountUrl = `${appUrl()}/account/bookings`;
+  const logoUrl = `${getServerSiteUrl()}/tempticket.png`;
+  const accountUrl = `${getServerSiteUrl()}/account/bookings`;
   const supportEmail = `support@${process.env.EMAIL_DOMAIN ?? "tempticket.com"}`;
 
   const subject = buildConfirmationEmailSubject(order);
