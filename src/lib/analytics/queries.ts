@@ -23,12 +23,28 @@ export type AnalyticsQueryRange = {
 const FUNNEL_STEPS = [
   "page_view",
   "book_page_view",
+  "search_attempted",
+  "search_failed",
   "search_performed",
   "offer_viewed",
   "checkout_started",
   "checkout_completed",
   "booking_confirmed",
 ] as const;
+
+/** Short labels for admin funnel chart (avoid technical event names). */
+export const FUNNEL_STEP_LABELS: Record<(typeof FUNNEL_STEPS)[number], string> =
+  {
+    page_view: "Any page view",
+    book_page_view: "Book flights page",
+    search_attempted: "Submitted flight search",
+    search_failed: "Search error (no offers)",
+    search_performed: "Offers returned",
+    offer_viewed: "Offer details opened",
+    checkout_started: "Checkout started",
+    checkout_completed: "Checkout paid",
+    booking_confirmed: "Booking confirmed",
+  };
 
 const PAID_STATUSES = [
   BOOKING_STATUS.PAID,

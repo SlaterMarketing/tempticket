@@ -37,6 +37,18 @@ export async function POST(req: Request) {
     );
   }
 
+  const firstSliceForAnalytics = parsed.data.slices[0];
+  if (firstSliceForAnalytics) {
+    void trackServerEventSafe("search_attempted", {
+      path: "/api/flights/search",
+      payload: {
+        origin: firstSliceForAnalytics.origin,
+        destination: firstSliceForAnalytics.destination,
+        date: firstSliceForAnalytics.departure_date,
+      },
+    });
+  }
+
   try {
     const duffel = getDuffel();
     const res = await duffel.offerRequests.create({
@@ -77,14 +89,13 @@ export async function POST(req: Request) {
 
     const offersOrdered = orderOffersHoldCheapestFirst(slim);
 
-    const firstSlice = parsed.data.slices[0];
-    if (firstSlice) {
+    if (firstSliceForAnalytics) {
       void trackServerEventSafe("search_performed", {
         path: "/api/flights/search",
         payload: {
-          origin: firstSlice.origin,
-          destination: firstSlice.destination,
-          date: firstSlice.departure_date,
+          origin: firstSliceForAnalytics.origin,
+          destination: firstSliceForAnalytics.destination,
+          date: firstSliceForAnalytics.departure_date,
         },
       });
     }
@@ -95,6 +106,16 @@ export async function POST(req: Request) {
     });
   } catch (e) {
     console.error("Duffel search error", e);
+    if (firstSliceForAnalytics) {
+      void trackServerEventSafe("search_failed", {
+        path: "/api/flights/search",
+        payload: {
+          origin: firstSliceForAnalytics.origin,
+          destination: firstSliceForAnalytics.destination,
+          date: firstSliceForAnalytics.departure_date,
+        },
+      });
+    }
     return NextResponse.json(
       { error: "Flight search failed. Try different dates or airports." },
       { status: 502 },

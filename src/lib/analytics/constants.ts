@@ -24,6 +24,8 @@ export const ANALYTICS_EVENT_NAMES = [
   "signup",
   "login",
   "book_page_view",
+  "search_attempted",
+  "search_failed",
   "search_performed",
   "offer_viewed",
   "checkout_started",
