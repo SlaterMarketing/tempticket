@@ -21,6 +21,10 @@ import {
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import {
+  FlightReservationTicket,
+  type FlightTicketOfferPreview,
+} from "@/components/flight-reservation-ticket";
+import {
   PlaceAutocomplete,
   type SelectedPlace,
 } from "@/components/place-autocomplete";
@@ -64,7 +68,7 @@ type OfferPassenger = {
 const fieldShell =
   "rounded-xl border-2 border-[color:var(--brand-blue)]/12 bg-white/90 shadow-sm transition focus-within:border-[color:var(--brand-blue)]/35 focus-within:shadow-md";
 
-const STEP_TOTAL = 2;
+const STEP_TOTAL = 3;
 
 function TypeformStep({
   title,
@@ -143,7 +147,7 @@ export function BookFlow({
   const [fullPassengers, setFullPassengers] = useState<OfferPassenger[]>([]);
   const [currency, setCurrency] = useState<CheckoutCurrencyCode>("usd");
 
-  const [wizardStep, setWizardStep] = useState<1 | 2>(1);
+  const [wizardStep, setWizardStep] = useState<1 | 2 | 3>(1);
   const [adminSkipStripe, setAdminSkipStripe] = useState(false);
 
   const [dialCodeOptions, setDialCodeOptions] =
@@ -195,6 +199,10 @@ export function BookFlow({
   );
 
   function wizardGoBack() {
+    if (wizardStep === 3) {
+      setWizardStep(2);
+      return;
+    }
     if (wizardStep === 2) {
       setWizardStep(1);
       setSelected(null);
@@ -524,6 +532,33 @@ export function BookFlow({
           ) : null}
 
           {wizardStep === 2 && selected && fullPassengers.length > 0 ? (
+            <TypeformStep
+              title={t("stepTicketTitle")}
+              description={t("stepTicketDescription")}
+              panelClass="bg-feature-card-sky"
+              contentClassName="flex min-h-0 flex-1 flex-col"
+            >
+              <div className="flex min-h-0 flex-1 flex-col gap-8">
+                <FlightReservationTicket
+                  offer={selected as FlightTicketOfferPreview}
+                  locale={locale}
+                  className="shrink-0"
+                />
+                <div className="mt-auto flex justify-end pt-2">
+                  <Button
+                    type="button"
+                    className={cn(primaryButtonClass, "gap-2")}
+                    onClick={() => setWizardStep(3)}
+                  >
+                    {t("ticketContinue")}
+                    <ChevronRight className="size-4 opacity-90" aria-hidden />
+                  </Button>
+                </div>
+              </div>
+            </TypeformStep>
+          ) : null}
+
+          {wizardStep === 3 && selected && fullPassengers.length > 0 ? (
             <TypeformStep
               title={t("stepPayTitle")}
               description={t("stepPayDescription")}
