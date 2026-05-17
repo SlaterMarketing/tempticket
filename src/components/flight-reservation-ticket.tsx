@@ -131,22 +131,26 @@ export function FlightReservationTicket({
               </p>
             </div>
           </div>
-          <div className="text-right">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-              {t("ticketListedFare")}
-            </p>
-            <p className="font-mono text-lg font-semibold tabular-nums tracking-tight text-muted-foreground line-through decoration-muted-foreground/75 decoration-2 sm:text-xl">
-              {totalLabel || "—"}
-            </p>
-            <p className="mt-3 text-[10px] font-semibold uppercase tracking-wider text-[color:var(--brand-green)]">
-              {t("ticketYouPay")}
-            </p>
-            <p className="font-mono text-2xl font-bold tabular-nums tracking-tight text-[color:var(--brand-blue)] sm:text-3xl">
-              {feeFormatted}
-            </p>
-            <p className="mt-1 text-[11px] font-semibold tracking-wide text-muted-foreground">
-              {appName}
-            </p>
+          <div className="flex max-w-full flex-row flex-wrap items-start justify-end gap-x-8 gap-y-5 sm:gap-x-10">
+            <div className="min-w-0 shrink-0 text-right">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                {t("ticketListedFare")}
+              </p>
+              <p className="font-mono text-lg font-semibold tabular-nums tracking-tight text-muted-foreground line-through decoration-muted-foreground/75 decoration-2 sm:text-xl">
+                {totalLabel || "—"}
+              </p>
+            </div>
+            <div className="min-w-0 shrink-0 border-l border-dashed border-[color:var(--brand-blue)]/22 pl-6 text-right sm:pl-8">
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-[color:var(--brand-green)]">
+                {t("ticketYouPay")}
+              </p>
+              <p className="font-mono text-2xl font-bold tabular-nums tracking-tight text-[color:var(--brand-blue)] sm:text-3xl">
+                {feeFormatted}
+              </p>
+              <p className="mt-1 text-[11px] font-semibold tracking-wide text-muted-foreground">
+                {appName}
+              </p>
+            </div>
           </div>
         </div>
 
@@ -202,10 +206,6 @@ export function FlightReservationTicket({
             );
           })}
         </div>
-
-        <p className="mt-8 border-t border-[color:var(--brand-blue)]/12 pt-5 text-center text-xs leading-relaxed text-muted-foreground">
-          {t("ticketFootnote")}
-        </p>
       </div>
     </div>
   );

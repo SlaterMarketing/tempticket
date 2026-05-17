@@ -93,7 +93,6 @@
     "ticketYouPay": "You pay",
     "ticketDepart": "Departure",
     "ticketArriveAirport": "Arrival",
-    "ticketFootnote": "The crossed-out figure is the fare shown for this offer. Checkout collects only our service fee until the airline booking is confirmed. Final times and carriers come from the airline after checkout. Names on the next step must match travel documents.",
     "ticketContinue": "Continue to passenger details",
     "stepPayTitle": "Passenger details & payment",
     "stepPayDescription": "Names must match travel documents.",
