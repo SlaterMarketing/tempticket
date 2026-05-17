@@ -2,7 +2,34 @@
 
 import { Plane } from "lucide-react";
 import { useTranslations } from "next-intl";
+import {
+  type CheckoutCurrencyCode,
+  serviceFeeForCurrency,
+} from "@/lib/pricing";
 import { cn } from "@/lib/utils";
+
+const ZERO_DECIMAL_CURRENCIES = new Set(["jpy", "krw"]);
+
+function formatMinorCurrency(
+  minorUnits: number,
+  currencyCode: string,
+  locale: string,
+): string {
+  const upper = currencyCode.toUpperCase();
+  const lc = currencyCode.toLowerCase();
+  const zeroDecimal = ZERO_DECIMAL_CURRENCIES.has(lc);
+  const value = zeroDecimal ? minorUnits : minorUnits / 100;
+  try {
+    return new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: upper,
+      minimumFractionDigits: zeroDecimal ? 0 : 2,
+      maximumFractionDigits: zeroDecimal ? 0 : 2,
+    }).format(value);
+  } catch {
+    return `${upper} ${value}`;
+  }
+}
 
 export type FlightTicketOfferPreview = {
   total_amount: string;
@@ -57,14 +84,20 @@ function carriersForSlice(slice: FlightTicketOfferPreview["slices"][0]): string 
 export function FlightReservationTicket({
   offer,
   locale,
+  checkoutCurrency,
   className,
 }: {
   offer: FlightTicketOfferPreview;
   locale: string;
+  /** Pay-in currency from book flow — service fee matches Stripe checkout. */
+  checkoutCurrency: CheckoutCurrencyCode;
   className?: string;
 }) {
   const t = useTranslations("BookFlow");
+  const appName = process.env.NEXT_PUBLIC_APP_NAME ?? "TempTicket";
   const totalLabel = `${offer.total_currency?.toUpperCase() ?? ""} ${offer.total_amount}`.trim();
+  const feeMinor = serviceFeeForCurrency(checkoutCurrency);
+  const feeFormatted = formatMinorCurrency(feeMinor, checkoutCurrency, locale);
 
   return (
     <div
@@ -100,10 +133,19 @@ export function FlightReservationTicket({
           </div>
           <div className="text-right">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-              {t("ticketTotalLabel")}
+              {t("ticketListedFare")}
             </p>
-            <p className="font-mono text-xl font-bold tabular-nums tracking-tight text-[color:var(--brand-blue)] sm:text-2xl">
+            <p className="font-mono text-lg font-semibold tabular-nums tracking-tight text-muted-foreground line-through decoration-muted-foreground/75 decoration-2 sm:text-xl">
               {totalLabel || "—"}
+            </p>
+            <p className="mt-3 text-[10px] font-semibold uppercase tracking-wider text-[color:var(--brand-green)]">
+              {t("ticketYouPay")}
+            </p>
+            <p className="font-mono text-2xl font-bold tabular-nums tracking-tight text-[color:var(--brand-blue)] sm:text-3xl">
+              {feeFormatted}
+            </p>
+            <p className="mt-1 text-[11px] font-semibold tracking-wide text-muted-foreground">
+              {appName}
             </p>
           </div>
         </div>

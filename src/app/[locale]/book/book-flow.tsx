@@ -33,6 +33,7 @@ import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import {
+  CHECKOUT_CURRENCY_CODES,
   CHECKOUT_CURRENCY_OPTIONS,
   type CheckoutCurrencyCode,
 } from "@/lib/pricing";
@@ -278,6 +279,13 @@ export function BookFlow({
       }
       setFullPassengers(pax);
       refreshPassengerDefaults(pax);
+      const oc = offer.total_currency?.trim().toLowerCase();
+      if (
+        oc &&
+        (CHECKOUT_CURRENCY_CODES as readonly string[]).includes(oc)
+      ) {
+        setCurrency(oc as CheckoutCurrencyCode);
+      }
       setWizardStep(2);
     } catch {
       toast.error(t("toastLoadOffer"));
@@ -542,6 +550,7 @@ export function BookFlow({
                 <FlightReservationTicket
                   offer={selected as FlightTicketOfferPreview}
                   locale={locale}
+                  checkoutCurrency={currency}
                   className="shrink-0"
                 />
                 <div className="mt-auto flex justify-end pt-2">
