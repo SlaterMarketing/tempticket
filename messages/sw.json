@@ -104,7 +104,16 @@
     "preparingCheckout": "Inatayarisha malipo...",
     "payButton": "Lipa ada ya huduma na akiba ",
     "demoOriginLabel": "Uwanja wa ndege wa Suvarnabhumi (BKK) · Bangkok, Thailand ",
-    "demoDestinationLabel": "Uwanja wa Ndege wa Kimataifa wa Kuala Lumpur (KUL) · Sepang, Malaysia "
+    "demoDestinationLabel": "Uwanja wa Ndege wa Kimataifa wa Kuala Lumpur (KUL) · Sepang, Malaysia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Rudi nyumbani ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Haikuweza kutuma msimbo ",
     "toastCodeSent": "Angalia barua pepe yako kwa msimbo wa tarakimu 6 ",
     "toastInvalid": "Msimbo batili ",
-    "toastSignedIn": "Umeingia "
+    "toastSignedIn": "Umeingia ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Inapakia... "
@@ -144,7 +156,9 @@
     "colReference": "Rejea ",
     "colMode": "Modi ",
     "needsAttention": "Inahitaji umakini ",
-    "needsAttentionDescription": "Kama uhifadhi haukufaulu baada ya malipo, wasiliana na usaidizi ukitumia kitambulisho na risiti ya Stripe. "
+    "needsAttentionDescription": "Kama uhifadhi haukufaulu baada ya malipo, wasiliana na usaidizi ukitumia kitambulisho na risiti ya Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Masharti ya huduma",

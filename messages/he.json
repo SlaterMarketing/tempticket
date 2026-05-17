@@ -104,7 +104,16 @@
     "preparingCheckout": "מכין את התשלום...",
     "payButton": "שלם דמי שירות והזמנת מקום ",
     "demoOriginLabel": "שדה התעופה סוברנבהומי (BKK) · בנגקוק, תאילנד ",
-    "demoDestinationLabel": "שדה התעופה הבינלאומי של קואלה לומפור (KUL) · ספאנג, מלזיה "
+    "demoDestinationLabel": "שדה התעופה הבינלאומי של קואלה לומפור (KUL) · ספאנג, מלזיה ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "חזרה לבית ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "לא ניתן לשלוח קוד ",
     "toastCodeSent": "בדוק באימייל שלך קוד בן 6 ספרות ",
     "toastInvalid": "קוד לא חוקי ",
-    "toastSignedIn": "נכנס "
+    "toastSignedIn": "נכנס ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "טוען... "
@@ -144,7 +156,9 @@
     "colReference": "הפניה ",
     "colMode": "מצב ",
     "needsAttention": "צריך תשומת לב ",
-    "needsAttentionDescription": "אם הזמנה נכשלה לאחר התשלום, צור קשר עם התמיכה עם המזהה וקבלת ה-Stripe. "
+    "needsAttentionDescription": "אם הזמנה נכשלה לאחר התשלום, צור קשר עם התמיכה עם המזהה וקבלת ה-Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "תנאי שירות",

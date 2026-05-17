@@ -104,7 +104,16 @@
     "preparingCheckout": "Se pregătește checkout...",
     "payButton": "Plătiți taxa de serviciu și rezervare ",
     "demoOriginLabel": "Aeroportul Suvarnabhumi (BKK) · Bangkok, Thailanda ",
-    "demoDestinationLabel": "Aeroportul Internațional Kuala Lumpur (KUL) · Sepang, Malaezia "
+    "demoDestinationLabel": "Aeroportul Internațional Kuala Lumpur (KUL) · Sepang, Malaezia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Înapoi la casă ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nu s-a putut trimite codul ",
     "toastCodeSent": "Verificați e-mailul pentru un cod din 6 cifre ",
     "toastInvalid": "Cod nevalid ",
-    "toastSignedIn": "Conectat "
+    "toastSignedIn": "Conectat ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Se încarcă... "
@@ -144,7 +156,9 @@
     "colReference": "Referință ",
     "colMode": "Mod ",
     "needsAttention": "Necesită atenție ",
-    "needsAttentionDescription": "Dacă o rezervare a eșuat după plată, contactați asistența cu id-ul și chitanța Stripe. "
+    "needsAttentionDescription": "Dacă o rezervare a eșuat după plată, contactați asistența cu id-ul și chitanța Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Termeni și condiții",

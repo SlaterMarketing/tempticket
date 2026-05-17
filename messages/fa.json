@@ -104,7 +104,16 @@
     "preparingCheckout": " در حال آماده سازی تسویه حساب…",
     "payButton": "پرداخت هزینه خدمات و رزرو ",
     "demoOriginLabel": "فرودگاه سووارنابومی (BKK) · بانکوک، تایلند ",
-    "demoDestinationLabel": "فرودگاه بین المللی کوالالامپور (KUL) · سپانگ، مالزی "
+    "demoDestinationLabel": "فرودگاه بین المللی کوالالامپور (KUL) · سپانگ، مالزی ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "بازگشت به خانه ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "کد ارسال نشد ",
     "toastCodeSent": " ایمیل خود را برای یک کد 6 رقمی بررسی کنید ",
     "toastInvalid": "کد نامعتبر است ",
-    "toastSignedIn": "ورود به سیستم "
+    "toastSignedIn": "ورود به سیستم ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "درحال بارگیری… "
@@ -144,7 +156,9 @@
     "colReference": "مرجع ",
     "colMode": "حالت ",
     "needsAttention": " نیاز به توجه دارد ",
-    "needsAttentionDescription": "اگر رزرو پس از پرداخت انجام نشد، با شناسه و رسید Stripe با پشتیبانی تماس بگیرید. "
+    "needsAttentionDescription": "اگر رزرو پس از پرداخت انجام نشد، با شناسه و رسید Stripe با پشتیبانی تماس بگیرید. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": " شرایط خدمات",

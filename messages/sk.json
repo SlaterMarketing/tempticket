@@ -104,7 +104,16 @@
     "preparingCheckout": "Príprava pokladne…",
     "payButton": "Zaplaťte servisný poplatok a rezervu ",
     "demoOriginLabel": "Letisko Suvarnabhumi (BKK) · Bangkok, Thajsko ",
-    "demoDestinationLabel": " Medzinárodné letisko Kuala Lumpur (KUL) · Sepang, Malajzia "
+    "demoDestinationLabel": " Medzinárodné letisko Kuala Lumpur (KUL) · Sepang, Malajzia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Späť domov ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nepodarilo sa odoslať kód ",
     "toastCodeSent": "Skontrolujte svoj e-mail pre 6-miestny kód ",
     "toastInvalid": "Neplatný kód ",
-    "toastSignedIn": "Prihlásený "
+    "toastSignedIn": "Prihlásený ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Načítavam... "
@@ -144,7 +156,9 @@
     "colReference": "Odkaz ",
     "colMode": "Režim ",
     "needsAttention": "Vyžaduje pozornosť ",
-    "needsAttentionDescription": "Ak rezervácia po zaplatení zlyhala, kontaktujte podporu a uveďte ID a potvrdenie Stripe. "
+    "needsAttentionDescription": "Ak rezervácia po zaplatení zlyhala, kontaktujte podporu a uveďte ID a potvrdenie Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Podmienky služby",

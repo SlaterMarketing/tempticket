@@ -104,7 +104,16 @@
     "preparingCheckout": "ચેકઆઉટની તૈયારી કરી રહ્યાં છીએ…",
     "payButton": "પે સેવા ફી અને અનામત ",
     "demoOriginLabel": "સુવર્ણભૂમિ એરપોર્ટ (BKK) · બેંગકોક, થાઇલેન્ડ ",
-    "demoDestinationLabel": "કુઆલા લમ્પુર ઇન્ટરનેશનલ એરપોર્ટ (KUL) · સેપાંગ, મલેશિયા "
+    "demoDestinationLabel": "કુઆલા લમ્પુર ઇન્ટરનેશનલ એરપોર્ટ (KUL) · સેપાંગ, મલેશિયા ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": " ઘરે પાછા ",
@@ -126,7 +135,10 @@
     "toastSendFailed": " કોડ મોકલી શકાયો નથી ",
     "toastCodeSent": "6-અંકના કોડ માટે તમારી ઇમેઇલ તપાસો ",
     "toastInvalid": "અમાન્ય કોડ ",
-    "toastSignedIn": " સાઇન ઇન કર્યું "
+    "toastSignedIn": " સાઇન ઇન કર્યું ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "લોડ કરી રહ્યું છે... "
@@ -144,7 +156,9 @@
     "colReference": " સંદર્ભ ",
     "colMode": "મોડ ",
     "needsAttention": " ધ્યાનની જરૂર છે ",
-    "needsAttentionDescription": "જો ચુકવણી પછી બુકિંગ નિષ્ફળ જાય, તો ID અને સ્ટ્રાઇપ રસીદ સાથે સપોર્ટનો સંપર્ક કરો. "
+    "needsAttentionDescription": "જો ચુકવણી પછી બુકિંગ નિષ્ફળ જાય, તો ID અને સ્ટ્રાઇપ રસીદ સાથે સપોર્ટનો સંપર્ક કરો. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": " સેવાની શરતો",

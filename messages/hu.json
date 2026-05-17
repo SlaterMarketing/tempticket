@@ -104,7 +104,16 @@
     "preparingCheckout": "Fizetés előkészítése…",
     "payButton": "Szolgáltatási díj és tartalék fizetése ",
     "demoOriginLabel": "Suvarnabhumi repülőtér (BKK) · Bangkok, Thaiföld ",
-    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malajzia "
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malajzia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Vissza a főoldalra ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nem sikerült elküldeni a kódot ",
     "toastCodeSent": "E-mailben keresse meg a 6 számjegyű kódot ",
     "toastInvalid": "Érvénytelen kód ",
-    "toastSignedIn": "Bejelentkezve "
+    "toastSignedIn": "Bejelentkezve ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Betöltés… "
@@ -144,7 +156,9 @@
     "colReference": "Referencia ",
     "colMode": "Mód ",
     "needsAttention": "Figyelmet igényel ",
-    "needsAttentionDescription": "Ha a foglalás fizetés után meghiúsult, forduljon az ügyfélszolgálathoz az azonosítóval és a Stripe nyugtával. "
+    "needsAttentionDescription": "Ha a foglalás fizetés után meghiúsult, forduljon az ügyfélszolgálathoz az azonosítóval és a Stripe nyugtával. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Szolgáltatási feltételek",

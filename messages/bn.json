@@ -104,7 +104,16 @@
     "preparingCheckout": " চেকআউটের প্রস্তুতি চলছে...",
     "payButton": "পে সেবা ফি এবং রিজার্ভ ",
     "demoOriginLabel": "সুবর্ণভূমি বিমানবন্দর (BKK) · ব্যাংকক, থাইল্যান্ড ",
-    "demoDestinationLabel": "কুয়ালালামপুর আন্তর্জাতিক বিমানবন্দর (KUL) · সেপাং, মালয়েশিয়া "
+    "demoDestinationLabel": "কুয়ালালামপুর আন্তর্জাতিক বিমানবন্দর (KUL) · সেপাং, মালয়েশিয়া ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "বাড়িতে ফিরে যান ",
@@ -126,7 +135,10 @@
     "toastSendFailed": " কোড পাঠানো যায়নি ",
     "toastCodeSent": " একটি 6-সংখ্যার কোডের জন্য আপনার ইমেল পরীক্ষা করুন ",
     "toastInvalid": "অবৈধ কোড ",
-    "toastSignedIn": "সাইন ইন "
+    "toastSignedIn": "সাইন ইন ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "লোড হচ্ছে... "
@@ -144,7 +156,9 @@
     "colReference": " রেফারেন্স ",
     "colMode": "মোড ",
     "needsAttention": " মনোযোগ প্রয়োজন ",
-    "needsAttentionDescription": " পেমেন্টের পরে যদি বুকিং ব্যর্থ হয়, তাহলে আইডি এবং স্ট্রাইপ রসিদ সহ সহায়তার সাথে যোগাযোগ করুন। "
+    "needsAttentionDescription": " পেমেন্টের পরে যদি বুকিং ব্যর্থ হয়, তাহলে আইডি এবং স্ট্রাইপ রসিদ সহ সহায়তার সাথে যোগাযোগ করুন। ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "পরিষেবার শর্তাবলী",

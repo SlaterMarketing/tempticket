@@ -104,7 +104,16 @@
     "preparingCheckout": "చెక్‌అవుట్‌ను సిద్ధం చేస్తోంది...",
     "payButton": " సేవా రుసుము & రిజర్వ్ చెల్లించండి ",
     "demoOriginLabel": "సువర్ణభూమి విమానాశ్రయం (BKK) · బ్యాంకాక్, థాయిలాండ్ ",
-    "demoDestinationLabel": " కౌలాలంపూర్ అంతర్జాతీయ విమానాశ్రయం (KUL) · సెపాంగ్, మలేషియా "
+    "demoDestinationLabel": " కౌలాలంపూర్ అంతర్జాతీయ విమానాశ్రయం (KUL) · సెపాంగ్, మలేషియా ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": " ఇంటికి తిరిగి వెళ్ళు ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "కోడ్‌ని పంపడం సాధ్యపడలేదు ",
     "toastCodeSent": "6-అంకెల కోడ్ కోసం మీ ఇమెయిల్‌ను తనిఖీ చేయండి ",
     "toastInvalid": "చెల్లని కోడ్ ",
-    "toastSignedIn": "సైన్ ఇన్ చేసారు "
+    "toastSignedIn": "సైన్ ఇన్ చేసారు ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "లోడ్ అవుతోంది... "
@@ -144,7 +156,9 @@
     "colReference": "సూచన ",
     "colMode": "మోడ్ ",
     "needsAttention": " శ్రద్ధ అవసరం ",
-    "needsAttentionDescription": " చెల్లింపు తర్వాత బుకింగ్ విఫలమైతే, id మరియు గీత రసీదుతో మద్దతును సంప్రదించండి. "
+    "needsAttentionDescription": " చెల్లింపు తర్వాత బుకింగ్ విఫలమైతే, id మరియు గీత రసీదుతో మద్దతును సంప్రదించండి. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": " సేవా నిబంధనలు",

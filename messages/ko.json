@@ -104,7 +104,16 @@
     "preparingCheckout": "결제 준비 중…",
     "payButton": "서비스 수수료 및 적립금 지불 ",
     "demoOriginLabel": "수완나품 공항(BKK) · 방콕, 태국 ",
-    "demoDestinationLabel": "쿠알라룸푸르 국제공항(KUL) · 세팡, 말레이시아 "
+    "demoDestinationLabel": "쿠알라룸푸르 국제공항(KUL) · 세팡, 말레이시아 ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "홈으로 돌아가기 ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "코드를 보낼 수 없습니다 ",
     "toastCodeSent": "이메일에서 6자리 코드를 확인하세요. ",
     "toastInvalid": "잘못된 코드 ",
-    "toastSignedIn": "로그인됨 "
+    "toastSignedIn": "로그인됨 ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "로드 중… "
@@ -144,7 +156,9 @@
     "colReference": "참고자료 ",
     "colMode": "모드 ",
     "needsAttention": "주의가 필요함 ",
-    "needsAttentionDescription": "결제 후 예약이 실패한 경우 ID와 Stripe 영수증을 가지고 지원팀에 문의하세요. "
+    "needsAttentionDescription": "결제 후 예약이 실패한 경우 ID와 Stripe 영수증을 가지고 지원팀에 문의하세요. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "서비스 약관",

@@ -104,7 +104,16 @@
     "preparingCheckout": "تحضير الخروج…",
     "payButton": "دفع رسوم الخدمة والحجز ",
     "demoOriginLabel": " مطار سوفارنابومي (BKK) · بانكوك، تايلاند ",
-    "demoDestinationLabel": " مطار كوالالمبور الدولي (KUL) · سيبانغ، ماليزيا "
+    "demoDestinationLabel": " مطار كوالالمبور الدولي (KUL) · سيبانغ، ماليزيا ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "العودة إلى المنزل ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "تعذر إرسال الرمز ",
     "toastCodeSent": "تحقق من بريدك الإلكتروني للحصول على رمز مكون من 6 أرقام ",
     "toastInvalid": "رمز غير صالح ",
-    "toastSignedIn": "تسجيل الدخول "
+    "toastSignedIn": "تسجيل الدخول ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "تحميل… "
@@ -144,7 +156,9 @@
     "colReference": "المرجع ",
     "colMode": "الوضع ",
     "needsAttention": "يحتاج إلى الاهتمام ",
-    "needsAttentionDescription": "إذا فشل الحجز بعد الدفع، فاتصل بالدعم باستخدام المعرف والإيصال الشريطي. "
+    "needsAttentionDescription": "إذا فشل الحجز بعد الدفع، فاتصل بالدعم باستخدام المعرف والإيصال الشريطي. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "شروط الخدمة",

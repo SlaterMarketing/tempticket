@@ -104,7 +104,16 @@
     "preparingCheckout": "Inihahanda ang pag-checkout...",
     "payButton": "Bayaran ang bayad sa serbisyo at reserba ",
     "demoOriginLabel": "Paliparan ng Suvarnabhumi (BKK) · Bangkok, Thailand ",
-    "demoDestinationLabel": "Paliparang Pandaigdig ng Kuala Lumpur (KUL) · Sepang, Malaysia "
+    "demoDestinationLabel": "Paliparang Pandaigdig ng Kuala Lumpur (KUL) · Sepang, Malaysia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Bumalik sa bahay ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Hindi maipadala ang code ",
     "toastCodeSent": "Suriin ang iyong email para sa isang 6 na digit na code ",
     "toastInvalid": "Di-wastong code ",
-    "toastSignedIn": "Naka-sign in "
+    "toastSignedIn": "Naka-sign in ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Naglo-load… "
@@ -144,7 +156,9 @@
     "colReference": "Sanggunian ",
     "colMode": "Mode ",
     "needsAttention": "Nangangailangan ng pansin ",
-    "needsAttentionDescription": "Kung nabigo ang booking pagkatapos ng pagbabayad, makipag-ugnayan sa suporta gamit ang id at Stripe na resibo. "
+    "needsAttentionDescription": "Kung nabigo ang booking pagkatapos ng pagbabayad, makipag-ugnayan sa suporta gamit ang id at Stripe na resibo. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Mga tuntunin ng serbisyo",

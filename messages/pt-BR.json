@@ -104,7 +104,16 @@
     "preparingCheckout": "Preparando a finalização da compra…",
     "payButton": "Pagar taxa de serviço e reserva ",
     "demoOriginLabel": "Aeroporto de Suvarnabhumi (BKK) · Bangkok, Tailândia ",
-    "demoDestinationLabel": "Aeroporto Internacional de Kuala Lumpur (KUL) · Sepang, Malásia "
+    "demoDestinationLabel": "Aeroporto Internacional de Kuala Lumpur (KUL) · Sepang, Malásia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "De volta para casa ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Não foi possível enviar o código ",
     "toastCodeSent": "Verifique seu e-mail para obter um código de 6 dígitos ",
     "toastInvalid": "Código inválido ",
-    "toastSignedIn": "Conectado "
+    "toastSignedIn": "Conectado ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Carregando… "
@@ -144,7 +156,9 @@
     "colReference": "Referência ",
     "colMode": "Modo ",
     "needsAttention": "Precisa de atenção ",
-    "needsAttentionDescription": "Se a reserva falhou após o pagamento, entre em contato com o suporte com o ID e o recibo do Stripe. "
+    "needsAttentionDescription": "Se a reserva falhou após o pagamento, entre em contato com o suporte com o ID e o recibo do Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Termos de serviço",

@@ -104,7 +104,16 @@
     "preparingCheckout": "Ödeme hazırlanıyor…",
     "payButton": "Hizmet ücretini ödeyin ve rezerve edin ",
     "demoOriginLabel": "Suvarnabhumi Havalimanı (BKK) · Bangkok, Tayland ",
-    "demoDestinationLabel": "Kuala Lumpur Uluslararası Havaalanı (KUL) · Sepang, Malezya "
+    "demoDestinationLabel": "Kuala Lumpur Uluslararası Havaalanı (KUL) · Sepang, Malezya ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Eve dönüş ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Kod gönderilemedi ",
     "toastCodeSent": "E-postanızı 6 haneli kod için kontrol edin ",
     "toastInvalid": "Geçersiz kod ",
-    "toastSignedIn": "Oturum açıldı "
+    "toastSignedIn": "Oturum açıldı ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Yükleniyor… "
@@ -144,7 +156,9 @@
     "colReference": "Referans ",
     "colMode": "Mod ",
     "needsAttention": "Dikkat edilmesi gerekiyor ",
-    "needsAttentionDescription": "Ödeme sonrasında rezervasyon başarısız olursa, kimlik ve Stripe makbuzuyla birlikte destek ekibiyle iletişime geçin. "
+    "needsAttentionDescription": "Ödeme sonrasında rezervasyon başarısız olursa, kimlik ve Stripe makbuzuyla birlikte destek ekibiyle iletişime geçin. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Hizmet şartları",

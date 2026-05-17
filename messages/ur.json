@@ -104,7 +104,16 @@
     "preparingCheckout": " چیک آؤٹ کی تیاری کر رہا ہے…",
     "payButton": " سروس فیس اور ریزرو ادا کریں۔ ",
     "demoOriginLabel": "Suvarnabhumi Airport (BKK) · بنکاک، تھائی لینڈ ",
-    "demoDestinationLabel": " کوالا لمپور بین الاقوامی ہوائی اڈہ (KUL) · سیپانگ، ملائیشیا "
+    "demoDestinationLabel": " کوالا لمپور بین الاقوامی ہوائی اڈہ (KUL) · سیپانگ، ملائیشیا ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "گھر پر واپس ",
@@ -126,7 +135,10 @@
     "toastSendFailed": " کوڈ نہیں بھیجا جا سکا ",
     "toastCodeSent": "6 ہندسوں کے کوڈ کے لیے اپنا ای میل چیک کریں۔ ",
     "toastInvalid": " غلط کوڈ ",
-    "toastSignedIn": " سائن ان "
+    "toastSignedIn": " سائن ان ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": " لوڈ ہو رہا ہے… "
@@ -144,7 +156,9 @@
     "colReference": " حوالہ ",
     "colMode": " موڈ ",
     "needsAttention": " توجہ کی ضرورت ہے۔ ",
-    "needsAttentionDescription": " اگر ادائیگی کے بعد بکنگ ناکام ہو جاتی ہے تو آئی ڈی اور پٹی رسید کے ساتھ سپورٹ سے رابطہ کریں۔ "
+    "needsAttentionDescription": " اگر ادائیگی کے بعد بکنگ ناکام ہو جاتی ہے تو آئی ڈی اور پٹی رسید کے ساتھ سپورٹ سے رابطہ کریں۔ ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": " سروس کی شرائط",

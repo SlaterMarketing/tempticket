@@ -104,7 +104,16 @@
     "preparingCheckout": "Подготовка оформления заказа…",
     "payButton": "Оплата сервисного сбора и резерва ",
     "demoOriginLabel": "Аэропорт Суварнабхуми (BKK) · Бангкок, Таиланд ",
-    "demoDestinationLabel": "Международный аэропорт Куала-Лумпура (KUL) · Сепанг, Малайзия "
+    "demoDestinationLabel": "Международный аэропорт Куала-Лумпура (KUL) · Сепанг, Малайзия ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Назад домой ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Не удалось отправить код ",
     "toastCodeSent": "Проверьте свою электронную почту на наличие 6-значного кода. ",
     "toastInvalid": "Неверный код ",
-    "toastSignedIn": "Выполнен вход "
+    "toastSignedIn": "Выполнен вход ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Загрузка… "
@@ -144,7 +156,9 @@
     "colReference": "Справочник ",
     "colMode": "Режим ",
     "needsAttention": "Требует внимания ",
-    "needsAttentionDescription": "Если бронирование не удалось после оплаты, обратитесь в службу поддержки, предоставив удостоверение личности и квитанцию Stripe. "
+    "needsAttentionDescription": "Если бронирование не удалось после оплаты, обратитесь в службу поддержки, предоставив удостоверение личности и квитанцию Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Условия обслуживания",

@@ -104,7 +104,16 @@
     "preparingCheckout": "准备结帐...",
     "payButton": "支付服务费和预订",
     "demoOriginLabel": "素万那普机场 (BKK) · 曼谷, 泰国",
-    "demoDestinationLabel": "吉隆坡国际机场 (KUL) · 雪邦，马来西亚"
+    "demoDestinationLabel": "吉隆坡国际机场 (KUL) · 雪邦，马来西亚",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "返回首页",
@@ -126,7 +135,10 @@
     "toastSendFailed": "无法发送代码",
     "toastCodeSent": "检查您的电子邮件中是否有 6 位数代码",
     "toastInvalid": "代码无效",
-    "toastSignedIn": "已登录"
+    "toastSignedIn": "已登录",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "加载中..."
@@ -144,7 +156,9 @@
     "colReference": "参考",
     "colMode": "模式",
     "needsAttention": "需要注意",
-    "needsAttentionDescription": "如果付款后预订失败，请提供 ID 和 Stripe 收据联系支持人员。"
+    "needsAttentionDescription": "如果付款后预订失败，请提供 ID 和 Stripe 收据联系支持人员。",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "服务条款",

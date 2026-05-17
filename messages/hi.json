@@ -104,7 +104,16 @@
     "preparingCheckout": "चेकआउट की तैयारी हो रही है…",
     "payButton": "सेवा शुल्क और रिज़र्व का भुगतान करें ",
     "demoOriginLabel": "सुवर्णभूमि हवाई अड्डा (बीकेके) · बैंकॉक, थाईलैंड ",
-    "demoDestinationLabel": "कुआलालंपुर अंतर्राष्ट्रीय हवाई अड्डा (KUL) · सेपांग, मलेशिया "
+    "demoDestinationLabel": "कुआलालंपुर अंतर्राष्ट्रीय हवाई अड्डा (KUL) · सेपांग, मलेशिया ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "घर वापस ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "कोड नहीं भेज सका ",
     "toastCodeSent": "6 अंकों वाले कोड के लिए अपना ईमेल जांचें ",
     "toastInvalid": "अमान्य कोड ",
-    "toastSignedIn": "साइन इन किया गया "
+    "toastSignedIn": "साइन इन किया गया ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "लोड हो रहा है... "
@@ -144,7 +156,9 @@
     "colReference": "संदर्भ ",
     "colMode": "मोड ",
     "needsAttention": "ध्यान की जरूरत है ",
-    "needsAttentionDescription": "यदि भुगतान के बाद बुकिंग विफल हो जाती है, तो आईडी और स्ट्राइप रसीद के साथ सहायता से संपर्क करें। "
+    "needsAttentionDescription": "यदि भुगतान के बाद बुकिंग विफल हो जाती है, तो आईडी और स्ट्राइप रसीद के साथ सहायता से संपर्क करें। ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "सेवा की शर्तें",

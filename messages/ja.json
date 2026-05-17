@@ -104,7 +104,16 @@
     "preparingCheckout": "チェックアウトの準備中…",
     "payButton": "サービス料を払って予約する",
     "demoOriginLabel": "スワンナプーム空港 (BKK) · バンコク、タイ",
-    "demoDestinationLabel": "クアラルンプール国際空港 (KUL) · セパン、マレーシア"
+    "demoDestinationLabel": "クアラルンプール国際空港 (KUL) · セパン、マレーシア",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "家に戻る",
@@ -126,7 +135,10 @@
     "toastSendFailed": "コードを送信できませんでした",
     "toastCodeSent": "メールで 6 桁のコードを確認してください",
     "toastInvalid": "無効なコード",
-    "toastSignedIn": "サインインしました"
+    "toastSignedIn": "サインインしました",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "読み込み中…"
@@ -144,7 +156,9 @@
     "colReference": "参照",
     "colMode": "モード",
     "needsAttention": "注意が必要です",
-    "needsAttentionDescription": "支払い後に予約が失敗した場合は、ID と Stripe の領収書を添えてサポートにご連絡ください。"
+    "needsAttentionDescription": "支払い後に予約が失敗した場合は、ID と Stripe の領収書を添えてサポートにご連絡ください。",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "利用規約",

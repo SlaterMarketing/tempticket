@@ -104,7 +104,16 @@
     "preparingCheckout": "Preparazione del pagamento…",
     "payButton": "Paga la commissione di servizio e prenota ",
     "demoOriginLabel": "Aeroporto di Suvarnabhumi (BKK) · Bangkok, Tailandia ",
-    "demoDestinationLabel": "Aeroporto internazionale di Kuala Lumpur (KUL) · Sepang, Malesia "
+    "demoDestinationLabel": "Aeroporto internazionale di Kuala Lumpur (KUL) · Sepang, Malesia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Ritorno a casa ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Impossibile inviare il codice ",
     "toastCodeSent": "Controlla se nella tua email è presente un codice a 6 cifre ",
     "toastInvalid": "Codice non valido ",
-    "toastSignedIn": "Accesso effettuato "
+    "toastSignedIn": "Accesso effettuato ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Caricamento in corso... "
@@ -144,7 +156,9 @@
     "colReference": "Riferimento ",
     "colMode": "Modalità ",
     "needsAttention": "Ha bisogno di attenzione ",
-    "needsAttentionDescription": "Se una prenotazione non è andata a buon fine dopo il pagamento, contatta l'assistenza con l'ID e la ricevuta Stripe. "
+    "needsAttentionDescription": "Se una prenotazione non è andata a buon fine dopo il pagamento, contatta l'assistenza con l'ID e la ricevuta Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Termini di servizio",

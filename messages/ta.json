@@ -104,7 +104,16 @@
     "preparingCheckout": "செக் அவுட் தயாராகிறது…",
     "payButton": "சேவை கட்டணம் & இருப்பு செலுத்தவும் ",
     "demoOriginLabel": "சுவர்ணபூமி விமான நிலையம் (BKK) · பாங்காக், தாய்லாந்து ",
-    "demoDestinationLabel": "கோலாலம்பூர் சர்வதேச விமான நிலையம் (KUL) · செபாங், மலேசியா "
+    "demoDestinationLabel": "கோலாலம்பூர் சர்வதேச விமான நிலையம் (KUL) · செபாங், மலேசியா ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "வீட்டுக்குத் திரும்பு ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "குறியீட்டை அனுப்ப முடியவில்லை ",
     "toastCodeSent": "6 இலக்கக் குறியீடு உள்ளதா என உங்கள் மின்னஞ்சலைச் சரிபார்க்கவும் ",
     "toastInvalid": "தவறான குறியீடு ",
-    "toastSignedIn": "உள்நுழைந்துள்ளார் "
+    "toastSignedIn": "உள்நுழைந்துள்ளார் ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "ஏற்றப்படுகிறது… "
@@ -144,7 +156,9 @@
     "colReference": "குறிப்பு ",
     "colMode": "முறை ",
     "needsAttention": "கவனம் தேவை ",
-    "needsAttentionDescription": "பணம் செலுத்திய பிறகு முன்பதிவு தோல்வியடைந்தால், ஐடி மற்றும் ஸ்ட்ரைப் ரசீது மூலம் ஆதரவைத் தொடர்பு கொள்ளவும். "
+    "needsAttentionDescription": "பணம் செலுத்திய பிறகு முன்பதிவு தோல்வியடைந்தால், ஐடி மற்றும் ஸ்ட்ரைப் ரசீது மூலம் ஆதரவைத் தொடர்பு கொள்ளவும். ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "சேவை விதிமுறைகள்",

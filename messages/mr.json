@@ -104,7 +104,16 @@
     "preparingCheckout": " चेकआउटची तयारी करत आहे…",
     "payButton": "पे सेवा शुल्क आणि राखीव ",
     "demoOriginLabel": "सुवर्णभूमी विमानतळ (BKK) · बँकॉक, थायलंड ",
-    "demoDestinationLabel": " क्वालालंपूर आंतरराष्ट्रीय विमानतळ (KUL) · सेपांग, मलेशिया "
+    "demoDestinationLabel": " क्वालालंपूर आंतरराष्ट्रीय विमानतळ (KUL) · सेपांग, मलेशिया ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "घरी परत ",
@@ -126,7 +135,10 @@
     "toastSendFailed": " कोड पाठवू शकलो नाही ",
     "toastCodeSent": "6-अंकी कोडसाठी तुमचा ईमेल तपासा ",
     "toastInvalid": "अवैध कोड ",
-    "toastSignedIn": "साइन इन केले "
+    "toastSignedIn": "साइन इन केले ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "लोड करत आहे… "
@@ -144,7 +156,9 @@
     "colReference": " संदर्भ ",
     "colMode": " मोड ",
     "needsAttention": " लक्ष देणे आवश्यक आहे ",
-    "needsAttentionDescription": " पेमेंट केल्यानंतर बुकिंग अयशस्वी झाल्यास, आयडी आणि स्ट्राइप पावतीसह समर्थनाशी संपर्क साधा. "
+    "needsAttentionDescription": " पेमेंट केल्यानंतर बुकिंग अयशस्वी झाल्यास, आयडी आणि स्ट्राइप पावतीसह समर्थनाशी संपर्क साधा. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "सेवा अटी",

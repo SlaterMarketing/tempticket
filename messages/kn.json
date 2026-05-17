@@ -104,7 +104,16 @@
     "preparingCheckout": "ಚೆಕ್‌ಔಟ್ ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ...",
     "payButton": "ಸೇವಾ ಶುಲ್ಕ ಮತ್ತು ಮೀಸಲು ಪಾವತಿಸಿ ",
     "demoOriginLabel": "Suvarnabhumi Airport (BKK) · ಬ್ಯಾಂಕಾಕ್, ಥೈಲ್ಯಾಂಡ್ ",
-    "demoDestinationLabel": "ಕ್ವಾಲಾಲಂಪುರ್ ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ (KUL) · ಸೆಪಾಂಗ್, ಮಲೇಷ್ಯಾ "
+    "demoDestinationLabel": "ಕ್ವಾಲಾಲಂಪುರ್ ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ (KUL) · ಸೆಪಾಂಗ್, ಮಲೇಷ್ಯಾ ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "ಮನೆಗೆ ಹಿಂತಿರುಗಿ ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "ಕೋಡ್ ಕಳುಹಿಸಲಾಗಲಿಲ್ಲ ",
     "toastCodeSent": "6-ಅಂಕಿಯ ಕೋಡ್‌ಗಾಗಿ ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ಪರಿಶೀಲಿಸಿ ",
     "toastInvalid": "ಅಮಾನ್ಯ ಕೋಡ್ ",
-    "toastSignedIn": "ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ "
+    "toastSignedIn": "ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ... "
@@ -144,7 +156,9 @@
     "colReference": "ಉಲ್ಲೇಖ ",
     "colMode": "ಮೋಡ್ ",
     "needsAttention": "ಗಮನದ ಅಗತ್ಯವಿದೆ ",
-    "needsAttentionDescription": "ಪಾವತಿಯ ನಂತರ ಬುಕಿಂಗ್ ವಿಫಲವಾದರೆ, ಐಡಿ ಮತ್ತು ಸ್ಟ್ರೈಪ್ ರಸೀದಿಯೊಂದಿಗೆ ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ. "
+    "needsAttentionDescription": "ಪಾವತಿಯ ನಂತರ ಬುಕಿಂಗ್ ವಿಫಲವಾದರೆ, ಐಡಿ ಮತ್ತು ಸ್ಟ್ರೈಪ್ ರಸೀದಿಯೊಂದಿಗೆ ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "ಸೇವಾ ನಿಯಮಗಳು",

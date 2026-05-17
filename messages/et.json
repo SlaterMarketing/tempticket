@@ -104,7 +104,16 @@
     "preparingCheckout": "Kassa ettevalmistamine…",
     "payButton": "Maksa teenustasu ja reserv ",
     "demoOriginLabel": "Suvarnabhumi lennujaam (BKK) · Bangkok, Tai ",
-    "demoDestinationLabel": "Kuala Lumpuri rahvusvaheline lennujaam (KUL) · Sepang, Malaisia "
+    "demoDestinationLabel": "Kuala Lumpuri rahvusvaheline lennujaam (KUL) · Sepang, Malaisia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Tagasi koju ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Koodi ei saanud saata ",
     "toastCodeSent": "Kontrolli oma meililt 6-kohalist koodi ",
     "toastInvalid": "Vigane kood ",
-    "toastSignedIn": "Sisse logitud "
+    "toastSignedIn": "Sisse logitud ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Laadimine… "
@@ -144,7 +156,9 @@
     "colReference": "Viide ",
     "colMode": "Režiim ",
     "needsAttention": "Vajab tähelepanu ",
-    "needsAttentionDescription": "Kui broneering ebaõnnestus pärast maksmist, võtke ID ja Stripe kviitungiga ühendust tugiteenusega. "
+    "needsAttentionDescription": "Kui broneering ebaõnnestus pärast maksmist, võtke ID ja Stripe kviitungiga ühendust tugiteenusega. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Teenuse tingimused",

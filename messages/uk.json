@@ -104,7 +104,16 @@
     "preparingCheckout": "Підготовка до виписки…",
     "payButton": "Сплатити комісію за обслуговування та зарезервувати ",
     "demoOriginLabel": "Аеропорт Суварнабхумі (BKK) · Бангкок, Таїланд ",
-    "demoDestinationLabel": "Міжнародний аеропорт Куала-Лумпур (KUL) · Сепанг, Малайзія "
+    "demoDestinationLabel": "Міжнародний аеропорт Куала-Лумпур (KUL) · Сепанг, Малайзія ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Повернення додому ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Не вдалося надіслати код ",
     "toastCodeSent": "Перевірте свою електронну пошту на наявність 6-значного коду ",
     "toastInvalid": "Недійсний код ",
-    "toastSignedIn": "Увійшли "
+    "toastSignedIn": "Увійшли ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Завантаження… "
@@ -144,7 +156,9 @@
     "colReference": "Довідка ",
     "colMode": "Режим ",
     "needsAttention": "Потребує уваги ",
-    "needsAttentionDescription": "Якщо бронювання не вдалося виконати після оплати, зв’яжіться зі службою підтримки, вказавши ідентифікатор і квитанцію Stripe. "
+    "needsAttentionDescription": "Якщо бронювання не вдалося виконати після оплати, зв’яжіться зі службою підтримки, вказавши ідентифікатор і квитанцію Stripe. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Умови обслуговування",

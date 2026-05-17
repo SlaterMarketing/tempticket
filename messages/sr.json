@@ -104,7 +104,16 @@
     "preparingCheckout": "Припрема плаћања…",
     "payButton": "Плати накнаду за услугу и резерву ",
     "demoOriginLabel": "Аеродром Суварнабхуми (БКК) · Бангкок, Тајланд ",
-    "demoDestinationLabel": "Међународни аеродром Куала Лумпур (КУЛ) · Сепанг, Малезија "
+    "demoDestinationLabel": "Међународни аеродром Куала Лумпур (КУЛ) · Сепанг, Малезија ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Назад кући ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Не могу послати код ",
     "toastCodeSent": "Проверите своју е-пошту да ли имате шестоцифрени код ",
     "toastInvalid": "Неважећи код ",
-    "toastSignedIn": "Пријављени "
+    "toastSignedIn": "Пријављени ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Учитавање… "
@@ -144,7 +156,9 @@
     "colReference": "Референца ",
     "colMode": "Режим ",
     "needsAttention": "Потребна је пажња ",
-    "needsAttentionDescription": "Ако резервација није успела након уплате, контактирајте подршку са ИД-ом и Стрипе рачуном. "
+    "needsAttentionDescription": "Ако резервација није успела након уплате, контактирајте подршку са ИД-ом и Стрипе рачуном. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Услови услуге",

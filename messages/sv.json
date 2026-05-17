@@ -104,7 +104,16 @@
     "preparingCheckout": "Förbereder kassan...",
     "payButton": "Betala serviceavgift & reservera ",
     "demoOriginLabel": "Suvarnabhumi Airport (BKK) · Bangkok, Thailand ",
-    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malaysia "
+    "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malaysia ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Tillbaka till hemmet ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Kunde inte skicka koden ",
     "toastCodeSent": "Kontrollera din e-post för en 6-siffrig kod ",
     "toastInvalid": "Ogiltig kod ",
-    "toastSignedIn": "Inloggad "
+    "toastSignedIn": "Inloggad ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Laster... "
@@ -144,7 +156,9 @@
     "colReference": "Referens ",
     "colMode": "Läge ",
     "needsAttention": "Behöver uppmärksamhet ",
-    "needsAttentionDescription": "Om en bokning misslyckades efter betalning, kontakta supporten med id och Stripe-kvitto. "
+    "needsAttentionDescription": "Om en bokning misslyckades efter betalning, kontakta supporten med id och Stripe-kvitto. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Användarvillkor",

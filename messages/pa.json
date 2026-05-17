@@ -104,7 +104,16 @@
     "preparingCheckout": " ਚੈੱਕਆਉਟ ਦੀ ਤਿਆਰੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…",
     "payButton": "ਸੇਵਾ ਫੀਸ ਅਤੇ ਰਿਜ਼ਰਵ ਦਾ ਭੁਗਤਾਨ ਕਰੋ ",
     "demoOriginLabel": "ਸੁਵਰਨਭੂਮੀ ਹਵਾਈ ਅੱਡਾ (BKK) · ਬੈਂਕਾਕ, ਥਾਈਲੈਂਡ ",
-    "demoDestinationLabel": "ਕੁਆਲਾਲੰਪੁਰ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ (KUL) · ਸੇਪਾਂਗ, ਮਲੇਸ਼ੀਆ "
+    "demoDestinationLabel": "ਕੁਆਲਾਲੰਪੁਰ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ (KUL) · ਸੇਪਾਂਗ, ਮਲੇਸ਼ੀਆ ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "ਘਰ ਵਾਪਸ ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "ਕੋਡ ਨਹੀਂ ਭੇਜਿਆ ਜਾ ਸਕਿਆ ",
     "toastCodeSent": "6-ਅੰਕਾਂ ਵਾਲੇ ਕੋਡ ਲਈ ਆਪਣੀ ਈਮੇਲ ਦੀ ਜਾਂਚ ਕਰੋ ",
     "toastInvalid": "ਅਵੈਧ ਕੋਡ ",
-    "toastSignedIn": " ਸਾਈਨ ਇਨ ਕੀਤਾ "
+    "toastSignedIn": " ਸਾਈਨ ਇਨ ਕੀਤਾ ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ… "
@@ -144,7 +156,9 @@
     "colReference": " ਹਵਾਲਾ ",
     "colMode": " ਮੋਡ ",
     "needsAttention": " ਧਿਆਨ ਦੀ ਲੋੜ ਹੈ ",
-    "needsAttentionDescription": "ਜੇਕਰ ਭੁਗਤਾਨ ਤੋਂ ਬਾਅਦ ਬੁਕਿੰਗ ਅਸਫਲ ਹੋ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਆਈਡੀ ਅਤੇ ਸਟ੍ਰਾਈਪ ਰਸੀਦ ਨਾਲ ਸਹਾਇਤਾ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। "
+    "needsAttentionDescription": "ਜੇਕਰ ਭੁਗਤਾਨ ਤੋਂ ਬਾਅਦ ਬੁਕਿੰਗ ਅਸਫਲ ਹੋ ਜਾਂਦੀ ਹੈ, ਤਾਂ ਆਈਡੀ ਅਤੇ ਸਟ੍ਰਾਈਪ ਰਸੀਦ ਨਾਲ ਸਹਾਇਤਾ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",

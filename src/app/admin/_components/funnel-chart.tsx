@@ -17,11 +17,12 @@ export function FunnelChart({ steps }: { steps: FunnelStep[] }) {
       <CardHeader>
         <CardTitle>Funnel</CardTitle>
         <CardDescription>
-          Distinct visitors who triggered each step in this date range. Rows are
-          independent counts—not everyone who searched necessarily reached offers.
-          Compare Book → Submitted search to see browsing without searching;
-          compare Submitted vs Offers returned vs Search error to see supplier or
-          server failures.
+          Distinct visitors who reached each milestone in this date range (counts
+          are not strictly sequential). On the book flow, step 1 is find flights,
+          step 2 is the trip preview, step 3 is traveler details before checkout.
+          Compare flights returned vs trip preview vs step 3 to see where people
+          leave mid-booking; compare search submitted vs search error for supplier
+          issues.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">

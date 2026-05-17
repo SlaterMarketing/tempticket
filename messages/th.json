@@ -104,7 +104,16 @@
     "preparingCheckout": "กำลังเตรียมการชำระเงิน...",
     "payButton": "ชำระค่าบริการและจอง ",
     "demoOriginLabel": "สนามบินสุวรรณภูมิ (BKK) · กรุงเทพมหานคร ประเทศไทย ",
-    "demoDestinationLabel": "สนามบินนานาชาติกัวลาลัมเปอร์ (KUL) · เซปัง ประเทศมาเลเซีย "
+    "demoDestinationLabel": "สนามบินนานาชาติกัวลาลัมเปอร์ (KUL) · เซปัง ประเทศมาเลเซีย ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "กลับไปที่บ้าน ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "ไม่สามารถส่งรหัสได้ ",
     "toastCodeSent": "ตรวจสอบอีเมลของคุณเพื่อดูรหัส 6 หลัก ",
     "toastInvalid": "รหัสไม่ถูกต้อง ",
-    "toastSignedIn": "ลงชื่อเข้าใช้แล้ว "
+    "toastSignedIn": "ลงชื่อเข้าใช้แล้ว ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "กำลังโหลด... "
@@ -144,7 +156,9 @@
     "colReference": "ข้อมูลอ้างอิง ",
     "colMode": "โหมด ",
     "needsAttention": "ต้องการความสนใจ ",
-    "needsAttentionDescription": "หากการจองล้มเหลวหลังการชำระเงิน โปรดติดต่อฝ่ายสนับสนุนพร้อมระบุรหัสและใบเสร็จลาย "
+    "needsAttentionDescription": "หากการจองล้มเหลวหลังการชำระเงิน โปรดติดต่อฝ่ายสนับสนุนพร้อมระบุรหัสและใบเสร็จลาย ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "ข้อกำหนดในการให้บริการ",

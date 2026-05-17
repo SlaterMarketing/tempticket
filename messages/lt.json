@@ -104,7 +104,16 @@
     "preparingCheckout": "Ruošiamas atsiskaitymas...",
     "payButton": "Mokėkite paslaugos mokestį ir rezervuokite ",
     "demoOriginLabel": "Suvarnabhumi oro uostas (BKK) · Bankokas, Tailandas ",
-    "demoDestinationLabel": "Kvala Lumpūro tarptautinis oro uostas (KUL) · Sepangas, Malaizija "
+    "demoDestinationLabel": "Kvala Lumpūro tarptautinis oro uostas (KUL) · Sepangas, Malaizija ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Grįžti į namus ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nepavyko išsiųsti kodo ",
     "toastCodeSent": "Patikrinkite el. paštą, ar nėra 6 skaitmenų kodo ",
     "toastInvalid": "Neteisingas kodas ",
-    "toastSignedIn": "Prisijungęs "
+    "toastSignedIn": "Prisijungęs ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Įkeliama... "
@@ -144,7 +156,9 @@
     "colReference": "Nuoroda ",
     "colMode": "Režimas ",
     "needsAttention": "Reikia dėmesio ",
-    "needsAttentionDescription": "Jei užsakymas nepavyko po apmokėjimo, susisiekite su palaikymo tarnyba ir nurodykite ID ir Stripe kvitą. "
+    "needsAttentionDescription": "Jei užsakymas nepavyko po apmokėjimo, susisiekite su palaikymo tarnyba ir nurodykite ID ir Stripe kvitą. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Paslaugų teikimo sąlygos",

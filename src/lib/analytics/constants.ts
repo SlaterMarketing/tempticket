@@ -28,6 +28,10 @@ export const ANALYTICS_EVENT_NAMES = [
   "search_failed",
   "search_performed",
   "offer_viewed",
+  /** Book wizard step 2 — reservation preview UI shown */
+  "book_ticket_preview_viewed",
+  /** Book wizard step 3 — traveler details & payment UI shown */
+  "book_passenger_details_viewed",
   "checkout_started",
   "checkout_completed",
   "booking_confirmed",
@@ -46,4 +50,6 @@ export const analyticsEventNameSchema = z.enum(
 /** Client beacon may only send these (server routes use full set). */
 export const CLIENT_ALLOWED_ANALYTICS_EVENTS: AnalyticsEventName[] = [
   "page_view",
+  "book_ticket_preview_viewed",
+  "book_passenger_details_viewed",
 ];

@@ -104,7 +104,16 @@
     "preparingCheckout": "Priprema naplate…",
     "payButton": "Plati naknadu za uslugu i rezerviraj ",
     "demoOriginLabel": "Zračna luka Suvarnabhumi (BKK) · Bangkok, Tajland ",
-    "demoDestinationLabel": "Međunarodna zračna luka Kuala Lumpur (KUL) · Sepang, Malezija "
+    "demoDestinationLabel": "Međunarodna zračna luka Kuala Lumpur (KUL) · Sepang, Malezija ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Povratak kući ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nije moguće poslati kod ",
     "toastCodeSent": "Provjerite svoju e-poštu za 6-znamenkasti kod ",
     "toastInvalid": "Nevažeći kod ",
-    "toastSignedIn": "Prijavljen "
+    "toastSignedIn": "Prijavljen ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Učitavanje… "
@@ -144,7 +156,9 @@
     "colReference": "Referenca ",
     "colMode": "Način ",
     "needsAttention": "Potrebna je pažnja ",
-    "needsAttentionDescription": "Ako rezervacija nije uspjela nakon plaćanja, kontaktirajte podršku s ID-om i Stripe potvrdom. "
+    "needsAttentionDescription": "Ako rezervacija nije uspjela nakon plaćanja, kontaktirajte podršku s ID-om i Stripe potvrdom. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Uvjeti usluge",

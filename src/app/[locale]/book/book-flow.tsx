@@ -29,9 +29,10 @@ import {
   type SelectedPlace,
 } from "@/components/place-autocomplete";
 import { useTranslations } from "next-intl";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import type { AnalyticsEventName } from "@/lib/analytics/constants";
 import {
   CHECKOUT_CURRENCY_CODES,
   CHECKOUT_CURRENCY_OPTIONS,
@@ -70,6 +71,22 @@ const fieldShell =
   "rounded-xl border-2 border-[color:var(--brand-blue)]/12 bg-white/90 shadow-sm transition focus-within:border-[color:var(--brand-blue)]/35 focus-within:shadow-md";
 
 const STEP_TOTAL = 3;
+
+function trackBookWizardStep(name: AnalyticsEventName) {
+  const path =
+    typeof window !== "undefined" ? window.location.pathname : undefined;
+  const body = JSON.stringify({ name, path });
+  if (typeof navigator !== "undefined" && navigator.sendBeacon) {
+    const blob = new Blob([body], { type: "application/json" });
+    if (navigator.sendBeacon("/api/analytics/track", blob)) return;
+  }
+  void fetch("/api/analytics/track", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+    keepalive: true,
+  }).catch(() => {});
+}
 
 function TypeformStep({
   title,
@@ -149,7 +166,20 @@ export function BookFlow({
   const [currency, setCurrency] = useState<CheckoutCurrencyCode>("usd");
 
   const [wizardStep, setWizardStep] = useState<1 | 2 | 3>(1);
+  const prevWizardStepRef = useRef<1 | 2 | 3>(1);
   const [adminSkipStripe, setAdminSkipStripe] = useState(false);
+
+  useEffect(() => {
+    const prev = prevWizardStepRef.current;
+    if (wizardStep === prev) return;
+    if (wizardStep === 2) {
+      trackBookWizardStep("book_ticket_preview_viewed");
+    }
+    if (wizardStep === 3) {
+      trackBookWizardStep("book_passenger_details_viewed");
+    }
+    prevWizardStepRef.current = wizardStep;
+  }, [wizardStep]);
 
   const [dialCodeOptions, setDialCodeOptions] =
     useState(COUNTRY_DIAL_CODES);

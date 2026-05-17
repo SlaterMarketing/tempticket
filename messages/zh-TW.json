@@ -104,7 +104,16 @@
     "preparingCheckout": "準備結帳...",
     "payButton": "支付服務費和預訂",
     "demoOriginLabel": "素萬那普機場 (BKK) · 曼谷, 泰國",
-    "demoDestinationLabel": "吉隆坡國際機場 (KUL) · 雪邦，馬來西亞"
+    "demoDestinationLabel": "吉隆坡國際機場 (KUL) · 雪邦，馬來西亞",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "返回首頁",
@@ -126,7 +135,10 @@
     "toastSendFailed": "無法傳送代碼",
     "toastCodeSent": "檢查您的電子郵件中是否有 6 位數代碼",
     "toastInvalid": "代碼無效",
-    "toastSignedIn": "已登入"
+    "toastSignedIn": "已登入",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "加載..."
@@ -144,7 +156,9 @@
     "colReference": "參考",
     "colMode": "模式",
     "needsAttention": "需要注意",
-    "needsAttentionDescription": "如果付款後預訂失敗，請提供 ID 和 Stripe 收據聯絡支援人員。"
+    "needsAttentionDescription": "如果付款後預訂失敗，請提供 ID 和 Stripe 收據聯絡支援人員。",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "服務條款",

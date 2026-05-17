@@ -104,7 +104,16 @@
     "preparingCheckout": "ചെക്ക്ഔട്ട് തയ്യാറാക്കുന്നു...",
     "payButton": "സേവന ഫീസും കരുതലും അടയ്‌ക്കുക ",
     "demoOriginLabel": "സുവർണഭൂമി എയർപോർട്ട് (BKK) · ബാങ്കോക്ക്, തായ്‌ലൻഡ് ",
-    "demoDestinationLabel": "ക്വലാലംപൂർ അന്താരാഷ്ട്ര വിമാനത്താവളം (KUL) · സെപാങ്, മലേഷ്യ "
+    "demoDestinationLabel": "ക്വലാലംപൂർ അന്താരാഷ്ട്ര വിമാനത്താവളം (KUL) · സെപാങ്, മലേഷ്യ ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "വീട്ടിലേക്ക് മടങ്ങുക ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "കോഡ് അയയ്ക്കാൻ കഴിഞ്ഞില്ല ",
     "toastCodeSent": "6-അക്ക കോഡിനായി നിങ്ങളുടെ ഇമെയിൽ പരിശോധിക്കുക ",
     "toastInvalid": "അസാധുവായ കോഡ് ",
-    "toastSignedIn": "സൈൻ ഇൻ ചെയ്തു "
+    "toastSignedIn": "സൈൻ ഇൻ ചെയ്തു ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "ലോഡ് ചെയ്യുന്നു... "
@@ -144,7 +156,9 @@
     "colReference": "റഫറൻസ് ",
     "colMode": "മോഡ് ",
     "needsAttention": "ശ്രദ്ധ ആവശ്യമാണ് ",
-    "needsAttentionDescription": "പേയ്‌മെൻ്റിന് ശേഷം ഒരു ബുക്കിംഗ് പരാജയപ്പെട്ടാൽ, ഐഡിയും സ്ട്രൈപ്പ് രസീതും ഉപയോഗിച്ച് പിന്തുണയുമായി ബന്ധപ്പെടുക. "
+    "needsAttentionDescription": "പേയ്‌മെൻ്റിന് ശേഷം ഒരു ബുക്കിംഗ് പരാജയപ്പെട്ടാൽ, ഐഡിയും സ്ട്രൈപ്പ് രസീതും ഉപയോഗിച്ച് പിന്തുണയുമായി ബന്ധപ്പെടുക. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "സേവന നിബന്ധനകൾ",

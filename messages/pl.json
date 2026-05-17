@@ -104,7 +104,16 @@
     "preparingCheckout": "Przygotowanie do kasy…",
     "payButton": "Zapłać opłatę za usługę i rezerwę ",
     "demoOriginLabel": "Lotnisko Suvarnabhumi (BKK) · Bangkok, Tajlandia ",
-    "demoDestinationLabel": "Międzynarodowy port lotniczy Kuala Lumpur (KUL) · Sepang, Malezja "
+    "demoDestinationLabel": "Międzynarodowy port lotniczy Kuala Lumpur (KUL) · Sepang, Malezja ",
+    "stepTicketTitle": "Your reservation preview",
+    "stepTicketDescription": "We're holding this itinerary while you continue—it's not booked until you've paid the service fee.",
+    "ticketBadge": "Preview",
+    "ticketHeading": "Your itinerary",
+    "ticketListedFare": "Listed fare",
+    "ticketYouPay": "You pay",
+    "ticketDepart": "Departure",
+    "ticketArriveAirport": "Arrival",
+    "ticketContinue": "Continue to passenger details"
   },
   "BookConfirmation": {
     "backHome": "Powrót do domu ",
@@ -126,7 +135,10 @@
     "toastSendFailed": "Nie można wysłać kodu ",
     "toastCodeSent": "Sprawdź, czy w skrzynce e-mail znajduje się 6-cyfrowy kod ",
     "toastInvalid": "Nieprawidłowy kod ",
-    "toastSignedIn": "Zalogowano "
+    "toastSignedIn": "Zalogowano ",
+    "codeHelper": "Paste the code from the email, or just click the sign-in button we sent.",
+    "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
+    "linkErrorExpired": "That sign-in link has expired. Request a new one below."
   },
   "LoginPage": {
     "loading": "Ładowanie… "
@@ -144,7 +156,9 @@
     "colReference": "Odniesienie ",
     "colMode": "Tryb ",
     "needsAttention": "Wymaga uwagi ",
-    "needsAttentionDescription": "Jeśli rezerwacja nie powiodła się po dokonaniu płatności, skontaktuj się z obsługą klienta, przekazując dowód tożsamości i paragon z paskiem. "
+    "needsAttentionDescription": "Jeśli rezerwacja nie powiodła się po dokonaniu płatności, skontaktuj się z obsługą klienta, przekazując dowód tożsamości i paragon z paskiem. ",
+    "colItinerary": "Itinerary",
+    "downloadPdf": "Download PDF"
   },
   "Terms": {
     "title": "Regulamin świadczenia usług",
