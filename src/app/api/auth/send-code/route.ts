@@ -5,6 +5,7 @@ import { buildLoginEmail } from "@/lib/auth/login-email";
 import { getEmailFrom, getResend } from "@/lib/resend";
 import bcrypt from "bcryptjs";
 import { createHash, randomBytes } from "node:crypto";
+import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -43,36 +44,68 @@ export async function POST(req: Request) {
 
   const expiresAt = new Date(Date.now() + OTP_TTL_MINUTES * 60 * 1000);
 
-  await db().insert(loginCodes).values({
-    email,
-    codeHash,
-    tokenHash,
-    expiresAt,
-  });
+  let insertedId: string | undefined;
+  try {
+    const [inserted] = await db()
+      .insert(loginCodes)
+      .values({
+        email,
+        codeHash,
+        tokenHash,
+        expiresAt,
+      })
+      .returning({ id: loginCodes.id });
 
-  const appUrl = (
-    process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
-  ).replace(/\/$/, "");
-  const magicLinkUrl = new URL(`${appUrl}/api/auth/magic`);
-  magicLinkUrl.searchParams.set("email", email);
-  magicLinkUrl.searchParams.set("token", token);
-  if (next) magicLinkUrl.searchParams.set("next", next);
+    insertedId = inserted?.id;
 
-  const resend = getResend();
-  const from = getEmailFrom();
-  const { subject, html, text } = buildLoginEmail({
-    code: codeStr,
-    magicLinkUrl: magicLinkUrl.toString(),
-    ttlMinutes: OTP_TTL_MINUTES,
-  });
+    const appUrl = (
+      process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"
+    ).replace(/\/$/, "");
+    const magicLinkUrl = new URL(`${appUrl}/api/auth/magic`);
+    magicLinkUrl.searchParams.set("email", email);
+    magicLinkUrl.searchParams.set("token", token);
+    if (next) magicLinkUrl.searchParams.set("next", next);
 
-  await resend.emails.send({
-    from,
-    to: email,
-    subject,
-    html,
-    text,
-  });
+    const resend = getResend();
+    const from = getEmailFrom();
+    const { subject, html, text } = buildLoginEmail({
+      code: codeStr,
+      magicLinkUrl: magicLinkUrl.toString(),
+      ttlMinutes: OTP_TTL_MINUTES,
+    });
 
-  return NextResponse.json({ ok: true });
+    const { error: sendError } = await resend.emails.send({
+      from,
+      to: email,
+      subject,
+      html,
+      text,
+    });
+
+    if (sendError) {
+      console.error("send-code Resend error", sendError);
+      if (insertedId) {
+        await db().delete(loginCodes).where(eq(loginCodes.id, insertedId));
+      }
+      return NextResponse.json(
+        { error: "Email could not be sent. Try again shortly." },
+        { status: 502 },
+      );
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("send-code failed", err);
+    if (insertedId) {
+      try {
+        await db().delete(loginCodes).where(eq(loginCodes.id, insertedId));
+      } catch {
+        /* ignore cleanup failure */
+      }
+    }
+    return NextResponse.json(
+      { error: "Something went wrong. Try again." },
+      { status: 500 },
+    );
+  }
 }

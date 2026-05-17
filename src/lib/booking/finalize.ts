@@ -213,7 +213,7 @@ async function finalizeBooking(
 
   try {
     const resend = getResend();
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: getEmailFrom(),
       to,
       subject,
@@ -228,6 +228,15 @@ async function finalizeBooking(
           ]
         : undefined,
     });
+    if (error) {
+      console.error("Booking confirmation email failed", error);
+      await logBookingEvent({ id: bookingId }, "email_failed", {
+        message:
+          typeof error === "object"
+            ? JSON.stringify(error)
+            : String(error),
+      });
+    }
   } catch (err) {
     console.error("Booking confirmation email failed", err);
     await logBookingEvent({ id: bookingId }, "email_failed", {
