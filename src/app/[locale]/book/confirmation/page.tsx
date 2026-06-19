@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { buildPublicMetadata } from "@/lib/i18n/metadata";
+import { reconcileByCheckoutSessionId } from "@/lib/booking/reconcile-stripe-session";
 import { ConfirmationToast } from "./confirmation-toast";
 
 export async function generateMetadata({
@@ -37,6 +38,17 @@ export default async function BookConfirmationPage({
   const t = await getTranslations("BookConfirmation");
   const sp = await searchParams;
   const isAdminTest = sp.admin_test === "1";
+
+  if (sp.session_id && !isAdminTest) {
+    try {
+      await reconcileByCheckoutSessionId(
+        sp.session_id,
+        "/book/confirmation",
+      );
+    } catch (err) {
+      console.error("[book/confirmation] stripe reconcile failed", err);
+    }
+  }
 
   const primary = cn(
     buttonVariants({ size: "lg" }),

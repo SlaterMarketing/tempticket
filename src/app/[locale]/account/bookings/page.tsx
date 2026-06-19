@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/table";
 import { getSession } from "@/lib/auth/session";
 import { buildPublicMetadata } from "@/lib/i18n/metadata";
+import { reconcileByCheckoutSessionId, reconcilePendingStripeBooking } from "@/lib/booking/reconcile-stripe-session";
+import { BOOKING_STATUS } from "@/lib/booking/status";
 import { db } from "@/lib/db";
 import { bookings } from "@/lib/db/schema";
 import { and, desc, eq, or, sql, isNotNull } from "drizzle-orm";
@@ -63,7 +65,42 @@ export default async function BookingsPage({
   const emailLower = email.trim().toLowerCase();
   const paramsSp = await searchParams;
 
+  if (paramsSp.session_id) {
+    try {
+      await reconcileByCheckoutSessionId(
+        paramsSp.session_id,
+        "/account/bookings",
+      );
+    } catch (err) {
+      console.error("[account/bookings] stripe reconcile failed", err);
+    }
+  }
+
   const rows = await db()
+    .select()
+    .from(bookings)
+    .where(
+      or(
+        eq(bookings.userId, userId),
+        and(
+          isNotNull(bookings.customerEmail),
+          sql`lower(${bookings.customerEmail}) = ${emailLower}`,
+        ),
+      ),
+    )
+    .orderBy(desc(bookings.createdAt));
+
+  for (const booking of rows) {
+    if (booking.status !== BOOKING_STATUS.PENDING_CHECKOUT) continue;
+    if (!booking.stripeSessionId) continue;
+    try {
+      await reconcilePendingStripeBooking(booking, "/account/bookings");
+    } catch (err) {
+      console.error("[account/bookings] pending reconcile failed", booking.id, err);
+    }
+  }
+
+  const refreshedRows = await db()
     .select()
     .from(bookings)
     .where(
@@ -96,7 +133,7 @@ export default async function BookingsPage({
           <CardDescription>{t("ordersDescription")}</CardDescription>
         </CardHeader>
         <CardContent>
-          {rows.length === 0 ? (
+          {refreshedRows.length === 0 ? (
             <p className="text-muted-foreground text-sm">{t("empty")}</p>
           ) : (
             <Table>
@@ -111,7 +148,7 @@ export default async function BookingsPage({
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {rows.map((b) => (
+                {refreshedRows.map((b) => (
                   <TableRow key={b.id}>
                     <TableCell className="whitespace-nowrap text-sm">
                       {b.createdAt.toISOString().slice(0, 10)}
@@ -144,14 +181,14 @@ export default async function BookingsPage({
         </CardContent>
       </Card>
 
-      {rows.some((b) => b.failureReason) && (
+      {refreshedRows.some((b) => b.failureReason) && (
         <Card className="border-destructive/40">
           <CardHeader>
             <CardTitle>{t("needsAttention")}</CardTitle>
             <CardDescription>{t("needsAttentionDescription")}</CardDescription>
           </CardHeader>
           <CardContent className="text-sm space-y-2">
-            {rows
+            {refreshedRows
               .filter((b) => b.failureReason)
               .map((b) => (
                 <p key={b.id}>

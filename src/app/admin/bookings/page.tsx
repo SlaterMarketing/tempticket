@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/table";
 import { db } from "@/lib/db";
 import { bookings, users } from "@/lib/db/schema";
+import { reconcilePendingStripeBooking } from "@/lib/booking/reconcile-stripe-session";
+import { BOOKING_STATUS } from "@/lib/booking/status";
 import { cn } from "@/lib/utils";
 import { desc, eq } from "drizzle-orm";
 
@@ -31,6 +33,20 @@ export default async function AdminBookingsPage({
 }) {
   const sp = await searchParams;
   const exportQuery = serializeAdminSearchParams(sp);
+
+  const pendingRows = await db()
+    .select()
+    .from(bookings)
+    .where(eq(bookings.status, BOOKING_STATUS.PENDING_CHECKOUT));
+
+  for (const booking of pendingRows) {
+    if (!booking.stripeSessionId) continue;
+    try {
+      await reconcilePendingStripeBooking(booking, "/admin/bookings");
+    } catch (err) {
+      console.error("[admin/bookings] pending reconcile failed", booking.id, err);
+    }
+  }
 
   const rows = await db()
     .select({

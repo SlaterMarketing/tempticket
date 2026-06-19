@@ -1,28 +1,11 @@
-import { logBookingEvent } from "@/lib/booking/log";
+import { reconcileStripeCheckoutPayment } from "@/lib/booking/reconcile-stripe-payment";
 import { BOOKING_STATUS } from "@/lib/booking/status";
-import { trackInternalEventSafe } from "@/lib/analytics/track";
-import { createDuffelOrderForBooking } from "@/lib/booking/finalize";
 import { db } from "@/lib/db";
-import { bookings, type Booking } from "@/lib/db/schema";
+import { bookings } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-
-function analyticsContextFromBooking(b: Booking) {
-  const meta = (b.metadata ?? {}) as Record<string, unknown>;
-  return {
-    visitorId:
-      typeof meta.analyticsVisitorId === "string"
-        ? meta.analyticsVisitorId
-        : null,
-    sessionId:
-      typeof meta.analyticsSessionId === "string"
-        ? meta.analyticsSessionId
-        : null,
-    userId: b.userId,
-  };
-}
 
 export async function POST(req: Request) {
   const whSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -65,45 +48,19 @@ export async function POST(req: Request) {
     return NextResponse.json({ received: true });
   }
 
-  if (
-    booking.stripeSessionId &&
-    booking.stripeSessionId !== session.id
-  ) {
+  const needsReconcile =
+    booking.status === BOOKING_STATUS.PENDING_CHECKOUT ||
+    ((booking.status === BOOKING_STATUS.PAID ||
+      booking.status === BOOKING_STATUS.FAILED) &&
+      !booking.duffelOrderId);
+
+  if (!needsReconcile) {
     return NextResponse.json({ received: true });
   }
 
-  if (booking.status !== BOOKING_STATUS.PENDING_CHECKOUT) {
-    return NextResponse.json({ received: true });
-  }
-
-  await db()
-    .update(bookings)
-    .set({
-      status: BOOKING_STATUS.PAID,
-      stripePaymentStatus: "paid",
-      updatedAt: new Date(),
-    })
-    .where(eq(bookings.id, bookingId));
-
-  await logBookingEvent({ id: bookingId }, "stripe_paid", {
-    session_id: session.id,
-  });
-
-  const ac = analyticsContextFromBooking(booking);
-  void trackInternalEventSafe({
-    name: "checkout_completed",
-    visitorId: ac.visitorId,
-    sessionId: ac.sessionId,
-    userId: ac.userId,
-    path: "/api/webhooks/stripe",
-    payload: {
-      booking_id: bookingId,
-      stripe_session_id: session.id,
-    },
-  });
-
-  await createDuffelOrderForBooking(
-    { ...booking, status: BOOKING_STATUS.PAID },
+  await reconcileStripeCheckoutPayment(
+    booking,
+    session,
     "/api/webhooks/stripe",
   );
 
