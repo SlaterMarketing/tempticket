@@ -16,7 +16,7 @@ import type {
   CreateOrderPassenger,
   Order,
 } from "@duffel/api/dist/booking/Orders/OrdersTypes";
-import { eq } from "drizzle-orm";
+import { eq, and, or } from "drizzle-orm";
 
 function analyticsContextFromBooking(b: Booking) {
   const meta = (b.metadata ?? {}) as Record<string, unknown>;
@@ -242,4 +242,86 @@ async function finalizeBooking(
       message: err instanceof Error ? err.message : String(err),
     });
   }
+}
+
+/** Sync booking state when Duffel sends order.created (backup to the synchronous API path). */
+export async function confirmBookingFromDuffelWebhook(
+  orderId: string,
+  source: string,
+  embeddedOrder?: Record<string, unknown> | null,
+): Promise<void> {
+  const byOrderId = await db()
+    .select()
+    .from(bookings)
+    .where(eq(bookings.duffelOrderId, orderId))
+    .limit(1);
+  let booking = byOrderId[0];
+
+  const offerId =
+    typeof embeddedOrder?.offer_id === "string"
+      ? embeddedOrder.offer_id
+      : null;
+
+  if (!booking && offerId) {
+    const byOffer = await db()
+      .select()
+      .from(bookings)
+      .where(
+        and(
+          eq(bookings.duffelOfferId, offerId),
+          or(
+            eq(bookings.status, BOOKING_STATUS.PAID),
+            eq(bookings.status, BOOKING_STATUS.DUFFEL_PROCESSING),
+          ),
+        ),
+      )
+      .limit(1);
+    booking = byOffer[0];
+  }
+
+  if (!booking || booking.status === BOOKING_STATUS.CONFIRMED) {
+    return;
+  }
+
+  const duffel = getDuffel();
+  const orderRes = await duffel.orders.get(orderId);
+  await finalizeBooking(booking.id, orderRes.data, source);
+}
+
+/** Mark a booking failed when Duffel sends order.creation_failed. */
+export async function failBookingFromDuffelWebhook(
+  offerId: string,
+  message: string,
+  source: string,
+): Promise<void> {
+  const rows = await db()
+    .select()
+    .from(bookings)
+    .where(
+      and(
+        eq(bookings.duffelOfferId, offerId),
+        or(
+          eq(bookings.status, BOOKING_STATUS.PAID),
+          eq(bookings.status, BOOKING_STATUS.DUFFEL_PROCESSING),
+        ),
+      ),
+    )
+    .limit(1);
+  const booking = rows[0];
+  if (!booking) return;
+
+  await db()
+    .update(bookings)
+    .set({
+      status: BOOKING_STATUS.FAILED,
+      failureReason: message,
+      updatedAt: new Date(),
+    })
+    .where(eq(bookings.id, booking.id));
+
+  await logBookingEvent({ id: booking.id }, "duffel_failed", {
+    message,
+    source,
+    via: "webhook",
+  });
 }
