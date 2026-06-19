@@ -25,23 +25,26 @@ export function verifyDuffelWebhookSignature(
   signatureHeader: string | null,
   secret: string,
 ): boolean {
-  if (!signatureHeader?.trim()) return false;
+  const trimmedSecret = secret.trim();
+  if (!signatureHeader?.trim() || !trimmedSecret) return false;
 
   let timestamp: string | undefined;
   let signature: string | undefined;
   for (const part of signatureHeader.split(",")) {
     const eqIdx = part.indexOf("=");
     if (eqIdx === -1) continue;
-    const key = part.slice(0, eqIdx);
-    const value = part.slice(eqIdx + 1);
+    const key = part.slice(0, eqIdx).trim();
+    const value = part.slice(eqIdx + 1).trim();
     if (key === "t") timestamp = value;
     if (key === "v1") signature = value;
   }
   if (!timestamp || !signature) return false;
 
+  const secretKey = Buffer.from(trimmedSecret, "utf8");
   const expected = crypto
-    .createHmac("sha256", Buffer.from(secret, "utf8"))
-    .update(`${timestamp}.${rawBody}`, "utf8")
+    .createHmac("sha256", secretKey)
+    .update(Buffer.from(`${timestamp}.`, "utf8"))
+    .update(Buffer.from(rawBody, "utf8"))
     .digest("hex");
 
   try {
@@ -56,11 +59,19 @@ export function verifyDuffelWebhookSignature(
 
 export function parseDuffelWebhookEvent(rawBody: string): DuffelWebhookEvent | null {
   try {
-    const parsed = JSON.parse(rawBody) as { data?: DuffelWebhookEvent };
-    if (!parsed.data?.type || !parsed.data.idempotency_key) {
+    const parsed = JSON.parse(rawBody) as Partial<DuffelWebhookEvent>;
+    if (!parsed.type || !parsed.id) {
       return null;
     }
-    return parsed.data;
+    return {
+      id: parsed.id,
+      type: parsed.type,
+      idempotency_key: parsed.idempotency_key ?? parsed.id,
+      live_mode: parsed.live_mode ?? false,
+      created_at: parsed.created_at ?? new Date().toISOString(),
+      api_version: parsed.api_version,
+      data: parsed.data ?? null,
+    };
   } catch {
     return null;
   }

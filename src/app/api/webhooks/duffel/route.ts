@@ -22,6 +22,7 @@ export async function POST(req: Request) {
 
   const event = parseDuffelWebhookEvent(rawBody);
   if (!event) {
+    console.error("Duffel webhook invalid payload", rawBody.slice(0, 500));
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
