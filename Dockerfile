@@ -19,7 +19,7 @@ ENV NEXT_PUBLIC_APP_NAME=$NEXT_PUBLIC_APP_NAME
 
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Pass NEXT_PUBLIC_APP_URL at image build for prod, or set the same name at container runtime on Dokploy for server-generated links.
+# Pass NEXT_PUBLIC_APP_URL at image build for client/metadata. Set APP_URL at container runtime on Dokploy for server-generated links (emails, Stripe).
 RUN npm run build
 
 FROM base AS runner
