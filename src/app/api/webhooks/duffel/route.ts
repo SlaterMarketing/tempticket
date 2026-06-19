@@ -12,15 +12,25 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Not configured" }, { status: 500 });
   }
 
-  const rawBody = await req.text();
-  const signature = req.headers.get("x-duffel-signature");
+  const rawBody = Buffer.from(await req.arrayBuffer());
+  const signature =
+    req.headers.get("x-duffel-signature") ??
+    req.headers.get("X-Duffel-Signature");
+
+  if (!signature) {
+    console.error("Duffel webhook missing X-Duffel-Signature header");
+    return NextResponse.json({ error: "Missing signature" }, { status: 400 });
+  }
 
   if (!verifyDuffelWebhookSignature(rawBody, signature, secret)) {
-    console.error("Duffel webhook signature failed");
+    console.error("Duffel webhook signature failed", {
+      bodyBytes: rawBody.length,
+      secretChars: secret.trim().length,
+    });
     return NextResponse.json({ error: "Bad signature" }, { status: 400 });
   }
 
-  const event = parseDuffelWebhookEvent(rawBody);
+  const event = parseDuffelWebhookEvent(rawBody.toString("utf8"));
   if (!event) {
     console.error("Duffel webhook invalid payload", rawBody.slice(0, 500));
     return NextResponse.json({ error: "Invalid payload" }, { status: 400 });

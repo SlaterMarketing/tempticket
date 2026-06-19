@@ -121,10 +121,14 @@ function shouldSkipIntl(pathname: string) {
 }
 
 export default function proxy(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  if (pathname.startsWith("/api/webhooks/")) {
+    return NextResponse.next();
+  }
+
   const { requestHeaders, visitorId, sessionId, issuedNewVisitor } =
     buildAnalyticsRequestHeaders(request);
-
-  const pathname = request.nextUrl.pathname;
 
   if (shouldSkipIntl(pathname)) {
     const res = NextResponse.next({

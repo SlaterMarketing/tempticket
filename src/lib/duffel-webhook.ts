@@ -20,13 +20,65 @@ export type DuffelWebhookEvent = {
   } | null;
 };
 
+function stripEnvQuotes(value: string): string {
+  const trimmed = value.trim();
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1).trim();
+  }
+  return trimmed;
+}
+
+/** Duffel signs with the secret string as UTF-8 bytes (not base64-decoded). */
+function duffelWebhookSecretVariants(secret: string): Buffer[] {
+  const base = stripEnvQuotes(secret);
+  const literals = new Set<string>([base]);
+  if (base.includes(" ")) literals.add(base.replace(/ /g, "+"));
+
+  const keys: Buffer[] = [];
+  for (const literal of literals) {
+    keys.push(Buffer.from(literal, "utf8"));
+    try {
+      const decoded = Buffer.from(literal, "base64");
+      if (decoded.length > 0) keys.push(decoded);
+    } catch {
+      // ignore invalid base64
+    }
+  }
+  return keys;
+}
+
+function duffelWebhookHmac(
+  secretKey: Buffer,
+  timestamp: string,
+  rawBody: Buffer,
+): string {
+  return crypto
+    .createHmac("sha256", secretKey)
+    .update(`${timestamp}.`, "utf8")
+    .update(rawBody)
+    .digest("hex");
+}
+
+function signaturesMatch(expected: string, given: string): boolean {
+  try {
+    return crypto.timingSafeEqual(
+      Buffer.from(expected, "utf8"),
+      Buffer.from(given, "utf8"),
+    );
+  } catch {
+    return false;
+  }
+}
+
 export function verifyDuffelWebhookSignature(
-  rawBody: string,
+  rawBody: string | Buffer,
   signatureHeader: string | null,
   secret: string,
 ): boolean {
-  const trimmedSecret = secret.trim();
-  if (!signatureHeader?.trim() || !trimmedSecret) return false;
+  if (!signatureHeader?.trim() || !secret.trim()) return false;
 
   let timestamp: string | undefined;
   let signature: string | undefined;
@@ -40,21 +92,14 @@ export function verifyDuffelWebhookSignature(
   }
   if (!timestamp || !signature) return false;
 
-  const secretKey = Buffer.from(trimmedSecret, "utf8");
-  const expected = crypto
-    .createHmac("sha256", secretKey)
-    .update(Buffer.from(`${timestamp}.`, "utf8"))
-    .update(Buffer.from(rawBody, "utf8"))
-    .digest("hex");
+  const bodyBuf =
+    typeof rawBody === "string" ? Buffer.from(rawBody, "utf8") : rawBody;
 
-  try {
-    return crypto.timingSafeEqual(
-      Buffer.from(signature, "utf8"),
-      Buffer.from(expected, "utf8"),
-    );
-  } catch {
-    return false;
+  for (const secretKey of duffelWebhookSecretVariants(secret)) {
+    const expected = duffelWebhookHmac(secretKey, timestamp, bodyBuf);
+    if (signaturesMatch(expected, signature)) return true;
   }
+  return false;
 }
 
 export function parseDuffelWebhookEvent(rawBody: string): DuffelWebhookEvent | null {
