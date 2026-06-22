@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { buildPublicMetadata } from "@/lib/i18n/metadata";
 import { reconcileByCheckoutSessionId } from "@/lib/booking/reconcile-stripe-session";
+import { trackServerEventSafe } from "@/lib/analytics/track";
 import { ConfirmationToast } from "./confirmation-toast";
 
 export async function generateMetadata({
@@ -41,10 +42,19 @@ export default async function BookConfirmationPage({
 
   if (sp.session_id && !isAdminTest) {
     try {
-      await reconcileByCheckoutSessionId(
+      const result = await reconcileByCheckoutSessionId(
         sp.session_id,
         "/book/confirmation",
       );
+      if (result.ok) {
+        void trackServerEventSafe("stripe_checkout_returned", {
+          path: "/book/confirmation",
+          payload: {
+            booking_id: result.bookingId,
+            session_id: sp.session_id,
+          },
+        });
+      }
     } catch (err) {
       console.error("[book/confirmation] stripe reconcile failed", err);
     }

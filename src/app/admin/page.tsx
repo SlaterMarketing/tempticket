@@ -4,6 +4,7 @@ import { CohortGrid } from "@/app/admin/_components/cohort-grid";
 import { FunnelChart } from "@/app/admin/_components/funnel-chart";
 import { KpiCard } from "@/app/admin/_components/kpi-card";
 import { LandingsTable } from "@/app/admin/_components/landings-table";
+import { RoutesTable } from "@/app/admin/_components/routes-table";
 import { SourcesTable } from "@/app/admin/_components/sources-table";
 import {
   getAdminRangeFromSearchParams,
@@ -13,14 +14,25 @@ import { buttonVariants } from "@/components/ui/button";
 import {
   getAdminKpis,
   getCohortRetention,
+  getFailureMetrics,
   getFunnel,
   getRevenueByDay,
+  getRouteConversion,
   getTopLandingPages,
   getTrafficSources,
+  type TrafficSourceGroupBy,
 } from "@/lib/analytics/queries";
 import { cn } from "@/lib/utils";
 
 export const revalidate = 60;
+
+function parseAttrGroup(
+  sp: Record<string, string | string[] | undefined>,
+): TrafficSourceGroupBy {
+  const raw = typeof sp.attr === "string" ? sp.attr : "source";
+  if (raw === "campaign" || raw === "medium") return raw;
+  return "source";
+}
 
 export default async function AdminOverviewPage({
   searchParams,
@@ -30,19 +42,25 @@ export default async function AdminOverviewPage({
   const sp = await searchParams;
   const range = await getAdminRangeFromSearchParams(searchParams);
   const exportQuery = serializeAdminSearchParams(sp);
+  const attrGroup = parseAttrGroup(sp);
+  const rangeQuery = exportQuery;
 
   const [
     kpis,
     funnel,
+    failures,
     revenueByDay,
     sources,
+    routes,
     landings,
     cohorts,
   ] = await Promise.all([
     getAdminKpis(range),
     getFunnel(range),
+    getFailureMetrics(range),
     getRevenueByDay(range),
-    getTrafficSources(range),
+    getTrafficSources(range, attrGroup),
+    getRouteConversion(range),
     getTopLandingPages(range),
     getCohortRetention(range),
   ]);
@@ -118,6 +136,11 @@ export default async function AdminOverviewPage({
           prev={kpis.bookingsPaidPrev}
         />
         <KpiCard
+          title="Guest bookings"
+          value={kpis.guestBookingsPaid}
+          prev={kpis.guestBookingsPaidPrev}
+        />
+        <KpiCard
           title="Revenue (USD)"
           value={kpis.revenueUsdCents}
           prev={kpis.revenueUsdCentsPrev}
@@ -129,14 +152,35 @@ export default async function AdminOverviewPage({
           prev={kpis.conversionPctPrev}
           format="percent"
         />
+        <KpiCard
+          title="Checkout abandoned"
+          value={kpis.checkoutAbandoned}
+          prev={kpis.checkoutAbandonedPrev}
+        />
+        <KpiCard
+          title="Booking failed"
+          value={kpis.bookingFailed}
+          prev={kpis.bookingFailedPrev}
+        />
+        <KpiCard
+          title="Paid, not confirmed"
+          value={kpis.paidButNotConfirmed}
+          prev={kpis.paidButNotConfirmedPrev}
+        />
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <FunnelChart steps={funnel} />
+        <FunnelChart steps={funnel} failures={failures} />
         <RevenueBarChart data={revenueByDay} />
       </div>
 
-      <SourcesTable rows={sources} exportQuery={exportQuery} />
+      <SourcesTable
+        rows={sources}
+        exportQuery={exportQuery}
+        groupBy={attrGroup}
+        rangeQuery={rangeQuery}
+      />
+      <RoutesTable rows={routes} exportQuery={exportQuery} />
       <LandingsTable rows={landings} exportQuery={exportQuery} />
       <CohortGrid rows={cohorts} />
     </div>

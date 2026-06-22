@@ -50,6 +50,7 @@ export async function reconcilePendingStripeBooking(
       ok: true,
       alreadyConfirmed: true,
       bookingReference: booking.duffelBookingRef,
+      bookingId: booking.id,
     };
   }
 

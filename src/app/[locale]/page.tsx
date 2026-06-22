@@ -99,7 +99,7 @@ function HeroTicketGraphic({
         backgroundSize: "16px 16px",
       }}
     >
-      <div className="relative rounded-xl border-2 border-dashed border-[color:var(--brand-blue)]/30 bg-subtle-ticket-face p-6 pt-7 shadow-[0_20px_50px_-12px_rgba(34,98,187,0.25)] backdrop-blur-sm">
+      <div className="relative overflow-hidden rounded-xl border-2 border-dashed border-[color:var(--brand-blue)]/30 bg-subtle-ticket-face p-6 pt-7 shadow-[0_20px_50px_-12px_rgba(34,98,187,0.25)] backdrop-blur-sm">
         <p className="absolute right-4 top-4 z-10 rounded-full bg-[color:var(--brand-green)] px-3 py-1.5 text-xs font-bold tracking-tight text-white shadow-md">
           {priceLabel}
         </p>
@@ -143,12 +143,12 @@ function HeroTicketGraphic({
               {verified}
             </span>
           </div>
-          <div className="flex gap-0.5 opacity-40">
+          <div className="flex max-w-full gap-0.5 overflow-hidden opacity-40">
             {Array.from({ length: 28 }).map((_, i) => (
               <div
                 key={i}
                 className={cn(
-                  "h-8 w-1 rounded-full bg-foreground",
+                  "h-8 w-1 rounded-full bg-[color:var(--brand-blue)]/35",
                   i % 3 === 0 && "w-1.5",
                 )}
               />
@@ -255,27 +255,27 @@ export default async function HomePage({
   const priceFrom = t("ticketFrom", { price: usdFeeDisplay });
 
   return (
-    <div id="top" className="relative bg-mint-grain">
+    <div id="top" className="relative overflow-x-clip bg-mint-grain">
       <BackToTopButton />
       {/* Hero + trust wave: one shell so mint grain & airiness run to the wave (no extra divider band) */}
       <div className="relative">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 z-0 opacity-[0.34] mix-blend-soft-light"
+          className="pointer-events-none absolute inset-0 z-0 opacity-50"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse 95% 62% at 50% -14%, rgb(255 255 255 / 0.92) 0%, transparent 62%), radial-gradient(ellipse 55% 48% at 86% 20%, rgb(227 238 252 / 0.3) 0%, transparent 68%)",
+              "radial-gradient(ellipse 95% 62% at 50% -14%, rgb(255 255 255 / 0.92) 0%, transparent 62%), radial-gradient(ellipse 55% 48% at 86% 20%, rgb(227 238 252 / 0.45) 0%, transparent 68%)",
           }}
         />
         <section
           id="hero"
-          className="relative z-10 flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-24 md:pb-16 md:pt-28"
+          className="relative z-10 flex min-h-dvh flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-20 md:pb-16 md:pt-24"
           aria-labelledby="hero-heading"
         >
           <div className="relative mx-auto max-w-6xl rounded-xl bg-subtle-hero-card px-6 py-10 shadow-[0_25px_60px_-20px_rgba(34,98,187,0.2)] ring-1 ring-[color:var(--brand-blue)]/10 md:rounded-2xl md:px-12 md:py-14">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-14">
               <div>
-                <p className="mb-2 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-green)] shadow-sm">
+                <p className="mb-2 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-green)] shadow-sm ring-1 ring-[color:var(--brand-green)]/15">
                   {t("heroBadge")}
                 </p>
                 <h1
@@ -285,20 +285,20 @@ export default async function HomePage({
                   <span className="text-[color:var(--brand-blue)]">
                     {t("heroHeadingLead")}
                   </span>
-                  <span className="bg-gradient-to-r from-[color:var(--brand-blue)] to-[color:var(--brand-green)] bg-clip-text text-transparent">
+                  <span className="text-[color:var(--brand-green)]">
                     {t("heroHeadingAccent")}
                   </span>
                 </h1>
-                <p className="mt-5 max-w-xl text-pretty text-lg text-muted-foreground leading-relaxed">
+                <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-slate-600">
                   {t("heroSub")}
                 </p>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
+                <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
                   <BookNowButton label={t("bookNow")} />
                   <Link
                     href="#how-it-works"
                     className={cn(
-                      buttonVariants({ variant: "ghost", size: "lg" }),
-                      "rounded-xl font-medium text-[color:var(--brand-blue)] hover:bg-[color:var(--brand-blue)]/5 hover:text-[color:var(--brand-blue)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
+                      buttonVariants({ variant: "outline", size: "lg" }),
+                      "rounded-xl border-2 border-[color:var(--brand-blue)]/35 bg-white font-semibold text-[color:var(--brand-blue)] shadow-sm hover:bg-[color:var(--brand-blue)]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
                     )}
                   >
                     {t("howItWorks")}

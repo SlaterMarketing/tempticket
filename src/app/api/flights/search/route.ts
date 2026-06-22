@@ -38,14 +38,21 @@ export async function POST(req: Request) {
   }
 
   const firstSliceForAnalytics = parsed.data.slices[0];
-  if (firstSliceForAnalytics) {
-    void trackServerEventSafe("search_attempted", {
-      path: "/api/flights/search",
-      payload: {
+  const searchAnalyticsBase = firstSliceForAnalytics
+    ? {
         origin: firstSliceForAnalytics.origin,
         destination: firstSliceForAnalytics.destination,
         date: firstSliceForAnalytics.departure_date,
-      },
+        cabin_class: parsed.data.cabin_class,
+        passenger_count: parsed.data.passengers.length,
+        slice_count: parsed.data.slices.length,
+      }
+    : null;
+
+  if (searchAnalyticsBase) {
+    void trackServerEventSafe("search_attempted", {
+      path: "/api/flights/search",
+      payload: searchAnalyticsBase,
     });
   }
 
@@ -89,13 +96,12 @@ export async function POST(req: Request) {
 
     const offersOrdered = orderOffersHoldCheapestFirst(slim);
 
-    if (firstSliceForAnalytics) {
+    if (searchAnalyticsBase) {
       void trackServerEventSafe("search_performed", {
         path: "/api/flights/search",
         payload: {
-          origin: firstSliceForAnalytics.origin,
-          destination: firstSliceForAnalytics.destination,
-          date: firstSliceForAnalytics.departure_date,
+          ...searchAnalyticsBase,
+          offer_count: offersOrdered.length,
         },
       });
     }
@@ -106,14 +112,10 @@ export async function POST(req: Request) {
     });
   } catch (e) {
     console.error("Duffel search error", e);
-    if (firstSliceForAnalytics) {
+    if (searchAnalyticsBase) {
       void trackServerEventSafe("search_failed", {
         path: "/api/flights/search",
-        payload: {
-          origin: firstSliceForAnalytics.origin,
-          destination: firstSliceForAnalytics.destination,
-          date: firstSliceForAnalytics.departure_date,
-        },
+        payload: searchAnalyticsBase,
       });
     }
     return NextResponse.json(

@@ -48,7 +48,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
       <select
         value={locale}
         aria-label={t("ariaLabel")}
-        className="max-w-[10.5rem] rounded-md border border-input bg-background px-2 py-1.5 text-foreground shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)]"
+        className="max-w-[6.75rem] rounded-md border border-[color:var(--brand-blue)]/20 bg-white px-1.5 py-1 text-xs text-[color:var(--brand-blue)] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] sm:max-w-[10.5rem] sm:px-2 sm:py-1.5 sm:text-sm"
         onChange={(e) => {
           router.replace(href, { locale: e.target.value });
         }}

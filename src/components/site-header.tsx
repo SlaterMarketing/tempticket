@@ -25,34 +25,34 @@ export function SiteHeader({
 
   const isHome = pathname === "/";
 
-  /** Home: sticky + transparent still sits over the body’s white bg; absolute lets the page wash show through. */
+  /** Home: light sticky bar so mobile matches desktop (no transparent overlay on dark system UI). */
   const isFloatingNav = isHome;
 
   return (
     <header
       className={cn(
-        "z-50",
+        "sticky top-0 z-50",
         isFloatingNav
-          ? "absolute inset-x-0 top-0 border-0 bg-transparent"
-          : "sticky top-0 border-b bg-background/80 backdrop-blur-sm",
+          ? "border-b border-[color:var(--brand-blue)]/10 bg-[rgb(236_248_243/0.94)] backdrop-blur-md"
+          : "border-b bg-background/95 backdrop-blur-sm",
       )}
     >
-      <div className="mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-2 px-4 py-2 sm:min-h-20 sm:gap-4 sm:py-3">
         <Link
           href="/"
-          className="flex items-center gap-4 font-semibold tracking-tight text-foreground"
+          className="flex min-w-0 shrink items-center gap-2 font-semibold tracking-tight text-foreground sm:gap-4"
         >
           <Image
             src="/tempticket.png"
             alt={t("brandAlt")}
             width={64}
             height={64}
-            className="h-16 w-16 shrink-0 object-contain"
+            className="h-11 w-11 shrink-0 object-contain sm:h-16 sm:w-16"
             priority
           />
-          <Logo className="text-3xl leading-none" />
+          <Logo className="truncate text-xl leading-none sm:text-3xl" />
         </Link>
-        <nav className="flex max-w-full flex-1 flex-wrap items-center justify-end gap-2 sm:gap-4 text-xl">
+        <nav className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-4 text-sm sm:text-xl">
           <LocaleSwitcher
             className={cn(
               "shrink-0",
@@ -85,7 +85,7 @@ export function SiteHeader({
             <Link
               href="/book"
               className={cn(
-                "rounded-full px-6 py-3 font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2",
+                "shrink-0 rounded-full px-4 py-2 font-medium transition-colors focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 sm:px-6 sm:py-3",
                 isHome
                   ? "bg-[color:var(--brand-green)] text-white shadow-sm hover:bg-[color:var(--brand-green)]/90"
                   : "text-muted-foreground hover:bg-muted/80 hover:text-foreground",

@@ -28,11 +28,14 @@ export const ANALYTICS_EVENT_NAMES = [
   "search_failed",
   "search_performed",
   "offer_viewed",
+  "offer_selected",
   /** Book wizard step 2 — reservation preview UI shown */
   "book_ticket_preview_viewed",
   /** Book wizard step 3 — traveler details & payment UI shown */
   "book_passenger_details_viewed",
   "checkout_started",
+  "checkout_abandoned",
+  "stripe_checkout_returned",
   "checkout_completed",
   "booking_confirmed",
   "booking_failed",

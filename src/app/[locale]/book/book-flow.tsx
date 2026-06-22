@@ -316,6 +316,23 @@ export function BookFlow({
       ) {
         setCurrency(oc as CheckoutCurrencyCode);
       }
+      const firstSlice = offer.slices[0];
+      void fetch("/api/analytics/offer-selected", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          offer_id: offer.id,
+          origin: firstSlice?.origin,
+          destination: firstSlice?.destination,
+          date: firstSlice?.departing_at?.slice(0, 10),
+          total_amount: offer.total_amount,
+          total_currency: offer.total_currency,
+          airline: firstSlice?.segments?.[0]?.marketing_carrier,
+          requires_instant_payment:
+            offer.payment_requirements?.requires_instant_payment !== false,
+        }),
+        keepalive: true,
+      }).catch(() => {});
       setWizardStep(2);
     } catch {
       toast.error(t("toastLoadOffer"));

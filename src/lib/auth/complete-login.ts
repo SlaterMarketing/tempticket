@@ -1,3 +1,4 @@
+import { linkGuestBookingsToUser } from "@/lib/booking/link-guest-bookings";
 import {
   ANALYTICS_VISITOR_COOKIE,
   PG_UUID_RE,
@@ -40,6 +41,8 @@ export async function completeLogin(email: string, path: string) {
   if (vid && PG_UUID_RE.test(vid)) {
     await linkVisitorToUser(vid, userId);
   }
+
+  await linkGuestBookingsToUser(userId, email);
 
   const token = await createSessionToken({ sub: userId, email });
   await setSessionCookie(token);

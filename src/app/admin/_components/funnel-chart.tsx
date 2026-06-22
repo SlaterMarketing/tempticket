@@ -10,19 +10,28 @@ import {
   type FunnelStep,
 } from "@/lib/analytics/queries";
 
-export function FunnelChart({ steps }: { steps: FunnelStep[] }) {
+const FAILURE_LABELS: Record<string, string> = {
+  search_failed: "Search errors",
+  booking_failed: "Booking failed (Duffel)",
+  checkout_abandoned: "Checkout abandoned",
+};
+
+export function FunnelChart({
+  steps,
+  failures,
+}: {
+  steps: FunnelStep[];
+  failures: { name: string; count: number }[];
+}) {
   const max = Math.max(1, ...steps.map((s) => s.count));
   return (
     <Card>
       <CardHeader>
         <CardTitle>Funnel</CardTitle>
         <CardDescription>
-          Distinct visitors who reached each milestone in this date range (counts
-          are not strictly sequential). On the book flow, step 1 is find flights,
-          step 2 is the trip preview, step 3 is traveler details before checkout.
-          Compare flights returned vs trip preview vs step 3 to see where people
-          leave mid-booking; compare search submitted vs search error for supplier
-          issues.
+          Distinct visitors per milestone (not strict session sequences).
+          Step-to-step % is indicative. Offer selected and checkout return
+          events improve mid-funnel visibility.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -35,8 +44,13 @@ export function FunnelChart({ steps }: { steps: FunnelStep[] }) {
             <div key={s.name} className="space-y-1">
               <div className="flex justify-between gap-3 text-sm">
                 <span className="font-medium leading-snug">{label}</span>
-                <span className="tabular-nums text-muted-foreground shrink-0">
+                <span className="shrink-0 text-right tabular-nums text-muted-foreground">
                   {s.count}
+                  {s.conversionPct != null ? (
+                    <span className="ml-2 text-xs">
+                      → {s.conversionPct.toFixed(0)}%
+                    </span>
+                  ) : null}
                 </span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-muted">
@@ -48,6 +62,23 @@ export function FunnelChart({ steps }: { steps: FunnelStep[] }) {
             </div>
           );
         })}
+
+        {failures.some((f) => f.count > 0) ? (
+          <div className="mt-6 space-y-2 border-t pt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              Issues (not funnel steps)
+            </p>
+            {failures.map((f) => (
+              <div
+                key={f.name}
+                className="flex justify-between text-sm text-destructive/90"
+              >
+                <span>{FAILURE_LABELS[f.name] ?? f.name}</span>
+                <span className="tabular-nums">{f.count}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </CardContent>
     </Card>
   );

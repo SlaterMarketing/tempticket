@@ -10,7 +10,7 @@ import {
   SERVICE_FEE_BY_CURRENCY,
   type CheckoutCurrencyCode,
 } from "@/lib/pricing";
-import { and, count, desc, eq, gte, inArray, isNotNull, lte, sql } from "drizzle-orm";
+import { and, count, desc, eq, gte, inArray, isNotNull, isNull, lte, sql } from "drizzle-orm";
 
 /** Date window for admin analytics (current + previous period of equal length). */
 export type AnalyticsQueryRange = {
@@ -24,13 +24,19 @@ const FUNNEL_STEPS = [
   "page_view",
   "book_page_view",
   "search_attempted",
-  "search_failed",
   "search_performed",
+  "offer_selected",
   "book_ticket_preview_viewed",
   "book_passenger_details_viewed",
   "checkout_started",
   "checkout_completed",
   "booking_confirmed",
+] as const;
+
+export const FAILURE_EVENT_NAMES = [
+  "search_failed",
+  "booking_failed",
+  "checkout_abandoned",
 ] as const;
 
 /** Short labels for admin funnel chart (avoid technical event names). */
@@ -39,8 +45,8 @@ export const FUNNEL_STEP_LABELS: Record<(typeof FUNNEL_STEPS)[number], string> =
     page_view: "Any page view",
     book_page_view: "Book · step 1 (find flights)",
     search_attempted: "Book · search submitted",
-    search_failed: "Book · search error",
     search_performed: "Book · flights returned",
+    offer_selected: "Book · offer selected",
     book_ticket_preview_viewed: "Book · step 2 (trip preview)",
     book_passenger_details_viewed: "Book · step 3 (travelers & pay)",
     checkout_started: "Checkout started",
@@ -154,7 +160,45 @@ export type KpiSnapshot = {
   revenueUsdCentsPrev: number;
   conversionPct: number;
   conversionPctPrev: number;
+  checkoutAbandoned: number;
+  checkoutAbandonedPrev: number;
+  bookingFailed: number;
+  bookingFailedPrev: number;
+  paidButNotConfirmed: number;
+  paidButNotConfirmedPrev: number;
+  guestBookingsPaid: number;
+  guestBookingsPaidPrev: number;
 };
+
+async function countPaidButNotConfirmed(from: Date, to: Date): Promise<number> {
+  const row = await db()
+    .select({ n: count() })
+    .from(bookings)
+    .where(
+      and(
+        eq(bookings.stripePaymentStatus, "paid"),
+        isNull(bookings.duffelOrderId),
+        gte(bookings.createdAt, from),
+        lte(bookings.createdAt, to),
+      ),
+    );
+  return Number(row[0]?.n ?? 0);
+}
+
+async function countGuestConfirmedBookings(from: Date, to: Date): Promise<number> {
+  const row = await db()
+    .select({ n: count() })
+    .from(bookings)
+    .where(
+      and(
+        eq(bookings.status, BOOKING_STATUS.CONFIRMED),
+        isNull(bookings.userId),
+        gte(bookings.createdAt, from),
+        lte(bookings.createdAt, to),
+      ),
+    );
+  return Number(row[0]?.n ?? 0);
+}
 
 export async function getAdminKpis(
   range: AnalyticsQueryRange,
@@ -175,6 +219,14 @@ export async function getAdminKpis(
     bookingsPaidRowsPrev,
     revenueUsdCents,
     revenueUsdCentsPrev,
+    checkoutAbandoned,
+    checkoutAbandonedPrev,
+    bookingFailed,
+    bookingFailedPrev,
+    paidButNotConfirmed,
+    paidButNotConfirmedPrev,
+    guestBookingsPaid,
+    guestBookingsPaidPrev,
   ] = await Promise.all([
     countDistinctEventVisitors(from, to),
     countDistinctEventVisitors(prevFrom, prevTo),
@@ -190,6 +242,14 @@ export async function getAdminKpis(
     paidBookingsInRange(prevFrom, prevTo),
     revenueUsdCentsSum(from, to),
     revenueUsdCentsSum(prevFrom, prevTo),
+    countEvents("checkout_abandoned", from, to),
+    countEvents("checkout_abandoned", prevFrom, prevTo),
+    countEvents("booking_failed", from, to),
+    countEvents("booking_failed", prevFrom, prevTo),
+    countPaidButNotConfirmed(from, to),
+    countPaidButNotConfirmed(prevFrom, prevTo),
+    countGuestConfirmedBookings(from, to),
+    countGuestConfirmedBookings(prevFrom, prevTo),
   ]);
 
   const bookingsPaid = bookingsPaidRows.length;
@@ -215,10 +275,30 @@ export async function getAdminKpis(
     revenueUsdCentsPrev,
     conversionPct,
     conversionPctPrev,
+    checkoutAbandoned,
+    checkoutAbandonedPrev,
+    bookingFailed,
+    bookingFailedPrev,
+    paidButNotConfirmed,
+    paidButNotConfirmedPrev,
+    guestBookingsPaid,
+    guestBookingsPaidPrev,
   };
 }
 
-export type FunnelStep = { name: string; count: number };
+export type FunnelStep = { name: string; count: number; conversionPct: number | null };
+
+export async function getFailureMetrics(
+  range: AnalyticsQueryRange,
+): Promise<{ name: string; count: number }[]> {
+  const { from, to } = range;
+  const names = [...FAILURE_EVENT_NAMES];
+  const out: { name: string; count: number }[] = [];
+  for (const name of names) {
+    out.push({ name, count: await countEvents(name, from, to) });
+  }
+  return out;
+}
 
 export async function getFunnel(
   range: AnalyticsQueryRange,
@@ -239,7 +319,12 @@ export async function getFunnel(
           isNotNull(analyticsEvents.visitorId),
         ),
       );
-    out.push({ name, count: Number(row[0]?.n ?? 0) });
+    out.push({ name, count: Number(row[0]?.n ?? 0), conversionPct: null });
+  }
+  for (let i = 0; i < out.length - 1; i++) {
+    const cur = out[i]!.count;
+    const next = out[i + 1]!.count;
+    out[i]!.conversionPct = cur > 0 ? (next / cur) * 100 : null;
   }
   return out;
 }
@@ -270,6 +355,142 @@ function sourceLabel(utm: string | null, refHost: string | null): string {
   return "direct";
 }
 
+export type TrafficSourceGroupBy = "source" | "campaign" | "medium";
+
+function sessionAttributionLabel(
+  s: {
+    utmSource: string | null;
+    utmMedium: string | null;
+    utmCampaign: string | null;
+    referrerHost: string | null;
+  },
+  groupBy: TrafficSourceGroupBy,
+): string {
+  if (groupBy === "campaign") {
+    const c = s.utmCampaign?.trim();
+    if (c) return c;
+  }
+  if (groupBy === "medium") {
+    const m = s.utmMedium?.trim();
+    if (m) return m;
+  }
+  return sourceLabel(s.utmSource, s.referrerHost);
+}
+
+function routeKey(
+  origin: string | null | undefined,
+  destination: string | null | undefined,
+): string | null {
+  const o = origin?.trim().toUpperCase();
+  const d = destination?.trim().toUpperCase();
+  if (!o || !d || o.length !== 3 || d.length !== 3) return null;
+  return `${o}→${d}`;
+}
+
+function payloadRouteKey(payload: Record<string, unknown> | null): string | null {
+  if (!payload) return null;
+  return routeKey(
+    typeof payload.origin === "string" ? payload.origin : null,
+    typeof payload.destination === "string" ? payload.destination : null,
+  );
+}
+
+export type RouteConversionRow = {
+  route: string;
+  searches: number;
+  checkouts: number;
+  confirmed: number;
+  searchToCheckoutPct: number;
+  checkoutToConfirmedPct: number;
+};
+
+export async function getRouteConversion(
+  range: AnalyticsQueryRange,
+): Promise<RouteConversionRow[]> {
+  const { from, to } = range;
+
+  const searchEvents = await db()
+    .select({ payload: analyticsEvents.payload })
+    .from(analyticsEvents)
+    .where(
+      and(
+        eq(analyticsEvents.name, "search_performed"),
+        gte(analyticsEvents.ts, from),
+        lte(analyticsEvents.ts, to),
+      ),
+    );
+
+  const checkoutEvents = await db()
+    .select({ payload: analyticsEvents.payload })
+    .from(analyticsEvents)
+    .where(
+      and(
+        eq(analyticsEvents.name, "checkout_started"),
+        gte(analyticsEvents.ts, from),
+        lte(analyticsEvents.ts, to),
+      ),
+    );
+
+  const confirmedBookings = await db()
+    .select({ metadata: bookings.metadata })
+    .from(bookings)
+    .where(
+      and(
+        eq(bookings.status, BOOKING_STATUS.CONFIRMED),
+        gte(bookings.createdAt, from),
+        lte(bookings.createdAt, to),
+      ),
+    );
+
+  const searches = new Map<string, number>();
+  for (const e of searchEvents) {
+    const key = payloadRouteKey(e.payload);
+    if (!key) continue;
+    searches.set(key, (searches.get(key) ?? 0) + 1);
+  }
+
+  const checkouts = new Map<string, number>();
+  for (const e of checkoutEvents) {
+    const key = payloadRouteKey(e.payload);
+    if (!key) continue;
+    checkouts.set(key, (checkouts.get(key) ?? 0) + 1);
+  }
+
+  const confirmed = new Map<string, number>();
+  for (const b of confirmedBookings) {
+    const meta = (b.metadata ?? {}) as Record<string, unknown>;
+    const snap = meta.offer_snapshot as
+      | { slices?: { origin?: string; destination?: string }[] }
+      | undefined;
+    const slice = snap?.slices?.[0];
+    const key = routeKey(slice?.origin, slice?.destination);
+    if (!key) continue;
+    confirmed.set(key, (confirmed.get(key) ?? 0) + 1);
+  }
+
+  const routes = new Set<string>([
+    ...searches.keys(),
+    ...checkouts.keys(),
+    ...confirmed.keys(),
+  ]);
+
+  return [...routes]
+    .map((route) => {
+      const s = searches.get(route) ?? 0;
+      const c = checkouts.get(route) ?? 0;
+      const f = confirmed.get(route) ?? 0;
+      return {
+        route,
+        searches: s,
+        checkouts: c,
+        confirmed: f,
+        searchToCheckoutPct: s > 0 ? (c / s) * 100 : 0,
+        checkoutToConfirmedPct: c > 0 ? (f / c) * 100 : 0,
+      };
+    })
+    .sort((a, b) => b.searches - a.searches);
+}
+
 export type TrafficSourceRow = {
   source: string;
   sessions: number;
@@ -280,6 +501,7 @@ export type TrafficSourceRow = {
 
 export async function getTrafficSources(
   range: AnalyticsQueryRange,
+  groupBy: TrafficSourceGroupBy = "source",
 ): Promise<TrafficSourceRow[]> {
   const { from, to } = range;
   const sessionRows = await db()
@@ -298,14 +520,14 @@ export async function getTrafficSources(
     if (!visitorToSource.has(s.visitorId)) {
       visitorToSource.set(
         s.visitorId,
-        sourceLabel(s.utmSource, s.referrerHost),
+        sessionAttributionLabel(s, groupBy),
       );
     }
   }
 
   const sessionsBySource = new Map<string, number>();
   for (const s of sessionRows) {
-    const label = sourceLabel(s.utmSource, s.referrerHost);
+    const label = sessionAttributionLabel(s, groupBy);
     sessionsBySource.set(label, (sessionsBySource.get(label) ?? 0) + 1);
   }
 

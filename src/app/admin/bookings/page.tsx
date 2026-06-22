@@ -17,6 +17,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { detectCheckoutAbandonment } from "@/lib/analytics/abandonment";
 import { db } from "@/lib/db";
 import { bookings, users } from "@/lib/db/schema";
 import { reconcilePendingStripeBooking } from "@/lib/booking/reconcile-stripe-session";
@@ -33,6 +34,12 @@ export default async function AdminBookingsPage({
 }) {
   const sp = await searchParams;
   const exportQuery = serializeAdminSearchParams(sp);
+
+  try {
+    await detectCheckoutAbandonment();
+  } catch (err) {
+    console.error("[admin/bookings] abandonment detection failed", err);
+  }
 
   const pendingRows = await db()
     .select()

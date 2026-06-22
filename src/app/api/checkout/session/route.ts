@@ -188,6 +188,15 @@ export async function POST(req: Request) {
       })
       .returning({ id: bookings.id });
 
+    const firstSlice = offer.slices[0];
+    const routeOrigin = firstSlice?.origin.iata_code ?? null;
+    const routeDestination = firstSlice?.destination.iata_code ?? null;
+    const routeDate = (firstSlice?.segments?.[0]?.departing_at ?? "").slice(
+      0,
+      10,
+    );
+    const airline = offer.owner?.iata_code ?? null;
+
     const bookingId = inserted[0]!.id;
     await logBookingEvent({ id: bookingId }, "checkout_started", {
       offer_id: offer.id,
@@ -201,6 +210,11 @@ export async function POST(req: Request) {
         offer_id: offer.id,
         currency: parsed.data.currency,
         service_fee_cents: feeCents,
+        order_type: duffelOrderMode,
+        origin: routeOrigin,
+        destination: routeDestination,
+        date: routeDate,
+        airline,
         admin_test: adminTestMode,
       },
     });

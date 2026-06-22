@@ -17,7 +17,7 @@ import {
 import { PG_UUID_RE } from "@/lib/analytics/constants";
 import { db } from "@/lib/db";
 import { analyticsEvents, bookings, users } from "@/lib/db/schema";
-import { desc, eq } from "drizzle-orm";
+import { desc, eq, and, isNotNull, sql } from "drizzle-orm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -46,7 +46,9 @@ export default async function AdminUserDetailPage({
   const user = urows[0];
   if (!user) notFound();
 
-  const [evs, bks] = await Promise.all([
+  const emailLower = user.email.trim().toLowerCase();
+
+  const [evs, bksByUser, bksByEmail] = await Promise.all([
     db()
       .select()
       .from(analyticsEvents)
@@ -59,7 +61,39 @@ export default async function AdminUserDetailPage({
       .where(eq(bookings.userId, id))
       .orderBy(desc(bookings.createdAt))
       .limit(50),
+    db()
+      .select()
+      .from(bookings)
+      .where(
+        and(
+          isNotNull(bookings.customerEmail),
+          sql`lower(${bookings.customerEmail}) = ${emailLower}`,
+        ),
+      )
+      .orderBy(desc(bookings.createdAt))
+      .limit(50),
   ]);
+
+  const bookingMap = new Map<string, (typeof bksByUser)[0]>();
+  for (const b of [...bksByUser, ...bksByEmail]) {
+    bookingMap.set(b.id, b);
+  }
+  const bks = [...bookingMap.values()].sort(
+    (a, b) => b.createdAt.getTime() - a.createdAt.getTime(),
+  );
+
+  const visitorIds = [
+    ...new Set(
+      bks
+        .map((b) => {
+          const meta = (b.metadata ?? {}) as Record<string, unknown>;
+          return typeof meta.analyticsVisitorId === "string"
+            ? meta.analyticsVisitorId
+            : null;
+        })
+        .filter((v): v is string => !!v && PG_UUID_RE.test(v)),
+    ),
+  ];
 
   const timeline: TimelineRow[] = [
     ...evs.map((e) => ({
@@ -70,12 +104,27 @@ export default async function AdminUserDetailPage({
         .filter(Boolean)
         .join(" · "),
     })),
-    ...bks.map((b) => ({
-      ts: b.createdAt,
-      kind: "booking" as const,
-      label: `booking ${b.status}`,
-      detail: `${b.duffelOfferId} · ${b.customerEmail ?? ""}`,
-    })),
+    ...bks.map((b) => {
+      const meta = (b.metadata ?? {}) as Record<string, unknown>;
+      const vid =
+        typeof meta.analyticsVisitorId === "string"
+          ? meta.analyticsVisitorId
+          : null;
+      const guestTag = b.userId ? "" : " · guest checkout";
+      return {
+        ts: b.createdAt,
+        kind: "booking" as const,
+        label: `booking ${b.status}`,
+        detail: [
+          b.duffelOfferId,
+          b.customerEmail ?? "",
+          vid ? `visitor ${vid}` : "",
+          guestTag.trim(),
+        ]
+          .filter(Boolean)
+          .join(" · "),
+      };
+    }),
   ].sort((a, b) => b.ts.getTime() - a.ts.getTime());
 
   return (
@@ -92,6 +141,11 @@ export default async function AdminUserDetailPage({
           Joined {user.createdAt.toISOString()}
         </p>
         <p className="mt-1 font-mono text-xs text-muted-foreground">{user.id}</p>
+        {visitorIds.length > 0 ? (
+          <p className="mt-1 font-mono text-xs text-muted-foreground">
+            Analytics visitors: {visitorIds.join(", ")}
+          </p>
+        ) : null}
       </div>
 
       <Card>

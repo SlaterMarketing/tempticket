@@ -2,8 +2,10 @@ import { getAdminRangeFromUrlParams } from "@/app/admin/_lib/range";
 import { isAdminEmail } from "@/lib/auth/admin";
 import { getSession } from "@/lib/auth/session";
 import {
+  getRouteConversion,
   getTopLandingPages,
   getTrafficSources,
+  type TrafficSourceGroupBy,
 } from "@/lib/analytics/queries";
 import { db } from "@/lib/db";
 import {
@@ -178,7 +180,10 @@ export async function GET(req: Request) {
     body = lines.join("\n");
   } else if (kind === "sources") {
     filename = "traffic_sources.csv";
-    const rows = await getTrafficSources(range);
+    const attr = url.searchParams.get("attr");
+    const groupBy: TrafficSourceGroupBy =
+      attr === "campaign" || attr === "medium" ? attr : "source";
+    const rows = await getTrafficSources(range, groupBy);
     const lines = [
       csvRow([
         "source",
@@ -194,6 +199,30 @@ export async function GET(req: Request) {
           r.signups,
           r.paidBookings,
           r.revenueUsdCents,
+        ]),
+      ),
+    ];
+    body = lines.join("\n");
+  } else if (kind === "route_conversion") {
+    filename = "route_conversion.csv";
+    const rows = await getRouteConversion(range);
+    const lines = [
+      csvRow([
+        "route",
+        "searches",
+        "checkouts",
+        "confirmed",
+        "search_to_checkout_pct",
+        "checkout_to_confirmed_pct",
+      ]),
+      ...rows.map((r) =>
+        csvRow([
+          r.route,
+          r.searches,
+          r.checkouts,
+          r.confirmed,
+          r.searchToCheckoutPct.toFixed(2),
+          r.checkoutToConfirmedPct.toFixed(2),
         ]),
       ),
     ];

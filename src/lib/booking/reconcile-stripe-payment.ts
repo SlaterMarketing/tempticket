@@ -23,7 +23,12 @@ function analyticsContextFromBooking(b: Booking) {
 }
 
 export type ReconcileStripeResult =
-  | { ok: true; alreadyConfirmed: boolean; bookingReference: string | null }
+  | {
+      ok: true;
+      alreadyConfirmed: boolean;
+      bookingReference: string | null;
+      bookingId: string;
+    }
   | { ok: false; error: string };
 
 /**
@@ -48,6 +53,7 @@ export async function reconcileStripeCheckoutPayment(
       ok: true,
       alreadyConfirmed: true,
       bookingReference: booking.duffelBookingRef,
+      bookingId: booking.id,
     };
   }
 
@@ -56,6 +62,7 @@ export async function reconcileStripeCheckoutPayment(
       ok: true,
       alreadyConfirmed: true,
       bookingReference: booking.duffelBookingRef,
+      bookingId: booking.id,
     };
   }
 
@@ -120,5 +127,6 @@ export async function reconcileStripeCheckoutPayment(
     ok: true,
     alreadyConfirmed: false,
     bookingReference: result.order.booking_reference ?? null,
+    bookingId: booking.id,
   };
 }
