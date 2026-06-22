@@ -17,21 +17,31 @@ const FAILURE_LABELS: Record<string, string> = {
 };
 
 export function FunnelChart({
+  title,
+  description,
   steps,
   failures,
 }: {
+  title: string;
+  description: string;
   steps: FunnelStep[];
-  failures: { name: string; count: number }[];
+  failures?: { name: string; count: number }[];
 }) {
   const max = Math.max(1, ...steps.map((s) => s.count));
+  const sessionsInRange = steps[0]?.count ?? 0;
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Funnel</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <CardDescription>
-          Distinct visitors per milestone (not strict session sequences).
-          Step-to-step % is indicative. Offer selected and checkout return
-          events improve mid-funnel visibility.
+          {description}
+          {sessionsInRange > 0 ? (
+            <span className="mt-1 block text-xs">
+              {sessionsInRange} session{sessionsInRange === 1 ? "" : "s"} with
+              at least one step in range
+            </span>
+          ) : null}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
@@ -63,7 +73,7 @@ export function FunnelChart({
           );
         })}
 
-        {failures.some((f) => f.count > 0) ? (
+        {failures?.some((f) => f.count > 0) ? (
           <div className="mt-6 space-y-2 border-t pt-4">
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               Issues (not funnel steps)
@@ -79,6 +89,11 @@ export function FunnelChart({
             ))}
           </div>
         ) : null}
+
+        <p className="mt-4 text-xs text-muted-foreground">
+          Each step counts sessions that completed all prior steps in order
+          within the same session. Payment events use the checkout session.
+        </p>
       </CardContent>
     </Card>
   );

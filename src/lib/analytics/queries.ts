@@ -1,4 +1,13 @@
 import { BOOKING_STATUS } from "@/lib/booking/status";
+import {
+  BOOKING_FUNNEL_STEPS,
+  FUNNEL_STEPS,
+  FUNNEL_STEP_LABELS,
+  aggregateSequentialFunnel,
+  computeSessionSequentialDepth,
+  type FunnelEvent,
+  type FunnelStep,
+} from "@/lib/analytics/funnel";
 import { db } from "@/lib/db";
 import {
   analyticsEvents,
@@ -20,39 +29,13 @@ export type AnalyticsQueryRange = {
   prevTo: Date;
 };
 
-const FUNNEL_STEPS = [
-  "page_view",
-  "book_page_view",
-  "search_attempted",
-  "search_performed",
-  "offer_selected",
-  "book_ticket_preview_viewed",
-  "book_passenger_details_viewed",
-  "checkout_started",
-  "checkout_completed",
-  "booking_confirmed",
-] as const;
+export { FUNNEL_STEP_LABELS, type FunnelStep };
 
 export const FAILURE_EVENT_NAMES = [
   "search_failed",
   "booking_failed",
   "checkout_abandoned",
 ] as const;
-
-/** Short labels for admin funnel chart (avoid technical event names). */
-export const FUNNEL_STEP_LABELS: Record<(typeof FUNNEL_STEPS)[number], string> =
-  {
-    page_view: "Any page view",
-    book_page_view: "Book · step 1 (find flights)",
-    search_attempted: "Book · search submitted",
-    search_performed: "Book · flights returned",
-    offer_selected: "Book · offer selected",
-    book_ticket_preview_viewed: "Book · step 2 (trip preview)",
-    book_passenger_details_viewed: "Book · step 3 (travelers & pay)",
-    checkout_started: "Checkout started",
-    checkout_completed: "Checkout paid",
-    booking_confirmed: "Booking confirmed",
-  };
 
 const PAID_STATUSES = [
   BOOKING_STATUS.PAID,
@@ -286,7 +269,54 @@ export async function getAdminKpis(
   };
 }
 
-export type FunnelStep = { name: string; count: number; conversionPct: number | null };
+export async function getSequentialFunnel(
+  range: AnalyticsQueryRange,
+  steps: readonly string[],
+): Promise<FunnelStep[]> {
+  const { from, to } = range;
+
+  const rows = await db()
+    .select({
+      sessionId: analyticsEvents.sessionId,
+      name: analyticsEvents.name,
+      ts: analyticsEvents.ts,
+    })
+    .from(analyticsEvents)
+    .where(
+      and(
+        isNotNull(analyticsEvents.sessionId),
+        inArray(analyticsEvents.name, [...steps]),
+        gte(analyticsEvents.ts, from),
+        lte(analyticsEvents.ts, to),
+      ),
+    )
+    .orderBy(analyticsEvents.sessionId, analyticsEvents.ts);
+
+  const bySession = new Map<string, FunnelEvent[]>();
+  for (const row of rows) {
+    const sid = row.sessionId!;
+    const list = bySession.get(sid) ?? [];
+    list.push({ name: row.name, ts: row.ts });
+    bySession.set(sid, list);
+  }
+
+  const depths: number[] = [];
+  for (const events of bySession.values()) {
+    depths.push(computeSessionSequentialDepth(events, steps));
+  }
+
+  return aggregateSequentialFunnel(depths, steps);
+}
+
+export function getSiteFunnel(range: AnalyticsQueryRange): Promise<FunnelStep[]> {
+  return getSequentialFunnel(range, FUNNEL_STEPS);
+}
+
+export function getBookingFunnel(
+  range: AnalyticsQueryRange,
+): Promise<FunnelStep[]> {
+  return getSequentialFunnel(range, BOOKING_FUNNEL_STEPS);
+}
 
 export async function getFailureMetrics(
   range: AnalyticsQueryRange,
@@ -296,35 +326,6 @@ export async function getFailureMetrics(
   const out: { name: string; count: number }[] = [];
   for (const name of names) {
     out.push({ name, count: await countEvents(name, from, to) });
-  }
-  return out;
-}
-
-export async function getFunnel(
-  range: AnalyticsQueryRange,
-): Promise<FunnelStep[]> {
-  const { from, to } = range;
-  const out: FunnelStep[] = [];
-  for (const name of FUNNEL_STEPS) {
-    const row = await db()
-      .select({
-        n: sql<number>`count(distinct ${analyticsEvents.visitorId})`,
-      })
-      .from(analyticsEvents)
-      .where(
-        and(
-          eq(analyticsEvents.name, name),
-          gte(analyticsEvents.ts, from),
-          lte(analyticsEvents.ts, to),
-          isNotNull(analyticsEvents.visitorId),
-        ),
-      );
-    out.push({ name, count: Number(row[0]?.n ?? 0), conversionPct: null });
-  }
-  for (let i = 0; i < out.length - 1; i++) {
-    const cur = out[i]!.count;
-    const next = out[i + 1]!.count;
-    out[i]!.conversionPct = cur > 0 ? (next / cur) * 100 : null;
   }
   return out;
 }

@@ -14,10 +14,11 @@ import { buttonVariants } from "@/components/ui/button";
 import {
   getAdminKpis,
   getCohortRetention,
+  getBookingFunnel,
   getFailureMetrics,
-  getFunnel,
   getRevenueByDay,
   getRouteConversion,
+  getSiteFunnel,
   getTopLandingPages,
   getTrafficSources,
   type TrafficSourceGroupBy,
@@ -47,7 +48,8 @@ export default async function AdminOverviewPage({
 
   const [
     kpis,
-    funnel,
+    siteFunnel,
+    bookingFunnel,
     failures,
     revenueByDay,
     sources,
@@ -56,7 +58,8 @@ export default async function AdminOverviewPage({
     cohorts,
   ] = await Promise.all([
     getAdminKpis(range),
-    getFunnel(range),
+    getSiteFunnel(range),
+    getBookingFunnel(range),
     getFailureMetrics(range),
     getRevenueByDay(range),
     getTrafficSources(range, attrGroup),
@@ -170,9 +173,20 @@ export default async function AdminOverviewPage({
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <FunnelChart steps={funnel} failures={failures} />
-        <RevenueBarChart data={revenueByDay} />
+        <FunnelChart
+          title="Site funnel"
+          description="Sequential sessions from first page view through confirmed booking."
+          steps={siteFunnel}
+        />
+        <FunnelChart
+          title="Booking funnel"
+          description="Sequential sessions from the book page — excludes casual browsers."
+          steps={bookingFunnel}
+          failures={failures}
+        />
       </div>
+
+      <RevenueBarChart data={revenueByDay} />
 
       <SourcesTable
         rows={sources}
