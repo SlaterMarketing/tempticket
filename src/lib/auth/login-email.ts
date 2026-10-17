@@ -33,18 +33,13 @@ export function buildLoginEmail({
   const logoUrl = `${getServerSiteUrl()}/tempticket.png`;
   const supportEmail = `support@${process.env.EMAIL_DOMAIN ?? "tempticket.com"}`;
 
-  const digitBlocks = code
-    .split("")
-    .map(
-      (d) => `
+  // One text node so copy/paste yields exactly the six digits.
+  const codeBlock = `
         <td align="center" valign="middle"
-            style="width:44px;height:56px;background:rgba(255,255,255,0.08);border:1px solid ${CARD_ACCENT};border-radius:10px;
-                   font:700 28px/1 Arial,Helvetica,sans-serif;color:#ffffff;letter-spacing:1px;">
-          ${escapeHtml(d)}
-        </td>
-        <td style="width:8px;font-size:0;line-height:0;">&nbsp;</td>`,
-    )
-    .join("");
+            style="padding:12px 20px;background:rgba(255,255,255,0.08);border:1px solid ${CARD_ACCENT};border-radius:10px;
+                   font:700 32px/1 'Courier New',Courier,monospace;color:#ffffff;letter-spacing:8px;">
+          ${escapeHtml(code)}
+        </td>`;
 
   const html = `<!doctype html>
 <html lang="en">
@@ -111,7 +106,7 @@ export function buildLoginEmail({
                   <tr>
                     <td align="center" style="padding:18px 24px 8px;">
                       <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                        <tr>${digitBlocks}</tr>
+                        <tr>${codeBlock}</tr>
                       </table>
                     </td>
                   </tr>

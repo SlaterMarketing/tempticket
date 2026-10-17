@@ -77,12 +77,17 @@ export async function GET(req: Request) {
     return errorRedirect("expired_link");
   }
 
+  try {
+    await completeLogin(email, "/login/magic");
+  } catch (err) {
+    console.error("[auth/magic] completeLogin failed", err);
+    return errorRedirect("server_error");
+  }
+
   await db()
     .update(loginCodes)
     .set({ usedAt: new Date() })
     .where(eq(loginCodes.id, matched.id));
-
-  await completeLogin(email, "/login/magic");
 
   return NextResponse.redirect(publicUrl(next));
 }

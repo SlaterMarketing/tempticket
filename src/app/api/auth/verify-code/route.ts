@@ -8,7 +8,11 @@ import { z } from "zod";
 
 const bodySchema = z.object({
   email: z.string().email(),
-  code: z.string().regex(/^\d{6}$/),
+  // Strip spaces and other characters picked up when copying from email.
+  code: z
+    .string()
+    .transform((v) => v.replace(/\D/g, ""))
+    .pipe(z.string().regex(/^\d{6}$/)),
 });
 
 export async function POST(req: Request) {
@@ -49,12 +53,21 @@ export async function POST(req: Request) {
     );
   }
 
+  try {
+    await completeLogin(email, "/login");
+  } catch (err) {
+    // Leave the code unused so the person can retry once the server issue is fixed.
+    console.error("[auth/verify-code] completeLogin failed", err);
+    return NextResponse.json(
+      { error: "server_error" },
+      { status: 500 },
+    );
+  }
+
   await db()
     .update(loginCodes)
     .set({ usedAt: new Date() })
     .where(eq(loginCodes.id, matched.id));
-
-  await completeLogin(email, "/login");
 
   return NextResponse.json({ ok: true });
 }

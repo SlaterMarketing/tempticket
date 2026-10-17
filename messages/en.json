@@ -146,6 +146,7 @@
     "toastSendFailed": "Could not send code",
     "toastCodeSent": "Check your email for a code and one-click sign-in link",
     "toastInvalid": "Invalid code",
+    "toastServerError": "Sign-in failed on our side. Please try again in a minute.",
     "toastSignedIn": "Signed in",
     "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
     "linkErrorExpired": "That sign-in link has expired. Request a new one below."
