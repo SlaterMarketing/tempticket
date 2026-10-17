@@ -122,7 +122,15 @@
     "body": "We're confirming your flight reservation with the airline. You'll get an email with booking details shortly.",
     "detail": "Check your inbox (and spam) for the confirmation. Use the airline reference on the carrier site when you need proof of onward travel.",
     "bookAnother": "Book another",
-    "signInHistory": "Sign in for history"
+    "signInHistory": "Sign in for history",
+    "confirmedBadge": "Reservation confirmed",
+    "confirmedTitle": "You're booked",
+    "confirmedBody": "Your airline booking reference is {reference}. We've emailed your itinerary, so check spam if you can't see it.",
+    "failedBadge": "Not charged",
+    "failedTitle": "We couldn't reserve that flight",
+    "failedBody": "The airline didn't accept the reservation, so we cancelled the payment and your card was not charged. Please pick another flight.",
+    "failedDetail": "Any temporary hold on your card will disappear within a few days, depending on your bank.",
+    "tryAnother": "Choose another flight"
   },
   "Login": {
     "title": "Sign in",

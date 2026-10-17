@@ -40,6 +40,9 @@ export default async function BookConfirmationPage({
   const sp = await searchParams;
   const isAdminTest = sp.admin_test === "1";
 
+  let outcome: "processing" | "confirmed" | "failed" = "processing";
+  let bookingReference: string | null = null;
+
   if (sp.session_id && !isAdminTest) {
     try {
       const result = await reconcileByCheckoutSessionId(
@@ -47,6 +50,8 @@ export default async function BookConfirmationPage({
         "/book/confirmation",
       );
       if (result.ok) {
+        outcome = "confirmed";
+        bookingReference = result.bookingReference;
         void trackServerEventSafe("stripe_checkout_returned", {
           path: "/book/confirmation",
           payload: {
@@ -54,11 +59,35 @@ export default async function BookConfirmationPage({
             session_id: sp.session_id,
           },
         });
+      } else if (result.failed) {
+        outcome = "failed";
       }
     } catch (err) {
       console.error("[book/confirmation] stripe reconcile failed", err);
     }
   }
+
+  const copy =
+    outcome === "failed"
+      ? {
+          badge: t("failedBadge"),
+          title: t("failedTitle"),
+          body: t("failedBody"),
+          detail: t("failedDetail"),
+        }
+      : outcome === "confirmed" && bookingReference
+        ? {
+            badge: t("confirmedBadge"),
+            title: t("confirmedTitle"),
+            body: t("confirmedBody", { reference: bookingReference }),
+            detail: t("detail"),
+          }
+        : {
+            badge: t("badge"),
+            title: t("title"),
+            body: t("body"),
+            detail: t("detail"),
+          };
 
   const primary = cn(
     buttonVariants({ size: "lg" }),
@@ -82,7 +111,9 @@ export default async function BookConfirmationPage({
           {t("backHome")}
         </Link>
 
-        <ConfirmationToast sessionId={sp.session_id} />
+        {outcome !== "failed" ? (
+          <ConfirmationToast sessionId={sp.session_id} />
+        ) : null}
 
         {isAdminTest ? (
           <div className="mt-6 rounded-lg border border-dashed border-amber-500/70 bg-amber-50/90 px-4 py-3 text-sm text-amber-900">
@@ -111,23 +142,23 @@ export default async function BookConfirmationPage({
               </span>
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--brand-green)]">
-                  {t("badge")}
+                  {copy.badge}
                 </p>
                 <h1 className="mt-1 text-2xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-3xl">
-                  {t("title")}
+                  {copy.title}
                 </h1>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-[0.9375rem]">
-                  {t("body")}
+                  {copy.body}
                 </p>
                 <div className="heading-accent-bar-left mt-3" />
               </div>
             </div>
 
             <div className="mt-8 space-y-6 text-sm leading-relaxed text-muted-foreground">
-              <p>{t("detail")}</p>
+              <p>{copy.detail}</p>
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link href="/book" className={primary}>
-                  {t("bookAnother")}
+                  {outcome === "failed" ? t("tryAnother") : t("bookAnother")}
                   <ChevronRight className="size-4 opacity-90" aria-hidden />
                 </Link>
                 <Link

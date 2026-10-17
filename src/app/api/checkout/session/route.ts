@@ -101,9 +101,14 @@ export async function POST(req: Request) {
       }
     }
 
-    const requiresInstant =
-      offer.payment_requirements?.requires_instant_payment !== false;
-    const duffelOrderMode = requiresInstant ? "instant" : "pay_later";
+    // We only sell holds; an instant-payment fare would be paid from the Duffel balance.
+    if (offer.payment_requirements?.requires_instant_payment !== false) {
+      return NextResponse.json(
+        { error: "This fare can't be held. Please pick another flight." },
+        { status: 400 },
+      );
+    }
+    const duffelOrderMode = "pay_later";
 
     const feeCents = serviceFeeForCurrency(parsed.data.currency);
     const appUrl = getServerSiteUrl();
@@ -290,6 +295,11 @@ export async function POST(req: Request) {
           quantity: 1,
         },
       ],
+      // Authorize only; the card is captured once the reservation exists.
+      payment_intent_data: {
+        capture_method: "manual",
+        metadata: { booking_id: bookingId },
+      },
       success_url: `${appUrl}${localePath}/book/confirmation?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${appUrl}${localePath}/book?cancelled=1`,
       metadata: {

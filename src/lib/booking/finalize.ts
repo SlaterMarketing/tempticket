@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 import { bookings, users, type Booking } from "@/lib/db/schema";
 import { getDuffel } from "@/lib/duffel";
 import { formatDuffelError } from "@/lib/duffel-error";
+import { findFreshOffer, getOfferSnapshot } from "@/lib/booking/fresh-offer";
 import { buildConfirmationEmail } from "@/lib/booking/confirmation-email";
 import {
   itineraryFilename,
@@ -16,7 +17,7 @@ import type {
   CreateOrderPassenger,
   Order,
 } from "@duffel/api/dist/booking/Orders/OrdersTypes";
-import { eq, and, or } from "drizzle-orm";
+import { eq, and, ne, or } from "drizzle-orm";
 
 function analyticsContextFromBooking(b: Booking) {
   const meta = (b.metadata ?? {}) as Record<string, unknown>;
@@ -44,7 +45,9 @@ export type StoredPassenger = {
   phone_number: string;
 };
 
-export function parsePassengers(booking: Booking): CreateOrderPassenger[] {
+export function parsePassengers(
+  booking: Pick<Booking, "passengersJson">,
+): CreateOrderPassenger[] {
   const passengers = JSON.parse(booking.passengersJson) as StoredPassenger[];
   return passengers.map((p) => ({
     id: p.id,
@@ -58,9 +61,29 @@ export function parsePassengers(booking: Booking): CreateOrderPassenger[] {
   }));
 }
 
+/** Places a pay-later (hold) order; never pays airfare from the Duffel balance. */
+async function placeHoldOrder(
+  offerId: string,
+  passengers: CreateOrderPassenger[],
+): Promise<Order> {
+  const duffel = getDuffel();
+  const offer = (await duffel.offers.get(offerId)).data;
+  if (offer.payment_requirements?.requires_instant_payment !== false) {
+    throw new Error("Offer can no longer be held without instant payment.");
+  }
+  const orderRes = await duffel.orders.create({
+    selected_offers: [offer.id],
+    passengers,
+    type: "pay_later",
+  });
+  return orderRes.data;
+}
+
 /**
  * Creates the Duffel order for a booking and writes the success/failure state
- * to the DB. Shared by the Stripe webhook and the admin retry action.
+ * to the DB. If the original offer can't be booked (usually because it
+ * expired), re-searches the same route once and books the fresh fare.
+ * Shared by checkout fulfilment and the admin retry/test actions.
  */
 export async function createDuffelOrderForBooking(
   booking: Booking,
@@ -76,62 +99,97 @@ export async function createDuffelOrderForBooking(
       failureReason: null,
       updatedAt: new Date(),
     })
-    .where(eq(bookings.id, booking.id));
+    .where(
+      and(eq(bookings.id, booking.id), ne(bookings.status, BOOKING_STATUS.CONFIRMED)),
+    );
 
+  let message = "Duffel order failed.";
+  let order: Order | null = null;
   try {
-    const duffel = getDuffel();
-    const offerRes = await duffel.offers.get(booking.duffelOfferId);
-    const offer = offerRes.data;
-    const passengers = parsePassengers(booking);
-
-    const orderRes =
-      booking.orderType === "pay_later"
-        ? await duffel.orders.create({
-            selected_offers: [offer.id],
-            passengers,
-            type: "pay_later",
-          })
-        : await duffel.orders.create({
-            selected_offers: [offer.id],
-            passengers,
-            type: "instant",
-            payments: [
-              {
-                type: "balance",
-                amount: offer.total_amount,
-                currency: offer.total_currency,
-              },
-            ],
-          });
-
-    await finalizeBooking(booking.id, orderRes.data, source);
-    return { ok: true, order: orderRes.data };
+    order = await placeHoldOrder(
+      booking.duffelOfferId,
+      parsePassengers(booking),
+    );
   } catch (e) {
-    const message = formatDuffelError(e);
+    message = formatDuffelError(e);
     console.error("Duffel order failed", e);
-    await db()
-      .update(bookings)
-      .set({
-        status: BOOKING_STATUS.FAILED,
-        failureReason: message,
-        updatedAt: new Date(),
-      })
-      .where(eq(bookings.id, booking.id));
-    await logBookingEvent({ id: booking.id }, "duffel_failed", {
+  }
+  // Finalize outside the try so a DB/email error never triggers a second order.
+  if (order) {
+    await finalizeBooking(booking.id, order, source);
+    return { ok: true, order };
+  }
+
+  const snapshot = getOfferSnapshot(booking);
+  if (snapshot) {
+    await logBookingEvent({ id: booking.id }, "duffel_first_attempt_failed", {
       message,
       source,
     });
-    const ac = analyticsContextFromBooking(booking);
-    void trackInternalEventSafe({
-      name: "booking_failed",
-      visitorId: ac.visitorId,
-      sessionId: ac.sessionId,
-      userId: ac.userId,
-      path: source,
-      payload: { booking_id: booking.id, message },
-    });
-    return { ok: false, message };
+    const fresh = await findFreshOffer(snapshot);
+    if (fresh.ok) {
+      const passengers = (
+        JSON.parse(booking.passengersJson) as StoredPassenger[]
+      ).map((p) => ({
+        ...p,
+        id: fresh.offer.passengerIdMap.get(p.id) ?? p.id,
+      }));
+      await db()
+        .update(bookings)
+        .set({
+          duffelOfferId: fresh.offer.offerId,
+          passengersJson: JSON.stringify(passengers),
+          updatedAt: new Date(),
+        })
+        .where(eq(bookings.id, booking.id));
+      await logBookingEvent({ id: booking.id }, "retry_offer_replaced", {
+        new_offer_id: fresh.offer.offerId,
+        new_total_amount: fresh.offer.totalAmount,
+        new_total_currency: fresh.offer.totalCurrency,
+        source,
+      });
+      try {
+        order = await placeHoldOrder(
+          fresh.offer.offerId,
+          parsePassengers({ passengersJson: JSON.stringify(passengers) }),
+        );
+      } catch (e) {
+        message = formatDuffelError(e);
+        console.error("Duffel order failed on fresh offer", e);
+      }
+      if (order) {
+        await finalizeBooking(booking.id, order, source);
+        return { ok: true, order };
+      }
+    } else {
+      message = `${message} (fresh search: ${fresh.message})`;
+    }
   }
+
+  await db()
+    .update(bookings)
+    .set({
+      status: BOOKING_STATUS.FAILED,
+      failureReason: message,
+      updatedAt: new Date(),
+    })
+    .where(
+      and(eq(bookings.id, booking.id), ne(bookings.status, BOOKING_STATUS.CONFIRMED)),
+    );
+  await logBookingEvent({ id: booking.id }, "duffel_failed", {
+    message,
+    source,
+  });
+  const ac = analyticsContextFromBooking(booking);
+  void trackInternalEventSafe({
+    name: "booking_failed",
+    visitorId: ac.visitorId,
+    sessionId: ac.sessionId,
+    userId: ac.userId,
+    path: source,
+    payload: { booking_id: booking.id, message },
+  });
+  return { ok: false, message };
 }
 
 async function finalizeBooking(
@@ -142,7 +200,8 @@ async function finalizeBooking(
   const firstCarrier =
     order.slices?.[0]?.segments?.[0]?.marketing_carrier?.iata_code ?? null;
 
-  await db()
+  // Only the first caller to confirm sends the email (sync path and Duffel webhook can race).
+  const confirmed = await db()
     .update(bookings)
     .set({
       status: BOOKING_STATUS.CONFIRMED,
@@ -152,7 +211,11 @@ async function finalizeBooking(
       failureReason: null,
       updatedAt: new Date(),
     })
-    .where(eq(bookings.id, bookingId));
+    .where(
+      and(eq(bookings.id, bookingId), ne(bookings.status, BOOKING_STATUS.CONFIRMED)),
+    )
+    .returning({ id: bookings.id });
+  if (confirmed.length === 0) return;
 
   await logBookingEvent({ id: bookingId }, "duffel_confirmed", {
     order_id: order.id,
