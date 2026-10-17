@@ -9,10 +9,10 @@ import Stripe from "stripe";
 
 function bookingNeedsReconcile(booking: Booking): boolean {
   return (
-    booking.status === BOOKING_STATUS.PENDING_CHECKOUT ||
-    ((booking.status === BOOKING_STATUS.PAID ||
-      booking.status === BOOKING_STATUS.FAILED) &&
-      !booking.duffelOrderId)
+    !booking.duffelOrderId &&
+    (booking.status === BOOKING_STATUS.PENDING_CHECKOUT ||
+      booking.status === BOOKING_STATUS.PAID ||
+      booking.status === BOOKING_STATUS.DUFFEL_PROCESSING)
   );
 }
 
@@ -73,7 +73,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ received: true });
   }
 
-  if (event.type === "payment_intent.succeeded") {
+  if (
+    event.type === "payment_intent.amount_capturable_updated" ||
+    event.type === "payment_intent.succeeded"
+  ) {
     const paymentIntent = event.data.object as Stripe.PaymentIntent;
     const bookingId = paymentIntent.metadata?.booking_id;
     if (!bookingId) {
