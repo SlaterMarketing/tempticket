@@ -60,6 +60,8 @@
     "toastChoosePlaces": "Choose origin and destination from the suggestions",
     "toastSearchFailed": "Search failed",
     "toastNoPayLater": "No pay-later fares on this search—try other dates or airports.",
+    "fallbackDate": "No reservable flights on your date, so we found one on {date} instead.",
+    "fallbackDestination": "No reservable flights to {requested}, so we found one from {origin} to {destination} instead. It still works as proof of onward travel.",
     "toastOfferExpired": "Offer expired—search again",
     "toastPassengerSlots": "Could not load passenger slots for this offer",
     "toastLoadOffer": "Could not load offer",
