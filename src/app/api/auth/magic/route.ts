@@ -2,6 +2,7 @@ import { completeLogin } from "@/lib/auth/complete-login";
 import { db } from "@/lib/db";
 import { loginCodes } from "@/lib/db/schema";
 import { defaultLocale } from "@/i18n/config";
+import { getServerSiteUrl } from "@/lib/site-url";
 import { and, desc, eq, isNull, isNotNull } from "drizzle-orm";
 import { createHash, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
@@ -15,12 +16,16 @@ function sanitiseNext(raw: string | null): string {
   return trimmed.length > 512 ? "/account/bookings" : trimmed;
 }
 
-function localisedUrl(base: URL, path: string) {
-  return new URL(path, base);
+/**
+ * Behind Docker/a reverse proxy `req.url` carries the internal host
+ * (e.g. 0.0.0.0:3000), so redirects must use the public site origin.
+ */
+function publicUrl(path: string) {
+  return new URL(path, getServerSiteUrl());
 }
 
-function errorRedirect(base: URL, reason: string) {
-  const url = localisedUrl(base, `/${defaultLocale}/login`);
+function errorRedirect(reason: string) {
+  const url = publicUrl(`/${defaultLocale}/login`);
   url.searchParams.set("error", reason);
   return NextResponse.redirect(url);
 }
@@ -32,7 +37,7 @@ export async function GET(req: Request) {
   const next = sanitiseNext(url.searchParams.get("next"));
 
   if (!email || !token) {
-    return errorRedirect(url, "invalid_link");
+    return errorRedirect("invalid_link");
   }
 
   const rows = await db()
@@ -69,7 +74,14 @@ export async function GET(req: Request) {
   }
 
   if (!matched) {
-    return errorRedirect(url, "expired_link");
+    return errorRedirect("expired_link");
+  }
+
+  try {
+    await completeLogin(email, "/login/magic");
+  } catch (err) {
+    console.error("[auth/magic] completeLogin failed", err);
+    return errorRedirect("server_error");
   }
 
   await db()
@@ -77,7 +89,5 @@ export async function GET(req: Request) {
     .set({ usedAt: new Date() })
     .where(eq(loginCodes.id, matched.id));
 
-  await completeLogin(email, "/login/magic");
-
-  return NextResponse.redirect(localisedUrl(url, next));
+  return NextResponse.redirect(publicUrl(next));
 }

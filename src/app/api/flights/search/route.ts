@@ -1,6 +1,10 @@
+import { getAffiliatePartner } from "@/lib/affiliate";
 import { trackServerEventSafe } from "@/lib/analytics/track";
-import { getDuffel } from "@/lib/duffel";
-import { orderOffersHoldCheapestFirst } from "@/lib/flights/pick-best-hold-offer";
+import {
+  findFallback,
+  searchHoldableOffers,
+  type SearchFallback,
+} from "@/lib/flights/search-holdable";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -23,6 +27,12 @@ const bodySchema = z.object({
 });
 
 export async function POST(req: Request) {
+  if (getAffiliatePartner()) {
+    return NextResponse.json(
+      { error: "Booking is handled by our partner." },
+      { status: 410 },
+    );
+  }
   let json: unknown;
   try {
     json = await req.json();
@@ -57,44 +67,29 @@ export async function POST(req: Request) {
   }
 
   try {
-    const duffel = getDuffel();
-    const res = await duffel.offerRequests.create({
-      return_offers: true,
-      slices: parsed.data.slices.map((s) => ({
-        origin: s.origin,
-        destination: s.destination,
-        departure_date: s.departure_date,
-      })),
-      passengers: parsed.data.passengers,
-      cabin_class: parsed.data.cabin_class,
-    } as Parameters<typeof duffel.offerRequests.create>[0]);
+    const primary = await searchHoldableOffers(
+      parsed.data.slices,
+      parsed.data.passengers,
+      parsed.data.cabin_class,
+    );
+    let result = primary;
+    let fallback: SearchFallback | null = null;
 
-    const offers = res.data.offers ?? [];
-    const slim = offers.slice(0, 40).map((o) => ({
-      id: o.id,
-      total_amount: o.total_amount,
-      total_currency: o.total_currency,
-      expires_at: o.expires_at,
-      owner: o.owner,
-      slices: o.slices.map((sl) => ({
-        origin: sl.origin.iata_code,
-        destination: sl.destination.iata_code,
-        departing_at: sl.segments?.[0]?.departing_at,
-        arriving_at:
-          sl.segments?.[sl.segments.length - 1]?.arriving_at ?? null,
-        duration: sl.duration,
-        segments:
-          sl.segments?.map((seg) => ({
-            marketing_carrier: seg.marketing_carrier.iata_code,
-            operating_carrier: seg.operating_carrier.iata_code,
-            departing_at: seg.departing_at,
-            arriving_at: seg.arriving_at,
-          })) ?? [],
-      })),
-      payment_requirements: o.payment_requirements,
-    }));
+    // Most travellers need *any* onward flight; when the exact route/date has
+    // no holdable fare, try nearby dates and big hubs before giving up.
+    if (primary.offers.length === 0 && parsed.data.slices.length === 1) {
+      const found = await findFallback(
+        parsed.data.slices[0]!,
+        parsed.data.passengers,
+        parsed.data.cabin_class,
+      );
+      if (found) {
+        result = found.result;
+        fallback = found.fallback;
+      }
+    }
 
-    const offersOrdered = orderOffersHoldCheapestFirst(slim);
+    const offersOrdered = result.offers;
 
     if (searchAnalyticsBase) {
       void trackServerEventSafe("search_performed", {
@@ -102,13 +97,15 @@ export async function POST(req: Request) {
         payload: {
           ...searchAnalyticsBase,
           offer_count: offersOrdered.length,
+          fallback: fallback?.reason ?? null,
         },
       });
     }
 
     return NextResponse.json({
-      offer_request_id: res.data.id,
+      offer_request_id: result.offerRequestId,
       offers: offersOrdered,
+      fallback,
     });
   } catch (e) {
     console.error("Duffel search error", e);

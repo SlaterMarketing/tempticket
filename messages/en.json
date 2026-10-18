@@ -60,6 +60,8 @@
     "toastChoosePlaces": "Choose origin and destination from the suggestions",
     "toastSearchFailed": "Search failed",
     "toastNoPayLater": "No pay-later fares on this search—try other dates or airports.",
+    "fallbackDate": "No reservable flights on your date, so we found one on {date} instead.",
+    "fallbackDestination": "No reservable flights to {requested}, so we found one from {origin} to {destination} instead. It still works as proof of onward travel.",
     "toastOfferExpired": "Offer expired—search again",
     "toastPassengerSlots": "Could not load passenger slots for this offer",
     "toastLoadOffer": "Could not load offer",
@@ -115,6 +117,13 @@
     "demoOriginLabel": "Suvarnabhumi Airport (BKK) · Bangkok, Thailand",
     "demoDestinationLabel": "Kuala Lumpur International Airport (KUL) · Sepang, Malaysia"
   },
+  "BookPartner": {
+    "badge": "Verifiable flight reservations",
+    "title": "Get your onward ticket",
+    "body": "We've partnered with {partner} to issue real flight reservations you can verify on the airline's website. You'll get yours by email in minutes.",
+    "cta": "Continue to {partner}",
+    "note": "You'll complete your booking and payment on {partner}'s website."
+  },
   "BookConfirmation": {
     "backHome": "Back to home",
     "badge": "Payment received",
@@ -144,6 +153,7 @@
     "toastSendFailed": "Could not send code",
     "toastCodeSent": "Check your email for a code and one-click sign-in link",
     "toastInvalid": "Invalid code",
+    "toastServerError": "Sign-in failed on our side. Please try again in a minute.",
     "toastSignedIn": "Signed in",
     "linkErrorInvalid": "That sign-in link isn't valid. Request a new one below.",
     "linkErrorExpired": "That sign-in link has expired. Request a new one below."

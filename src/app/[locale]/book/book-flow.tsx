@@ -165,6 +165,7 @@ export function BookFlow({
   const [fullPassengers, setFullPassengers] = useState<OfferPassenger[]>([]);
   const [currency, setCurrency] = useState<CheckoutCurrencyCode>("usd");
 
+  const [fallbackNote, setFallbackNote] = useState<string | null>(null);
   const [wizardStep, setWizardStep] = useState<1 | 2 | 3>(1);
   const prevWizardStepRef = useRef<1 | 2 | 3>(1);
   const [adminSkipStripe, setAdminSkipStripe] = useState(false);
@@ -283,6 +284,23 @@ export function BookFlow({
         toast.message(t("toastNoPayLater"));
         return;
       }
+      const fallback = data.fallback as {
+        reason: "date" | "destination";
+        origin: string;
+        destination: string;
+        departure_date: string;
+      } | null;
+      setFallbackNote(
+        fallback?.reason === "date"
+          ? t("fallbackDate", { date: fallback.departure_date })
+          : fallback?.reason === "destination"
+            ? t("fallbackDestination", {
+                requested: destinationPlace.code.toUpperCase(),
+                origin: fallback.origin,
+                destination: fallback.destination,
+              })
+            : null,
+      );
       setLoadingOffer(true);
       await loadOfferDetails(list[0]!);
     } finally {
@@ -594,6 +612,11 @@ export function BookFlow({
               contentClassName="flex min-h-0 flex-1 flex-col"
             >
               <div className="flex min-h-0 flex-1 flex-col gap-8">
+                {fallbackNote ? (
+                  <p className="rounded-xl border border-[color:var(--brand-blue)]/15 bg-white/80 px-4 py-3 text-sm leading-relaxed text-[color:var(--brand-blue)]">
+                    {fallbackNote}
+                  </p>
+                ) : null}
                 <FlightReservationTicket
                   offer={selected as FlightTicketOfferPreview}
                   locale={locale}

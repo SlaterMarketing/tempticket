@@ -31,6 +31,7 @@ export function LoginForm() {
   useEffect(() => {
     if (linkError === "expired_link") toast.error(t("linkErrorExpired"));
     else if (linkError === "invalid_link") toast.error(t("linkErrorInvalid"));
+    else if (linkError === "server_error") toast.error(t("toastServerError"));
   }, [linkError, t]);
 
   async function sendCode(e: React.FormEvent) {
@@ -63,7 +64,9 @@ export function LoginForm() {
         body: JSON.stringify({ email, code }),
       });
       if (!res.ok) {
-        toast.error(t("toastInvalid"));
+        toast.error(
+          res.status >= 500 ? t("toastServerError") : t("toastInvalid"),
+        );
         return;
       }
       toast.success(t("toastSignedIn"));
@@ -105,10 +108,12 @@ export function LoginForm() {
               <Input
                 id="code"
                 inputMode="numeric"
+                autoComplete="one-time-code"
                 pattern="\d{6}"
-                maxLength={6}
                 value={code}
-                onChange={(e) => setCode(e.target.value)}
+                onChange={(e) =>
+                  setCode(e.target.value.replace(/\D/g, "").slice(0, 6))
+                }
                 required
               />
               <p className="text-xs text-muted-foreground">
