@@ -1,3 +1,4 @@
+import { getAffiliatePartner } from "@/lib/affiliate";
 import { trackServerEventSafe } from "@/lib/analytics/track";
 import {
   findFallback,
@@ -26,6 +27,12 @@ const bodySchema = z.object({
 });
 
 export async function POST(req: Request) {
+  if (getAffiliatePartner()) {
+    return NextResponse.json(
+      { error: "Booking is handled by our partner." },
+      { status: 410 },
+    );
+  }
   let json: unknown;
   try {
     json = await req.json();

@@ -1,3 +1,4 @@
+import { getAffiliatePartner } from "@/lib/affiliate";
 import { hasLocale } from "next-intl";
 import {
   ANALYTICS_SESSION_COOKIE,
@@ -60,6 +61,12 @@ async function resolveBookingUserId(sub: string | undefined) {
 }
 
 export async function POST(req: Request) {
+  if (getAffiliatePartner()) {
+    return NextResponse.json(
+      { error: "Booking is handled by our partner." },
+      { status: 410 },
+    );
+  }
   let json: unknown;
   try {
     json = await req.json();

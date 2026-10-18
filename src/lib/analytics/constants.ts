@@ -39,6 +39,8 @@ export const ANALYTICS_EVENT_NAMES = [
   "checkout_completed",
   "booking_confirmed",
   "booking_failed",
+  /** Visitor sent to the affiliate partner instead of the in-house booking flow */
+  "affiliate_click",
 ] as const;
 
 export type AnalyticsEventName = (typeof ANALYTICS_EVENT_NAMES)[number];
