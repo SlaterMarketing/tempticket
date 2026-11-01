@@ -345,6 +345,7 @@
     "ticketPassenger": "Пасажир",
     "ticketPassengerVal": "Кочівник · 1 дорослий",
     "ticketRecord": "Локатор записів",
-    "ticketVerified": "Перевірено"
+    "ticketVerified": "Перевірено",
+    "airlinesTitle": "Бронювання в авіакомпаніях, зокрема"
   }
 }

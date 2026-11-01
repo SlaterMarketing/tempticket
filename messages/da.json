@@ -345,6 +345,7 @@
     "ticketPassenger": "Passager",
     "ticketPassengerVal": "Nomad · 1 voksen",
     "ticketRecord": "Record locator",
-    "ticketVerified": "Verificeret"
+    "ticketVerified": "Verificeret",
+    "airlinesTitle": "Reservationer hos flyselskaber som"
   }
 }

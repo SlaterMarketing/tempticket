@@ -382,7 +382,7 @@ export default async function HomePage({
       {/* Features + how wave: one features-gradient shell to the wave */}
       <div className="relative -mt-px bg-subtle-features">
         <section className="relative overflow-hidden bg-transparent pt-8 pb-16 md:pt-12 md:pb-24">
-          <LogoTicker />
+          <LogoTicker title={t("airlinesTitle")} />
           <div
             aria-hidden
             className="feature-blob feature-blob-a -left-28 top-[18%] h-72 w-72 bg-[color:var(--brand-blue)] md:h-80 md:w-80"
@@ -553,7 +553,7 @@ export default async function HomePage({
               </p>
             </Reveal>
             <ul className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {guides.map((g, i) => (
+              {guides.slice(0, 9).map((g, i) => (
                 <li key={g.slug} className="h-full">
                   <Reveal className="h-full" delayMs={i * 40}>
                     <Link
@@ -567,6 +567,16 @@ export default async function HomePage({
                 </li>
               ))}
             </ul>
+            {guides.length > 9 ? (
+              <p className="mt-6 text-center">
+                <Link
+                  href="/guides"
+                  className="font-semibold text-[color:var(--brand-blue)] underline-offset-4 hover:underline"
+                >
+                  {guideUi.indexTitle}
+                </Link>
+              </p>
+            ) : null}
             <Reveal className="mt-12 flex justify-center">
               <BookNowButton label={t("bookNow")} partnerSource={cta("home-guides")} />
             </Reveal>

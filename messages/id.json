@@ -4,8 +4,8 @@
     "defaultDescription": "Reservasi penerbangan yang nyata dan dapat diverifikasi untuk pemeriksaan perjalanan selanjutnya. Dibangun untuk digital nomad.",
     "homeTitle": "Tiket keluar (onward ticket) mulai $14 — Reservasi penerbangan terverifikasi | TempTicket",
     "homeDescription": "Bukti perjalanan lanjutan dalam hitungan menit: reservasi penerbangan asli dengan kode PNR yang bisa Anda cek di situs maskapai. Untuk perjalanan sekali jalan, pengajuan visa, dan check-in.",
-    "bookTitle": "Pesan reservasi — TempTicket",
-    "bookDescription": "Temukan penundaan penerbangan dan selesaikan reservasi perjalanan selanjutnya.",
+    "bookTitle": "Pesan tiket keluar — TempTicket",
+    "bookDescription": "Dapatkan reservasi penerbangan yang bisa diverifikasi sebagai bukti perjalanan lanjutan atau untuk permohonan visa.",
     "bookConfirmationTitle": "Pembayaran diterima — TempTicket",
     "bookConfirmationDescription": "Kami sedang mengonfirmasi reservasi Anda dengan maskapai penerbangan.",
     "loginTitle": "Masuk — TempTicket",
@@ -41,18 +41,18 @@
     "steps": [
       {
         "label": "01",
-        "title": "Masukkan informasi Anda",
-        "body": "Rute, tanggal, dan detail penumpang."
+        "title": "Isi data",
+        "body": "Rute, tanggal, dan data penumpang."
       },
       {
         "label": "02",
-        "title": "Lakukan pembayaran",
-        "body": "Pembayaran aman—harga di muka."
+        "title": "Bayar",
+        "body": "Pembayaran aman, harga jelas sejak awal."
       },
       {
         "label": "03",
-        "title": "Dapatkan referensi Anda",
-        "body": "Verifikasi pada maskapai penerbangan saat siaran langsung."
+        "title": "Terima kode booking",
+        "body": "Cek di situs maskapai."
       }
     ]
   },
@@ -210,141 +210,149 @@
     "trustStats": [
       {
         "stat": "Menit",
-        "label": "Perubahan haluan yang umum ketika maskapai penerbangan bekerja sama"
+        "label": "Waktu pengiriman biasanya"
       },
       {
-        "stat": "PNR nyata",
-        "label": "Cari di operator saat diterbitkan"
+        "stat": "PNR asli",
+        "label": "Bisa dicek di situs maskapai"
       },
       {
         "stat": "24/7",
-        "label": "Dukungan ketika sesuatu membutuhkan manusia"
+        "label": "Dibantu orang sungguhan saat perlu"
       }
     ],
-    "featuresTitle": "Semua yang Anda butuhkan untuk ketenangan pikiran",
-    "featuresSub": "Bukti perjalanan selanjutnya yang cepat dan dapat diverifikasi—tanpa kekhawatiran membeli tiket yang tidak akan Anda gunakan.",
+    "featuresTitle": "Semua yang Anda butuhkan agar perjalanan tenang",
+    "featuresSub": "Bukti perjalanan lanjutan yang cepat dan bisa diverifikasi, tanpa membeli tiket yang tidak akan dipakai.",
     "features": [
       {
         "title": "Reservasi asli",
-        "body": "Catatan maskapai penerbangan asli ketika konfirmasi diterima—bukan PDF dekoratif."
+        "body": "Reservasi sungguhan di sistem maskapai, bukan PDF hiasan."
       },
       {
-        "title": "Pengiriman instan",
-        "body": "Sebagian besar alur diselesaikan dengan cepat sehingga Anda dapat melampirkan bukti pada hari yang sama."
+        "title": "Langsung terkirim",
+        "body": "Sebagian besar reservasi tiba dalam hitungan menit, jadi bisa ditunjukkan hari itu juga."
       },
       {
-        "title": "Dapat diverifikasi oleh operator",
-        "body": "Gunakan alat maskapai untuk menarik pemesanan ketika seseorang bertanya."
+        "title": "Bisa dicek di maskapai",
+        "body": "Buka reservasinya di situs maskapai saat diminta."
       },
       {
-        "title": "Hemat uang",
-        "body": "Membayar biaya layanan yang kecil dibandingkan ongkos perjalanan jarak jauh yang dapat dikembalikan."
+        "title": "Hemat",
+        "body": "Bayar biaya kecil, bukan tiket jarak jauh yang bisa di-refund."
       },
       {
-        "title": "Rencana yang fleksibel",
-        "body": "Sesuaikan tanggal kapan rencana perjalanan Anda berubah—dalam jendela kebijakan maskapai penerbangan."
+        "title": "Rencana fleksibel",
+        "body": "Ganti tanggal jika rute berubah, sesuai aturan maskapai."
       },
       {
-        "title": "Dukungan manusia",
-        "body": "Tarif macet dan kasus tepian dapat diteruskan ke tim kami dari antrean."
+        "title": "Bantuan manusia",
+        "body": "Jika ada masalah, tim kami siap membantu."
       }
     ],
-    "processTitle": "Proses pemesanan sederhana",
+    "processTitle": "Pesan dalam tiga langkah",
     "commonQuestions": "Pertanyaan umum",
-    "personasTitle": "sangat cocok untuk",
+    "personasTitle": "cocok untuk",
     "personas": [
       {
         "title": "Pemohon visa",
-        "body": "Bila konsulat menginginkan rencana perjalanan, belum tentu tarif berbayar."
+        "body": "Saat kedutaan meminta itinerary, bukan tiket yang sudah dibayar."
       },
       {
-        "title": "Frequent flyer",
-        "body": "Bukti berulang untuk maskapai penerbangan yang menerapkan aturan pulang/pergi."
+        "title": "Sering bepergian",
+        "body": "Bukti perjalanan lanjutan setiap kali maskapai meminta tiket pulang atau keluar."
       },
       {
         "title": "Wisatawan",
-        "body": "Kisah verifikasi sederhana untuk pemeriksaan perbatasan dan operator."
+        "body": "Cara mudah melewati pemeriksaan check-in dan imigrasi."
       },
       {
-        "title": "Pengembara digital",
-        "body": "Tetap fleksibel tanpa uang parkir pada tarif jarak jauh yang tidak terpakai."
+        "title": "Digital nomad",
+        "body": "Tetap fleksibel tanpa menahan uang di tiket yang tidak dipakai."
       }
     ],
-    "visaTitle": "Fleksibilitas yang lebih besar saat mengamankan visa Anda",
-    "visaBody": "Banyak misi menjelaskan penerimaan rencana perjalanan atau reservasi daripada tiket yang dibayar penuh. Konfirmasikan di situs resmi untuk kasus Anda—kami menyediakan reservasi nyata yang dapat Anda verifikasi sambil menunggu.",
+    "visaTitle": "Lebih fleksibel saat mengurus visa",
+    "visaBody": "Banyak kedutaan menerima itinerary atau reservasi, bukan tiket yang sudah dibayar. Pastikan di situs resmi untuk kasus Anda: kami memberikan reservasi asli yang bisa Anda verifikasi sambil menunggu.",
     "visaSteps": [
       {
         "n": "1",
-        "title": "Baca daftar periksa resmi",
-        "body": "Kedutaan berbeda-beda—ada yang ingin reservasi, ada yang minta tiket. Mulailah dari halaman mereka, bukan blog."
+        "title": "Baca daftar resmi",
+        "body": "Setiap kedutaan berbeda: ada yang minta reservasi, ada yang minta tiket. Mulai dari situs mereka, bukan blog."
       },
       {
         "n": "2",
-        "title": "Cocokkan tanggal dengan cerita Anda",
-        "body": "Pilih rute dan waktu yang sesuai dengan permohonan yang Anda ajukan."
+        "title": "Sesuaikan tanggal",
+        "body": "Pilih rute dan tanggal yang sama persis dengan permohonan Anda."
       },
       {
         "n": "3",
-        "title": "Verifikasi di maskapai penerbangan",
-        "body": "Jika rekaman tersebut aktif, berlatihlah untuk menampilkannya di situs operator sebelum janji temu Anda."
+        "title": "Cek di maskapai",
+        "body": "Buka reservasinya di situs maskapai sebelum janji temu."
       }
     ],
-    "embassyPublish": "Apa yang diterbitkan kedutaan",
+    "embassyPublish": "Yang dipublikasikan kedutaan",
     "embassyFigures": [
       {
-        "quote": "Reservasi tiket pulang pergi, tidak perlu membeli tiket sebelum visa diberikan…",
-        "caption": "Tema dari FAQ Kedutaan Besar (Norwegia)"
+        "quote": "Reservasi tiket pulang; tiket tidak perlu dibeli sebelum visa diberikan…",
+        "caption": "Inti dari FAQ publik sebuah kedutaan (Norwegia)"
       },
       {
-        "quote": "Reservasi maskapai penerbangan… dengan nomor reservasi perjalanan… belum tentu reservasi tiket.",
-        "caption": "Tema dari panduan Schengen publik (Spanyol)"
+        "quote": "Reservasi penerbangan… dengan nomor reservasi… tidak harus tiket yang sudah diterbitkan.",
+        "caption": "Inti dari panduan Schengen publik (Spanyol)"
       },
       {
         "quote": "Reservasi penerbangan yang dapat diverifikasi… bukan tiket yang dibeli.",
-        "caption": "Tema dari informasi visa publik (India)"
+        "caption": "Inti dari informasi visa publik (India)"
       }
     ],
-    "faqTitle": "Apakah Anda memerlukan bantuan?",
-    "faqFooter": "Pertanyaan lain? Mulai pemesanan—kami menampilkan waktu dan catatan operator saat Anda bepergian.",
+    "faqTitle": "Butuh bantuan?",
+    "faqFooter": "Masih ada pertanyaan? Hubungi kami, kami bantu sesuai kasus Anda.",
     "faqItems": [
       {
         "q": "Apa itu TempTicket?",
-        "a": "Layanan yang membantu Anda mendapatkan reservasi penerbangan nyata dan dapat diverifikasi (dengan referensi pemesanan saat maskapai mengonfirmasinya) untuk perjalanan selanjutnya dan skenario visa—tanpa membayar tarif penuh yang tidak boleh Anda gunakan."
+        "a": "Layanan untuk mendapatkan reservasi penerbangan asli yang bisa diverifikasi, lengkap dengan kode booking, untuk pemeriksaan tiket keluar dan permohonan visa, tanpa membayar tiket penuh yang mungkin tidak dipakai."
       },
       {
-        "q": "Berapa lama masa berlaku reservasi?",
-        "a": "Validitas bergantung pada peraturan tarif maskapai, kebijakan penangguhan, atau jadwal waktu tiket. Kami mengungkapkan apa yang kami bisa saat pemesanan; selalu konfirmasikan waktunya dengan persyaratan kedutaan atau operator Anda."
+        "q": "Berapa lama reservasinya berlaku?",
+        "a": "Tergantung maskapai, tetapi biasanya aktif sekitar 48 jam. Pesan sesaat sebelum check-in atau janji temu."
       },
       {
-        "q": "Dapatkah saya memverifikasinya di situs web maskapai penerbangan?",
-        "a": "Saat maskapai penerbangan mengeluarkan catatan langsung, Anda biasanya dapat mencarinya di alur kelola pemesanan atau periksa perjalanan saya. Jika suatu rute tidak memenuhi syarat untuk ditangguhkan, Anda mungkin memerlukan tiket instan."
+        "q": "Bisakah dicek di situs maskapai?",
+        "a": "Bisa. Dengan kode booking dan nama belakang, Anda bisa menemukannya di menu kelola pemesanan maskapai."
       },
       {
         "q": "Apakah ini nasihat hukum atau jaminan visa?",
-        "a": "Tidak. Aturan imigrasi berubah berdasarkan negara dan petugas. Kami hanya menyediakan layanan reservasi—periksa sumber resmi untuk situasi Anda."
+        "a": "Bukan. Aturan berbeda tiap negara dan petugas. Kami menyediakan layanan reservasi; selalu cek sumber resmi untuk kasus Anda."
       }
     ],
-    "ctaTitle": "Bepergian cukup sulit. Jadikan pembuktian selanjutnya lebih mudah dengan",
-    "ctaPriceLine": "Dari {price} · menit, bukan dugaan",
-    "footerTagline": "Bukti perjalanan selanjutnya untuk pengembara",
+    "ctaTitle": "Bepergian sudah cukup ribet. Urus bukti perjalanan lanjutan dengan mudah bersama",
+    "ctaPriceLine": "Mulai {price} · dalam hitungan menit",
+    "footerTagline": "Bukti perjalanan lanjutan untuk nomad",
     "footerServices": "Layanan",
     "footerAccount": "Akun",
-    "footerLegal": "Hukum",
+    "footerLegal": "Legal",
     "footerBook": "Pesan reservasi",
     "footerSignIn": "Masuk",
-    "footerMyBookings": "Pemesanan saya",
-    "footerTerms": "Syarat",
+    "footerMyBookings": "Pesanan saya",
+    "footerTerms": "Ketentuan",
     "footerPrivacy": "Privasi",
-    "footerCopyright": "Semua hak dilindungi undang-undang.",
+    "footerCopyright": "Hak cipta dilindungi.",
     "footerBackTop": "Kembali ke atas",
-    "ticketFrom": "Dari {price}",
+    "ticketFrom": "Mulai {price}",
     "ticketDeparture": "Keberangkatan",
     "ticketArrival": "Kedatangan",
     "ticketBangkok": "Bangkok",
     "ticketTokyo": "Tokyo",
     "ticketPassenger": "Penumpang",
-    "ticketPassengerVal": "Pengembara · 1 dewasa",
-    "ticketRecord": "Pencari rekaman",
-    "ticketVerified": "Terverifikasi"
+    "ticketPassengerVal": "Nomad · 1 dewasa",
+    "ticketRecord": "Kode booking",
+    "ticketVerified": "Terverifikasi",
+    "airlinesTitle": "Reservasi di maskapai seperti"
+  },
+  "BookPartner": {
+    "badge": "Reservasi penerbangan terverifikasi",
+    "title": "Dapatkan tiket keluar Anda",
+    "body": "Kami bekerja sama dengan {partner} untuk menerbitkan reservasi penerbangan asli yang bisa Anda cek di situs maskapai. Anda akan menerimanya lewat email dalam hitungan menit.",
+    "cta": "Lanjut ke {partner}",
+    "note": "Pemesanan dan pembayaran diselesaikan di situs {partner}."
   }
 }

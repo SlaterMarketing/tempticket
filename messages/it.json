@@ -4,8 +4,8 @@
     "defaultDescription": "Prenotazioni di voli reali e verificabili per assegni di proseguimento del viaggio. Costruito per i nomadi digitali.",
     "homeTitle": "Biglietto di uscita da 14 $ — Prenotazione volo verificabile | TempTicket",
     "homeDescription": "Prova di uscita dal paese in pochi minuti: una vera prenotazione aerea con codice PNR verificabile sul sito della compagnia. Per viaggi di sola andata, richieste di visto e check-in.",
-    "bookTitle": "Prenota una prenotazione — TempTicket",
-    "bookDescription": "Trova un volo in attesa e completa la prenotazione del viaggio successivo.",
+    "bookTitle": "Prenota il tuo biglietto di uscita — TempTicket",
+    "bookDescription": "Ottieni una prenotazione aerea verificabile come prova di uscita o per la domanda di visto.",
     "bookConfirmationTitle": "Pagamento ricevuto — TempTicket",
     "bookConfirmationDescription": "Stiamo confermando la tua prenotazione con la compagnia aerea.",
     "loginTitle": "Accedi: TempTicket",
@@ -37,22 +37,22 @@
     "couldNotSearch": "Impossibile cercare luoghi."
   },
   "BookingTimeline": {
-    "stepLabel": "Passaggio {step}",
+    "stepLabel": "Passo {step}",
     "steps": [
       {
         "label": "01",
-        "title": "Inserisci i tuoi dati",
-        "body": "Percorso, date e dettagli dei passeggeri."
+        "title": "Inserisci i dati",
+        "body": "Tratta, date e dati del passeggero."
       },
       {
         "label": "02",
-        "title": "Effettua un pagamento",
-        "body": "Pagamento sicuro: prezzo anticipato."
+        "title": "Paga",
+        "body": "Pagamento sicuro, prezzo chiaro da subito."
       },
       {
         "label": "03",
-        "title": "Ottieni la tua referenza",
-        "body": "Verifica sulla compagnia aerea quando è attiva."
+        "title": "Ricevi il codice",
+        "body": "Verificalo sul sito della compagnia."
       }
     ]
   },
@@ -210,141 +210,149 @@
     "trustStats": [
       {
         "stat": "Minuti",
-        "label": "Tipica inversione di tendenza quando le compagnie aeree collaborano"
+        "label": "Tempo di consegna abituale"
       },
       {
         "stat": "PNR reale",
-        "label": "Ricercarlo presso il corriere al momento del rilascio"
+        "label": "Verificabile sul sito della compagnia"
       },
       {
         "stat": "24/7",
-        "label": "Supporto quando qualcosa ha bisogno di un essere umano"
+        "label": "Una persona vera quando serve"
       }
     ],
-    "featuresTitle": "Tutto ciò di cui hai bisogno per la tua tranquillità",
-    "featuresSub": "Prova di viaggio veloce e verificabile, senza l'ansia di acquistare un biglietto che non utilizzerai.",
+    "featuresTitle": "Tutto ciò che serve per viaggiare sereni",
+    "featuresSub": "Una prova di uscita rapida e verificabile, senza comprare un biglietto che non userai.",
     "features": [
       {
         "title": "Prenotazioni autentiche",
-        "body": "Un documento autentico della compagnia aerea al momento della conferma, non un PDF decorativo."
+        "body": "Una prenotazione reale nel sistema della compagnia, non un PDF decorativo."
       },
       {
         "title": "Consegna immediata",
-        "body": "La maggior parte dei flussi viene completata rapidamente, quindi puoi allegare la prova lo stesso giorno."
+        "body": "La maggior parte arriva in pochi minuti: puoi presentarla lo stesso giorno."
       },
       {
-        "title": "Verificabile dal corriere",
-        "body": "Utilizza gli strumenti della compagnia aerea per visualizzare la prenotazione quando qualcuno lo richiede."
+        "title": "Verificabile con la compagnia",
+        "body": "Ritrova la prenotazione sul sito della compagnia quando te la chiedono."
       },
       {
-        "title": "Risparmia denaro",
-        "body": "Paga una piccola tariffa di servizio invece di una tariffa a lungo raggio rimborsabile."
+        "title": "Risparmia",
+        "body": "Paghi una piccola tariffa invece di un biglietto rimborsabile a lungo raggio."
       },
       {
         "title": "Piani flessibili",
-        "body": "Modifica le date quando cambia il tuo itinerario, all'interno delle finestre delle politiche della compagnia aerea."
+        "body": "Cambia le date se cambia l'itinerario, secondo le regole della compagnia."
       },
       {
-        "title": "Supporto umano",
-        "body": "Tariffe bloccate e casi limite possono passare al nostro team dalla coda."
+        "title": "Assistenza umana",
+        "body": "Se qualcosa va storto, ti aiuta una persona del nostro team."
       }
     ],
-    "processTitle": "Processo di prenotazione semplice",
-    "commonQuestions": "Domande comuni",
+    "processTitle": "Prenoti in tre passi",
+    "commonQuestions": "Domande frequenti",
     "personasTitle": "è perfetto per",
     "personas": [
       {
-        "title": "Richiedenti il visto",
-        "body": "Quando i consolati desiderano un itinerario, non necessariamente una tariffa pagata."
+        "title": "Chi chiede un visto",
+        "body": "Quando il consolato vuole un itinerario, non per forza un biglietto pagato."
       },
       {
-        "title": "Frequent flyer",
-        "body": "Prova ripetibile per le compagnie aeree che applicano le regole di rimpatrio/proseguimento."
+        "title": "Chi viaggia spesso",
+        "body": "Prova di uscita ogni volta che la compagnia chiede un biglietto di ritorno o di uscita."
       },
       {
         "title": "Viaggiatori",
-        "body": "Semplice storia di verifica per controlli di frontiera e del corriere."
+        "body": "Un modo semplice per superare i controlli al check-in e alla frontiera."
       },
       {
         "title": "Nomadi digitali",
-        "body": "Mantieni la flessibilità senza pagare il parcheggio nelle tariffe a lungo raggio non utilizzate."
+        "body": "Resta flessibile senza bloccare soldi in biglietti inutilizzati."
       }
     ],
-    "visaTitle": "Maggiore flessibilità nell'ottenimento del visto",
-    "visaBody": "Molte missioni descrivono l'accettazione di un itinerario o di una prenotazione anziché di un biglietto interamente pagato. Conferma sul sito ufficiale il tuo caso: forniamo una prenotazione reale che puoi verificare mentre aspetti.",
+    "visaTitle": "Più flessibilità per il tuo visto",
+    "visaBody": "Molti consolati accettano un itinerario o una prenotazione invece di un biglietto pagato. Controlla il sito ufficiale per il tuo caso: forniamo una prenotazione reale, verificabile mentre aspetti.",
     "visaSteps": [
       {
         "n": "1",
-        "title": "Leggi la checklist ufficiale",
-        "body": "Le ambasciate differiscono: alcune vogliono una prenotazione, altre un biglietto. Inizia dalla loro pagina, non da un blog."
+        "title": "Leggi la lista ufficiale",
+        "body": "Ogni ambasciata è diversa: alcune chiedono una prenotazione, altre un biglietto. Parti dal loro sito, non da un blog."
       },
       {
         "n": "2",
-        "title": "Abbina le date alla tua storia",
-        "body": "Scegli un percorso e una tempistica perfettamente in linea con la domanda che stai presentando."
+        "title": "Allinea le date alla domanda",
+        "body": "Scegli tratta e date che corrispondano esattamente alla tua domanda."
       },
       {
         "n": "3",
-        "title": "Verificare sulla compagnia aerea",
-        "body": "Se la documentazione è pubblicata, esercitati a visualizzarla sul sito del corriere prima dell'appuntamento."
+        "title": "Verifica con la compagnia",
+        "body": "Cerca la prenotazione sul sito della compagnia prima dell'appuntamento."
       }
     ],
     "embassyPublish": "Cosa pubblicano le ambasciate",
     "embassyFigures": [
       {
-        "quote": "Prenotazione per il biglietto di ritorno, non è necessario acquistare il biglietto prima della concessione del visto…",
-        "caption": "Tema dalle FAQ dell'ambasciata pubblica (Norvegia)"
+        "quote": "Prenotazione del biglietto di ritorno; non è necessario acquistarlo prima del rilascio del visto…",
+        "caption": "Concetto tratto dalle FAQ pubbliche di un'ambasciata (Norvegia)"
       },
       {
-        "quote": "Prenotazione aerea... con numero di prenotazione del viaggio... non necessariamente una prenotazione con biglietto.",
-        "caption": "Tema dell'orientamento pubblico Schengen (Spagna)"
+        "quote": "Prenotazione aerea… con codice di prenotazione… non necessariamente un biglietto emesso.",
+        "caption": "Concetto tratto dalle indicazioni Schengen pubbliche (Spagna)"
       },
       {
-        "quote": "Prenotazione del volo verificabile... non un biglietto acquistato.",
-        "caption": "Tema tratto dalle informazioni pubbliche sui visti (India)"
+        "quote": "Prenotazione aerea verificabile… non un biglietto acquistato.",
+        "caption": "Concetto tratto da informazioni pubbliche sui visti (India)"
       }
     ],
     "faqTitle": "Hai bisogno di aiuto?",
-    "faqFooter": "Altre domande? Avvia una prenotazione: mostriamo tempistiche e note del corriere man mano che procedi.",
+    "faqFooter": "Altre domande? Scrivici e ti aiutiamo con il tuo caso.",
     "faqItems": [
       {
-        "q": "Che cos'è TempTicket?",
-        "a": "Un servizio che ti aiuta a ottenere una prenotazione di volo reale e verificabile (con un riferimento di prenotazione quando la compagnia aerea la conferma) per scenari di proseguimento del viaggio e visto, senza pagare una tariffa intera che potresti non utilizzare."
+        "q": "Cos'è TempTicket?",
+        "a": "Un servizio per ottenere una vera prenotazione aerea verificabile, con codice di prenotazione, per i controlli di uscita e le domande di visto, senza pagare un biglietto intero che forse non userai."
       },
       {
-        "q": "Quanto tempo è valida la prenotazione?",
-        "a": "La validità dipende dalle regole tariffarie della compagnia aerea, dalla politica di attesa o dalla tempistica dell'emissione dei biglietti. Emergiamo ciò che possiamo durante la prenotazione; conferma sempre i tempi in base ai requisiti della tua ambasciata o del tuo operatore."
+        "q": "Quanto dura la prenotazione?",
+        "a": "Dipende dalla compagnia, ma di solito resta attiva circa 48 ore. Prenotala poco prima del check-in o dell'appuntamento."
       },
       {
-        "q": "Posso verificarlo sul sito della compagnia aerea?",
-        "a": "Quando la compagnia aerea emette un record in tempo reale, in genere puoi cercarlo nel flusso di gestione delle prenotazioni o di controllo del mio viaggio. Se una tratta non è idonea alla sospensione, potresti aver bisogno di un biglietto istantaneo."
+        "q": "Posso verificarla sul sito della compagnia?",
+        "a": "Sì. Con il codice di prenotazione e il cognome la trovi nella sezione «Gestisci prenotazione» della compagnia."
       },
       {
-        "q": "Si tratta di consulenza legale o di garanzia del visto?",
-        "a": "N. Le regole sull’immigrazione cambiano in base al paese e al funzionario. Forniamo solo un servizio di prenotazione: controlla le fonti ufficiali per la tua situazione."
+        "q": "È una consulenza legale o una garanzia di visto?",
+        "a": "No. Le regole cambiano da paese a paese e da funzionario a funzionario. Offriamo un servizio di prenotazione; controlla sempre le fonti ufficiali."
       }
     ],
-    "ctaTitle": "Viaggiare è già abbastanza difficile. Rendi più semplice la prova in avanti con",
-    "ctaPriceLine": "A partire da {price} · minuti, non supposizioni",
-    "footerTagline": "Prova di viaggio per nomadi",
+    "ctaTitle": "Viaggiare è già complicato. Ottieni la prova di uscita facilmente con",
+    "ctaPriceLine": "Da {price} · in pochi minuti",
+    "footerTagline": "Prova di uscita per nomadi",
     "footerServices": "Servizi",
-    "footerAccount": "Conto",
-    "footerLegal": "Legale",
-    "footerBook": "Prenota una prenotazione",
+    "footerAccount": "Account",
+    "footerLegal": "Note legali",
+    "footerBook": "Prenota",
     "footerSignIn": "Accedi",
     "footerMyBookings": "Le mie prenotazioni",
     "footerTerms": "Termini",
     "footerPrivacy": "Privacy",
     "footerCopyright": "Tutti i diritti riservati.",
-    "footerBackTop": "Torna all'inizio",
+    "footerBackTop": "Torna su",
     "ticketFrom": "Da {price}",
     "ticketDeparture": "Partenza",
     "ticketArrival": "Arrivo",
     "ticketBangkok": "Bangkok",
-    "ticketTokyo": "Tokio",
+    "ticketTokyo": "Tokyo",
     "ticketPassenger": "Passeggero",
     "ticketPassengerVal": "Nomade · 1 adulto",
-    "ticketRecord": "Localizzatore di record",
-    "ticketVerified": "Verificato"
+    "ticketRecord": "Codice prenotazione",
+    "ticketVerified": "Verificato",
+    "airlinesTitle": "Prenotazioni su compagnie come"
+  },
+  "BookPartner": {
+    "badge": "Prenotazioni aeree verificabili",
+    "title": "Ottieni il tuo biglietto di uscita",
+    "body": "Collaboriamo con {partner} per emettere vere prenotazioni aeree, verificabili sul sito della compagnia. La ricevi via e-mail in pochi minuti.",
+    "cta": "Continua su {partner}",
+    "note": "Completerai prenotazione e pagamento sul sito di {partner}."
   }
 }

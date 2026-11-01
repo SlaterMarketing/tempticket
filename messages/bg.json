@@ -345,6 +345,7 @@
     "ticketPassenger": "Пътник",
     "ticketPassengerVal": "Номад · 1 възрастен",
     "ticketRecord": "Локатор на записи",
-    "ticketVerified": "Проверен"
+    "ticketVerified": "Проверен",
+    "airlinesTitle": "Резервации при авиокомпании като"
   }
 }

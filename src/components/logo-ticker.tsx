@@ -14,7 +14,7 @@ type LogoTickerProps = {
  * Seamless horizontal marquee (e.g. partner airlines); duplicates items for infinite scroll.
  */
 export function LogoTicker({
-  title = "Airlines we partner with",
+  title = "Reservations on airlines including",
   labels = DUFFEL_PARTNER_AIRLINE_LABELS,
   className,
 }: LogoTickerProps) {
