@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const VERIFICAR =
+export const VERIFICAR =
   "Quando a reserva chegar, abra a página de \"gerenciar reserva\" da companhia aérea e procure pelo código de reserva (PNR) e pelo seu sobrenome. Se aparecer lá, o atendente do check-in também vai ver. Salve um print além do e-mail.";
 
-const PRAZO =
+export const PRAZO =
   "Esse tipo de reserva fica ativo por pouco tempo (normalmente cerca de 48 horas) e depois expira. Faça a reserva pouco antes do check-in ou da entrevista do visto, não semanas antes.";
 
 export const PT_BR_GUIDES: Guide[] = [
@@ -142,7 +142,18 @@ export const PT_BR_GUIDES: Guide[] = [
           VERIFICAR,
         ],
       },
+      {
+        heading: "Onde é a entrevista no Brasil",
+        paragraphs: [
+          "As entrevistas de visto americano no Brasil acontecem na embaixada em Brasília e nos consulados em São Paulo, Rio de Janeiro, Recife e Porto Alegre. Normalmente há antes uma etapa no CASV para coleta de digitais e foto.",
+          "As taxas mudaram em 2025, quando o Congresso americano criou uma taxa de integridade do visto além da taxa de solicitação. Confira o valor atual em travel.state.gov antes de pagar.",
+        ],
+      },
     ],
+    sources: [
+      { label: "Departamento de Estado dos EUA: visto de visitante (em inglês)", url: "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Posso ter o visto negado sem reserva de voo?",
