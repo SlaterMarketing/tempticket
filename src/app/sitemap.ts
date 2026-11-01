@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { GUIDE_LOCALE, GUIDES } from "@/lib/guides";
+import { GUIDE_LOCALES, getGuides } from "@/lib/guides";
 import { getServerSiteUrl } from "@/lib/site-url";
 
 /** Only pages worth ranking: no sign-in, account or post-payment pages. */
@@ -19,12 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
-  entries.push({ url: `${base}/${GUIDE_LOCALE}/guides`, lastModified: now });
-  for (const g of GUIDES) {
-    entries.push({
-      url: `${base}/${GUIDE_LOCALE}/guides/${g.slug}`,
-      lastModified: now,
-    });
+  for (const locale of GUIDE_LOCALES) {
+    entries.push({ url: `${base}/${locale}/guides`, lastModified: now });
+    for (const g of getGuides(locale)) {
+      entries.push({
+        url: `${base}/${locale}/guides/${g.slug}`,
+        lastModified: now,
+      });
+    }
   }
   return entries;
 }

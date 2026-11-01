@@ -2,8 +2,8 @@
   "Metadata": {
     "defaultTitle": "TempTicket — 游牧民族继续旅行的证明",
     "defaultDescription": "用于后续旅行检查的真实、可验证的航班预订。专为数字游民打造。",
-    "homeTitle": "TempTicket — 游牧民族继续旅行的证明",
-    "homeDescription": "用于后续旅行检查的真实、可验证的航班预订。专为数字游民打造。",
+    "homeTitle": "离境机票（Onward Ticket）$14 起 — 可查验的机票预订 | TempTicket",
+    "homeDescription": "几分钟内获得离境证明：真实的机票预订，附带可在航空公司官网查询的 PNR 订座编号。适用于单程旅行、签证申请和值机。",
     "bookTitle": "预订 — TempTicket",
     "bookDescription": "查找航班保留并完成您的续程旅行预订。",
     "bookConfirmationTitle": "收到付款 — TempTicket",
@@ -18,12 +18,12 @@
     "privacyDescription": "TempTicket 如何处理个人数据。"
   },
   "SiteHeader": {
-    "brandAlt": "临时票",
+    "brandAlt": "TempTicket",
     "myBookings": "我的预订",
     "admin": "管理",
     "signOut": "退出",
     "signIn": "登录",
-    "book": "书籍"
+    "book": "立即预订"
   },
   "LocaleSwitcher": {
     "ariaLabel": "语言",
@@ -203,9 +203,9 @@
   "Home": {
     "bookNow": "立即预订",
     "heroBadge": "实时预订",
-    "heroHeadingLead": "航班预订",
-    "heroHeadingAccent": "几分钟内验证",
-    "heroSub": "您可以在航空公司网站上验证真实的航班预订。游牧民族无压力旅行。",
+    "heroHeadingLead": "离境机票，",
+    "heroHeadingAccent": "几分钟内即可查验",
+    "heroSub": "可在航空公司官网查询的真实机票预订。用于值机、入境检查和签证申请的离境证明。",
     "howItWorks": "工作原理",
     "trustStats": [
       {
@@ -268,27 +268,6 @@
       {
         "title": "数字游牧民族",
         "body": "保持灵活性，无需将钱停放在未使用的长途票价中。"
-      }
-    ],
-    "socialTitle": "受到世界各地旅行者的信赖",
-    "testimonials": [
-      {
-        "flag": "🇺🇸",
-        "name": "样本 · Alex M.",
-        "quote": "PNR 在我申请的同一周在航空公司网站上查看。",
-        "avatar": "AM"
-      },
-      {
-        "flag": "🇩🇪",
-        "name": "样本·Leni K.",
-        "quote": "当我询问路线时，流程简单，答案快速。",
-        "avatar": "LK"
-      },
-      {
-        "flag": "🇬🇧",
-        "name": "样本·詹姆斯·T.",
-        "quote": "让我通过单程票政策办理登机手续。",
-        "avatar": "JT"
       }
     ],
     "visaTitle": "获得签证时更加灵活",

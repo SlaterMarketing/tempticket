@@ -4,19 +4,7 @@
  * sources: entry rules change, and these pages must not read as legal advice.
  */
 
-export type GuideSection = { heading: string; paragraphs: string[] };
-export type GuideFaq = { q: string; a: string };
-
-export type Guide = {
-  slug: string;
-  /** <title> and H1 target the search phrase people actually type. */
-  title: string;
-  h1: string;
-  description: string;
-  intro: string;
-  sections: GuideSection[];
-  faqs: GuideFaq[];
-};
+import type { Guide, GuideUi } from "./types";
 
 const VERIFY_STEP =
   "Once your reservation arrives, open the airline's manage-booking page and look it up with the booking reference (PNR) and your surname. If you can see it there, so can a check-in agent. Screenshot it as well as keeping the email.";
@@ -24,8 +12,9 @@ const VERIFY_STEP =
 const TIMING_STEP =
   "Reservations of this kind are held for a limited time (typically around 48 hours) before they lapse. Book it shortly before check-in or your visa appointment, not weeks ahead.";
 
-export const GUIDES: Guide[] = [
+export const EN_GUIDES: Guide[] = [
   {
+    key: "proof-of-onward-travel",
     slug: "proof-of-onward-travel",
     title: "Proof of Onward Travel: What It Is and How to Get It",
     h1: "Proof of onward travel, explained",
@@ -74,6 +63,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-thailand",
     slug: "onward-ticket-thailand",
     title: "Onward Ticket for Thailand: Do You Need One?",
     h1: "Do you need an onward ticket for Thailand?",
@@ -110,6 +100,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-philippines",
     slug: "onward-ticket-philippines",
     title: "Onward Ticket for the Philippines: What Airlines Check",
     h1: "Onward ticket for the Philippines",
@@ -145,6 +136,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-bali-indonesia",
     slug: "onward-ticket-bali-indonesia",
     title: "Onward Ticket for Bali and Indonesia",
     h1: "Do you need an onward ticket for Bali?",
@@ -176,6 +168,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-costa-rica",
     slug: "onward-ticket-costa-rica",
     title: "Onward Ticket for Costa Rica: Proof of Exit Explained",
     h1: "Onward ticket for Costa Rica",
@@ -202,6 +195,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-colombia-peru",
     slug: "onward-ticket-colombia-peru",
     title: "Onward Ticket for Colombia and Peru",
     h1: "Onward tickets for Colombia and Peru",
@@ -233,6 +227,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "onward-ticket-new-zealand",
     slug: "onward-ticket-new-zealand",
     title: "Onward Ticket for New Zealand",
     h1: "Do you need an onward ticket for New Zealand?",
@@ -264,6 +259,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "flight-itinerary-for-schengen-visa",
     slug: "flight-itinerary-for-schengen-visa",
     title: "Flight Itinerary for a Schengen Visa (Without Buying a Ticket)",
     h1: "Flight itinerary for a Schengen visa application",
@@ -299,6 +295,7 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    key: "one-way-ticket-denied-boarding",
     slug: "one-way-ticket-denied-boarding",
     title: "Denied Boarding on a One-Way Ticket? How to Avoid It",
     h1: "Denied boarding on a one-way ticket: how to avoid it",
@@ -328,11 +325,285 @@ export const GUIDES: Guide[] = [
       },
     ],
   },
+  {
+    key: "dummy-ticket-for-visa",
+    slug: "dummy-ticket-for-visa",
+    title: "Dummy Ticket for Visa: Real Reservations vs Fake PDFs",
+    h1: "Dummy ticket for a visa application",
+    description:
+      "What a \"dummy ticket\" for a visa really is, why consulates ask for one, how to tell a real reservation from a fake PDF, and how to get one you can verify.",
+    intro:
+      "A \"dummy ticket\" is the travel industry's name for a flight reservation used to support a visa application. It shows your planned dates and route without you paying for a ticket you might not be able to use. The name is misleading: a good one isn't fake at all. It's a real booking held on the airline's system for a short time.",
+    sections: [
+      {
+        heading: "Why consulates ask for one",
+        paragraphs: [
+          "Visa officers want to see that your trip has a clear start and end, and that the dates match the rest of your application. Many embassies and visa centres say directly that you should not buy a ticket before the visa is granted, so a reservation is the expected document.",
+          "Consulates that commonly list a flight itinerary or reservation include Schengen countries, Japan, and many others. Some, like the UK and the US, don't require one but accept it as supporting evidence.",
+        ],
+      },
+      {
+        heading: "Real reservation or fake PDF?",
+        paragraphs: [
+          "A real reservation has a booking reference (PNR) that you can look up on the airline's own manage-booking page. A fake is a document edited to look like a booking, with nothing behind it.",
+          "Consulates and airlines can and do check. Submitting a forged document can get your application refused and may count against you in future applications. Only use a reservation you can verify yourself.",
+        ],
+      },
+      {
+        heading: "Getting the details right",
+        paragraphs: [
+          "Your name must match your passport exactly, including middle names if your passport shows them. Dates should match the dates on your application form and any hotel bookings.",
+          "Most visa applications want a round trip. If you're travelling through several countries, the reservation should start in the country of your main stay or first entry, as your consulate's checklist describes.",
+        ],
+      },
+      {
+        heading: "Timing",
+        paragraphs: [
+          "Reservations are held for a limited time, often around 48 hours, before they lapse. Book it a day or two before your appointment or submission so it's live when your documents are first reviewed. It's normal for it to expire before a decision.",
+          VERIFY_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a dummy ticket legal?",
+        a: "A real flight reservation is legal and is what many consulates ask for. A forged or edited booking is not, and can get your visa refused.",
+      },
+      {
+        q: "Will the embassy check the booking?",
+        a: "They may, especially at the start of processing. That's why the reservation needs a PNR you can look up on the airline's website.",
+      },
+      {
+        q: "What happens when the reservation expires?",
+        a: "Nothing. Consulates expect reservations to lapse and advise against buying tickets until your visa is approved. Book your real flights once you have the decision.",
+      },
+    ],
+  },
+  {
+    key: "flight-itinerary-uk-visa",
+    slug: "flight-itinerary-uk-visa",
+    title: "Flight Itinerary for a UK Visitor Visa: Do You Need One?",
+    h1: "Do you need a flight booking for a UK visitor visa?",
+    description:
+      "The UK doesn't require a flight booking for a Standard Visitor visa, but a reservation can support your application. When to include one and how to get a verifiable itinerary.",
+    intro:
+      "UK Visas and Immigration does not require you to book flights before applying for a Standard Visitor visa, and UK guidance generally advises against paying for travel before you have a decision. Many applicants still include a flight itinerary as supporting evidence of their plans.",
+    sections: [
+      {
+        heading: "Why include one anyway",
+        paragraphs: [
+          "The decision maker wants to understand your trip: when you'll arrive, how long you'll stay and when you'll leave. A clear itinerary that matches your dates, accommodation and leave from work makes that story easier to follow.",
+          "A reservation does this without the risk of losing money on a ticket if the visa is refused or delayed.",
+        ],
+      },
+      {
+        heading: "What to show",
+        paragraphs: [
+          "A return flight, or an arrival and departure, matching the dates in your online application. Your name should appear exactly as in your passport.",
+          "Always follow the current guidance on GOV.UK for the visa you're applying for.",
+        ],
+      },
+      {
+        heading: "Getting it right",
+        paragraphs: [
+          "Book the reservation shortly before you submit your application or attend your biometrics appointment. Reservations of this kind are typically held for around 48 hours before they lapse, which is expected.",
+          VERIFY_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is a flight booking mandatory for a UK visitor visa?",
+        a: "No. It's optional supporting evidence. What matters is that your plans, funds and ties to home are clear and consistent.",
+      },
+      {
+        q: "Should I buy a ticket before applying?",
+        a: "It's generally advised not to, because you could lose the money if your application is refused or takes longer than expected.",
+      },
+    ],
+  },
+  {
+    key: "flight-itinerary-us-visa",
+    slug: "flight-itinerary-us-visa",
+    title: "Flight Reservation for a US Visa (B1/B2) Interview",
+    h1: "Do you need a flight reservation for a US visa?",
+    description:
+      "The US doesn't require a flight booking for a B1/B2 visa, and advises against buying tickets before your visa is issued. When a reservation helps and how to get one.",
+    intro:
+      "For a US B1/B2 visitor visa, you don't need to show a flight booking, and the US Department of State advises applicants not to buy tickets until they have their visa. Your DS-160 asks about your intended travel dates, and some applicants bring a reservation to the interview to show their plans are concrete.",
+    sections: [
+      {
+        heading: "When a reservation helps",
+        paragraphs: [
+          "If the consular officer asks about your plans, a reservation that matches the dates on your DS-160 is an easy way to show you've thought it through. It isn't a substitute for evidence of your ties to home, which matter far more.",
+        ],
+      },
+      {
+        heading: "What to show",
+        paragraphs: [
+          "A round trip matching the arrival date and length of stay on your DS-160, in your name exactly as on your passport. Check the instructions for your embassy or consulate on travel.state.gov and the appointment site.",
+        ],
+      },
+      {
+        heading: "Getting it right",
+        paragraphs: [
+          "Interview dates can be months away, so book the reservation a day or two before the interview rather than when you file the DS-160.",
+          VERIFY_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Will I be refused without a flight booking?",
+        a: "No. A flight booking isn't a requirement for a B1/B2 visa.",
+      },
+      {
+        q: "Can I change my travel dates after the interview?",
+        a: "Yes. The dates on your DS-160 are your intended plans. You book your real flights once the visa is issued.",
+      },
+    ],
+  },
+  {
+    key: "flight-itinerary-canada-visa",
+    slug: "flight-itinerary-canada-visa",
+    title: "Flight Itinerary for a Canada Visitor Visa",
+    h1: "Flight itinerary for a Canada visitor visa",
+    description:
+      "Canada's visitor visa application can ask for a travel itinerary, and IRCC advises against buying tickets before a decision. What to include and how to get a verifiable reservation.",
+    intro:
+      "When you apply for a Canadian visitor visa (temporary resident visa), you may be asked for a travel itinerary as part of your supporting documents. Immigration, Refugees and Citizenship Canada (IRCC) generally recommends not buying tickets until you have a decision.",
+    sections: [
+      {
+        heading: "What to include",
+        paragraphs: [
+          "A return flight reservation that matches the dates in your application and your proposed purpose of travel, such as a family visit or tourism, along with any accommodation details.",
+          "Check the document checklist that IRCC generates for your application, because requirements depend on your country and circumstances.",
+        ],
+      },
+      {
+        heading: "Getting it right",
+        paragraphs: [
+          "Book the reservation shortly before you upload your documents. It will lapse after a short hold, which is expected.",
+          VERIFY_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does a flight reservation improve my chances?",
+        a: "It helps show your plans are clear, but it won't outweigh weak evidence of funds or ties to home.",
+      },
+      {
+        q: "I only need an eTA, not a visa. Do I need this?",
+        a: "eTA applications don't ask for an itinerary, but your airline may still ask one-way passengers for proof of onward travel.",
+      },
+    ],
+  },
+  {
+    key: "flight-itinerary-japan-visa",
+    slug: "flight-itinerary-japan-visa",
+    title: "Flight Reservation for a Japan Tourist Visa",
+    h1: "Flight reservation for a Japan visa",
+    description:
+      "Many Japanese embassies ask visa applicants for a flight reservation or itinerary. What to include in your schedule of stay and how to get a verifiable reservation.",
+    intro:
+      "If you need a visa to visit Japan, many Japanese embassies and consulates ask for proof of your travel plans, usually a flight reservation alongside a schedule of stay. You generally don't need to buy the ticket first.",
+    sections: [
+      {
+        heading: "What to include",
+        paragraphs: [
+          "A round-trip reservation into and out of Japan, in your name as it appears in your passport, matching the dates on your application form and schedule of stay.",
+          "Requirements differ between embassies and between nationalities, so use the checklist from the Japanese embassy or consulate that handles your application, or its appointed visa centre.",
+        ],
+      },
+      {
+        heading: "Getting it right",
+        paragraphs: [
+          "Processing usually takes several working days. Book the reservation just before you submit, so it's live when your documents are checked.",
+          VERIFY_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I need to buy a ticket for a Japan visa?",
+        a: "Usually not. Most checklists accept a reservation or itinerary, but check the one from your embassy.",
+      },
+      {
+        q: "Can my itinerary include other countries?",
+        a: "Yes, but the reservation should clearly show your entry into and exit from Japan.",
+      },
+    ],
+  },
+  {
+    key: "best-onward-ticket-services",
+    slug: "best-onward-ticket-services",
+    title: "Best Onward Ticket Services Compared (2026)",
+    h1: "Best onward ticket services compared",
+    description:
+      "Volward, BestOnwardTicket, OnwardTicket and OneWayFly compared on price, group pricing, add-ons and how fast you get your reservation.",
+    intro:
+      "Onward ticket services all do the same core job: they place a real flight reservation in your name, send you the booking reference, and let it lapse after a short hold. The differences are price, how many travellers you can add, and extras like changing dates or activating the booking later.",
+    disclosure:
+      "TempTicket earns a commission if you book through our link to Volward. That doesn't change what you pay. Prices below are as advertised on the providers' own sites and comparison pages in late 2026. Check the current price before you buy.",
+    table: {
+      caption: "Advertised prices (USD)",
+      headers: ["Service", "One way", "Return", "Family of 4", "Max travellers"],
+      rows: [
+        ["Volward", "$14", "$21", "$29", "9"],
+        ["BestOnwardTicket", "$14", "$21", "$56", "5"],
+        ["OnwardTicket", "$16", "$23", "$64", "5"],
+        ["OneWayFly", "$16", "$24", "$64", "5"],
+      ],
+      note: "All four advertise delivery by email within a few minutes.",
+    },
+    sections: [
+      {
+        heading: "Which one should you use?",
+        paragraphs: [
+          "For one traveller, the cheapest services are within a couple of dollars of each other, so pick the one whose checkout you trust.",
+          "For couples, families and groups, the gap gets bigger. Volward prices extra travellers much lower than the others and allows up to nine people on one booking.",
+          "If your plans might change, look for a flexibility add-on that lets you change the date or destination. Volward and OnwardTicket offer one. If you're booking ahead for a flight days away, an \"activate later\" option holds off issuing the reservation until you need it.",
+        ],
+      },
+      {
+        heading: "What to check with any provider",
+        paragraphs: [
+          "The reservation should come with a booking reference that you can look up on the airline's own website. If it doesn't show up there, ask for a replacement or a refund.",
+          "Check the refund policy before you pay, and make sure your name exactly matches your passport.",
+          TIMING_STEP,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Are onward ticket services legit?",
+        a: "The established ones place real reservations on airline systems. The test is simple: look the booking up on the airline's website.",
+      },
+      {
+        q: "Why not just buy a refundable ticket?",
+        a: "You can, but you'll tie up hundreds of dollars, and refunds can take weeks. A reservation costs a fraction of that.",
+      },
+    ],
+  },
 ];
 
-export function getGuide(slug: string): Guide | undefined {
-  return GUIDES.find((g) => g.slug === slug);
-}
-
-/** Guides are written in English only; other locales don't get these pages. */
-export const GUIDE_LOCALE = "en";
+export const EN_UI: GuideUi = {
+  home: "Home",
+  guides: "Guides",
+  indexTitle: "Onward Ticket and Visa Itinerary Guides",
+  indexDescription:
+    "Which countries ask for proof of onward travel, what visa applications need, and how to get a verifiable flight reservation without buying a ticket.",
+  commonQuestions: "Common questions",
+  moreGuides: "More guides",
+  disclaimer:
+    "This guide is general information, not legal or immigration advice. Entry rules change; always confirm with the official government source for your destination and your airline before you travel.",
+  ctaHeading: (price) =>
+    price ? `Need a verifiable onward ticket, from ${price}?` : "Need a verifiable onward ticket?",
+  ctaBody:
+    "Get a real flight reservation with a booking reference you can check on the airline's website, delivered by email in minutes.",
+  ctaButton: "Get your onward ticket",
+  destinationsTitle: "Where you'll need proof of onward travel",
+  destinationsSub:
+    "Country guides on what airlines and immigration check, and visa itinerary guides.",
+};

@@ -16,7 +16,6 @@ import {
   Timer,
   BadgeCheck,
   ChevronRight,
-  Star,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Logo } from "@/components/logo";
@@ -28,7 +27,7 @@ import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 import { SERVICE_FEE_BY_CURRENCY } from "@/lib/pricing";
 import { getAffiliatePartner, partnerHref } from "@/lib/affiliate";
-import { GUIDE_LOCALE } from "@/lib/guides";
+import { getGuideUi, getGuides } from "@/lib/guides";
 
 const usdFeeDisplay = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -252,12 +251,6 @@ export default async function HomePage({
   const trustStats = t.raw("trustStats") as { stat: string; label: string }[];
   const features = t.raw("features") as { title: string; body: string }[];
   const personas = t.raw("personas") as { title: string; body: string }[];
-  const testimonials = t.raw("testimonials") as {
-    flag: string;
-    name: string;
-    quote: string;
-    avatar: string;
-  }[];
   const visaSteps = t.raw("visaSteps") as {
     n: string;
     title: string;
@@ -268,6 +261,8 @@ export default async function HomePage({
     caption: string;
   }[];
   const faqItems = t.raw("faqItems") as { q: string; a: string }[];
+  const guideUi = getGuideUi(locale);
+  const guides = getGuides(locale);
   const partner = getAffiliatePartner();
   // Show the partner's real starting price when we hand off to them.
   const priceDisplay =
@@ -544,63 +539,40 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Social proof */}
-      <section className="-mt-px bg-subtle-social py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-4">
-          <Reveal className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
-              {t("socialTitle")}
-            </h2>
-            <div className="heading-accent-bar" />
-            <div
-              className="mt-5 flex justify-center gap-0.5"
-              aria-hidden
-            >
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className="size-[1.15rem] fill-[color:var(--brand-green)] text-[color:var(--brand-green)]"
-                />
-              ))}
-            </div>
-          </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {testimonials.map((row, i) => (
-              <Reveal key={row.name} delayMs={i * 60}>
-                <blockquote className="flex h-full flex-col rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-testimonial p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[color:var(--brand-blue)] text-sm font-bold text-white"
-                      aria-hidden
+      {/* Destination guides (only in languages that have them) */}
+      {guideUi && guides.length > 0 ? (
+        <section className="-mt-px bg-subtle-social py-16 md:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <Reveal className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
+                {guideUi.destinationsTitle}
+              </h2>
+              <div className="heading-accent-bar" />
+              <p className="mx-auto mt-5 max-w-2xl text-muted-foreground">
+                {guideUi.destinationsSub}
+              </p>
+            </Reveal>
+            <ul className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {guides.map((g, i) => (
+                <li key={g.slug} className="h-full">
+                  <Reveal className="h-full" delayMs={i * 40}>
+                    <Link
+                      href={`/guides/${g.slug}`}
+                      className="flex h-full items-center justify-between gap-3 rounded-xl border border-[color:var(--brand-blue)]/10 bg-subtle-testimonial p-5 font-semibold text-[color:var(--brand-blue)] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"
                     >
-                      {row.avatar}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">
-                        <span aria-hidden>{row.flag}</span> {row.name}
-                      </p>
-                      <div className="mt-0.5 flex gap-0.5" aria-hidden>
-                        {Array.from({ length: 5 }).map((_, j) => (
-                          <Star
-                            key={j}
-                            className="size-3.5 fill-[color:var(--brand-green)] text-[color:var(--brand-green)]"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    &ldquo;{row.quote}&rdquo;
-                  </p>
-                </blockquote>
-              </Reveal>
-            ))}
+                      {g.h1}
+                      <ChevronRight className="size-4 shrink-0 opacity-70" aria-hidden />
+                    </Link>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+            <Reveal className="mt-12 flex justify-center">
+              <BookNowButton label={t("bookNow")} partnerSource={cta("home-guides")} />
+            </Reveal>
           </div>
-          <Reveal className="mt-12 flex justify-center">
-            <BookNowButton label={t("bookNow")} partnerSource={cta("home-social")} />
-          </Reveal>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <SectionDivider variant="social-to-embassy" />
 
@@ -766,10 +738,10 @@ export default async function HomePage({
                       {t("footerBook")}
                     </Link>
                   </li>
-                  {locale === GUIDE_LOCALE ? (
+                  {guideUi ? (
                     <li>
                       <Link href="/guides" className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]">
-                        {t("footerGuides")}
+                        {guideUi.guides}
                       </Link>
                     </li>
                   ) : null}

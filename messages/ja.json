@@ -2,8 +2,8 @@
   "Metadata": {
     "defaultTitle": "TempTicket — 遊牧民のための今後の旅行証明",
     "defaultDescription": "往路の小切手のための本物の検証可能なフライト予約。 デジタル遊牧民向けに構築されています。",
-    "homeTitle": "TempTicket — 遊牧民のための今後の旅行証明",
-    "homeDescription": "往路の小切手のための本物の検証可能なフライト予約。 デジタル遊牧民向けに構築されています。",
+    "homeTitle": "出国用航空券（オンワードチケット）$14〜 — 確認できる航空券予約 | TempTicket",
+    "homeDescription": "出国証明を数分で。航空会社のサイトで確認できるPNR付きの本物の航空券予約です。片道旅行、ビザ申請、チェックインに。",
     "bookTitle": "予約する — TempTicket",
     "bookDescription": "フライトの保留を見つけて、その後の旅行の予約を完了します。",
     "bookConfirmationTitle": "支払いを受け取りました — TempTicket",
@@ -18,12 +18,12 @@
     "privacyDescription": "TempTicket による個人データの処理方法。"
   },
   "SiteHeader": {
-    "brandAlt": "テンプチケット",
+    "brandAlt": "TempTicket",
     "myBookings": "私の予約",
     "admin": "管理者",
     "signOut": "サインアウト",
     "signIn": "サインイン",
-    "book": "本"
+    "book": "今すぐ予約する"
   },
   "LocaleSwitcher": {
     "ariaLabel": "言語",
@@ -203,9 +203,9 @@
   "Home": {
     "bookNow": "今すぐ予約する",
     "heroBadge": "ライブ予約",
-    "heroHeadingLead": "航空券の予約",
-    "heroHeadingAccent": "数分で検証されました",
-    "heroSub": "実際の航空券の予約は航空会社のウェブサイトで確認できます。 遊牧民のためのストレスフリーな旅行。",
+    "heroHeadingLead": "出国用航空券を、",
+    "heroHeadingAccent": "数分で確認",
+    "heroSub": "航空会社のサイトで確認できる本物の航空券予約。チェックイン、入国審査、ビザ申請のための出国証明に。",
     "howItWorks": "仕組み",
     "trustStats": [
       {
@@ -268,27 +268,6 @@
       {
         "title": "デジタル遊牧民",
         "body": "未使用の長距離運賃を駐車料金なしで柔軟に利用できます。"
-      }
-    ],
-    "socialTitle": "世界中の旅行者から信頼されています",
-    "testimonials": [
-      {
-        "flag": "🇺🇸",
-        "name": "サンプル · アレックス M.",
-        "quote": "私が申請したのと同じ週に航空会社のサイトで PNR をチェックアウトしました。",
-        "avatar": "午前"
-      },
-      {
-        "flag": "🇩🇪",
-        "name": "サンプル · Leni K.",
-        "quote": "スムーズな流れで、ルートについて質問したときもすぐに答えてくれました。",
-        "avatar": "LK"
-      },
-      {
-        "flag": "🇬🇧",
-        "name": "サンプル · ジェームス T.",
-        "quote": "片道航空券ポリシーでチェックインを済ませました。",
-        "avatar": "JT"
       }
     ],
     "visaTitle": "ビザの確保における柔軟性の向上",
