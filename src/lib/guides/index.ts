@@ -5,6 +5,7 @@ import { EN_COUNTRY_GUIDES_3 } from "./en-countries-3";
 import { EN_SCHENGEN_NATIONALITY_GUIDES } from "./en-schengen-nationality";
 import { EN_VISA_NATIONALITY_GUIDES } from "./en-visa-nationality";
 import { EN_OFFICIAL_GUIDES } from "./en-official";
+import { EN_NOMAD_GUIDES } from "./en-nomad";
 import { DE_GUIDES, DE_UI } from "./de";
 import { ES_GUIDES, ES_UI } from "./es";
 import { ES_COUNTRY_GUIDES } from "./es-countries";
@@ -22,7 +23,7 @@ export type { Guide, GuideUi } from "./types";
 
 /** Locales with hand-written guides. Other locales don't get guide pages. */
 const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
-  en: { guides: [...EN_GUIDES, ...EN_COUNTRY_GUIDES, ...EN_COUNTRY_GUIDES_2, ...EN_COUNTRY_GUIDES_3, ...EN_SCHENGEN_NATIONALITY_GUIDES, ...EN_VISA_NATIONALITY_GUIDES, ...EN_OFFICIAL_GUIDES], ui: EN_UI },
+  en: { guides: [...EN_GUIDES, ...EN_COUNTRY_GUIDES, ...EN_COUNTRY_GUIDES_2, ...EN_COUNTRY_GUIDES_3, ...EN_SCHENGEN_NATIONALITY_GUIDES, ...EN_VISA_NATIONALITY_GUIDES, ...EN_OFFICIAL_GUIDES, ...EN_NOMAD_GUIDES], ui: EN_UI },
   es: { guides: [...ES_GUIDES, ...ES_COUNTRY_GUIDES, ...ES_VISA_LATAM_GUIDES], ui: ES_UI },
   "pt-BR": { guides: [...PT_BR_GUIDES, ...PT_BR_MORE_GUIDES], ui: PT_BR_UI },
   fr: { guides: [...FR_GUIDES, ...FR_VISA_AFRIQUE_GUIDES], ui: FR_UI },
