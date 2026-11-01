@@ -46,6 +46,9 @@ import { TH_GUIDES, TH_UI } from "./th";
 import { RU_GUIDES, RU_UI } from "./ru";
 import { NL_GUIDES, NL_UI } from "./nl";
 import { PL_GUIDES, PL_UI } from "./pl";
+import { ID_EXTRA_GUIDES } from "./id-extra";
+import { MS_GUIDES, MS_UI } from "./ms";
+import { FIL_GUIDES, FIL_UI } from "./fil";
 import type { Guide, GuideUi } from "./types";
 
 export type { Guide, GuideUi } from "./types";
@@ -58,7 +61,7 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   fr: { guides: [...FR_GUIDES, ...FR_VISA_AFRIQUE_GUIDES, ...FR_NOMAD_GUIDES, ...FR_VISA_RUN_GUIDES, ...FR_OFFICIAL_GUIDES], ui: FR_UI },
   de: { guides: [...DE_GUIDES, ...DE_NOMAD_GUIDES, ...DE_VISA_RUN_GUIDES, ...DE_OFFICIAL_GUIDES], ui: DE_UI },
   it: { guides: [...IT_GUIDES, ...IT_NOMAD_GUIDES, ...IT_VISA_RUN_GUIDES, ...IT_OFFICIAL_GUIDES], ui: IT_UI },
-  id: { guides: [...ID_GUIDES, ...ID_MORE_GUIDES], ui: ID_UI },
+  id: { guides: [...ID_GUIDES, ...ID_MORE_GUIDES, ...ID_EXTRA_GUIDES], ui: ID_UI },
   hi: { guides: HI_GUIDES, ui: HI_UI },
   ar: { guides: AR_GUIDES, ui: AR_UI },
   tr: { guides: TR_GUIDES, ui: TR_UI },
@@ -71,6 +74,8 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   ru: { guides: RU_GUIDES, ui: RU_UI },
   nl: { guides: NL_GUIDES, ui: NL_UI },
   pl: { guides: PL_GUIDES, ui: PL_UI },
+  ms: { guides: MS_GUIDES, ui: MS_UI },
+  fil: { guides: FIL_GUIDES, ui: FIL_UI },
 };
 
 export const GUIDE_LOCALES = Object.keys(GUIDES_BY_LOCALE);
