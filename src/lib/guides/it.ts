@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const VERIFICA =
+export const VERIFICA =
   "Quando ricevi la prenotazione, apri la pagina «Gestisci prenotazione» della compagnia e cercala con il codice di prenotazione (PNR) e il cognome. Se la vedi lì, la vedrà anche l'addetto al check-in. Fai uno screenshot oltre a conservare l'e-mail.";
 
-const TEMPI =
+export const TEMPI =
   "Queste prenotazioni restano attive per poco tempo (di solito circa 48 ore) e poi scadono. Falla poco prima del check-in o dell'appuntamento, non settimane prima.";
 
 export const IT_GUIDES: Guide[] = [
