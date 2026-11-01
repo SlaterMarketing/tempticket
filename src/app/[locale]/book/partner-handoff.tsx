@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { BadgeCheck, ChevronRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { partnerHref } from "@/lib/affiliate";
 import { cn } from "@/lib/utils";
 
 export async function PartnerHandoff({ partnerName }: { partnerName: string }) {
@@ -37,8 +38,7 @@ export async function PartnerHandoff({ partnerName }: { partnerName: string }) {
             </div>
             <div className="mt-8 space-y-3">
               {/* Plain link to an API route (not a page): it counts the click, then redirects. */}
-              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-              <a href="/api/go/partner" rel="sponsored" className={primary}>
+              <a href={partnerHref("book-page")} rel="sponsored nofollow" className={primary}>
                 {t("cta", { partner: partnerName })}
                 <ChevronRight className="size-4 opacity-90" aria-hidden />
               </a>

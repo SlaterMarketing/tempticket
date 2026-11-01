@@ -27,6 +27,8 @@ import { BookingProcessTimeline } from "@/components/booking-process-timeline";
 import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 import { SERVICE_FEE_BY_CURRENCY } from "@/lib/pricing";
+import { getAffiliatePartner, partnerHref } from "@/lib/affiliate";
+import { GUIDE_LOCALE } from "@/lib/guides";
 
 const usdFeeDisplay = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -37,20 +39,20 @@ const usdFeeDisplay = new Intl.NumberFormat("en-US", {
 
 function BookNowButton({
   label,
+  partnerSource,
   className,
   variant = "green",
   pulseCta = false,
 }: {
   label: string;
+  /** In affiliate mode, link straight to the partner (tagged with this CTA name) instead of /book. */
+  partnerSource?: string | null;
   className?: string;
   variant?: "green" | "outline";
   /** Subtle glow pulse for final CTA emphasis */
   pulseCta?: boolean;
 }) {
-  return (
-    <Link
-      href="/book"
-      className={cn(
+  const classes = cn(
         buttonVariants({ size: "lg" }),
         "inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-xl font-semibold shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:shadow-md",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
@@ -59,11 +61,25 @@ function BookNowButton({
         variant === "outline" &&
           "border-2 border-[color:var(--brand-blue)] bg-white/90 text-[color:var(--brand-blue)] shadow-sm hover:bg-white hover:shadow-md",
         pulseCta && variant === "green" && "animate-cta-glow-pulse",
-        className,
-      )}
-    >
+    className,
+  );
+  const content = (
+    <>
       {label}
       <ChevronRight className="size-5 shrink-0 opacity-90" aria-hidden />
+    </>
+  );
+  if (partnerSource) {
+    return (
+      // Plain link to an API route (not a page): it counts the click, then redirects.
+      <a href={partnerHref(partnerSource)} rel="sponsored nofollow" className={classes}>
+        {content}
+      </a>
+    );
+  }
+  return (
+    <Link href="/book" className={classes}>
+      {content}
     </Link>
   );
 }
@@ -252,7 +268,18 @@ export default async function HomePage({
     caption: string;
   }[];
   const faqItems = t.raw("faqItems") as { q: string; a: string }[];
-  const priceFrom = t("ticketFrom", { price: usdFeeDisplay });
+  const partner = getAffiliatePartner();
+  // Show the partner's real starting price when we hand off to them.
+  const priceDisplay =
+    partner?.priceFromUsd != null
+      ? new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(partner.priceFromUsd)
+      : usdFeeDisplay;
+  const cta = (source: string) => (partner ? source : null);
+  const priceFrom = t("ticketFrom", { price: priceDisplay });
 
   return (
     <div id="top" className="relative overflow-x-clip bg-mint-grain">
@@ -293,7 +320,7 @@ export default async function HomePage({
                   {t("heroSub")}
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-                  <BookNowButton label={t("bookNow")} />
+                  <BookNowButton label={t("bookNow")} partnerSource={cta("home-hero")} />
                   <Link
                     href="#how-it-works"
                     className={cn(
@@ -467,6 +494,7 @@ export default async function HomePage({
               >
                 <BookNowButton
                   label={t("bookNow")}
+                  partnerSource={cta("home-process")}
                   className="transition duration-200 hover:brightness-105 active:scale-[0.98]"
                 />
                 <Link
@@ -569,7 +597,7 @@ export default async function HomePage({
             ))}
           </div>
           <Reveal className="mt-12 flex justify-center">
-            <BookNowButton label={t("bookNow")} />
+            <BookNowButton label={t("bookNow")} partnerSource={cta("home-social")} />
           </Reveal>
         </div>
       </section>
@@ -693,12 +721,13 @@ export default async function HomePage({
             {t("ctaTitle")} <Logo />.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            {t("ctaPriceLine", { price: usdFeeDisplay })}
+            {t("ctaPriceLine", { price: priceDisplay })}
           </p>
           <BookNowButton
             label={t("bookNow")}
             className="mt-10"
             pulseCta
+            partnerSource={cta("home-final")}
           />
         </Reveal>
       </section>
@@ -737,6 +766,13 @@ export default async function HomePage({
                       {t("footerBook")}
                     </Link>
                   </li>
+                  {locale === GUIDE_LOCALE ? (
+                    <li>
+                      <Link href="/guides" className="rounded-sm opacity-90 underline-offset-4 hover:underline hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--brand-green)]">
+                        {t("footerGuides")}
+                      </Link>
+                    </li>
+                  ) : null}
                   <li>
                     <Link
                       href="/login"
