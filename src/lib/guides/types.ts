@@ -5,6 +5,8 @@ export type GuideTable = {
   headers: string[];
   rows: string[][];
   note?: string;
+  /** Optional guide slug per row; makes the first cell link to that guide. */
+  rowLinks?: (string | null)[];
 };
 
 export type Guide = {

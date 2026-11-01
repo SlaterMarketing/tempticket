@@ -87,7 +87,16 @@ export const EN_GUIDES: Guide[] = [
         ],
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
+      {
+        heading: "What the UK Foreign Office says",
+        paragraphs: [
+          "For British visitors, the UK Foreign Office says entry under Thailand's visa exemption scheme allows up to 30 days, for tourism only. Immigration may ask for evidence of onward or return travel and proof of funds of at least 10,000 baht per person or 20,000 baht per family.",
+          "All foreign arrivals must also complete the Thailand Digital Arrival Card (TDAC) online in the three days before arrival, and passports need six months' validity from arrival and one blank page.",
+        ],
+      },
     ],
+    sources: [{ label: "UK Foreign Office: Thailand entry requirements", url: "https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements" }],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Can I fly to Thailand on a one-way ticket?",
@@ -123,7 +132,16 @@ export const EN_GUIDES: Guide[] = [
         ],
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
+      {
+        heading: "What the UK Foreign Office says",
+        paragraphs: [
+          "The UK Foreign Office says most UK visitors are expected to have proof of return or onward travel, and that immigration officials and airlines may ask to see it. British visitors can stay up to 30 days without a visa and can extend once in the country.",
+          "Everyone arriving must register on the free eTravel system in the three days before arrival and show the QR code. Passports need six months' validity from arrival.",
+        ],
+      },
     ],
+    sources: [{ label: "UK Foreign Office: Philippines entry requirements", url: "https://www.gov.uk/foreign-travel-advice/philippines/entry-requirements" }],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Will I be refused boarding without an onward ticket?",
@@ -159,7 +177,16 @@ export const EN_GUIDES: Guide[] = [
         ],
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
+      {
+        heading: "What the UK Foreign Office says",
+        paragraphs: [
+          "For British visitors, the UK Foreign Office says the 30-day visa on arrival costs 500,000 rupiah and requires proof of an onward or return journey. You can apply online for the e-VOA at least a week ahead instead.",
+          "Complete the free online customs and health declaration within 72 hours of arrival. Bali charges foreign tourists a levy of 150,000 rupiah. Passports need six months' validity from arrival and two blank pages.",
+        ],
+      },
     ],
+    sources: [{ label: "UK Foreign Office: Indonesia entry requirements", url: "https://www.gov.uk/foreign-travel-advice/indonesia/entry-requirements" }],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Can I enter Bali on a one-way ticket?",

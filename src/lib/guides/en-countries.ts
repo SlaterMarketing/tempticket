@@ -104,7 +104,16 @@ export const EN_COUNTRY_GUIDES: Guide[] = [
         ],
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
+      {
+        heading: "What the UK Foreign Office says",
+        paragraphs: [
+          "For British visitors, the UK Foreign Office says no visa is needed for tourism or business, and the officer sets your stay, normally between 30 and 90 days.",
+          "Complete the electronic SG Arrival Card in the three days before arrival. Passports need six months' validity from arrival.",
+        ],
+      },
     ],
+    sources: [{ label: "UK Foreign Office: Singapore entry requirements", url: "https://www.gov.uk/foreign-travel-advice/singapore/entry-requirements" }],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Does a bus ticket to Malaysia count?",
@@ -130,7 +139,16 @@ export const EN_COUNTRY_GUIDES: Guide[] = [
         ],
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
+      {
+        heading: "What the UK Foreign Office says",
+        paragraphs: [
+          "For British visitors, the UK Foreign Office says no visa is needed for tourism and you'll normally be allowed 90 days on arrival. It doesn't list an onward-ticket rule, but airlines can still ask one-way passengers.",
+          "Complete the Malaysia Digital Arrival Card before you travel, as airlines may ask for it at check-in. Passports need six months' validity from arrival and must be undamaged.",
+        ],
+      },
     ],
+    sources: [{ label: "UK Foreign Office: Malaysia entry requirements", url: "https://www.gov.uk/foreign-travel-advice/malaysia/entry-requirements" }],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Can I do a visa run from Malaysia to Singapore?",
