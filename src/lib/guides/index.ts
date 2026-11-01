@@ -7,6 +7,8 @@ import { EN_VISA_NATIONALITY_GUIDES } from "./en-visa-nationality";
 import { EN_OFFICIAL_GUIDES } from "./en-official";
 import { EN_NOMAD_GUIDES } from "./en-nomad";
 import { EN_VISA_RUN_GUIDES } from "./en-visa-runs";
+import { DE_NOMAD_GUIDES } from "./de-nomad";
+import { IT_NOMAD_GUIDES } from "./it-nomad";
 import { DE_GUIDES, DE_UI } from "./de";
 import { ES_GUIDES, ES_UI } from "./es";
 import { ES_COUNTRY_GUIDES } from "./es-countries";
@@ -31,8 +33,8 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   es: { guides: [...ES_GUIDES, ...ES_COUNTRY_GUIDES, ...ES_VISA_LATAM_GUIDES, ...ES_NOMAD_GUIDES], ui: ES_UI },
   "pt-BR": { guides: [...PT_BR_GUIDES, ...PT_BR_MORE_GUIDES, ...PT_BR_NOMAD_GUIDES], ui: PT_BR_UI },
   fr: { guides: [...FR_GUIDES, ...FR_VISA_AFRIQUE_GUIDES, ...FR_NOMAD_GUIDES], ui: FR_UI },
-  de: { guides: DE_GUIDES, ui: DE_UI },
-  it: { guides: IT_GUIDES, ui: IT_UI },
+  de: { guides: [...DE_GUIDES, ...DE_NOMAD_GUIDES], ui: DE_UI },
+  it: { guides: [...IT_GUIDES, ...IT_NOMAD_GUIDES], ui: IT_UI },
   id: { guides: [...ID_GUIDES, ...ID_MORE_GUIDES], ui: ID_UI },
 };
 

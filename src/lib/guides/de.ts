@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const PRUEFEN =
+export const PRUEFEN =
   "Wenn die Reservierung da ist, öffne auf der Website der Airline „Buchung verwalten“ und suche sie mit Buchungscode (PNR) und Nachnamen. Wenn sie dort erscheint, sieht sie auch der Mitarbeiter am Check-in. Mach zusätzlich zur E-Mail einen Screenshot.";
 
-const TIMING =
+export const TIMING =
   "Solche Reservierungen bleiben nur kurz aktiv (meist etwa 48 Stunden) und verfallen dann. Buch sie kurz vor dem Check-in oder deinem Termin, nicht Wochen vorher.";
 
 export const DE_GUIDES: Guide[] = [
