@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const VERIFIER =
+export const VERIFIER =
   "Quand vous recevez la réservation, ouvrez la page « Gérer ma réservation » de la compagnie et recherchez-la avec le numéro de réservation (PNR) et votre nom. Si elle s'affiche, l'agent d'enregistrement la verra aussi. Gardez une capture d'écran en plus de l'e-mail.";
 
-const DELAI =
+export const DELAI =
   "Ces réservations restent actives peu de temps (en général environ 48 heures) avant d'expirer. Faites-la peu avant l'enregistrement ou votre rendez-vous, pas des semaines à l'avance.";
 
 export const FR_GUIDES: Guide[] = [
