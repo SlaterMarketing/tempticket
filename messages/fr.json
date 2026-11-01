@@ -4,8 +4,8 @@
     "defaultDescription": "Réservations de vols réelles et vérifiables pour les contrôles de voyage ultérieurs. Conçu pour les nomades numériques.",
     "homeTitle": "Billet de continuation dès 14 $ — Réservation de vol vérifiable | TempTicket",
     "homeDescription": "Obtenez une preuve de sortie du territoire en quelques minutes : une vraie réservation de vol avec un code PNR vérifiable sur le site de la compagnie. Pour les allers simples, les demandes de visa et l'enregistrement.",
-    "bookTitle": "Réserver une réservation — TempTicket",
-    "bookDescription": "Trouvez une réservation de vol et finalisez votre réservation de voyage ultérieur.",
+    "bookTitle": "Réservez votre billet de continuation — TempTicket",
+    "bookDescription": "Obtenez une réservation de vol vérifiable comme preuve de sortie ou pour votre demande de visa.",
     "bookConfirmationTitle": "Paiement reçu — TempTicket",
     "bookConfirmationDescription": "Nous confirmons votre réservation auprès de la compagnie aérienne.",
     "loginTitle": "Connexion — TempTicket",
@@ -23,7 +23,7 @@
     "admin": "Administrateur",
     "signOut": "Déconnexion",
     "signIn": "Se connecter",
-    "book": "Réserver maintenant"
+    "book": "Réserver"
   },
   "LocaleSwitcher": {
     "ariaLabel": "Langue",
@@ -41,18 +41,18 @@
     "steps": [
       {
         "label": "01",
-        "title": "Entrez vos informations",
-        "body": "Itinéraire, dates et détails des passagers."
+        "title": "Saisissez vos infos",
+        "body": "Trajet, dates et informations passager."
       },
       {
         "label": "02",
-        "title": "Effectuer un paiement",
-        "body": "Paiement sécurisé : tarification initiale."
+        "title": "Payez",
+        "body": "Paiement sécurisé, prix affiché d'emblée."
       },
       {
         "label": "03",
-        "title": "Obtenez votre référence",
-        "body": "Vérifiez sur la compagnie aérienne lorsqu'elle est en direct."
+        "title": "Recevez votre numéro",
+        "body": "Vérifiez-le sur le site de la compagnie."
       }
     ]
   },
@@ -201,150 +201,158 @@
     "ariaLabel": "Retour en haut"
   },
   "Home": {
-    "bookNow": "Réserver maintenant",
-    "heroBadge": "Réservations en direct",
+    "bookNow": "Réserver",
+    "heroBadge": "Réservations en temps réel",
     "heroHeadingLead": "Billet de continuation, ",
     "heroHeadingAccent": "vérifié en quelques minutes",
     "heroSub": "Une vraie réservation de vol, vérifiable sur le site de la compagnie aérienne. La preuve de sortie pour l'enregistrement, l'immigration et les demandes de visa.",
     "howItWorks": "Comment ça marche",
     "trustStats": [
       {
-        "stat": "Procès-verbal",
-        "label": "Revirement typique lorsque les compagnies aériennes coopèrent"
+        "stat": "Minutes",
+        "label": "Délai de livraison habituel"
       },
       {
-        "stat": "PNR réel",
-        "label": "Recherchez-le auprès du transporteur lors de son émission"
+        "stat": "Vrai PNR",
+        "label": "À vérifier sur le site de la compagnie"
       },
       {
         "stat": "24/7",
-        "label": "Soutien lorsque quelque chose a besoin d'un humain"
+        "label": "Une vraie personne quand vous en avez besoin"
       }
     ],
-    "featuresTitle": "Tout ce dont vous avez besoin pour avoir l'esprit tranquille",
-    "featuresSub": "Une preuve de voyage rapide et vérifiable, sans l'angoisse d'acheter un billet que vous n'utiliserez pas.",
+    "featuresTitle": "Tout ce qu'il faut pour voyager l'esprit tranquille",
+    "featuresSub": "Une preuve de sortie rapide et vérifiable, sans acheter un billet que vous n'utiliserez pas.",
     "features": [
       {
-        "title": "Réservations authentiques",
-        "body": "Un véritable dossier de la compagnie aérienne lorsque la confirmation arrive, et non un PDF décoratif."
+        "title": "De vraies réservations",
+        "body": "Une réservation réelle dans le système de la compagnie, pas un PDF décoratif."
       },
       {
-        "title": "Livraison instantanée",
-        "body": "La plupart des flux se terminent rapidement, vous pouvez donc joindre une preuve le jour même."
+        "title": "Livraison immédiate",
+        "body": "La plupart des réservations arrivent en quelques minutes : vous pouvez la présenter le jour même."
       },
       {
-        "title": "Vérifiable par le transporteur",
-        "body": "Utilisez les outils de la compagnie aérienne pour afficher la réservation lorsque quelqu'un le demande."
+        "title": "Vérifiable auprès de la compagnie",
+        "body": "Retrouvez la réservation sur le site de la compagnie quand on vous la demande."
       },
       {
-        "title": "Économisez de l'argent",
-        "body": "Payez des frais de service minimes au lieu d'un tarif long-courrier remboursable."
+        "title": "Économisez",
+        "body": "Payez de petits frais au lieu d'un billet long-courrier remboursable."
       },
       {
-        "title": "Forfaits flexibles",
-        "body": "Ajustez les dates lorsque votre itinéraire change, dans les limites des fenêtres de politique de la compagnie aérienne."
+        "title": "Plans flexibles",
+        "body": "Changez de dates si votre itinéraire change, selon les règles de la compagnie."
       },
       {
-        "title": "Soutien humain",
-        "body": "Les tarifs bloqués et les cas extrêmes peuvent être transmis à notre équipe depuis la file d'attente."
+        "title": "Une aide humaine",
+        "body": "En cas de souci, une personne de notre équipe vous répond."
       }
     ],
-    "processTitle": "Processus de réservation simple",
-    "commonQuestions": "Questions courantes",
-    "personasTitle": "est parfait pour",
+    "processTitle": "Réservez en trois étapes",
+    "commonQuestions": "Questions fréquentes",
+    "personasTitle": "est idéal pour",
     "personas": [
       {
         "title": "Demandeurs de visa",
-        "body": "Lorsque les consulats souhaitent un itinéraire, pas nécessairement un tarif payant."
+        "body": "Quand le consulat demande un itinéraire, pas forcément un billet payé."
       },
       {
-        "title": "Voyageurs fréquents",
-        "body": "Preuve répétable pour les compagnies aériennes qui appliquent les règles de retour/continuation."
+        "title": "Grands voyageurs",
+        "body": "Une preuve de sortie chaque fois que la compagnie exige un billet retour ou de continuation."
       },
       {
         "title": "Voyageurs",
-        "body": "Histoire de vérification simple pour les contrôles aux frontières et auprès des transporteurs."
+        "body": "Un moyen simple de passer les contrôles à l'enregistrement et à la frontière."
       },
       {
-        "title": "Nomades numériques",
-        "body": "Restez flexible sans investir d’argent dans des tarifs long-courriers inutilisés."
+        "title": "Nomades digitaux",
+        "body": "Gardez vos plans ouverts sans immobiliser d'argent dans des billets inutilisés."
       }
     ],
-    "visaTitle": "Une plus grande flexibilité lors de l'obtention de votre visa",
-    "visaBody": "De nombreuses missions décrivent l'acceptation d'un itinéraire ou d'une réservation plutôt que d'un billet entièrement payé. Confirmez votre cas sur le site officiel : nous vous proposons une véritable réservation que vous pouvez vérifier en attendant.",
+    "visaTitle": "Plus de souplesse pour votre demande de visa",
+    "visaBody": "De nombreux consulats acceptent un itinéraire ou une réservation plutôt qu'un billet payé. Vérifiez sur le site officiel pour votre cas : nous fournissons une vraie réservation, vérifiable pendant l'attente.",
     "visaSteps": [
       {
         "n": "1",
-        "title": "Lire la check-list officielle",
-        "body": "Les ambassades diffèrent : certaines veulent une réservation, d'autres un billet. Commencez par leur page, pas par un blog."
+        "title": "Lisez la liste officielle",
+        "body": "Chaque ambassade a ses règles : certaines demandent une réservation, d'autres un billet. Partez de leur site, pas d'un blog."
       },
       {
         "n": "2",
-        "title": "Faites correspondre les dates à votre histoire",
-        "body": "Choisissez un itinéraire et un timing qui correspondent parfaitement à la demande que vous déposez."
+        "title": "Alignez les dates sur votre dossier",
+        "body": "Choisissez un trajet et des dates qui correspondent exactement à votre demande."
       },
       {
         "n": "3",
-        "title": "Vérifier sur la compagnie aérienne",
-        "body": "Si le dossier est en direct, entraînez-vous à le récupérer sur le site du transporteur avant votre rendez-vous."
+        "title": "Vérifiez auprès de la compagnie",
+        "body": "Retrouvez la réservation sur le site de la compagnie avant votre rendez-vous."
       }
     ],
     "embassyPublish": "Ce que publient les ambassades",
     "embassyFigures": [
       {
-        "quote": "Réservation du billet aller-retour, pas besoin d'acheter le billet avant l'octroi du visa…",
-        "caption": "Thème de la FAQ de l'ambassade publique (Norvège)"
+        "quote": "Réservation du billet retour ; inutile d'acheter le billet avant l'obtention du visa…",
+        "caption": "Idée tirée de la FAQ publique d'une ambassade (Norvège)"
       },
       {
-        "quote": "Réservation d'une compagnie aérienne… avec numéro de réservation de voyage… pas nécessairement une réservation avec billet.",
-        "caption": "Thème de l'orientation publique Schengen (Espagne)"
+        "quote": "Réservation de vol… avec numéro de réservation… pas nécessairement un billet émis.",
+        "caption": "Idée tirée des consignes Schengen publiques (Espagne)"
       },
       {
         "quote": "Réservation de vol vérifiable… pas un billet acheté.",
-        "caption": "Thème de l'information publique sur les visas (Inde)"
+        "caption": "Idée tirée d'informations publiques sur les visas (Inde)"
       }
     ],
-    "faqTitle": "Avez-vous besoin d'aide ?",
-    "faqFooter": "Plus de questions ? Commencez une réservation : nous faisons apparaître le calendrier et les notes du transporteur au fur et à mesure.",
+    "faqTitle": "Besoin d'aide ?",
+    "faqFooter": "D'autres questions ? Écrivez-nous, on vous aide pour votre cas.",
     "faqItems": [
       {
         "q": "Qu'est-ce que TempTicket ?",
-        "a": "Un service qui vous aide à obtenir une réservation de vol réelle et vérifiable (avec une référence de réservation lorsque la compagnie aérienne la confirme) pour des scénarios de voyage ultérieur et de visa — sans payer un tarif plein que vous ne pouvez pas utiliser."
+        "a": "Un service pour obtenir une vraie réservation de vol vérifiable, avec un numéro de réservation, pour les contrôles de sortie et les demandes de visa, sans payer un billet complet que vous n'utiliserez peut-être pas."
       },
       {
-        "q": "Quelle est la durée de validité de la réservation ?",
-        "a": "La validité dépend des règles tarifaires de la compagnie aérienne, de la politique de retenue ou du calendrier d'émission des billets. Nous faisons apparaître ce que nous pouvons lors de la réservation ; confirmez toujours le timing par rapport aux exigences de votre ambassade ou de votre transporteur."
+        "q": "Combien de temps la réservation est-elle valable ?",
+        "a": "Cela dépend de la compagnie, mais elle reste généralement active environ 48 heures. Réservez-la peu avant l'enregistrement ou votre rendez-vous."
       },
       {
-        "q": "Puis-je le vérifier sur le site Internet de la compagnie aérienne ?",
-        "a": "Lorsque la compagnie aérienne émet un enregistrement en direct, vous pouvez généralement le rechercher dans son flux de gestion des réservations ou de vérification de mon voyage. Si un itinéraire n'est pas éligible à une retenue, vous aurez peut-être besoin d'un billet instantané à la place."
+        "q": "Puis-je la vérifier sur le site de la compagnie ?",
+        "a": "Oui. Avec le numéro de réservation et votre nom, retrouvez-la dans la rubrique « Gérer ma réservation » de la compagnie."
       },
       {
-        "q": "S'agit-il d'un conseil juridique ou d'une garantie de visa ?",
-        "a": "Non. Les règles d'immigration changent selon le pays et l'agent. Nous fournissons uniquement un service de réservation : vérifiez les sources officielles pour connaître votre situation."
+        "q": "Est-ce un conseil juridique ou une garantie de visa ?",
+        "a": "Non. Les règles varient selon le pays et l'agent. Nous proposons un service de réservation ; vérifiez toujours les sources officielles pour votre situation."
       }
     ],
-    "ctaTitle": "Voyager est déjà assez difficile. Facilitez la preuve de votre transfert avec",
-    "ctaPriceLine": "À partir de {price} · minutes, pas de conjectures",
-    "footerTagline": "Preuve de continuation du voyage pour les nomades",
-    "footerServices": "Prestations",
+    "ctaTitle": "Voyager est déjà assez compliqué. Simplifiez votre preuve de sortie avec",
+    "ctaPriceLine": "À partir de {price} · en quelques minutes",
+    "footerTagline": "La preuve de sortie pour les nomades",
+    "footerServices": "Services",
     "footerAccount": "Compte",
-    "footerLegal": "Juridique",
-    "footerBook": "Réserver une réservation",
+    "footerLegal": "Mentions légales",
+    "footerBook": "Réserver",
     "footerSignIn": "Se connecter",
     "footerMyBookings": "Mes réservations",
     "footerTerms": "Conditions",
     "footerPrivacy": "Confidentialité",
     "footerCopyright": "Tous droits réservés.",
-    "footerBackTop": "Retour en haut",
-    "ticketFrom": "À partir de {price}",
+    "footerBackTop": "Haut de page",
+    "ticketFrom": "Dès {price}",
     "ticketDeparture": "Départ",
     "ticketArrival": "Arrivée",
     "ticketBangkok": "Bangkok",
     "ticketTokyo": "Tokyo",
     "ticketPassenger": "Passager",
     "ticketPassengerVal": "Nomade · 1 adulte",
-    "ticketRecord": "Localisateur d'enregistrements",
-    "ticketVerified": "Vérifié"
+    "ticketRecord": "N° de réservation",
+    "ticketVerified": "Vérifié",
+    "airlinesTitle": "Réservations sur des compagnies comme"
+  },
+  "BookPartner": {
+    "badge": "Réservations de vol vérifiables",
+    "title": "Obtenez votre billet de continuation",
+    "body": "Nous travaillons avec {partner} pour émettre de vraies réservations de vol, vérifiables sur le site de la compagnie. Vous recevez la vôtre par e-mail en quelques minutes.",
+    "cta": "Continuer vers {partner}",
+    "note": "Vous finaliserez la réservation et le paiement sur le site de {partner}."
   }
 }

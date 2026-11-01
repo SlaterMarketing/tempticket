@@ -363,6 +363,7 @@
     "ticketPassenger": "Passenger",
     "ticketPassengerVal": "Nomad · 1 adult",
     "ticketRecord": "Record locator",
-    "ticketVerified": "Verified"
+    "ticketVerified": "Verified",
+    "airlinesTitle": "Reservations on airlines including"
   }
 }

@@ -6,10 +6,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const VERIFY_STEP =
+export const VERIFY_STEP =
   "Once your reservation arrives, open the airline's manage-booking page and look it up with the booking reference (PNR) and your surname. If you can see it there, so can a check-in agent. Screenshot it as well as keeping the email.";
 
-const TIMING_STEP =
+export const TIMING_STEP =
   "Reservations of this kind are held for a limited time (typically around 48 hours) before they lapse. Book it shortly before check-in or your visa appointment, not weeks ahead.";
 
 export const EN_GUIDES: Guide[] = [

@@ -279,6 +279,7 @@ const en = {
     heroHeadingAccent: "verified in minutes",
     heroSub: "A real flight reservation you can check on the airline's website. Proof of onward travel for check-in, immigration and visa applications.",
     howItWorks: "How it works",
+    airlinesTitle: "Reservations on airlines including",
     trustStats: [
       {
         stat: "Minutes",

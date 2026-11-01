@@ -345,6 +345,7 @@
     "ticketPassenger": "승객",
     "ticketPassengerVal": "노마드 · 성인 1명",
     "ticketRecord": "기록 찾기",
-    "ticketVerified": "확인됨"
+    "ticketVerified": "확인됨",
+    "airlinesTitle": "예약 가능한 항공사 예시"
   }
 }

@@ -345,6 +345,7 @@
     "ticketPassenger": "Matkustaja",
     "ticketPassengerVal": "Nomad · 1 aikuinen",
     "ticketRecord": "Tallennuksen paikannus",
-    "ticketVerified": "Varmennettu"
+    "ticketVerified": "Varmennettu",
+    "airlinesTitle": "Varauksia esimerkiksi näille lentoyhtiöille"
   }
 }

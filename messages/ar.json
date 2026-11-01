@@ -345,6 +345,7 @@
     "ticketPassenger": "الراكب",
     "ticketPassengerVal": "بدوي · شخص بالغ",
     "ticketRecord": "محدد الموقع",
-    "ticketVerified": "تم التحقق منه"
+    "ticketVerified": "تم التحقق منه",
+    "airlinesTitle": "حجوزات على شركات طيران منها"
   }
 }

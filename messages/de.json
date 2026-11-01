@@ -4,8 +4,8 @@
     "defaultDescription": "Echte, nachweisbare Flugreservierungen für Weiterreisekontrollen. Gebaut für digitale Nomaden.",
     "homeTitle": "Weiterreiseticket ab 14 $ — Überprüfbare Flugreservierung | TempTicket",
     "homeDescription": "Weiterreisenachweis in Minuten: eine echte Flugreservierung mit PNR-Buchungscode, den du auf der Website der Airline prüfen kannst. Für One-Way-Reisen, Visumanträge und den Check-in.",
-    "bookTitle": "Buchen Sie eine Reservierung – TempTicket",
-    "bookDescription": "Finden Sie einen Flugplatz und schließen Sie Ihre Weiterreisereservierung ab.",
+    "bookTitle": "Weiterreiseticket buchen — TempTicket",
+    "bookDescription": "Hol dir eine überprüfbare Flugreservierung als Weiterreisenachweis oder für deinen Visumantrag.",
     "bookConfirmationTitle": "Zahlung erhalten – TempTicket",
     "bookConfirmationDescription": "Wir bestätigen Ihre Reservierung bei der Fluggesellschaft.",
     "loginTitle": "Anmelden – TempTicket",
@@ -41,18 +41,18 @@
     "steps": [
       {
         "label": "01",
-        "title": "Geben Sie Ihre Daten ein",
-        "body": "Route, Daten und Passagierdetails."
+        "title": "Daten eingeben",
+        "body": "Strecke, Datum und Passagierdaten."
       },
       {
         "label": "02",
-        "title": "Machen Sie eine Zahlung aus",
-        "body": "Sicherer Checkout – Preise im Voraus."
+        "title": "Bezahlen",
+        "body": "Sichere Zahlung, Preis vorab klar."
       },
       {
         "label": "03",
-        "title": "Holen Sie sich Ihre Referenz",
-        "body": "Überprüfen Sie bei der Fluggesellschaft, wann es online ist."
+        "title": "Buchungscode erhalten",
+        "body": "Auf der Airline-Website prüfen."
       }
     ]
   },
@@ -206,145 +206,153 @@
     "heroHeadingLead": "Weiterreiseticket, ",
     "heroHeadingAccent": "in Minuten bestätigt",
     "heroSub": "Eine echte Flugreservierung, die du auf der Website der Airline prüfen kannst. Weiterreisenachweis für Check-in, Einreise und Visumantrag.",
-    "howItWorks": "Wie es funktioniert",
+    "howItWorks": "So funktioniert's",
     "trustStats": [
       {
-        "stat": "Protokoll",
-        "label": "Typischer Turnaround, wenn Fluggesellschaften kooperieren"
+        "stat": "Minuten",
+        "label": "Übliche Lieferzeit"
       },
       {
         "stat": "Echte PNR",
-        "label": "Sehen Sie bei der Ausstellung beim Spediteur nach"
+        "label": "Auf der Airline-Website prüfbar"
       },
       {
         "stat": "24/7",
-        "label": "Unterstützung, wenn etwas einen Menschen braucht"
+        "label": "Ein Mensch hilft, wenn's hakt"
       }
     ],
-    "featuresTitle": "Alles, was Sie für Ihren Seelenfrieden brauchen",
-    "featuresSub": "Schneller, nachweisbarer Weiterreisenachweis – ohne die Angst, ein Ticket zu kaufen, das Sie nicht nutzen werden.",
+    "featuresTitle": "Alles für eine entspannte Reise",
+    "featuresSub": "Schneller, überprüfbarer Weiterreisenachweis, ohne ein Ticket zu kaufen, das du nie nutzt.",
     "features": [
       {
-        "title": "Authentische Reservierungen",
-        "body": "Eine echte Aufzeichnung der Fluggesellschaft, wenn die Bestätigung eingeht – kein dekoratives PDF."
+        "title": "Echte Reservierungen",
+        "body": "Eine echte Buchung im System der Airline, kein hübsches PDF."
       },
       {
-        "title": "Sofortige Lieferung",
-        "body": "Die meisten Abläufe werden schnell abgeschlossen, sodass Sie den Nachweis noch am selben Tag beifügen können."
+        "title": "Sofort da",
+        "body": "Die meisten Reservierungen kommen in wenigen Minuten, du kannst sie also noch am selben Tag vorzeigen."
       },
       {
-        "title": "Carrier-überprüfbar",
-        "body": "Verwenden Sie die Tools der Fluggesellschaft, um die Buchung aufzurufen, wenn jemand danach fragt."
+        "title": "Bei der Airline prüfbar",
+        "body": "Ruf die Buchung auf der Airline-Website auf, wenn jemand danach fragt."
       },
       {
-        "title": "Sparen Sie Geld",
-        "body": "Zahlen Sie eine geringe Servicegebühr anstelle eines erstattungsfähigen Langstreckentarifs."
+        "title": "Geld sparen",
+        "body": "Eine kleine Gebühr statt eines teuren erstattbaren Langstreckentickets."
       },
       {
         "title": "Flexible Pläne",
-        "body": "Passen Sie die Daten an, wenn sich Ihre Reiseroute ändert – innerhalb der Richtlinien der Fluggesellschaft."
+        "body": "Ändere die Daten, wenn sich deine Route ändert, im Rahmen der Airline-Regeln."
       },
       {
-        "title": "Menschliche Unterstützung",
-        "body": "Festgefahrene Tarife und Randfälle können aus der Warteschlange an unser Team weitergeleitet werden."
+        "title": "Echter Support",
+        "body": "Wenn etwas schiefgeht, hilft dir ein Mensch aus unserem Team."
       }
     ],
-    "processTitle": "Einfacher Buchungsprozess",
+    "processTitle": "In drei Schritten gebucht",
     "commonQuestions": "Häufige Fragen",
-    "personasTitle": "ist perfekt für",
+    "personasTitle": "ist ideal für",
     "personas": [
       {
         "title": "Visumantragsteller",
-        "body": "Wenn Konsulate eine Reiseroute wünschen, nicht unbedingt einen bezahlten Fahrpreis."
+        "body": "Wenn das Konsulat einen Reiseplan will, aber kein bezahltes Ticket."
       },
       {
         "title": "Vielflieger",
-        "body": "Wiederholbarer Nachweis für Fluggesellschaften, die Rückflug-/Weiterflugregeln durchsetzen."
+        "body": "Weiterreisenachweis, wann immer die Airline ein Rück- oder Weiterreiseticket verlangt."
       },
       {
         "title": "Reisende",
-        "body": "Einfache Überprüfungsgeschichte für Grenz- und Spediteurkontrollen."
+        "body": "Ein einfacher Weg durch Check-in und Grenzkontrolle."
       },
       {
         "title": "Digitale Nomaden",
-        "body": "Bleiben Sie flexibel ohne Parkgeld bei ungenutzten Langstreckentarifen."
+        "body": "Bleib flexibel, ohne Geld in ungenutzten Tickets zu parken."
       }
     ],
-    "visaTitle": "Größere Flexibilität bei der Sicherung Ihres Visums",
-    "visaBody": "Viele Missionen beschreiben die Annahme eines Reiseplans oder einer Reservierung anstelle eines vollständig bezahlten Tickets. Bestätigen Sie Ihren Fall auf der offiziellen Website – wir bieten eine echte Reservierung, die Sie überprüfen können, während Sie warten.",
+    "visaTitle": "Mehr Flexibilität beim Visumantrag",
+    "visaBody": "Viele Konsulate akzeptieren einen Reiseplan oder eine Reservierung statt eines bezahlten Tickets. Prüfe die offizielle Seite für deinen Fall: Wir liefern eine echte Reservierung, die du während der Wartezeit prüfen kannst.",
     "visaSteps": [
       {
         "n": "1",
-        "title": "Lesen Sie die offizielle Checkliste",
-        "body": "Botschaften sind unterschiedlich – manche wollen eine Reservierung, andere ein Ticket. Beginnen Sie mit ihrer Seite, nicht mit einem Blog."
+        "title": "Offizielle Checkliste lesen",
+        "body": "Jede Botschaft ist anders: Manche wollen eine Reservierung, andere ein Ticket. Starte bei ihrer Website, nicht bei einem Blog."
       },
       {
         "n": "2",
-        "title": "Passen Sie Daten an Ihre Geschichte an",
-        "body": "Wählen Sie eine Route und einen Zeitpunkt, die perfekt zu dem Antrag passen, den Sie einreichen."
+        "title": "Daten an den Antrag anpassen",
+        "body": "Wähle Strecke und Daten, die genau zu deinem Antrag passen."
       },
       {
         "n": "3",
-        "title": "Überprüfen Sie dies bei der Fluggesellschaft",
-        "body": "Wenn die Aufzeichnung live ist, üben Sie vor Ihrem Termin, sie auf der Website des Mobilfunkanbieters abzurufen."
+        "title": "Bei der Airline prüfen",
+        "body": "Ruf die Buchung vor deinem Termin auf der Airline-Website auf."
       }
     ],
     "embassyPublish": "Was Botschaften veröffentlichen",
     "embassyFigures": [
       {
-        "quote": "Reservierung für Rückflugticket, Ticketkauf vor Erteilung des Visums nicht erforderlich …",
-        "caption": "Thema aus den FAQ der öffentlichen Botschaft (Norwegen)"
+        "quote": "Reservierung des Rückflugs; das Ticket muss vor Erteilung des Visums nicht gekauft werden…",
+        "caption": "Sinngemäß aus der öffentlichen FAQ einer Botschaft (Norwegen)"
       },
       {
-        "quote": "Fluglinienreservierung… mit Reisereservierungsnummer… nicht unbedingt eine Ticketreservierung.",
-        "caption": "Thema aus öffentlichen Schengen-Leitlinien (Spanien)"
+        "quote": "Flugreservierung… mit Buchungsnummer… nicht unbedingt ein ausgestelltes Ticket.",
+        "caption": "Sinngemäß aus öffentlichen Schengen-Hinweisen (Spanien)"
       },
       {
         "quote": "Überprüfbare Flugreservierung… kein gekauftes Ticket.",
-        "caption": "Thema aus öffentlichen Visa-Informationen (Indien)"
+        "caption": "Sinngemäß aus öffentlichen Visainformationen (Indien)"
       }
     ],
-    "faqTitle": "Brauchen Sie Hilfe?",
-    "faqFooter": "Weitere Fragen? Starten Sie eine Buchung – wir zeigen Ihnen unterwegs Informationen zum Zeitplan und zum Spediteur an.",
+    "faqTitle": "Brauchst du Hilfe?",
+    "faqFooter": "Noch Fragen? Schreib uns, wir helfen dir bei deinem Fall.",
     "faqItems": [
       {
         "q": "Was ist TempTicket?",
-        "a": "Ein Service, der Ihnen hilft, eine echte, überprüfbare Flugreservierung (mit einer Buchungsreferenz bei Bestätigung durch die Fluggesellschaft) für Weiterreise- und Visumsszenarien zu erhalten – ohne die Zahlung des vollen Flugpreises, den Sie möglicherweise nicht nutzen."
+        "a": "Ein Service für eine echte, überprüfbare Flugreservierung mit Buchungscode, für Weiterreisekontrollen und Visumanträge, ohne ein volles Ticket zu bezahlen, das du vielleicht nie nutzt."
       },
       {
         "q": "Wie lange ist die Reservierung gültig?",
-        "a": "Die Gültigkeit hängt von den Tarifbestimmungen, den Halterichtlinien oder dem Zeitplan für die Ticketausstellung der Fluggesellschaft ab. Wir geben bei der Buchung ans Licht, was wir können. Überprüfen Sie den Zeitpunkt immer anhand der Anforderungen Ihrer Botschaft oder Ihres Spediteurs."
+        "a": "Das hängt von der Airline ab, meist bleibt sie etwa 48 Stunden aktiv. Buche sie kurz vor dem Check-in oder deinem Termin."
       },
       {
-        "q": "Kann ich es auf der Website der Fluggesellschaft überprüfen?",
-        "a": "Wenn die Fluggesellschaft eine Live-Aufzeichnung herausgibt, können Sie diese in der Regel in deren Buchungsverwaltungs- oder Check-My-Trip-Ablauf nachschlagen. Wenn für eine Strecke kein Anspruch auf eine Sperre besteht, benötigen Sie möglicherweise stattdessen ein Sofortticket."
+        "q": "Kann ich sie auf der Airline-Website prüfen?",
+        "a": "Ja. Mit Buchungscode und Nachnamen findest du sie unter „Buchung verwalten“ bei der Airline."
       },
       {
-        "q": "Ist das eine Rechtsberatung oder eine Visumsgarantie?",
-        "a": "Nr. Die Einwanderungsbestimmungen ändern sich je nach Land und Beamtem. Wir bieten nur einen Reservierungsservice an – überprüfen Sie offizielle Quellen für Ihre Situation."
+        "q": "Ist das Rechtsberatung oder eine Visumgarantie?",
+        "a": "Nein. Die Regeln hängen vom Land und vom Beamten ab. Wir bieten einen Reservierungsservice; prüfe immer die offiziellen Quellen für deinen Fall."
       }
     ],
-    "ctaTitle": "Reisen ist schon schwer genug. Erleichtern Sie den Weiternachweis mit",
-    "ctaPriceLine": "Von {price} · Minuten, kein Rätselraten",
+    "ctaTitle": "Reisen ist schon kompliziert genug. Weiterreisenachweis ganz einfach mit",
+    "ctaPriceLine": "Ab {price} · in wenigen Minuten",
     "footerTagline": "Weiterreisenachweis für Nomaden",
-    "footerServices": "Dienstleistungen",
+    "footerServices": "Leistungen",
     "footerAccount": "Konto",
     "footerLegal": "Rechtliches",
-    "footerBook": "Buchen Sie eine Reservierung",
+    "footerBook": "Reservierung buchen",
     "footerSignIn": "Anmelden",
     "footerMyBookings": "Meine Buchungen",
-    "footerTerms": "Bedingungen",
+    "footerTerms": "AGB",
     "footerPrivacy": "Datenschutz",
     "footerCopyright": "Alle Rechte vorbehalten.",
-    "footerBackTop": "Zurück nach oben",
+    "footerBackTop": "Nach oben",
     "ticketFrom": "Ab {price}",
-    "ticketDeparture": "Abfahrt",
+    "ticketDeparture": "Abflug",
     "ticketArrival": "Ankunft",
     "ticketBangkok": "Bangkok",
     "ticketTokyo": "Tokio",
     "ticketPassenger": "Passagier",
-    "ticketPassengerVal": "Nomad · 1 Erwachsener",
-    "ticketRecord": "Datensatz-Locator",
-    "ticketVerified": "Verifiziert"
+    "ticketPassengerVal": "Nomade · 1 Erwachsener",
+    "ticketRecord": "Buchungscode",
+    "ticketVerified": "Geprüft",
+    "airlinesTitle": "Reservierungen bei Airlines wie"
+  },
+  "BookPartner": {
+    "badge": "Überprüfbare Flugreservierungen",
+    "title": "Hol dir dein Weiterreiseticket",
+    "body": "Wir arbeiten mit {partner} zusammen, um echte Flugreservierungen auszustellen, die du auf der Airline-Website prüfen kannst. Du bekommst deine in wenigen Minuten per E-Mail.",
+    "cta": "Weiter zu {partner}",
+    "note": "Buchung und Zahlung schließt du auf der Website von {partner} ab."
   }
 }

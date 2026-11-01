@@ -345,6 +345,7 @@
     "ticketPassenger": "Pasażer",
     "ticketPassengerVal": "Nomad · 1 osoba dorosła",
     "ticketRecord": "Lokalizator nagrań",
-    "ticketVerified": "Zweryfikowano"
+    "ticketVerified": "Zweryfikowano",
+    "airlinesTitle": "Rezerwacje w liniach takich jak"
   }
 }

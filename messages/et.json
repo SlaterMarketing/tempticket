@@ -345,6 +345,7 @@
     "ticketPassenger": "Reisija",
     "ticketPassengerVal": "Nomad · 1 täiskasvanu",
     "ticketRecord": "Kirjeldur",
-    "ticketVerified": "Kontrollitud"
+    "ticketVerified": "Kontrollitud",
+    "airlinesTitle": "Broneeringud lennufirmades nagu"
   }
 }

@@ -345,7 +345,8 @@
     "ticketPassenger": "Pasajero",
     "ticketPassengerVal": "Nómada · 1 adulto",
     "ticketRecord": "Código de reserva",
-    "ticketVerified": "Verificado"
+    "ticketVerified": "Verificado",
+    "airlinesTitle": "Reservas en aerolíneas como"
   },
   "BookPartner": {
     "badge": "Reservas de vuelo verificables",

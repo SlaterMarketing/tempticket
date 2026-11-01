@@ -345,6 +345,7 @@
     "ticketPassenger": "Yolcu",
     "ticketPassengerVal": "Göçebe · 1 yetişkin",
     "ticketRecord": "Kayıt bulucu",
-    "ticketVerified": "Doğrulandı"
+    "ticketVerified": "Doğrulandı",
+    "airlinesTitle": "Rezervasyon yapılan havayollarından bazıları"
   }
 }
