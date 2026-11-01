@@ -1,16 +1,10 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { GUIDE_LOCALE, GUIDES } from "@/lib/guides";
 import { getServerSiteUrl } from "@/lib/site-url";
 
-const publicPaths = [
-  "",
-  "book",
-  "book/confirmation",
-  "login",
-  "account/bookings",
-  "terms",
-  "privacy",
-] as const;
+/** Only pages worth ranking: no sign-in, account or post-payment pages. */
+const publicPaths = ["", "book", "terms", "privacy"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getServerSiteUrl();
@@ -24,6 +18,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
       });
     }
+  }
+  entries.push({ url: `${base}/${GUIDE_LOCALE}/guides`, lastModified: now });
+  for (const g of GUIDES) {
+    entries.push({
+      url: `${base}/${GUIDE_LOCALE}/guides/${g.slug}`,
+      lastModified: now,
+    });
   }
   return entries;
 }

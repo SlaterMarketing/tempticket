@@ -116,7 +116,10 @@ function shouldSkipIntl(pathname: string) {
     pathname.startsWith("/api") ||
     pathname.startsWith("/admin") ||
     pathname.startsWith("/_next") ||
-    pathname.startsWith("/_vercel")
+    pathname.startsWith("/_vercel") ||
+    // Metadata routes live at the root; the locale middleware would redirect them to /en/... and 404.
+    pathname === "/sitemap.xml" ||
+    pathname === "/robots.txt"
   );
 }
 
