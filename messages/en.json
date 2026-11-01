@@ -288,27 +288,6 @@
         "body": "Stay flexible without parking money in unused long-haul fares."
       }
     ],
-    "socialTitle": "Trusted by travelers worldwide",
-    "testimonials": [
-      {
-        "flag": "🇺🇸",
-        "name": "Alex M.",
-        "quote": "PNR checked out on the airline site the same week I applied.",
-        "avatar": "AM"
-      },
-      {
-        "flag": "🇩🇪",
-        "name": "Leni K.",
-        "quote": "Straightforward flow and quick answers when I asked about a route.",
-        "avatar": "LK"
-      },
-      {
-        "flag": "🇬🇧",
-        "name": "James T.",
-        "quote": "Got me through check-in with a one-way ticket policy.",
-        "avatar": "JT"
-      }
-    ],
     "visaTitle": "Greater flexibility when securing your visa",
     "visaBody": "Many missions describe accepting an itinerary or reservation rather than a fully paid ticket. Confirm on the official site for your case—we provide a real reservation you can verify while you wait.",
     "visaSteps": [
@@ -384,7 +363,6 @@
     "ticketPassenger": "Passenger",
     "ticketPassengerVal": "Nomad · 1 adult",
     "ticketRecord": "Record locator",
-    "ticketVerified": "Verified",
-    "footerGuides": "Onward ticket guides"
+    "ticketVerified": "Verified"
   }
 }

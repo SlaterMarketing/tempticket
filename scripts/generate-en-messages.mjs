@@ -61,12 +61,11 @@ const ALL_LOCALES = [
 
 const en = {
   Metadata: {
-    defaultTitle: "TempTicket — onward travel proof for nomads",
+    defaultTitle: "TempTicket — onward tickets and proof of onward travel",
     defaultDescription:
       "Real, verifiable flight reservations for onward-travel checks. Built for digital nomads.",
-    homeTitle: "TempTicket — onward travel proof for nomads",
-    homeDescription:
-      "Real, verifiable flight reservations for onward-travel checks. Built for digital nomads.",
+    homeTitle: "Onward Ticket from $14 — Verifiable Flight Reservation | TempTicket",
+    homeDescription: "Get proof of onward travel in minutes: a real flight reservation with a PNR you can check on the airline's website. For one-way trips, visa applications and check-in.",
     bookTitle: "Book a reservation — TempTicket",
     bookDescription:
       "Find a flight hold and complete your onward travel reservation.",
@@ -276,10 +275,9 @@ const en = {
   Home: {
     bookNow: "Book now",
     heroBadge: "Live reservations",
-    heroHeadingLead: "Flight booking ",
+    heroHeadingLead: "Onward ticket, ",
     heroHeadingAccent: "verified in minutes",
-    heroSub:
-      "Real flight reservations you can verify on the airlines' website. Stress free travel for nomads.",
+    heroSub: "A real flight reservation you can check on the airline's website. Proof of onward travel for check-in, immigration and visa applications.",
     howItWorks: "How it works",
     trustStats: [
       {
@@ -337,30 +335,6 @@ const en = {
       {
         title: "Digital nomads",
         body: "Stay flexible without parking money in unused long-haul fares.",
-      },
-    ],
-    socialTitle: "Trusted by travelers worldwide",
-    socialNote:
-      "Sample reviews—swap for real testimonials when you have them.",
-    testimonials: [
-      {
-        flag: "🇺🇸",
-        name: "Sample · Alex M.",
-        quote: "PNR checked out on the airline site the same week I applied.",
-        avatar: "AM",
-      },
-      {
-        flag: "🇩🇪",
-        name: "Sample · Leni K.",
-        quote:
-          "Straightforward flow and quick answers when I asked about a route.",
-        avatar: "LK",
-      },
-      {
-        flag: "🇬🇧",
-        name: "Sample · James T.",
-        quote: "Got me through check-in with a one-way ticket policy.",
-        avatar: "JT",
       },
     ],
     visaTitle: "Greater flexibility when securing your visa",

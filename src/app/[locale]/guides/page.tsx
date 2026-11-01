@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { GUIDE_LOCALE, GUIDES } from "@/lib/guides";
+import { GUIDE_LOCALES, getGuideUi, getGuides } from "@/lib/guides";
 import { getServerSiteUrl } from "@/lib/site-url";
 import { GuideCta } from "./guide-cta";
 
 type Params = Promise<{ locale: string }>;
 
-const TITLE = "Onward Ticket Guides by Country";
-const DESCRIPTION =
-  "Which countries ask for proof of onward travel, what airlines check at the desk, and how to get a verifiable flight reservation for a visa or one-way trip.";
+function indexUrl(locale: string) {
+  return new URL(`/${locale}/guides`, getServerSiteUrl()).toString();
+}
 
 export async function generateMetadata({
   params,
@@ -18,29 +18,31 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const { locale } = await params;
-  if (locale !== GUIDE_LOCALE) return {};
+  const ui = getGuideUi(locale);
+  if (!ui) return {};
+  const languages: Record<string, string> = { "x-default": indexUrl("en") };
+  for (const loc of GUIDE_LOCALES) languages[loc] = indexUrl(loc);
   return {
-    title: `${TITLE} | TempTicket`,
-    description: DESCRIPTION,
-    alternates: {
-      canonical: new URL(`/${GUIDE_LOCALE}/guides`, getServerSiteUrl()).toString(),
-    },
+    title: `${ui.indexTitle} | TempTicket`,
+    description: ui.indexDescription,
+    alternates: { canonical: indexUrl(locale), languages },
   };
 }
 
 export default async function GuidesIndexPage({ params }: { params: Params }) {
   const { locale } = await params;
-  if (locale !== GUIDE_LOCALE) notFound();
+  const ui = getGuideUi(locale);
+  if (!ui) notFound();
   setRequestLocale(locale);
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
       <h1 className="text-3xl font-bold tracking-tight text-[color:var(--brand-blue)] md:text-4xl">
-        {TITLE}
+        {ui.indexTitle}
       </h1>
-      <p className="mt-4 text-lg text-slate-600">{DESCRIPTION}</p>
+      <p className="mt-4 text-lg text-slate-600">{ui.indexDescription}</p>
       <ul className="mt-8 space-y-5">
-        {GUIDES.map((g) => (
+        {getGuides(locale).map((g) => (
           <li key={g.slug}>
             <Link
               href={`/guides/${g.slug}`}
@@ -52,7 +54,7 @@ export default async function GuidesIndexPage({ params }: { params: Params }) {
           </li>
         ))}
       </ul>
-      <GuideCta source="guides-index" />
+      <GuideCta source="guides-index" ui={ui} />
     </div>
   );
 }

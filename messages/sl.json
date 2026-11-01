@@ -2,8 +2,8 @@
   "Metadata": {
     "defaultTitle": "TempTicket — dokazilo o nadaljnjem potovanju za nomade",
     "defaultDescription": "Dejanske, preverljive rezervacije letov za preverjanje nadaljnjih potovanj. Ustvarjen za digitalne nomade.",
-    "homeTitle": "TempTicket — dokazilo o nadaljnjem potovanju za nomade",
-    "homeDescription": "Resnične, preverljive rezervacije letov za preverjanje nadaljnjih potovanj. Ustvarjen za digitalne nomade.",
+    "homeTitle": "Izhodna letalska karta od 14 $ — Preverljiva rezervacija leta | TempTicket",
+    "homeDescription": "Dokaz o odhodu v nekaj minutah: prava rezervacija leta s kodo PNR, ki jo preverite na spletni strani letalske družbe. Za enosmerna potovanja, vloge za vizum in prijavo na let.",
     "bookTitle": "Rezervirajte rezervacijo — TempTicket",
     "bookDescription": "Poiščite zadržanje leta in dokončajte rezervacijo nadaljnjega potovanja.",
     "bookConfirmationTitle": "Prejeto plačilo — TempTicket",
@@ -18,12 +18,12 @@
     "privacyDescription": "Kako TempTicket obdeluje osebne podatke."
   },
   "SiteHeader": {
-    "brandAlt": "Začasna vstopnica",
+    "brandAlt": "TempTicket",
     "myBookings": "Moje rezervacije",
     "admin": "Admin",
     "signOut": "Odjava",
     "signIn": "Prijava",
-    "book": "Knjiga"
+    "book": "Rezervirajte zdaj"
   },
   "LocaleSwitcher": {
     "ariaLabel": "Jezik",
@@ -203,9 +203,9 @@
   "Home": {
     "bookNow": "Rezervirajte zdaj",
     "heroBadge": "Rezervacije v živo",
-    "heroHeadingLead": "Rezervacija leta",
-    "heroHeadingAccent": "preverjeno v minutah",
-    "heroSub": "Dejanske rezervacije letov lahko preverite na spletni strani letalske družbe. Potovanje brez stresa za nomade.",
+    "heroHeadingLead": "Izhodna karta, ",
+    "heroHeadingAccent": "preverjena v nekaj minutah",
+    "heroSub": "Prava rezervacija leta, ki jo preverite na spletni strani letalske družbe. Dokaz o odhodu za prijavo na let, mejno kontrolo in vlogo za vizum.",
     "howItWorks": "Kako deluje",
     "trustStats": [
       {
@@ -268,27 +268,6 @@
       {
         "title": "Digitalni nomadi",
         "body": "Ostanite prilagodljivi brez denarja za parkiranje pri neizkoriščenih cenah vozovnic na dolge razdalje."
-      }
-    ],
-    "socialTitle": "Zaupajo mu popotniki po vsem svetu",
-    "testimonials": [
-      {
-        "flag": "🇺🇸",
-        "name": "Vzorec · Alex M.",
-        "quote": "PNR je bil odjavljen na spletnem mestu letalske družbe isti teden, ko sem se prijavil.",
-        "avatar": "AM"
-      },
-      {
-        "flag": "🇩🇪",
-        "name": "Vzorec · Leni K.",
-        "quote": "Preprost tok in hitri odgovori, ko sem vprašal o poti.",
-        "avatar": "LK"
-      },
-      {
-        "flag": "🇬🇧",
-        "name": "Vzorec · James T.",
-        "quote": "Poskrbel sem za prijavo s politiko enosmerne vozovnice.",
-        "avatar": "JT"
       }
     ],
     "visaTitle": "Večja prilagodljivost pri zagotavljanju vizuma",
