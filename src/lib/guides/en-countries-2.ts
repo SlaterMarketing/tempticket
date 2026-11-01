@@ -11,7 +11,7 @@ import type { Guide, GuideFaq } from "./types";
 
 const CHECKED = "2026-11-01";
 
-type Country = {
+export type Country = {
   id: string;
   name: string;
   /** "in Vietnam" vs "in the Dominican Republic" */
@@ -31,7 +31,7 @@ type Country = {
   source?: { label: string; url: string };
 };
 
-function build(c: Country): Guide {
+export function buildCountryGuide(c: Country): Guide {
   const name = c.the ? `the ${c.name}` : c.name;
   const Name = c.the ? `The ${c.name}` : c.name;
   const official = c.onward
@@ -288,4 +288,4 @@ const COUNTRIES: Country[] = [
   },
 ];
 
-export const EN_COUNTRY_GUIDES_2: Guide[] = COUNTRIES.map(build);
+export const EN_COUNTRY_GUIDES_2: Guide[] = COUNTRIES.map(buildCountryGuide);
