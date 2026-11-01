@@ -349,6 +349,49 @@ export const HI_GUIDES: Guide[] = [
     ],
     checked: CHECKED,
   },
+  {
+    key: "fake-flight-confirmation-email",
+    slug: "fake-flight-confirmation-email",
+    title: "नकली फ़्लाइट कन्फ़र्मेशन ईमेल: क्यों नहीं, और लीगल विकल्प",
+    h1: "नकली फ़्लाइट कन्फ़र्मेशन का सोच रहे हैं? पहले यह पढ़ें",
+    description:
+      "एडिट की हुई या नकली फ़्लाइट कन्फ़र्मेशन से वीज़ा रिजेक्ट, UK में 10 साल का बैन या US में misrepresentation का मामला क्यों बन सकता है, और असली रिज़र्वेशन कैसे लें।",
+    intro:
+      "वीज़ा या चेक-इन के लिए फ़्लाइट दिखानी हो, तो पुरानी बुकिंग एडिट करने या कन्फ़र्मेशन ईमेल बनाने वाले जनरेटर का लालच होता है। ऐसा न करें। यह आसानी से पकड़ा जाता है, और नतीजा एक रद्द यात्रा से कहीं ज़्यादा भारी होता है। असली बुकिंग रेफ़रेंस पाने का सस्ता और लीगल तरीक़ा मौजूद है।",
+    sections: [
+      {
+        heading: "नकली कैसे पकड़ा जाता है",
+        paragraphs: [
+          "असली बुकिंग का रेफ़रेंस (PNR) एयरलाइन के रिज़र्वेशन सिस्टम में होता है। चेक-इन एजेंट उसे टाइप करता है, और बुकिंग दिखती है या नहीं दिखती। दूतावास भी यही कर सकता है। एडिट की हुई PDF या बनाई गई ईमेल का रेफ़रेंस कहीं नहीं ले जाता।",
+        ],
+      },
+      {
+        heading: "इस्तेमाल करने पर क्या होता है",
+        paragraphs: [
+          "UK: Home Office के दिशानिर्देश कहते हैं कि अगर आवेदक ने धोखे का इस्तेमाल किया होने की संभावना ज़्यादा है, जिसमें नकली डॉक्यूमेंट शामिल हैं, तो आवेदन रिजेक्ट करना ज़रूरी है, और आगे के आवेदन 10 साल तक रिजेक्ट किए जाएँगे।",
+          "US: Immigration and Nationality Act की धारा 212(a)(6)(C)(i) के तहत जो व्यक्ति धोखे या किसी अहम तथ्य के जानबूझकर ग़लत बयान से वीज़ा माँगता है, वह अयोग्य है। यह फ़ैसला साथ रहता है और सिर्फ़ waiver से हटता है।",
+          "शेंगेन: EU Visa Code कहता है कि सहायक डॉक्यूमेंट की असलियत या उनकी बातों की सच्चाई पर उचित संदेह हो, तो वीज़ा रिजेक्ट करना होगा।",
+        ],
+      },
+      {
+        heading: "लीगल विकल्प",
+        paragraphs: [
+          "आपके नाम पर थोड़े समय के लिए होल्ड किया गया फ़्लाइट रिज़र्वेशन वही देता है जो नकली से उम्मीद थी: असली बुकिंग रेफ़रेंस वाला कन्फ़र्मेशन, टिकट की क़ीमत के छोटे-से हिस्से में। असली होने की वजह से एयरलाइन और दूतावास उसे खोज सकते हैं।",
+          SAMAY,
+          JAANCH,
+        ],
+      },
+    ],
+    faqs: [
+      { q: "क्या वीज़ा के लिए फ़्लाइट रिज़र्वेशन लीगल है?", a: "हाँ। यह आपके नाम पर असली बुकिंग है। शेंगेन समेत कई दूतावास वीज़ा के फ़ैसले से पहले टिकट न ख़रीदने की सलाह देते हैं, और योजना दिखाने का आम तरीक़ा रिज़र्वेशन ही है।" },
+    ],
+    sources: [
+      { label: "GOV.UK: Suitability guidance on deception, false representations and false documents", url: "https://www.gov.uk/government/publications/suitability-false-representations-immigration-staff-guidance/part-suitability-deception-false-representations-false-documents-and-non-disclosure-of-relevant-facts-accessible" },
+      { label: "US Foreign Affairs Manual 9 FAM 302.9: misrepresentation, INA 212(a)(6)(C)(i)", url: "https://fam.state.gov/fam/09FAM/09FAM030209.html" },
+      { label: "EU Visa Code (Regulation 810/2009), Article 32", url: "https://eur-lex.europa.eu/eli/reg/2009/810/oj" },
+    ],
+    checked: CHECKED,
+  },
 ];
 
 export const HI_UI: GuideUi = {
