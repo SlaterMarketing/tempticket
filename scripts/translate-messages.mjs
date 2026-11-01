@@ -77,6 +77,8 @@ const LOCALES = [
   "lv",
   "lt",
   "sw",
+  "ne",
+  "si",
 ];
 
 /** Google Translate `to` code; forceTo used for all calls */
@@ -131,6 +133,8 @@ const GOOGLE_TO = {
   lv: "lv",
   lt: "lt",
   sw: "sw",
+  ne: "ne",
+  si: "si",
 };
 
 const CHUNK_SIZE = Number(process.env.TRANSLATE_CHUNK_SIZE ?? 12);

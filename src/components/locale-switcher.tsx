@@ -10,7 +10,9 @@ import { useSearchParams } from "next/navigation";
 const NATIVE_NAME_OVERRIDES: Record<string, string> = {
   fil: "Filipino",
   nb: "Norsk bokmål",
+  ne: "नेपाली",
   "pt-BR": "Português (Brasil)",
+  si: "සිංහල",
   "zh-CN": "简体中文",
   "zh-TW": "繁體中文",
 };

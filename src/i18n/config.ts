@@ -1,5 +1,5 @@
 /**
- * Supported locales: high global reach + major web economies (50 BCP 47 tags).
+ * Supported locales: high global reach + major web economies (52 BCP 47 tags).
  * Adjust order or swap codes in this file only.
  */
 export const locales = [
@@ -53,6 +53,8 @@ export const locales = [
   "lv",
   "lt",
   "sw",
+  "ne",
+  "si",
 ] as const;
 
 export type AppLocale = (typeof locales)[number];

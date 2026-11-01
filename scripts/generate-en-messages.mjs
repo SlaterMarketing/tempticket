@@ -57,6 +57,8 @@ const ALL_LOCALES = [
   "lv",
   "lt",
   "sw",
+  "ne",
+  "si",
 ];
 
 const en = {

@@ -48,6 +48,8 @@ import { NL_GUIDES, NL_UI } from "./nl";
 import { PL_GUIDES, PL_UI } from "./pl";
 import { ID_EXTRA_GUIDES } from "./id-extra";
 import { MS_GUIDES, MS_UI } from "./ms";
+import { NE_GUIDES, NE_UI } from "./ne";
+import { SI_GUIDES, SI_UI } from "./si";
 import { FIL_GUIDES, FIL_UI } from "./fil";
 import { HI_MORE_GUIDES } from "./hi-more";
 import { FIL_MORE_GUIDES, AR_MORE_GUIDES, TR_MORE_GUIDES, VI_MORE_GUIDES } from "./deep-24";
@@ -77,6 +79,8 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   nl: { guides: NL_GUIDES, ui: NL_UI },
   pl: { guides: PL_GUIDES, ui: PL_UI },
   ms: { guides: MS_GUIDES, ui: MS_UI },
+  ne: { guides: NE_GUIDES, ui: NE_UI },
+  si: { guides: SI_GUIDES, ui: SI_UI },
   fil: { guides: [...FIL_GUIDES, ...FIL_MORE_GUIDES], ui: FIL_UI },
 };
 
