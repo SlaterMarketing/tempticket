@@ -108,12 +108,21 @@ export default async function GuidePage({ params }: { params: Params }) {
               </tr>
             </thead>
             <tbody>
-              {guide.table.rows.map((row) => (
+              {guide.table.rows.map((row, r) => (
                 <tr key={row[0]} className="border-b last:border-0">
                   {row.map((cell, i) =>
                     i === 0 ? (
                       <th key={i} scope="row" className="px-2 py-2 text-left font-medium">
-                        {cell}
+                        {guide.table?.rowLinks?.[r] ? (
+                          <Link
+                            href={`/guides/${guide.table.rowLinks[r]}`}
+                            className="text-[color:var(--brand-blue)] underline underline-offset-2"
+                          >
+                            {cell}
+                          </Link>
+                        ) : (
+                          cell
+                        )}
                       </th>
                     ) : (
                       <td key={i} className="px-2 py-2">
