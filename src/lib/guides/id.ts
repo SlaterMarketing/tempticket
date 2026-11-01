@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const CEK =
+export const CEK =
   "Setelah reservasi diterima, buka halaman \"kelola pemesanan\" (manage booking) di situs maskapai dan cari dengan kode booking (PNR) dan nama belakang Anda. Jika muncul di sana, petugas check-in dan petugas visa juga bisa melihatnya. Simpan tangkapan layar selain email.";
 
-const WAKTU =
+export const WAKTU =
   "Reservasi seperti ini hanya aktif sebentar (biasanya sekitar 48 jam) lalu kedaluwarsa. Pesan sesaat sebelum check-in atau janji temu visa, bukan berminggu-minggu sebelumnya.";
 
 export const ID_GUIDES: Guide[] = [
@@ -76,7 +76,19 @@ export const ID_GUIDES: Guide[] = [
           CEK,
         ],
       },
+      {
+        heading: "Visa multiple-entry lima tahun untuk WNI",
+        paragraphs: [
+          "Sejak 23 Juli 2025, warga negara Indonesia yang tinggal di Indonesia dan pernah mendapatkan serta menggunakan satu visa Schengen dengan benar dalam tiga tahun terakhir bisa diberi visa multiple-entry berlaku lima tahun, selama masa berlaku paspor mencukupi.",
+          "Visa ini tetap mengizinkan tinggal maksimal 90 hari dalam 180 hari dan tidak memberi hak bekerja. Biaya visa Schengen sejak 11 Juni 2024 adalah 90 € untuk dewasa dan 45 € untuk anak 6 sampai 12 tahun.",
+        ],
+      },
     ],
+    sources: [
+      { label: "EEAS Delegasi Uni Eropa untuk Indonesia: aturan visa Schengen yang lebih menguntungkan bagi Indonesia (bahasa Inggris)", url: "https://www.eeas.europa.eu/delegations/indonesia/european-union-adopts-more-favourable-schengen-visa-rules-indonesia_en" },
+      { label: "Kedutaan Swedia: biaya visa Schengen baru mulai 11 Juni 2024 (bahasa Inggris)", url: "https://swedenabroad.se/en/embassies/iran-tehran/current/news/new-schengen-visa-fees" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Perlu pulang-pergi atau sekali jalan?",
@@ -102,7 +114,19 @@ export const ID_GUIDES: Guide[] = [
         ],
       },
       { heading: "Cara yang benar", paragraphs: [WAKTU, CEK] },
+      {
+        heading: "Bebas visa untuk e-paspor dan JAPAN eVISA",
+        paragraphs: [
+          "Pemegang e-paspor Indonesia bisa masuk Jepang tanpa visa untuk kunjungan singkat hingga 15 hari setelah mendaftarkan paspornya (gratis) di Kedutaan Besar atau Konsulat Jepang di Indonesia. Pendaftaran berlaku tiga tahun atau sampai paspor habis masa berlakunya.",
+          "Untuk tinggal lebih lama, warga yang tinggal di Indonesia bisa mengajukan JAPAN eVISA turis sekali masuk, hingga 90 hari, melalui agen perjalanan terakreditasi. Di bandara, tunjukkan pemberitahuan penerbitan visa di perangkat yang terhubung internet; tangkapan layar dan cetakan tidak diterima.",
+        ],
+      },
     ],
+    sources: [
+      { label: "VFS Global: pendaftaran e-paspor untuk bebas visa Jepang", url: "https://www.vfsglobal.com/one-pager/Japan/Indonesia/Bahasa/pdf/pre-%20registration-for-ic-passport-holders.pdf" },
+      { label: "Kementerian Luar Negeri Jepang: JAPAN eVISA (bahasa Inggris)", url: "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Apakah harus membeli tiket untuk visa Jepang?",
