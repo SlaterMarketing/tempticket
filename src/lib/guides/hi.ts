@@ -282,7 +282,7 @@ export const HI_GUIDES: Guide[] = [
         ["UAE (दुबई)", "वीज़ा ज़रूरी; US ग्रीन कार्ड या UK/EU रेज़िडेंस पर 14 दिन वीज़ा ऑन अराइवल", "शर्तों में नहीं; एयरलाइन पूछ सकती है"],
         ["तुर्की", "e-वीज़ा सिर्फ़ शेंगेन/US/UK/आयरलैंड वीज़ा या परमिट के साथ, वरना स्टिकर वीज़ा", "स्टिकर वीज़ा आवेदन में इटिनररी"],
       ],
-      rowLinks: ["thailand-visa-for-indians", null, null, null, null, null, null, null, null],
+      rowLinks: ["thailand-visa-for-indians", "malaysia-visa-for-indians", "indonesia-bali-visa-for-indians", null, null, "singapore-visa-for-indians", null, "dubai-uae-visa-for-indians", null],
       note: "नियम बदलते रहते हैं। हर देश के आधिकारिक स्रोत और पूरी जानकारी हमारे अंग्रेज़ी गाइड में हैं।",
     },
     sections: [

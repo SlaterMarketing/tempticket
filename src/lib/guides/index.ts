@@ -49,6 +49,8 @@ import { PL_GUIDES, PL_UI } from "./pl";
 import { ID_EXTRA_GUIDES } from "./id-extra";
 import { MS_GUIDES, MS_UI } from "./ms";
 import { FIL_GUIDES, FIL_UI } from "./fil";
+import { HI_MORE_GUIDES } from "./hi-more";
+import { FIL_MORE_GUIDES, AR_MORE_GUIDES, TR_MORE_GUIDES, VI_MORE_GUIDES } from "./deep-24";
 import type { Guide, GuideUi } from "./types";
 
 export type { Guide, GuideUi } from "./types";
@@ -62,20 +64,20 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   de: { guides: [...DE_GUIDES, ...DE_NOMAD_GUIDES, ...DE_VISA_RUN_GUIDES, ...DE_OFFICIAL_GUIDES], ui: DE_UI },
   it: { guides: [...IT_GUIDES, ...IT_NOMAD_GUIDES, ...IT_VISA_RUN_GUIDES, ...IT_OFFICIAL_GUIDES], ui: IT_UI },
   id: { guides: [...ID_GUIDES, ...ID_MORE_GUIDES, ...ID_EXTRA_GUIDES], ui: ID_UI },
-  hi: { guides: HI_GUIDES, ui: HI_UI },
-  ar: { guides: AR_GUIDES, ui: AR_UI },
-  tr: { guides: TR_GUIDES, ui: TR_UI },
+  hi: { guides: [...HI_GUIDES, ...HI_MORE_GUIDES], ui: HI_UI },
+  ar: { guides: [...AR_GUIDES, ...AR_MORE_GUIDES], ui: AR_UI },
+  tr: { guides: [...TR_GUIDES, ...TR_MORE_GUIDES], ui: TR_UI },
   ja: { guides: JA_GUIDES, ui: JA_UI },
   ko: { guides: KO_GUIDES, ui: KO_UI },
   "zh-CN": { guides: ZH_CN_GUIDES, ui: ZH_CN_UI },
   "zh-TW": { guides: ZH_TW_GUIDES, ui: ZH_TW_UI },
-  vi: { guides: VI_GUIDES, ui: VI_UI },
+  vi: { guides: [...VI_GUIDES, ...VI_MORE_GUIDES], ui: VI_UI },
   th: { guides: TH_GUIDES, ui: TH_UI },
   ru: { guides: RU_GUIDES, ui: RU_UI },
   nl: { guides: NL_GUIDES, ui: NL_UI },
   pl: { guides: PL_GUIDES, ui: PL_UI },
   ms: { guides: MS_GUIDES, ui: MS_UI },
-  fil: { guides: FIL_GUIDES, ui: FIL_UI },
+  fil: { guides: [...FIL_GUIDES, ...FIL_MORE_GUIDES], ui: FIL_UI },
 };
 
 export const GUIDE_LOCALES = Object.keys(GUIDES_BY_LOCALE);
