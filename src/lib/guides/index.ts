@@ -9,6 +9,7 @@ import { ES_GUIDES, ES_UI } from "./es";
 import { ES_COUNTRY_GUIDES } from "./es-countries";
 import { ES_VISA_LATAM_GUIDES } from "./es-visa-latam";
 import { FR_GUIDES, FR_UI } from "./fr";
+import { FR_VISA_AFRIQUE_GUIDES } from "./fr-visa-afrique";
 import { ID_GUIDES, ID_UI } from "./id";
 import { IT_GUIDES, IT_UI } from "./it";
 import { PT_BR_GUIDES, PT_BR_UI } from "./pt-BR";
@@ -21,7 +22,7 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   en: { guides: [...EN_GUIDES, ...EN_COUNTRY_GUIDES, ...EN_COUNTRY_GUIDES_2, ...EN_COUNTRY_GUIDES_3, ...EN_SCHENGEN_NATIONALITY_GUIDES, ...EN_VISA_NATIONALITY_GUIDES], ui: EN_UI },
   es: { guides: [...ES_GUIDES, ...ES_COUNTRY_GUIDES, ...ES_VISA_LATAM_GUIDES], ui: ES_UI },
   "pt-BR": { guides: PT_BR_GUIDES, ui: PT_BR_UI },
-  fr: { guides: FR_GUIDES, ui: FR_UI },
+  fr: { guides: [...FR_GUIDES, ...FR_VISA_AFRIQUE_GUIDES], ui: FR_UI },
   de: { guides: DE_GUIDES, ui: DE_UI },
   it: { guides: IT_GUIDES, ui: IT_UI },
   id: { guides: ID_GUIDES, ui: ID_UI },
