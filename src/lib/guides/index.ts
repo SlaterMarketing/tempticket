@@ -1,5 +1,6 @@
 import { EN_GUIDES, EN_UI } from "./en";
 import { EN_COUNTRY_GUIDES } from "./en-countries";
+import { EN_SCHENGEN_NATIONALITY_GUIDES } from "./en-schengen-nationality";
 import { DE_GUIDES, DE_UI } from "./de";
 import { ES_GUIDES, ES_UI } from "./es";
 import { ES_COUNTRY_GUIDES } from "./es-countries";
@@ -13,7 +14,7 @@ export type { Guide, GuideUi } from "./types";
 
 /** Locales with hand-written guides. Other locales don't get guide pages. */
 const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
-  en: { guides: [...EN_GUIDES, ...EN_COUNTRY_GUIDES], ui: EN_UI },
+  en: { guides: [...EN_GUIDES, ...EN_COUNTRY_GUIDES, ...EN_SCHENGEN_NATIONALITY_GUIDES], ui: EN_UI },
   es: { guides: [...ES_GUIDES, ...ES_COUNTRY_GUIDES], ui: ES_UI },
   "pt-BR": { guides: PT_BR_GUIDES, ui: PT_BR_UI },
   fr: { guides: FR_GUIDES, ui: FR_UI },
