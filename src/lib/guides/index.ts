@@ -34,6 +34,9 @@ import { PT_BR_MORE_GUIDES } from "./pt-BR-more";
 import { PT_BR_NOMAD_GUIDES } from "./pt-BR-nomad";
 import { PT_BR_OFFICIAL_GUIDES } from "./pt-BR-official";
 import { PT_BR_VISA_RUN_GUIDES } from "./pt-BR-visa-runs";
+import { HI_GUIDES, HI_UI } from "./hi";
+import { AR_GUIDES, AR_UI } from "./ar";
+import { TR_GUIDES, TR_UI } from "./tr";
 import type { Guide, GuideUi } from "./types";
 
 export type { Guide, GuideUi } from "./types";
@@ -47,6 +50,9 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   de: { guides: [...DE_GUIDES, ...DE_NOMAD_GUIDES, ...DE_VISA_RUN_GUIDES, ...DE_OFFICIAL_GUIDES], ui: DE_UI },
   it: { guides: [...IT_GUIDES, ...IT_NOMAD_GUIDES, ...IT_VISA_RUN_GUIDES, ...IT_OFFICIAL_GUIDES], ui: IT_UI },
   id: { guides: [...ID_GUIDES, ...ID_MORE_GUIDES], ui: ID_UI },
+  hi: { guides: HI_GUIDES, ui: HI_UI },
+  ar: { guides: AR_GUIDES, ui: AR_UI },
+  tr: { guides: TR_GUIDES, ui: TR_UI },
 };
 
 export const GUIDE_LOCALES = Object.keys(GUIDES_BY_LOCALE);
