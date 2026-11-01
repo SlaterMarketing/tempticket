@@ -41,6 +41,11 @@ import { JA_GUIDES, JA_UI } from "./ja";
 import { KO_GUIDES, KO_UI } from "./ko";
 import { ZH_CN_GUIDES, ZH_CN_UI } from "./zh-CN";
 import { ZH_TW_GUIDES, ZH_TW_UI } from "./zh-TW";
+import { VI_GUIDES, VI_UI } from "./vi";
+import { TH_GUIDES, TH_UI } from "./th";
+import { RU_GUIDES, RU_UI } from "./ru";
+import { NL_GUIDES, NL_UI } from "./nl";
+import { PL_GUIDES, PL_UI } from "./pl";
 import type { Guide, GuideUi } from "./types";
 
 export type { Guide, GuideUi } from "./types";
@@ -61,6 +66,11 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   ko: { guides: KO_GUIDES, ui: KO_UI },
   "zh-CN": { guides: ZH_CN_GUIDES, ui: ZH_CN_UI },
   "zh-TW": { guides: ZH_TW_GUIDES, ui: ZH_TW_UI },
+  vi: { guides: VI_GUIDES, ui: VI_UI },
+  th: { guides: TH_GUIDES, ui: TH_UI },
+  ru: { guides: RU_GUIDES, ui: RU_UI },
+  nl: { guides: NL_GUIDES, ui: NL_UI },
+  pl: { guides: PL_GUIDES, ui: PL_UI },
 };
 
 export const GUIDE_LOCALES = Object.keys(GUIDES_BY_LOCALE);
