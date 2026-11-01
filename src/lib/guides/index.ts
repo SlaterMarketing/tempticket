@@ -37,6 +37,10 @@ import { PT_BR_VISA_RUN_GUIDES } from "./pt-BR-visa-runs";
 import { HI_GUIDES, HI_UI } from "./hi";
 import { AR_GUIDES, AR_UI } from "./ar";
 import { TR_GUIDES, TR_UI } from "./tr";
+import { JA_GUIDES, JA_UI } from "./ja";
+import { KO_GUIDES, KO_UI } from "./ko";
+import { ZH_CN_GUIDES, ZH_CN_UI } from "./zh-CN";
+import { ZH_TW_GUIDES, ZH_TW_UI } from "./zh-TW";
 import type { Guide, GuideUi } from "./types";
 
 export type { Guide, GuideUi } from "./types";
@@ -53,6 +57,10 @@ const GUIDES_BY_LOCALE: Record<string, { guides: Guide[]; ui: GuideUi }> = {
   hi: { guides: HI_GUIDES, ui: HI_UI },
   ar: { guides: AR_GUIDES, ui: AR_UI },
   tr: { guides: TR_GUIDES, ui: TR_UI },
+  ja: { guides: JA_GUIDES, ui: JA_UI },
+  ko: { guides: KO_GUIDES, ui: KO_UI },
+  "zh-CN": { guides: ZH_CN_GUIDES, ui: ZH_CN_UI },
+  "zh-TW": { guides: ZH_TW_GUIDES, ui: ZH_TW_UI },
 };
 
 export const GUIDE_LOCALES = Object.keys(GUIDES_BY_LOCALE);
