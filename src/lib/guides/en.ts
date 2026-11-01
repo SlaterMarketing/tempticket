@@ -606,4 +606,6 @@ export const EN_UI: GuideUi = {
   destinationsTitle: "Where you'll need proof of onward travel",
   destinationsSub:
     "Country guides on what airlines and immigration check, and visa itinerary guides.",
+  sourcesHeading: "Sources",
+  lastChecked: (date) => `Last checked ${date}`,
 };

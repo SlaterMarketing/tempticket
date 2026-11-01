@@ -21,7 +21,13 @@ export type Guide = {
   table?: GuideTable;
   sections: GuideSection[];
   faqs: GuideFaq[];
+  /** Official or primary pages the facts were checked against. */
+  sources?: GuideSource[];
+  /** ISO date the facts were last checked against the sources. */
+  checked?: string;
 };
+
+export type GuideSource = { label: string; url: string };
 
 /** Interface text around the guide content, per language. */
 export type GuideUi = {
@@ -37,4 +43,6 @@ export type GuideUi = {
   ctaButton: string;
   destinationsTitle: string;
   destinationsSub: string;
+  sourcesHeading: string;
+  lastChecked: (date: string) => string;
 };
