@@ -172,4 +172,6 @@ export const PT_BR_UI: GuideUi = {
   destinationsTitle: "Onde vão pedir comprovante de saída",
   destinationsSub:
     "Guias sobre o que companhias aéreas e imigração conferem, e sobre reserva de voo para visto.",
+  sourcesHeading: "Fontes",
+  lastChecked: (date) => `Última verificação: ${date}`,
 };

@@ -205,4 +205,6 @@ export const DE_UI: GuideUi = {
   destinationsTitle: "Wo du einen Ausreisenachweis brauchst",
   destinationsSub:
     "Ratgeber dazu, was Airlines und Grenzbehörden prüfen, und zu Flugreservierungen fürs Visum.",
+  sourcesHeading: "Quellen",
+  lastChecked: (date) => `Zuletzt geprüft: ${date}`,
 };

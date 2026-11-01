@@ -33,6 +33,11 @@ export const EN_COUNTRY_GUIDES: Guide[] = [
         ],
       },
     ],
+    sources: [
+      { label: "Delta agency policy: ESTA and the Visa Waiver Program (summarises CBP rules)", url: "https://pro.delta.com/content/agency/us/en/policy-library/travel-documentation/electronic-system-for-travel-authorization--esta--and-visa-waive.html" },
+      { label: "Official ESTA application site (CBP)", url: "https://esta.cbp.dhs.gov/" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Does a flight to Canada or Mexico count as onward travel?",
@@ -210,6 +215,10 @@ export const EN_COUNTRY_GUIDES: Guide[] = [
         ],
       },
     ],
+    sources: [
+      { label: "Maldives Embassy: Entry to Maldives", url: "https://tr.mdvmission.gov.mv/index.php/en/consular/for-foreigners/entry-to-maldives" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "Is a hotel booking also required?",
@@ -236,6 +245,10 @@ export const EN_COUNTRY_GUIDES: Guide[] = [
       },
       { heading: "Getting it right", paragraphs: [TIMING_STEP, VERIFY_STEP] },
     ],
+    sources: [
+      { label: "Tourism Panama: requirements to travel to Panama", url: "https://www.tourismpanama.com/information/travel-guidelines/" },
+    ],
+    checked: "2026-11-01",
     faqs: [
       {
         q: "How do I prove US$500?",

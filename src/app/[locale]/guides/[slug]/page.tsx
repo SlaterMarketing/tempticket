@@ -158,6 +158,37 @@ export default async function GuidePage({ params }: { params: Params }) {
 
       <GuideCta source={`guide-${guide.key}-bottom`} ui={ui} />
 
+      {guide.sources?.length ? (
+        <section className="mb-6 text-xs text-muted-foreground">
+          <h2 className="font-semibold uppercase tracking-wider">
+            {ui.sourcesHeading}
+          </h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5">
+            {guide.sources.map((s) => (
+              <li key={s.url}>
+                <a
+                  href={s.url}
+                  rel="noopener nofollow"
+                  target="_blank"
+                  className="underline-offset-2 hover:underline"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {guide.checked ? (
+            <p className="mt-2">
+              {ui.lastChecked(
+                new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(
+                  new Date(`${guide.checked}T00:00:00Z`),
+                ),
+              )}
+            </p>
+          ) : null}
+        </section>
+      ) : null}
+
       <p className="text-xs text-muted-foreground">{ui.disclaimer}</p>
 
       <section className="mt-10 border-t pt-6">

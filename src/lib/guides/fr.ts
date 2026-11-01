@@ -176,4 +176,6 @@ export const FR_UI: GuideUi = {
   destinationsTitle: "Où l'on vous demandera une preuve de sortie",
   destinationsSub:
     "Guides sur ce que vérifient les compagnies et l'immigration, et sur les réservations de vol pour visa.",
+  sourcesHeading: "Sources",
+  lastChecked: (date) => `Dernière vérification : ${date}`,
 };

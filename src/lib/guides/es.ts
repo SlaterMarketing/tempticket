@@ -2,10 +2,10 @@
 
 import type { Guide, GuideUi } from "./types";
 
-const VERIFICAR =
+export const VERIFICAR =
   "Cuando recibas la reserva, entra en la página de \"gestionar reserva\" de la aerolínea y búscala con el código de reserva (PNR) y tu apellido. Si la ves ahí, el agente de facturación también la verá. Guarda una captura de pantalla además del correo.";
 
-const PLAZO =
+export const PLAZO =
   "Estas reservas se mantienen durante un tiempo limitado (normalmente unas 48 horas) y luego caducan. Resérvala poco antes de facturar o de tu cita consular, no con semanas de antelación.";
 
 export const ES_GUIDES: Guide[] = [
@@ -203,4 +203,6 @@ export const ES_UI: GuideUi = {
   destinationsTitle: "Dónde te pedirán prueba de salida",
   destinationsSub:
     "Guías sobre lo que revisan aerolíneas y migración, y sobre reservas de vuelo para visa.",
+  sourcesHeading: "Fuentes",
+  lastChecked: (date) => `Última revisión: ${date}`,
 };
