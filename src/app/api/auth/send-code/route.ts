@@ -2,7 +2,7 @@ import { db } from "@/lib/db";
 import { loginCodes } from "@/lib/db/schema";
 import { OTP_TTL_MINUTES } from "@/lib/auth/constants";
 import { buildLoginEmail } from "@/lib/auth/login-email";
-import { getEmailFrom, getResend } from "@/lib/resend";
+import { sendEmail } from "@/lib/email";
 import { getServerSiteUrl } from "@/lib/site-url";
 import bcrypt from "bcryptjs";
 import { createHash, randomBytes } from "node:crypto";
@@ -65,24 +65,21 @@ export async function POST(req: Request) {
     magicLinkUrl.searchParams.set("token", token);
     if (next) magicLinkUrl.searchParams.set("next", next);
 
-    const resend = getResend();
-    const from = getEmailFrom();
     const { subject, html, text } = buildLoginEmail({
       code: codeStr,
       magicLinkUrl: magicLinkUrl.toString(),
       ttlMinutes: OTP_TTL_MINUTES,
     });
 
-    const { error: sendError } = await resend.emails.send({
-      from,
-      to: email,
-      subject,
-      html,
-      text,
-    });
+    let sendError: unknown = null;
+    try {
+      await sendEmail({ to: email, subject, html, text });
+    } catch (err) {
+      sendError = err;
+    }
 
     if (sendError) {
-      console.error("send-code Resend error", sendError);
+      console.error("send-code email error", sendError);
       if (insertedId) {
         await db().delete(loginCodes).where(eq(loginCodes.id, insertedId));
       }
