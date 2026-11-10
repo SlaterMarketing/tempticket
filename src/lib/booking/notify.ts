@@ -1,20 +1,10 @@
 import { ADMIN_EMAIL } from "@/lib/auth/admin";
 import { logBookingEvent } from "@/lib/booking/log";
-import { getEmailFrom, getResend } from "@/lib/resend";
+import { sendEmail } from "@/lib/email";
 import { getServerSiteUrl } from "@/lib/site-url";
 
 async function sendPlainEmail(to: string, subject: string, text: string) {
-  const { error } = await getResend().emails.send({
-    from: getEmailFrom(),
-    to,
-    subject,
-    text,
-  });
-  if (error) {
-    throw new Error(
-      typeof error === "object" ? JSON.stringify(error) : String(error),
-    );
-  }
+  await sendEmail({ to, subject, text });
 }
 
 /** Emails the site owner so a stuck or failed booking never goes unnoticed. */

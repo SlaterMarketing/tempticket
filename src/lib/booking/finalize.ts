@@ -11,7 +11,7 @@ import {
   itineraryFilename,
   renderItineraryPdf,
 } from "@/lib/booking/itinerary-pdf";
-import { getEmailFrom, getResend } from "@/lib/resend";
+import { sendEmail } from "@/lib/email";
 import { getServerSiteUrl } from "@/lib/site-url";
 import type {
   CreateOrderPassenger,
@@ -274,9 +274,7 @@ async function finalizeBooking(
   });
 
   try {
-    const resend = getResend();
-    const { error } = await resend.emails.send({
-      from: getEmailFrom(),
+    await sendEmail({
       to,
       subject,
       html,
@@ -286,19 +284,11 @@ async function finalizeBooking(
             {
               filename: itineraryFilename(order),
               content: pdfBuffer,
+              contentType: "application/pdf",
             },
           ]
         : undefined,
     });
-    if (error) {
-      console.error("Booking confirmation email failed", error);
-      await logBookingEvent({ id: bookingId }, "email_failed", {
-        message:
-          typeof error === "object"
-            ? JSON.stringify(error)
-            : String(error),
-      });
-    }
   } catch (err) {
     console.error("Booking confirmation email failed", err);
     await logBookingEvent({ id: bookingId }, "email_failed", {
